@@ -1,4 +1,7 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+
 /* --- Colors --- */
 :root {
     --main: #A2BA02;
@@ -184,4 +187,11 @@ header{
     background: url('../img/banner-bg.png');
     background-repeat: no-repeat;
     background-size: auto 100%;
+}
+
+/* b2b home page */
+
+.ellipse-stats{
+    z-index: -1;
+    float:left;
 }
