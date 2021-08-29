@@ -230,12 +230,17 @@ a.nav-link.active{
 .banner-bg{
     background: url('../img/banner-bg.png');
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: cover;
 }
 
 /* b2b home page */
 
 .ellipse-stats{
-    z-index: -1;
-    float:left;
+    position:absolute;
+    margin-left:-150px;
+}
+
+.number-stats{
+    position:absolute;
+    z-index:10;
 }
