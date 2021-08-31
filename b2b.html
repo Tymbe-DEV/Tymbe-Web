@@ -21,6 +21,15 @@
         <!-- AOS animations-->
         <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 
+         <!-- Favicon -->
+         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+         <link rel="manifest" href="/site.webmanifest">
+         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+         <meta name="msapplication-TileColor" content="#2b5797">
+         <meta name="theme-color" content="#ffffff">
+
         <!--Seznam SKLIK:-->
         <script type="text/javascript">
             /* <![CDATA[ */
@@ -162,16 +171,15 @@
                         <p data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1500">
                             Čas ušetřený díky službě Ty–brigády umožnil v Pilulce zaměřit síly na rozvoj dalšího byznysu.
                         </p>
-                        <a href="formular_b2b.html">
-                             <button class="btn btn-primary rounded-pill" data-aos="fade-up" data-aos-offset="200" data-aos-delay="400" data-aos-duration="1500">
+                        <a class="btn btn-primary rounded-pill"  data-aos="fade-up" data-aos-offset="200" data-aos-delay="400" data-aos-duration="1500" href="formular_b2b.html">
+                            
                             Chci brigádníky
-                        </button>
+                       
                         </a>
                        
-                        <a href="formular_b2c.html">
-                              <button class="btn btn-outline-primary rounded-pill mt-3 mt-md-0" data-aos="fade-up" data-aos-offset="200" data-aos-delay="400" data-aos-duration="1500">
+                        <a class="btn btn-outline-primary rounded-pill mt-3 mt-md-0" data-aos="fade-up" data-aos-offset="200" data-aos-delay="400" data-aos-duration="1500" href="formular_b2c.html">
+                             
                             Jsem brigádník
-                        </button>
                         </a>
                       
 
@@ -188,7 +196,7 @@
                         </svg>
 
                         <div class="number-stats">
-                            <p data-aos="fade-up" class="h1 text-decoration-underline text-accent">12 920</p>
+                            <p id="statsTemporaryWorkers" data-aos="fade-up" class="h1 text-decoration-underline text-accent">12 920</p>
                             <p class="text-accent">
                                 Brigádníků k dispozici
                             </p>
@@ -202,7 +210,7 @@
                         </svg>
 
                         <div class="number-stats">
-                            <p data-aos="fade-up" class="h1 text-decoration-underline text-accent">68</p>
+                            <p id="statsWorkPlaces" data-aos="fade-up" class="h1 text-decoration-underline text-accent">68</p>
                             <p class="text-accent">
                                 Míst, kde to šlape
                             </p>
@@ -215,7 +223,7 @@
                         </svg>
 
                         <div class="number-stats">
-                            <p data-aos="fade-up" class="h1 text-decoration-underline text-accent">95%</p>
+                            <p id="statsJobsTaken" data-aos="fade-up" class="h1 text-decoration-underline text-accent">95%</p>
                             <p class="text-accent">
                                 Brigád obsazeno
                             </p>
@@ -228,9 +236,9 @@
                         </svg>
 
                         <div class="number-stats">
-                            <p data-aos="fade-up" class="h1 text-decoration-underline text-accent">12 920</p>
+                            <p id="statsSatisfiedLeaders" data-aos="fade-up" class="h1 text-decoration-underline text-accent">98%</p>
                             <p class="text-accent">
-                                Brigádníků k dispozici
+                                Vedoucích spokojeno
                             </p>
                         </div>
 
@@ -565,478 +573,244 @@
                          <div id="companiesCarousel" class="carousel slide " data-bs-ride="carousel"  style="margin-right:-200px">
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
-                                    <div class="row row-cols-1 row-cols-md-5 g-4 py-3">
-                                        <div class="col">
-                                            <div class="card h-100 shadow border-0 m-2">
-                                                <div class="card-body">
-                                                    <div class="row justify-content-between">
-                                                        <div class="col-auto align-self-center">
-                                                            <img src="assets/img/tesco-logo.png">
-                                                        </div>
-                                                        <div class="col-auto align-self-center">
-                                                            <p class="mb-0 text-accent align-middle">
-                                                                <img src="assets/img/time-icon.svg">
-                                                                <span class="font-weight-bold text-decoration-underline h6">Dnes do 22:00</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <h4>Doplňování a vychystávání zboží</h4>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <p class="d-inline text-capitalize text-accent align-middle">
-                                                            <img src="assets/img/location-icon.svg">
-                                                            ústí nad orlicí
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-6 border-light">
-                                                            <p>
-                                                                <span class="font-weight-bold h4">120,00</span>
-                                                                <small>
-                                                                    Kč/h</small>
-                                                            </p>
-                                                        </div>
-                                                        <div class="col-6 border-light">
-                                                            <p>
-                                                                <span class="font-weight-bold h4">35,10</span>
-                                                                <small>
-                                                                    Kč/h</small>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-footer bg-white border-0">
-                                                    <button class="btn btn-primary rounded-pill w-100 mb-3">
-                                                        Chci brigádu
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="card h-100 shadow border-0 m-2">
-                                                <div class="card-body">
-                                                    <div class="row justify-content-between">
-                                                        <div class="col-auto align-self-center">
-                                                            <img src="assets/img/tesco-logo.png">
-                                                        </div>
-                                                        <div class="col-auto align-self-center">
-                                                            <p class="mb-0 text-accent align-middle">
-                                                                <img src="assets/img/time-icon.svg">
-                                                                <span class="font-weight-bold text-decoration-underline h6">Dnes do 22:00</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <h4>Doplňování a vychystávání zboží</h4>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <p class="d-inline text-capitalize text-accent align-middle">
-                                                            <img src="assets/img/location-icon.svg">
-                                                            ústí nad orlicí
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-6 border-light">
-                                                            <p>
-                                                                <span class="font-weight-bold h4">120,00</span>
-                                                                <small>
-                                                                    Kč/h</small>
-                                                            </p>
-                                                        </div>
-                                                        <div class="col-6 border-light">
-                                                            <p>
-                                                                <span class="font-weight-bold h4">35,10</span>
-                                                                <small>
-                                                                    Kč/h</small>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-footer bg-white border-0">
-                                                    <button class="btn btn-primary rounded-pill w-100 mb-3">
-                                                        Chci brigádu
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="card h-100 shadow border-0 m-2">
-                                                <div class="card-body">
-                                                    <div class="row justify-content-between">
-                                                        <div class="col-auto align-self-center">
-                                                            <img src="assets/img/tesco-logo.png">
-                                                        </div>
-                                                        <div class="col-auto align-self-center">
-                                                            <p class="mb-0 text-accent align-middle">
-                                                                <img src="assets/img/time-icon.svg">
-                                                                <span class="font-weight-bold text-decoration-underline h6">Dnes do 22:00</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <h4>Doplňování a vychystávání zboží</h4>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <p class="d-inline text-capitalize text-accent align-middle">
-                                                            <img src="assets/img/location-icon.svg">
-                                                            ústí nad orlicí
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-6 border-light">
-                                                            <p>
-                                                                <span class="font-weight-bold h4">120,00</span>
-                                                                <small>
-                                                                    Kč/h</small>
-                                                            </p>
-                                                        </div>
-                                                        <div class="col-6 border-light">
-                                                            <p>
-                                                                <span class="font-weight-bold h4">35,10</span>
-                                                                <small>
-                                                                    Kč/h</small>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-footer bg-white border-0">
-                                                    <button class="btn btn-primary rounded-pill w-100 mb-3">
-                                                        Chci brigádu
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="card h-100 shadow border-0 m-2">
-                                                <div class="card-body">
-                                                    <div class="row justify-content-between">
-                                                        <div class="col-auto align-self-center">
-                                                            <img src="assets/img/tesco-logo.png">
-                                                        </div>
-                                                        <div class="col-auto align-self-center">
-                                                            <p class="mb-0 text-accent align-middle">
-                                                                <img src="assets/img/time-icon.svg">
-                                                                <span class="font-weight-bold text-decoration-underline h6">Dnes do 22:00</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <h4>Doplňování a vychystávání zboží</h4>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <p class="d-inline text-capitalize text-accent align-middle">
-                                                            <img src="assets/img/location-icon.svg">
-                                                            ústí nad orlicí
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-6 border-light">
-                                                            <p>
-                                                                <span class="font-weight-bold h4">120,00</span>
-                                                                <small>
-                                                                    Kč/h</small>
-                                                            </p>
-                                                        </div>
-                                                        <div class="col-6 border-light">
-                                                            <p>
-                                                                <span class="font-weight-bold h4">35,10</span>
-                                                                <small>
-                                                                    Kč/h</small>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-footer bg-white border-0">
-                                                    <button class="btn btn-primary rounded-pill w-100 mb-3">
-                                                        Chci brigádu
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col">
-                                            <div class="card h-100 shadow border-0 m-2">
-                                                <div class="card-body">
-                                                    <div class="row justify-content-between">
-                                                        <div class="col-auto align-self-center">
-                                                            <img src="assets/img/tesco-logo.png">
-                                                        </div>
-                                                        <div class="col-auto align-self-center">
-                                                            <p class="mb-0 text-accent align-middle">
-                                                                <img src="assets/img/time-icon.svg">
-                                                                <span class="font-weight-bold text-decoration-underline h6">Dnes do 22:00</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <h4>Doplňování a vychystávání zboží</h4>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <p class="d-inline text-capitalize text-accent align-middle">
-                                                            <img src="assets/img/location-icon.svg">
-                                                            ústí nad orlicí
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-6 border-light">
-                                                            <p>
-                                                                <span class="font-weight-bold h4">120,00</span>
-                                                                <small>
-                                                                    Kč/h</small>
-                                                            </p>
-                                                        </div>
-                                                        <div class="col-6 border-light">
-                                                            <p>
-                                                                <span class="font-weight-bold h4">35,10</span>
-                                                                <small>
-                                                                    Kč/h</small>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-footer bg-white border-0">
-                                                    <button class="btn btn-primary rounded-pill w-100 mb-3">
-                                                        Chci brigádu
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div
+                                        id="ring_container" class="row row-cols-1 row-cols-md-5 g-4 py-3">
+                                        <!-- <div class="col">
+                                                                                        <div class="card h-100 shadow border-0 m-2">
+                                                                                            <div class="card-body">
+                                                                                                <div class="row justify-content-between">
+                                                                                                    <div class="col-auto align-self-center">
+                                                                                                        <img src="assets/img/tesco-logo.png">
+                                                                                                    </div>
+                                                                                                    <div class="col-auto align-self-center">
+                                                                                                        <p class="mb-0 text-accent align-middle">
+                                                                                                            <img src="assets/img/time-icon.svg">
+                                                                                                            <span class="font-weight-bold text-decoration-underline h6">Dnes do 22:00</span>
+                                                                                                        </p>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="row mt-3">
+                                                                                                    <h4>Doplňování a vychystávání zboží</h4>
+                                                                                                </div>
+                                                                                                <div class="row mt-3">
+                                                                                                    <p class="d-inline text-capitalize text-accent align-middle">
+                                                                                                        <img src="assets/img/location-icon.svg">
+                                                                                                        ústí nad orlicí
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-6 border-light">
+                                                                                                        <p>
+                                                                                                            <span class="font-weight-bold h4">120,00</span>
+                                                                                                            <small>
+                                                                                                                Kč/h</small>
+                                                                                                        </p>
+                                                                                                    </div>
+                                                                                                    <div class="col-6 border-light">
+                                                                                                        <p>
+                                                                                                            <span class="font-weight-bold h4">35,10</span>
+                                                                                                            <small>
+                                                                                                                Kč/h</small>
+                                                                                                        </p>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="card-footer bg-white border-0">
+                                                                                                <button class="btn btn-primary rounded-pill w-100 mb-3">
+                                                                                                    Chci brigádu
+                                                                                                </button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col">
+                                                                                        <div class="card h-100 shadow border-0 m-2">
+                                                                                            <div class="card-body">
+                                                                                                <div class="row justify-content-between">
+                                                                                                    <div class="col-auto align-self-center">
+                                                                                                        <img src="assets/img/tesco-logo.png">
+                                                                                                    </div>
+                                                                                                    <div class="col-auto align-self-center">
+                                                                                                        <p class="mb-0 text-accent align-middle">
+                                                                                                            <img src="assets/img/time-icon.svg">
+                                                                                                            <span class="font-weight-bold text-decoration-underline h6">Dnes do 22:00</span>
+                                                                                                        </p>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="row mt-3">
+                                                                                                    <h4>Doplňování a vychystávání zboží</h4>
+                                                                                                </div>
+                                                                                                <div class="row mt-3">
+                                                                                                    <p class="d-inline text-capitalize text-accent align-middle">
+                                                                                                        <img src="assets/img/location-icon.svg">
+                                                                                                        ústí nad orlicí
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-6 border-light">
+                                                                                                        <p>
+                                                                                                            <span class="font-weight-bold h4">120,00</span>
+                                                                                                            <small>
+                                                                                                                Kč/h</small>
+                                                                                                        </p>
+                                                                                                    </div>
+                                                                                                    <div class="col-6 border-light">
+                                                                                                        <p>
+                                                                                                            <span class="font-weight-bold h4">35,10</span>
+                                                                                                            <small>
+                                                                                                                Kč/h</small>
+                                                                                                        </p>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="card-footer bg-white border-0">
+                                                                                                <button class="btn btn-primary rounded-pill w-100 mb-3">
+                                                                                                    Chci brigádu
+                                                                                                </button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col">
+                                                                                        <div class="card h-100 shadow border-0 m-2">
+                                                                                            <div class="card-body">
+                                                                                                <div class="row justify-content-between">
+                                                                                                    <div class="col-auto align-self-center">
+                                                                                                        <img src="assets/img/tesco-logo.png">
+                                                                                                    </div>
+                                                                                                    <div class="col-auto align-self-center">
+                                                                                                        <p class="mb-0 text-accent align-middle">
+                                                                                                            <img src="assets/img/time-icon.svg">
+                                                                                                            <span class="font-weight-bold text-decoration-underline h6">Dnes do 22:00</span>
+                                                                                                        </p>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="row mt-3">
+                                                                                                    <h4>Doplňování a vychystávání zboží</h4>
+                                                                                                </div>
+                                                                                                <div class="row mt-3">
+                                                                                                    <p class="d-inline text-capitalize text-accent align-middle">
+                                                                                                        <img src="assets/img/location-icon.svg">
+                                                                                                        ústí nad orlicí
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-6 border-light">
+                                                                                                        <p>
+                                                                                                            <span class="font-weight-bold h4">120,00</span>
+                                                                                                            <small>
+                                                                                                                Kč/h</small>
+                                                                                                        </p>
+                                                                                                    </div>
+                                                                                                    <div class="col-6 border-light">
+                                                                                                        <p>
+                                                                                                            <span class="font-weight-bold h4">35,10</span>
+                                                                                                            <small>
+                                                                                                                Kč/h</small>
+                                                                                                        </p>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="card-footer bg-white border-0">
+                                                                                                <button class="btn btn-primary rounded-pill w-100 mb-3">
+                                                                                                    Chci brigádu
+                                                                                                </button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col">
+                                                                                        <div class="card h-100 shadow border-0 m-2">
+                                                                                            <div class="card-body">
+                                                                                                <div class="row justify-content-between">
+                                                                                                    <div class="col-auto align-self-center">
+                                                                                                        <img src="assets/img/tesco-logo.png">
+                                                                                                    </div>
+                                                                                                    <div class="col-auto align-self-center">
+                                                                                                        <p class="mb-0 text-accent align-middle">
+                                                                                                            <img src="assets/img/time-icon.svg">
+                                                                                                            <span class="font-weight-bold text-decoration-underline h6">Dnes do 22:00</span>
+                                                                                                        </p>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="row mt-3">
+                                                                                                    <h4>Doplňování a vychystávání zboží</h4>
+                                                                                                </div>
+                                                                                                <div class="row mt-3">
+                                                                                                    <p class="d-inline text-capitalize text-accent align-middle">
+                                                                                                        <img src="assets/img/location-icon.svg">
+                                                                                                        ústí nad orlicí
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-6 border-light">
+                                                                                                        <p>
+                                                                                                            <span class="font-weight-bold h4">120,00</span>
+                                                                                                            <small>
+                                                                                                                Kč/h</small>
+                                                                                                        </p>
+                                                                                                    </div>
+                                                                                                    <div class="col-6 border-light">
+                                                                                                        <p>
+                                                                                                            <span class="font-weight-bold h4">35,10</span>
+                                                                                                            <small>
+                                                                                                                Kč/h</small>
+                                                                                                        </p>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="card-footer bg-white border-0">
+                                                                                                <button class="btn btn-primary rounded-pill w-100 mb-3">
+                                                                                                    Chci brigádu
+                                                                                                </button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="col">
+                                                                                        <div class="card h-100 shadow border-0 m-2">
+                                                                                            <div class="card-body">
+                                                                                                <div class="row justify-content-between">
+                                                                                                    <div class="col-auto align-self-center">
+                                                                                                        <img src="assets/img/tesco-logo.png">
+                                                                                                    </div>
+                                                                                                    <div class="col-auto align-self-center">
+                                                                                                        <p class="mb-0 text-accent align-middle">
+                                                                                                            <img src="assets/img/time-icon.svg">
+                                                                                                            <span class="font-weight-bold text-decoration-underline h6">Dnes do 22:00</span>
+                                                                                                        </p>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="row mt-3">
+                                                                                                    <h4>Doplňování a vychystávání zboží</h4>
+                                                                                                </div>
+                                                                                                <div class="row mt-3">
+                                                                                                    <p class="d-inline text-capitalize text-accent align-middle">
+                                                                                                        <img src="assets/img/location-icon.svg">
+                                                                                                        ústí nad orlicí
+                                                                                                    </p>
+                                                                                                </div>
+                                                                                                <div class="row">
+                                                                                                    <div class="col-6 border-light">
+                                                                                                        <p>
+                                                                                                            <span class="font-weight-bold h4">120,00</span>
+                                                                                                            <small>
+                                                                                                                Kč/h</small>
+                                                                                                        </p>
+                                                                                                    </div>
+                                                                                                    <div class="col-6 border-light">
+                                                                                                        <p>
+                                                                                                            <span class="font-weight-bold h4">35,10</span>
+                                                                                                            <small>
+                                                                                                                Kč/h</small>
+                                                                                                        </p>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="card-footer bg-white border-0">
+                                                                                                <button class="btn btn-primary rounded-pill w-100 mb-3">
+                                                                                                    Chci brigádu
+                                                                                                </button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div> -->
 
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="row row-cols-1 row-cols-md-5 g-4">
-                                        <div class="col">
-                                            <div class="card h-100 shadow border-0 m-2">
-                                                <div class="card-body">
-                                                    <div class="row justify-content-between">
-                                                        <div class="col-auto align-self-center">
-                                                            <img src="assets/img/tesco-logo.png">
-                                                        </div>
-                                                        <div class="col-auto align-self-center">
-                                                            <p class="mb-0 text-accent align-middle">
-                                                                <img src="assets/img/time-icon.svg">
-                                                                <span class="font-weight-bold text-decoration-underline h6">Dnes do 22:00</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <h4>Doplňování a vychystávání zboží</h4>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <p class="d-inline text-capitalize text-accent align-middle">
-                                                            <img src="assets/img/location-icon.svg">
-                                                            ústí nad orlicí
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-6 border-light">
-                                                            <p>
-                                                                <span class="font-weight-bold h4">120,00</span>
-                                                                <small>
-                                                                    Kč/h</small>
-                                                            </p>
-                                                        </div>
-                                                        <div class="col-6 border-light">
-                                                            <p>
-                                                                <span class="font-weight-bold h4">35,10</span>
-                                                                <small>
-                                                                    Kč/h</small>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-footer bg-white border-0">
-                                                    <button class="btn btn-primary rounded-pill w-100 mb-3">
-                                                        Chci brigádu
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div> <div class="col">
-                                            <div class="card h-100 shadow border-0 m-2">
-                                                <div class="card-body">
-                                                    <div class="row justify-content-between">
-                                                        <div class="col-auto align-self-center">
-                                                            <img src="assets/img/tesco-logo.png">
-                                                        </div>
-                                                        <div class="col-auto align-self-center">
-                                                            <p class="mb-0 text-accent align-middle">
-                                                                <img src="assets/img/time-icon.svg">
-                                                                <span class="font-weight-bold text-decoration-underline h6">Dnes do 22:00</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <h4>Doplňování a vychystávání zboží</h4>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <p class="d-inline text-capitalize text-accent align-middle">
-                                                            <img src="assets/img/location-icon.svg">
-                                                            ústí nad orlicí
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-6 border-light">
-                                                            <p>
-                                                                <span class="font-weight-bold h4">120,00</span>
-                                                                <small>
-                                                                    Kč/h</small>
-                                                            </p>
-                                                        </div>
-                                                        <div class="col-6 border-light">
-                                                            <p>
-                                                                <span class="font-weight-bold h4">35,10</span>
-                                                                <small>
-                                                                    Kč/h</small>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-footer bg-white border-0">
-                                                    <button class="btn btn-primary rounded-pill w-100 mb-3">
-                                                        Chci brigádu
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div> <div class="col">
-                                            <div class="card h-100 shadow border-0 m-2">
-                                                <div class="card-body">
-                                                    <div class="row justify-content-between">
-                                                        <div class="col-auto align-self-center">
-                                                            <img src="assets/img/tesco-logo.png">
-                                                        </div>
-                                                        <div class="col-auto align-self-center">
-                                                            <p class="mb-0 text-accent align-middle">
-                                                                <img src="assets/img/time-icon.svg">
-                                                                <span class="font-weight-bold text-decoration-underline h6">Dnes do 22:00</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <h4>Doplňování a vychystávání zboží</h4>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <p class="d-inline text-capitalize text-accent align-middle">
-                                                            <img src="assets/img/location-icon.svg">
-                                                            ústí nad orlicí
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-6 border-light">
-                                                            <p>
-                                                                <span class="font-weight-bold h4">120,00</span>
-                                                                <small>
-                                                                    Kč/h</small>
-                                                            </p>
-                                                        </div>
-                                                        <div class="col-6 border-light">
-                                                            <p>
-                                                                <span class="font-weight-bold h4">35,10</span>
-                                                                <small>
-                                                                    Kč/h</small>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-footer bg-white border-0">
-                                                    <button class="btn btn-primary rounded-pill w-100 mb-3">
-                                                        Chci brigádu
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div> <div class="col">
-                                            <div class="card h-100 shadow border-0 m-2">
-                                                <div class="card-body">
-                                                    <div class="row justify-content-between">
-                                                        <div class="col-auto align-self-center">
-                                                            <img src="assets/img/tesco-logo.png">
-                                                        </div>
-                                                        <div class="col-auto align-self-center">
-                                                            <p class="mb-0 text-accent align-middle">
-                                                                <img src="assets/img/time-icon.svg">
-                                                                <span class="font-weight-bold text-decoration-underline h6">Dnes do 22:00</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <h4>Doplňování a vychystávání zboží</h4>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <p class="d-inline text-capitalize text-accent align-middle">
-                                                            <img src="assets/img/location-icon.svg">
-                                                            ústí nad orlicí
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-6 border-light">
-                                                            <p>
-                                                                <span class="font-weight-bold h4">120,00</span>
-                                                                <small>
-                                                                    Kč/h</small>
-                                                            </p>
-                                                        </div>
-                                                        <div class="col-6 border-light">
-                                                            <p>
-                                                                <span class="font-weight-bold h4">35,10</span>
-                                                                <small>
-                                                                    Kč/h</small>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-footer bg-white border-0">
-                                                    <button class="btn btn-primary rounded-pill w-100 mb-3">
-                                                        Chci brigádu
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div> <div class="col">
-                                            <div class="card h-100 shadow border-0 m-2">
-                                                <div class="card-body">
-                                                    <div class="row justify-content-between">
-                                                        <div class="col-auto align-self-center">
-                                                            <img src="assets/img/tesco-logo.png">
-                                                        </div>
-                                                        <div class="col-auto align-self-center">
-                                                            <p class="mb-0 text-accent align-middle">
-                                                                <img src="assets/img/time-icon.svg">
-                                                                <span class="font-weight-bold text-decoration-underline h6">Dnes do 22:00</span>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <h4>Doplňování a vychystávání zboží</h4>
-                                                    </div>
-                                                    <div class="row mt-3">
-                                                        <p class="d-inline text-capitalize text-accent align-middle">
-                                                            <img src="assets/img/location-icon.svg">
-                                                            ústí nad orlicí
-                                                        </p>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-6 border-light">
-                                                            <p>
-                                                                <span class="font-weight-bold h4">120,00</span>
-                                                                <small>
-                                                                    Kč/h</small>
-                                                            </p>
-                                                        </div>
-                                                        <div class="col-6 border-light">
-                                                            <p>
-                                                                <span class="font-weight-bold h4">35,10</span>
-                                                                <small>
-                                                                    Kč/h</small>
-                                                            </p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="card-footer bg-white border-0">
-                                                    <button class="btn btn-primary rounded-pill w-100 mb-3">
-                                                        Chci brigádu
-                                                    </button>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
 
@@ -1313,49 +1087,152 @@
         <!-- Custom scripts -->
         <script src="assets/js/scripts.js"></script>
 
-        <!-- Load Facebook SDK for JavaScript -->
-        <div id="fb-root"></div>
+        
         <script>
-            (function (d, s, id) {
-                var js,
-                    fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) 
-                    return;
-                
-                js = d.createElement(s);
-                js.id = id;
-                js.src = 'https://connect.facebook.net/cs_CZ/sdk/xfbml.customerchat.js#xfbml=1&version=v2.12&autoLogAppEvents=1';
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));
+            let statsTemporaryWorkers,statsWorkPlaces,statsJobsTaken,statsSatisfiedLeaders;
+            statsTemporaryWorkers = document.getElementById('statsTemporaryWorkers');
+            statsWorkPlaces = document.getElementById('statsWorkPlaces');
+            statsJobsTaken = document.getElementById('statsJobsTaken');
+            statsSatisfiedLeaders = document.getElementById('statsSatisfiedLeaders');
+
+
+            function loadStats(stats){
+                statsTemporaryWorkers.innerHTML = stats.firma_1;
+                statsWorkPlaces.innerHTML = stats.firma_2;
+                statsJobsTaken.innerHTML = stats.firma_3;
+                statsSatisfiedLeaders.innerHTML = stats.firma_4;
+            }
+
+            function buildPeckaCard(ring) {
+                const CardContainer = document.createElement("div");
+                CardContainer.classList.add("card", "h-100", "shadow", "border-0", "m-2");
+
+                const CardBody = document.createElement("div");
+                CardBody.classList.add("card-body");
+
+
+                const CardBodyHeader = document.createElement("div");
+                CardBodyHeader.classList.add("row", "justify-content-between");
+
+
+                const CardBodyHeaderImageContainer = document.createElement("div");
+                CardBodyHeaderImageContainer.classList.add("col-auto", "align-self-center");
+
+
+                const CardBodyHeaderImage = document.createElement("img");
+                CardBodyHeaderImage.src = "assets/img/tesco-logo.png";
+
+
+                const CardBodyHeaderTimeUntilContainer = document.createElement("div");
+                CardBodyHeaderTimeUntilContainer.classList.add("col-auto", "align-self-center");
+
+
+                const CardBodyHeaderTimeUntilContainerParagraph = document.createElement("p");
+                CardBodyHeaderTimeUntilContainerParagraph.classList.add("mb-0", "text-accent", "align-middle");
+
+                const CardBodyHeaderTimeUntilIcon = document.createElement("img");
+                CardBodyHeaderTimeUntilIcon.classList.add("col-auto", "align-self-center");
+                CardBodyHeaderTimeUntilIcon.src = "assets/img/time-icon.svg";
+
+
+                const CardBodyHeaderTimeUntil = document.createElement("span");
+                CardBodyHeaderTimeUntil.classList.add("font-weight-bold", "text-decoration-underline", "h6");
+                CardBodyHeaderTimeUntil.innerHTML = "Od" + ring.date_from;
+
+                const CardHeadingContainer = document.createElement("div");
+                CardHeadingContainer.classList.add("row", "mt-3");
+
+                const CardHeading = document.createElement("h4");
+                CardHeading.innerHTML = ring.position;
+
+                const CardLocationContainer = document.createElement('div')
+                CardLocationContainer.classList.add("row", "mt-3");
+
+                const CardLocationContainerParagraph = document.createElement('p')
+                CardLocationContainer.classList.add("d-inline", "text-accent", "align-middle", "text-capitalize");
+
+
+                const CardLocationContainerIcon = document.createElement('img')
+                CardLocationContainerIcon.src = 'assets/img/location-icon.svg';
+
+                const CardLocationContainerText = document.createElement('span')
+                CardLocationContainerText.innerHTML = ring.place;
+
+
+                const CardPriceContainer = document.createElement("div");
+                CardPriceContainer.classList.add("row");
+
+                const CardMoneyContainer = document.createElement("div");
+                CardMoneyContainer.classList.add("col-6", "border-light");
+
+                const CardMoney = document.createElement("span");
+                CardMoney.classList.add("font-weight-bold", "h4");
+                CardMoney.innerHTML = ring.price_start;
+                const CardMoneyCurrency = document.createElement("small");
+                CardMoneyCurrency.innerHTML = 'Kč/h'
+
+                const CardCreditContainer = document.createElement("div");
+                CardCreditContainer.classList.add("col-6", "border-light");
+
+                const CardCredit = document.createElement("span");
+                CardCredit.classList.add("font-weight-bold", "h4");
+                CardCredit.innerHTML = ring.price_current;
+
+                const CardCreditCurrency = document.createElement("small");
+                CardCreditCurrency.innerHTML = 'Kč/h'
+
+                const CardFooter = document.createElement("div");
+                CardFooter.classList.add("card-footer", "bg-white", "border-0");
+                const CardFooterAction = document.createElement("button");
+                CardFooterAction.classList.add("btn", "btn-primary", "rounded-pill", "w-100", "mb-3");
+                CardFooterAction.innerHTML = "Chci brigádu"
+
+
+                CardCreditCurrency.innerHTML = 'Kč/h'
+
+
+                CardContainer.appendChild(CardBody);
+                CardBody.appendChild(CardBodyHeader);
+                CardBodyHeader.appendChild(CardBodyHeaderImageContainer);
+                CardBodyHeaderImageContainer.appendChild(CardBodyHeaderImage);
+                CardBodyHeader.appendChild(CardBodyHeaderTimeUntilContainer);
+                CardBodyHeaderTimeUntilContainer.appendChild(CardBodyHeaderTimeUntilContainerParagraph);
+
+                CardBodyHeaderTimeUntilContainerParagraph.appendChild(CardBodyHeaderTimeUntilIcon);
+                CardBodyHeaderTimeUntilContainerParagraph.appendChild(CardBodyHeaderTimeUntil);
+                CardBody.appendChild(CardHeadingContainer);
+                CardHeadingContainer.appendChild(CardHeading);
+                CardBody.appendChild(CardLocationContainer);
+                CardLocationContainer.appendChild(CardLocationContainerParagraph);
+                CardLocationContainerParagraph.appendChild(CardLocationContainerIcon);
+                CardLocationContainerParagraph.appendChild(CardLocationContainerText);
+                CardPriceContainer.appendChild(CardMoneyContainer);
+                CardPriceContainer.appendChild(CardCreditContainer);
+                CardMoneyContainer.appendChild(CardMoney);
+                CardMoneyContainer.appendChild(CardMoneyCurrency);
+                CardCreditContainer.appendChild(CardCredit);
+                CardCreditContainer.appendChild(CardCreditCurrency);
+                CardBody.appendChild(CardPriceContainer);
+                CardPriceContainer.appendChild(CardCreditContainer);
+                CardBody.appendChild(CardFooter);
+                CardFooter.appendChild(CardFooterAction);
+
+                document.getElementById("ring_container").appendChild(CardContainer);
+            };
+
+            $.get("https://api.tymbeos1.cz/rings", function (response) {
+                buildPeckaCard(response.pecka);
+                buildPeckaCard(response.ring1);
+                buildPeckaCard(response.ring2);
+                buildPeckaCard(response.ring3);
+            });
+
+            $.get("https://api.tymbeos1.cz/statistics", function (response) {
+                loadStats(response);
+            });
+
+          
         </script>
-        <!-- Load Facebook SDK for JavaScript -->
-
-        <div class="layout" id="main"></div>
-
-
-        <!-- 
-        <div class="fb-customerchat"
-             attribution=setup_tool
-             page_id="1119067454907474"
-             theme_color="#94c378"
-             logged_in_greeting="Ahoj Tymbere, nevíš kudy kam? Napiš a naši trenéři Ti rádi se vším pomohou. ;-)"
-             logged_out_greeting="Ahoj Tymbere, nevíš kudy kam? Napiš a naši trenéři Ti rádi se vším pomohou. ;-)">
-        </div>
-        -->
-        <!-- ManyChat -->
-        <script src="//widget.manychat.com/1119067454907474.js" async="async"></script>
-
-
-        <script type="text/javascript" src="https://www.google.com/recaptcha/api.js?render=explicit" async defer></script>
-        <script src="./js/app.js"></script>
-
-        <noscript>
-            <style>
-                .eu-cookies {
-                    display: none;
-                }
-            </style>
-        </noscript>
 
 
     </body>
