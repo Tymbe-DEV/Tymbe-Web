@@ -244,3 +244,14 @@ a.nav-link.active{
     position:absolute;
     z-index:10;
 }
+
+.btn-faq.active{
+    font-weight: bold;
+    color:var(--main-dark);
+}
+
+.btn-faq.inactive{
+    font-weight: bold;
+    color:var(--main-dark);
+    opacity:0.6;
+}

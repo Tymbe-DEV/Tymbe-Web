@@ -49,6 +49,7 @@
         gtag('config', 'AW-967437153');
         </script>
 
+<script src="https://www.google.com/recaptcha/api.js?render=6LfNCnMUAAAAAMwWYCZaqQvtn5TmuA3Uau07nj5g"></script>
 
     </head>
     <body>
@@ -167,27 +168,27 @@
                     <div class="col-12 col-lg-5">
                         <div class="bg-white shadow p-4 rounded" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1500">
                             <h2 class="text-accent text-center">Registrace firem</h2>
-                            <form class="mt-4">
+                            <form id="companyRegisterForm" class="mt-4">
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="Název firmy" aria-label="Název firmy" aria-describedby="">
+                                    <input name="companyName" type="text" class="form-control" placeholder="Název firmy" aria-label="Název firmy" aria-describedby="">
                                 </div>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="IČO" aria-label="IČO" aria-describedby="">
+                                    <input name="ic" type="text" class="form-control" placeholder="IČO" aria-label="IČO" aria-describedby="">
                                 </div>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="Jméno" aria-label="Jméno" aria-describedby="">
+                                    <input name="sureName" type="text" class="form-control" placeholder="Jméno" aria-label="Jméno" aria-describedby="">
                                 </div>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="Příjmení" aria-label="Příjmení" aria-describedby="">
+                                    <input name="familyName" type="text" class="form-control" placeholder="Příjmení" aria-label="Příjmení" aria-describedby="">
                                 </div>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="">
+                                    <input name="email" type="email" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="">
                                 </div>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="Telefon" aria-label="Telefon" aria-describedby="">
+                                    <input name="phone" type="text" class="form-control" placeholder="Telefon" aria-label="Telefon" aria-describedby="">
                                 </div>
                                 <div class="text-center py-3">
-                                    <button type="submit" class="btn btn-primary rounded-pill mx-auto">Registrovat</button>
+                                    <button id="submitButton" type="submit" class="btn btn-primary rounded-pill mx-auto">Registrovat</button>
                                 </div>
                                 <p class="text-center">
                                     Už máš u nás účet?
@@ -279,7 +280,7 @@
                                 Kontakty</a>
                         </li>
 
-                        <!--
+                        
                         <li class="nav-item">
                             <a class="nav-link" href="faq.html">
                                 <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -288,7 +289,7 @@
 
                                 FAQ</a>
                         </li>
-                        -->
+                        
                     </ul>
                 </nav>
 
@@ -346,8 +347,8 @@
                 </div>
                 <div class="row justify-content-center">
 
-                    <p class="col-auto mt-3 p-3 text-center bg-light-transparent px-3 py-2 rounded-pill">
-                        24 hodin denně, 7 dní v týdnu a po celé ČR.
+                    <p class="col-auto mt-3 p-3 text-center bg-light-transparent px-3 py-2 rounded-pill text-white">
+                        <small>24 hodin denně, 7 dní v týdnu a po celé ČR.</small>
                     </p>
                 </div>
                 <div class="row mt-2">
@@ -365,7 +366,7 @@
 
                         <a href="https://www.linkedin.com/company/tymbe"><img class="mx-2" src="assets/img/linkedin.svg" alt=""></a>
                     </div>
-                    <p class="col-12 text-center mt-3">
+                    <p class="col-12 text-center mt-3 text-white">
                         <small>© Copyright 2021 – Tymbe a.s.</small>
                     </p>
                 </div>
@@ -384,5 +385,41 @@
 
         <!-- Custom scripts -->
         <script src="assets/js/scripts.js"></script>
+
+        <script>
+           $('button#submitButton').click(function(e) {
+                e.preventDefault();
+                grecaptcha.ready(function() {
+                    grecaptcha.execute('6LfNCnMUAAAAAMwWYCZaqQvtn5TmuA3Uau07nj5g', {
+                    action: 'submit'
+                    }).then(function(token) {
+                    $.ajax({
+                        url: 'https://api.tymbeos1.cz/company/registration',
+                        type: 'post',
+                        dataType: 'json',
+                        data: {
+                        ...$('form#companyRegisterForm').serialize(),
+                        reCaptcha: token
+                        },
+                        success: function(data) {
+                        console.log(data)
+                        },
+                        error: function(data) {
+                        const errors = data.responseJSON.data.errors;
+                        console.log(errors);
+
+                        errors.forEach(err => {
+                            const Err = document.createElement('li');
+                            Err.innerHTML = err;
+                            $('ul#errorContainer').append(Err);
+                        })
+                        }
+
+                    });
+                    });
+                });
+                });
+        </script>
+
     </body>
 </html>

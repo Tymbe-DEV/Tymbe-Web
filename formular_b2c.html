@@ -19,16 +19,18 @@
         rel="stylesheet" href="https://use.typekit.net/ykm6nsb.css">
 
         <!-- AOS animations-->
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+        <link
+        rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
 
-         <!-- Favicon -->
-         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-         <link rel="manifest" href="/site.webmanifest">
-         <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-         <meta name="msapplication-TileColor" content="#2b5797">
-         <meta name="theme-color" content="#ffffff">
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+        <meta name="msapplication-TileColor" content="#2b5797">
+        <meta
+        name="theme-color" content="#ffffff">
 
 
         <!--Seznam SKLIK:-->
@@ -43,11 +45,13 @@
         <!-- Global site tag (gtag.js) - Google Ads: 967437153 -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=AW-967437153"></script>
         <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
 
-        gtag('config', 'AW-967437153');
+            gtag('config', 'AW-967437153');
         </script>
     </head>
     <body>
@@ -108,8 +112,8 @@
                     </div>
                 </nav>
 
-                 <!-- Mobile nav -->
-                 <nav class="d-md-none navbar navbar-expand-lg navbar-light bg-white">
+                <!-- Mobile nav -->
+                <nav class="d-md-none navbar navbar-expand-lg navbar-light bg-white">
                     <div class="container-fluid">
                         <a class="navbar-brand" href="#">
                             <img src="assets/img/tymbe-logo.png">
@@ -146,16 +150,16 @@
                                 </li>
                             </ul>
                             <div class="text-center pb-3">
-                            <a class="btn btn-outline-primary rounded-pill me-2" href="formular_b2b.html">
-                              
+                                <a class="btn btn-outline-primary rounded-pill me-2" href="formular_b2b.html">
+
                                     Přihlásit
-                            </a>
-                            <a class="btn btn-primary rounded-pill" href="formular_b2c.html">
-                               
+                                </a>
+                                <a class="btn btn-primary rounded-pill" href="formular_b2c.html">
+
                                     Registrace
-                            </a>
+                                </a>
                             </div>
-                           
+
 
                         </div>
                     </div>
@@ -167,28 +171,100 @@
                     <div class="col-12 col-lg-5">
                         <div class="bg-white shadow p-4 rounded" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1500">
                             <h2 class="text-accent text-center">Staň se Tymberem</h2>
-                            <form class="mt-4">
+                            <form class="mt-4" id="workerRegisterForm">
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="Jméno" aria-label="Jméno" aria-describedby="">
+                                  <input required id="sureName" name="sureName" type="text" class="form-control" placeholder="Jméno" aria-label="Jméno" aria-describedby="">
                                 </div>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="Příjmení" aria-label="Příjmení" aria-describedby="">
+                                  <input required id="familyName" name="familyName" type="text" class="form-control" placeholder="Příjmení" aria-label="Příjmení" aria-describedby="">
                                 </div>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="">
+                                  <input required id="birthPlace" name="birthPlace" type="text" class="form-control" placeholder="Místo narození" aria-label="MístoNarození" aria-describedby="">
                                 </div>
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="Heslo" aria-label="Heslo" aria-describedby="">
+                                  <input required id="idNumber" name="idNumber" type="text" class="form-control" placeholder="Číslo občanského průkazu" aria-label="" aria-describedby="">
                                 </div>
-
+                                <div class="mb-3">
+                                  <input required id="birthDate" name="birthDate" type="text" class="form-control" placeholder="Datum narození (ve formátu DD.MM.RRRR)" aria-label="" aria-describedby="">
+                                </div>
+                                <div class="mb-3">
+                                  <input required id="birthNumber" name="birthNumber" type="text" class="form-control" placeholder="Rodné číslo (jen číslo bez lomítka)" aria-label="" aria-describedby="">
+                                </div>
+                                <div class="mb-3">
+                                    <p>Pohlaví:</p>
+                                  <div class="form-check">
+                                    <input id="gender" name="gender" class="form-check-input" value="2" type="radio">
+                                    <label class="form-check-label" for="genderRadio1">
+                                      Muž
+                                    </label>
+                                  </div>
+                                  <div class="form-check">
+                                    <input class="form-check-input" type="radio" checked value='1'>
+                                    <label class="form-check-label" for="genderRadio2">
+                                      Žena
+                                    </label>
+                                  </div>
+                                </div>
+                              
+                                <select required id="pCountry" name="pCountry" class="form-select mb-3" aria-label="Default select example">
+                                  <option selected>Stát - trvalé bydliště</option>
+                                  <option value="CZ">Česká republika</option>
+                                  <option value="SK">Slovensko</option>
+                                </select>
+                              
+                                <div class="mb-3">
+                                  <input required id="pStreet" name="pStreet" type="text" class="form-control" placeholder="Ulice a číslo - trvalé bydliště" aria-label="" aria-describedby="">
+                                </div>
+                                <div class="mb-3">
+                                  <input required id="pCity" name="pCity" type="text" class="form-control" placeholder="Město - trvalé bydliště" aria-label="" aria-describedby="">
+                                </div>
+                                <div class="mb-3">
+                                  <input required id="pZip" name="pZip" type="text" class="form-control" placeholder="PSČ - trvalé bydliště" aria-label="" aria-describedby="">
+                                </div>
+                              
+                                <select id="cCountry" name="cCountry" class="form-select mb-3" aria-label="Default select example">
+                                  <option selected>Stát - kontaktní adresa</option>
+                                  <option value="CZ">Česká republika</option>
+                                  <option value="SK">Slovensko</option>
+                                </select>
+                              
+                                <div class="mb-3">
+                                  <input id="cStreet" name="cStreet" type="text" class="form-control" placeholder="Ulice a číslo - kontaktní adresa" aria-label="" aria-describedby="">
+                                </div>
+                                <div class="mb-3">
+                                  <input id="cCity" name="cCity" type="text" class="form-control" placeholder="Město - kontaktní adresa" aria-label="" aria-describedby="">
+                                </div>
+                                <div class="mb-3">
+                                  <input id="cZip" name="cZip" type="text" class="form-control" placeholder="PSČ - kontaktní adresa" aria-label="" aria-describedby="">
+                                </div>
+                              
+                              
+                                <div class="mb-3">
+                                  <input required id="phone" name="phone" type="text" class="form-control" placeholder="Telefoní číslo (ve formátu: +420123456789)" aria-label="" aria-describedby="">
+                                </div>
+                              
+                                <div class="mb-3">
+                                  <input required id="email" name="email" type="email" class="form-control" placeholder="Email" aria-label="" aria-describedby="">
+                                </div>
+                              
+                                <div class="mb-3">
+                                  <input required id="password" name="password" type="password" class="form-control" placeholder="Password" aria-label="" aria-describedby="">
+                                </div>
+                              
+                                <div class="mb-3">
+                                  <input required id="passwordCheck" name="passwordCheck" type="password" class="form-control" placeholder="Repeat Password" aria-label="" aria-describedby="">
+                                </div>
+                                <input hidden name="acceptDataProcessing" value="true" />
+                              
+                              
                                 <div class="text-center py-3">
-                                    <button type="submit" class="btn btn-primary rounded-pill mx-auto">Registrovat</button>
+                                  <button id="submitButton" type="submit" class="btn btn-primary rounded-pill mx-auto">Registrovat</button>
                                 </div>
                                 <p class="text-center">
-                                    Už máš u nás účet?
-                                    <a href="#">Přihlas se.</a>
+                                  Už máš u nás účet?
+                                  <a href="#">Přihlas se.</a>
                                 </p>
-                            </form>
+                              </form>
                         </div>
                     </div>
                     <div class="col-12 col-lg-3 mt-5 mt-lg-0">
@@ -322,16 +398,16 @@
                                 Kontakty</a>
                         </li>
 
-                        <!--
-                        <li class="nav-item">
-                            <a class="nav-link" href="faq.html">
-                                <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 9.01127C1.5 5.06034 4.6575 1.5 9.015 1.5C13.275 1.5 16.5 4.99274 16.5 8.98873C16.5 13.6232 12.72 16.5 9 16.5C7.77 16.5 6.405 16.1695 5.31 15.5235C4.9275 15.2907 4.605 15.1179 4.1925 15.2531L2.6775 15.7038C2.295 15.824 1.95 15.5235 2.0625 15.1179L2.565 13.4354C2.6475 13.2026 2.6325 12.9547 2.5125 12.7594C1.8675 11.5726 1.5 10.2732 1.5 9.01127ZM8.02501 9.01127C8.02501 9.54457 8.45251 9.97271 8.98501 9.98022C9.51751 9.98022 9.94501 9.54457 9.94501 9.01878C9.94501 8.48548 9.51751 8.05734 8.98501 8.05734C8.46001 8.04982 8.02501 8.48548 8.02501 9.01127ZM11.4825 9.01878C11.4825 9.54457 11.91 9.98022 12.4425 9.98022C12.975 9.98022 13.4025 9.54457 13.4025 9.01878C13.4025 8.48548 12.975 8.05733 12.4425 8.05733C11.91 8.05733 11.4825 8.48548 11.4825 9.01878ZM5.52751 9.98022C5.00251 9.98022 4.56751 9.54457 4.56751 9.01878C4.56751 8.48548 4.99501 8.05733 5.52751 8.05733C6.06001 8.05733 6.48751 8.48548 6.48751 9.01878C6.48751 9.54457 6.06001 9.97271 5.52751 9.98022Z" fill="white"/>
-                                </svg>
-
-                                FAQ</a>
-                        </li>
-                        -->
+                        
+                                                <li class="nav-item">
+                                                    <a class="nav-link" href="faq.html">
+                                                        <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 9.01127C1.5 5.06034 4.6575 1.5 9.015 1.5C13.275 1.5 16.5 4.99274 16.5 8.98873C16.5 13.6232 12.72 16.5 9 16.5C7.77 16.5 6.405 16.1695 5.31 15.5235C4.9275 15.2907 4.605 15.1179 4.1925 15.2531L2.6775 15.7038C2.295 15.824 1.95 15.5235 2.0625 15.1179L2.565 13.4354C2.6475 13.2026 2.6325 12.9547 2.5125 12.7594C1.8675 11.5726 1.5 10.2732 1.5 9.01127ZM8.02501 9.01127C8.02501 9.54457 8.45251 9.97271 8.98501 9.98022C9.51751 9.98022 9.94501 9.54457 9.94501 9.01878C9.94501 8.48548 9.51751 8.05734 8.98501 8.05734C8.46001 8.04982 8.02501 8.48548 8.02501 9.01127ZM11.4825 9.01878C11.4825 9.54457 11.91 9.98022 12.4425 9.98022C12.975 9.98022 13.4025 9.54457 13.4025 9.01878C13.4025 8.48548 12.975 8.05733 12.4425 8.05733C11.91 8.05733 11.4825 8.48548 11.4825 9.01878ZM5.52751 9.98022C5.00251 9.98022 4.56751 9.54457 4.56751 9.01878C4.56751 8.48548 4.99501 8.05733 5.52751 8.05733C6.06001 8.05733 6.48751 8.48548 6.48751 9.01878C6.48751 9.54457 6.06001 9.97271 5.52751 9.98022Z" fill="white"/>
+                                                        </svg>
+                        
+                                                        FAQ</a>
+                                                </li>
+                                                
 
                     </ul>
                 </nav>
@@ -343,8 +419,8 @@
                 </div>
                 <div class="row justify-content-center">
 
-                    <p class="col-auto mt-3 p-3 text-center bg-light-transparent px-3 py-2 rounded-pill">
-                        24 hodin denně, 7 dní v týdnu a po celé ČR.
+                    <p class="col-auto mt-3 p-3 text-center bg-light-transparent px-3 py-2 rounded-pill text-white">
+                        <small>24 hodin denně, 7 dní v týdnu a po celé ČR.</small>
                     </p>
                 </div>
                 <div class="row mt-2">
@@ -353,16 +429,16 @@
                         <a href="https://www.facebook.com/tymbecz">
                             <img class="mx-2" src="assets/img/fb-icon.svg"></a>
 
-                    <!-- Instagram icon -->
+                        <!-- Instagram icon -->
 
-                    <!--
-                        <a href="https://www.instagram.com/tymbe_cz/">
-                            <img class="mx-2" src="assets/img/ig-icon.svg" alt=""></a>
-                    -->
+                        <!--
+                                                <a href="https://www.instagram.com/tymbe_cz/">
+                                                    <img class="mx-2" src="assets/img/ig-icon.svg" alt=""></a>
+                                            -->
 
                         <a href="https://www.linkedin.com/company/tymbe"><img class="mx-2" src="assets/img/linkedin.svg" alt=""></a>
                     </div>
-                    <p class="col-12 text-center mt-3">
+                    <p class="col-12 text-center mt-3 text-white">
                         <small>© Copyright 2021 – Tymbe a.s.</small>
                     </p>
                 </div>
@@ -381,6 +457,39 @@
 
         <!-- Custom scripts -->
         <script src="assets/js/scripts.js"></script>
+
+        <script>
+            $('button#submitButton').click(function (e) {
+                e.preventDefault();
+                grecaptcha.ready(function () {
+                    grecaptcha.execute('6LfNCnMUAAAAAMwWYCZaqQvtn5TmuA3Uau07nj5g', {action: 'submit'}).then(function (token) {
+                        $.ajax({
+                            url: 'https://api.tymbeos1.cz/registration',
+                            type: 'post',
+                            dataType: 'json',
+                            data: {
+                                ...$('form#workerRegisterForm').serialize(),
+                                reCaptcha: token
+                            },
+                            success: function (data) {
+                                console.log(data)
+                            },
+                            error: function (data) {
+                                const errors = data.responseJSON.data.errors;
+                                console.log(errors);
+
+                                errors.forEach(err => {
+                                    const Err = document.createElement('li');
+                                    Err.innerHTML = err;
+                                    $('ul#errorContainer').append(Err);
+                                })
+                            }
+
+                        });
+                    });
+                });
+            });
+        </script>
 
     </body>
 </html>
