@@ -234,7 +234,7 @@
                         </div>
 
                     </div>
-                    <div class="col-12 col-md-3 text-center" data-aos="fade-up" data-aos-offset="200" data-aos-delay="400" data-aos-duration="1500">
+                    <div class="col-12 col-md-3 text-center" data-aos="fade-up" data-aos-offset="50" data-aos-delay="400" data-aos-duration="1500">
                         <svg class="ellipse-stats" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="25" cy="25" r="25" fill="#B6CD1E"/>
                         </svg>
@@ -568,7 +568,7 @@
                             <div class="carousel-inner">
                                 <div class="carousel-item active">
                                     <div
-                                        id="ring_container" class="row row-cols-1 row-cols-md-2 row-cols-lg-5 g-4 py-3"><!-- <div class="col">
+                                        id="ring_container" class="row g-4 py-3"><!-- <div class="col">
                                                                                                                                     <div class="card h-100 shadow border-0 m-2">
                                                                                                                                         <div class="card-body">
                                                                                                                                             <div class="row justify-content-between">
@@ -1094,8 +1094,12 @@
 
 
             function buildPeckaCard(ring) {
+
+                const ColContainer = document.createElement("div");
+                ColContainer.classList.add("col-12","col-md-6","col-lg-3");
+
                 const CardContainer = document.createElement("div");
-                CardContainer.classList.add("card", "h-100", "shadow", "border-0", "m-2");
+                CardContainer.classList.add("card", "h-100", "shadow", "border-0", "rounded","m-2");
 
                 const CardBody = document.createElement("div");
                 CardBody.classList.add("card-body");
@@ -1123,6 +1127,7 @@
                 const CardBodyHeaderTimeUntilIcon = document.createElement("img");
                 CardBodyHeaderTimeUntilIcon.classList.add("col-auto", "align-self-center");
                 CardBodyHeaderTimeUntilIcon.src = "assets/img/time-icon.svg";
+                CardBodyHeaderTimeUntilIcon.classList.add("me-1");
 
 
                 const CardBodyHeaderTimeUntil = document.createElement("span");
@@ -1139,48 +1144,50 @@
                 CardLocationContainer.classList.add("row", "mt-3");
 
                 const CardLocationContainerParagraph = document.createElement('p')
-                CardLocationContainer.classList.add("d-inline", "text-accent", "align-middle", "text-capitalize");
+                CardLocationContainerParagraph.classList.add("d-inline", "text-accent", "align-middle", "text-capitalize");
 
 
                 const CardLocationContainerIcon = document.createElement('img')
                 CardLocationContainerIcon.src = 'assets/img/location-icon.svg';
+                CardLocationContainerIcon.classList.add("me-1");
 
                 const CardLocationContainerText = document.createElement('span')
                 CardLocationContainerText.innerHTML = ring.place;
 
 
                 const CardPriceContainer = document.createElement("div");
-                CardPriceContainer.classList.add("row");
+                CardPriceContainer.classList.add("row","mb-3");
 
                 const CardMoneyContainer = document.createElement("div");
-                CardMoneyContainer.classList.add("col-6", "border-light");
+                CardMoneyContainer.classList.add("col-6", "border", "border-light", "text-center", "py-3");
 
                 const CardMoney = document.createElement("span");
                 CardMoney.classList.add("font-weight-bold", "h4");
                 CardMoney.innerHTML = ring.price_start;
                 const CardMoneyCurrency = document.createElement("small");
-                CardMoneyCurrency.innerHTML = 'Kč/h'
+                CardMoneyCurrency.innerHTML = ' Kč/h'
+                
 
                 const CardCreditContainer = document.createElement("div");
-                CardCreditContainer.classList.add("col-6", "border-light");
+                CardCreditContainer.classList.add("col-6", "border", "border-light", "text-center", "py-3");
 
                 const CardCredit = document.createElement("span");
                 CardCredit.classList.add("font-weight-bold", "h4");
                 CardCredit.innerHTML = ring.price_current;
 
                 const CardCreditCurrency = document.createElement("small");
-                CardCreditCurrency.innerHTML = 'Kč/h'
+                CardCreditCurrency.innerHTML = ' Kč/h'
 
                 const CardFooter = document.createElement("div");
-                CardFooter.classList.add("card-footer", "bg-white", "border-0");
+                CardFooter.classList.add("card-footer", "bg-white", "border-0","rounded");
                 const CardFooterAction = document.createElement("button");
                 CardFooterAction.classList.add("btn", "btn-primary", "rounded-pill", "w-100", "mb-3");
                 CardFooterAction.innerHTML = "Chci brigádu"
 
 
-                CardCreditCurrency.innerHTML = 'Kč/h'
+                CardCreditCurrency.innerHTML = ' Kč/h'
 
-
+                ColContainer.appendChild(CardContainer);
                 CardContainer.appendChild(CardBody);
                 CardBody.appendChild(CardBodyHeader);
                 CardBodyHeader.appendChild(CardBodyHeaderImageContainer);
@@ -1202,12 +1209,14 @@
                 CardMoneyContainer.appendChild(CardMoneyCurrency);
                 CardCreditContainer.appendChild(CardCredit);
                 CardCreditContainer.appendChild(CardCreditCurrency);
-                CardBody.appendChild(CardPriceContainer);
+                
                 CardPriceContainer.appendChild(CardCreditContainer);
-                CardBody.appendChild(CardFooter);
+                CardContainer.appendChild(CardFooter);
+                
+                CardFooter.appendChild(CardPriceContainer);
                 CardFooter.appendChild(CardFooterAction);
 
-                document.getElementById("ring_container").appendChild(CardContainer);
+                document.getElementById("ring_container").appendChild(ColContainer);
             };
 
 
