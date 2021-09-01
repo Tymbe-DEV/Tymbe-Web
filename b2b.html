@@ -1079,6 +1079,7 @@
 
 
         <script>
+
             let statsTemporaryWorkers,
                 statsWorkPlaces,
                 statsJobsTaken,
@@ -1133,6 +1134,7 @@
                 const CardBodyHeaderTimeUntil = document.createElement("span");
                 CardBodyHeaderTimeUntil.classList.add("font-weight-bold", "text-decoration-underline", "h6");
                 CardBodyHeaderTimeUntil.innerHTML = "Od" + ring.date_from;
+               
 
                 const CardHeadingContainer = document.createElement("div");
                 CardHeadingContainer.classList.add("row", "mt-3");
@@ -1231,6 +1233,9 @@
                 statsJobsTakenMobile.innerHTML = Math.floor(stats.firma_3) + '%';
                 statsSatisfiedLeadersMobile.innerHTML = Math.floor(stats.firma_4) + '%';
             }
+
+            
+          
 
             $.get("https://api.tymbeos1.cz/rings", function (response) {
                 buildPeckaCard(response.pecka);
