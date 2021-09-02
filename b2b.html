@@ -1,574 +1,899 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta
-        name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
-        <title>Tymbe</title>
+    <title>Tymbe</title>
 
-        <link
-        href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet" />
 
-        <!-- Coolvetica font -->
-        <link
-        rel="stylesheet" href="https://use.typekit.net/ykm6nsb.css">
+    <!-- Coolvetica font -->
+    <link rel="stylesheet" href="https://use.typekit.net/ykm6nsb.css" />
 
-        <!-- AOS animations-->
-        <link
-        rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <!-- AOS animations-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-        <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#2b5797">
-        <meta
-        name="theme-color" content="#ffffff">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="theme-color" content="#ffffff" />
 
-        <!--Seznam SKLIK:-->
-        <script type="text/javascript">
-            /* <![CDATA[ */
-            var seznam_retargeting_id = 139023;
-            /* ]]> */
-        </script>
-        <script type="text/javascript" src="//c.imedia.cz/js/retargeting.js"></script>
+    <!--Seznam SKLIK:-->
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      var seznam_retargeting_id = 139023;
+      /* ]]> */
+    </script>
+    <script
+      type="text/javascript"
+      src="//c.imedia.cz/js/retargeting.js"
+    ></script>
 
+    <!-- Global site tag (gtag.js) - Google Ads: 967437153 -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-967437153"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        <!-- Global site tag (gtag.js) - Google Ads: 967437153 -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-967437153"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
+      gtag("config", "AW-967437153");
+    </script>
+  </head>
+  <body>
+    <header class="container-fluid pt-3">
+      <div class="container">
+        <!-- Desktop nav -->
+        <nav
+          class="
+            d-none d-md-block
+            navbar navbar-expand-lg navbar-light
+            bg-white
+          "
+        >
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="assets/img/tymbe-logo.svg" />
+            </a>
+            <p class="d-flex align-items-center mb-0">
+              <span class="slogan-text"
+                >Transforming<br />
+                the workplace</span
+              >
+            </p>
 
-            gtag('config', 'AW-967437153');
-        </script>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarTogglerDemo02"
+              aria-controls="navbarTogglerDemo02"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="index.html">
+                    <img src="assets/img/menu-icon1.svg" />
+                    Pro brigádníky</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="b2b.html">
+                    <img src="assets/img/menu-icon2.svg" />
+                    Pro firmy</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">
+                    <img src="assets/img/menu-icon3.svg" />
+                    O společnosti</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">
+                    <img src="assets/img/menu-icon4.svg" />
+                    Kontakty</a
+                  >
+                </li>
+              </ul>
+              <a href="https://tymbe.com/tymber/login">
+                <button class="btn btn-outline-primary rounded-pill me-2">
+                  Přihlásit
+                </button>
+              </a>
+              <a href="formular_b2b.html">
+                <button class="btn btn-primary rounded-pill">Registrace</button>
+              </a>
+            </div>
+          </div>
+        </nav>
 
-    </head>
-    <body>
+        <!-- Mobile nav -->
+        <nav class="d-md-none navbar navbar-expand-lg navbar-light bg-white">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="assets/img/tymbe-logo.svg" />
+            </a>
+            <p class="d-flex align-items-center mb-0">
+              <span class="slogan-text"
+                >Transforming<br />
+                the workplace</span
+              >
+            </p>
 
-        <header class="container-fluid pt-3">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarTogglerDemo02"
+              aria-controls="navbarTogglerDemo02"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+              <ul class="navbar-nav text-center me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link py-3 border-bottom"
+                    aria-current="page"
+                    href="index.html"
+                  >
+                    <img src="assets/img/menu-icon1.svg" />
+                    Pro brigádníky</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link py-3 border-bottom active" href="b2b.html">
+                    <img src="assets/img/menu-icon2.svg" />
+                    Pro firmy</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link py-3 border-bottom" href="about.html">
+                    <img src="assets/img/menu-icon3.svg" />
+                    O společnosti</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link py-3" href="contact.html">
+                    <img src="assets/img/menu-icon4.svg" />
+                    Kontakty</a
+                  >
+                </li>
+              </ul>
+              <div class="text-center pb-3">
+                <a
+                  class="btn-secondary rounded-pill me-2"
+                  href="https://tymbe.com/tymber/login"
+                >
+                  Přihlásit
+                </a>
+                <a
+                  class="btn btn-primary rounded-pill"
+                  href="formular_b2c.html"
+                >
+                  Registrace
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div class="container">
+        <div class="row my-5">
+          <div class="col-12 col-md-7 align-self-center">
+            <h1
+              data-aos="fade-up"
+              data-aos-offset="200"
+              data-aos-delay="50"
+              data-aos-duration="1500"
+              class="text-accent"
+            >
+              “Ty–brigády mi zajistí brigádníky bez papírování”
+            </h1>
+            <p
+              data-aos="fade-up"
+              data-aos-offset="200"
+              data-aos-delay="50"
+              data-aos-duration="1500"
+            >
+              Čas ušetřený díky službě Ty–brigády umožnil v Pilulce zaměřit síly
+              na rozvoj dalšího byznysu.
+            </p>
+            <div class="d-flex align-items-center">
+              <a
+                class="b2b-cat btn btn-primary rounded-pill me-2"
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-delay="400"
+                data-aos-duration="1500"
+                href="formular_b2b.html"
+              >
+                Chci brigádníky
+              </a>
+
+              <a
+                class="b2b-cat btn btn-secondary rounded-pill"
+                data-aos="fade-up"
+                data-aos-offset="200"
+                data-aos-delay="400"
+                data-aos-duration="1500"
+                href="formular_b2c.html"
+              >
+                Jsem brigádník
+              </a>
+            </div>
+          </div>
+          <div class="col-12 col-md-5 align-self-center text-center">
+            <img
+              class="img-fluid mt-5 mt-md-0"
+              data-aos="fade-left"
+              data-aos-offset="200"
+              data-aos-delay="50"
+              data-aos-duration="1500"
+              src="assets/img/header-graphic-b2b.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="row py-4 d-none d-lg-flex">
+          <div
+            class="col-12 col-md-3 text-center"
+            data-aos="fade-up"
+            data-aos-offset="50"
+            data-aos-delay="200"
+            data-aos-duration="1500"
+          >
+            <svg
+              class="ellipse-stats"
+              width="50"
+              height="50"
+              viewbox="0 0 50 50"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="25" cy="25" r="25" fill="#B6CD1E" />
+            </svg>
+
+            <div class="number-stats">
+              <p
+                id="statsTemporaryWorkers"
+                data-aos="fade-up"
+                class="h1 text-decoration-underline text-accent"
+              >
+                12 920
+              </p>
+              <span class="text-accent">Brigádníků k dispozici</span>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-3 text-center"
+            data-aos="fade-up"
+            data-aos-offset="50"
+            data-aos-delay="200"
+            data-aos-duration="1500"
+          >
+            <svg
+              class="ellipse-stats"
+              width="50"
+              height="50"
+              viewbox="0 0 50 50"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="25" cy="25" r="25" fill="#B6CD1E" />
+            </svg>
+
+            <div class="number-stats">
+              <p
+                id="statsWorkPlaces"
+                data-aos="fade-up"
+                class="h1 text-decoration-underline text-accent"
+              >
+                68
+              </p>
+              <p class="text-accent">Míst, kde to šlape</p>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-3 text-center"
+            data-aos="fade-up"
+            data-aos-offset="50"
+            data-aos-delay="300"
+            data-aos-duration="1500"
+          >
+            <svg
+              class="ellipse-stats"
+              width="50"
+              height="50"
+              viewbox="0 0 50 50"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="25" cy="25" r="25" fill="#B6CD1E" />
+            </svg>
+
+            <div class="number-stats">
+              <p
+                id="statsJobsTaken"
+                data-aos="fade-up"
+                class="h1 text-decoration-underline text-accent"
+              >
+                95%
+              </p>
+              <p class="text-accent">Brigád obsazeno</p>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-3 text-center"
+            data-aos="fade-up"
+            data-aos-offset="50"
+            data-aos-delay="400"
+            data-aos-duration="1500"
+          >
+            <svg
+              class="ellipse-stats"
+              width="50"
+              height="50"
+              viewbox="0 0 50 50"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="25" cy="25" r="25" fill="#B6CD1E" />
+            </svg>
+
+            <div class="number-stats">
+              <p
+                id="statsSatisfiedLeaders"
+                data-aos="fade-up"
+                class="h1 text-decoration-underline text-accent"
+              >
+                98%
+              </p>
+              <p class="text-accent">Vedoucích spokojeno</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row py-4 d-lg-none">
+          <div
+            class="col-12 col-md-3 text-center"
+            data-aos="fade-up"
+            data-aos-offset="50"
+            data-aos-delay="200"
+            data-aos-duration="1500"
+          >
+            <div class="row justify-content-between">
+              <div class="col-6 align-self-center">
+                <svg
+                  class="ellipse-stats"
+                  width="50"
+                  height="50"
+                  viewbox="0 0 50 50"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="25" cy="25" r="25" fill="#B6CD1E" />
+                </svg>
+
+                <div class="number-stats">
+                  <p
+                    id="statsTemporaryWorkersMobile"
+                    data-aos="fade-up"
+                    class="h1 text-decoration-underline text-accent mb-0"
+                  >
+                    12 920
+                  </p>
+                </div>
+              </div>
+
+              <p class="col-6 text-accent mb-0 align-self-center text-nowrap">
+                Brigádníků k dispozici
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-3 text-center"
+            data-aos="fade-up"
+            data-aos-offset="50"
+            data-aos-delay="200"
+            data-aos-duration="1500"
+          >
+            <div class="row justify-content-between">
+              <div class="col-6 align-self-center">
+                <svg
+                  class="ellipse-stats"
+                  width="50"
+                  height="50"
+                  viewbox="0 0 50 50"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="25" cy="25" r="25" fill="#B6CD1E" />
+                </svg>
+
+                <div class="number-stats">
+                  <p
+                    id="statsWorkPlacesMobile"
+                    data-aos="fade-up"
+                    class="h1 text-decoration-underline text-accent mb-0"
+                  >
+                    68
+                  </p>
+                </div>
+              </div>
+
+              <p class="col-6 text-accent align-self-center mb-0">
+                Míst, kde to šlape
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-3 text-center"
+            data-aos="fade-up"
+            data-aos-offset="50"
+            data-aos-delay="300"
+            data-aos-duration="1500"
+          >
+            <div class="row justify-content-between">
+              <div class="col-6 align-self-center">
+                <svg
+                  class="ellipse-stats"
+                  width="50"
+                  height="50"
+                  viewbox="0 0 50 50"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="25" cy="25" r="25" fill="#B6CD1E" />
+                </svg>
+
+                <div class="number-stats">
+                  <p
+                    id="statsJobsTakenMobile"
+                    data-aos="fade-up"
+                    class="h1 text-decoration-underline text-accent mb-0"
+                  >
+                    95%
+                  </p>
+                </div>
+              </div>
+
+              <p class="col-6 text-accent align-self-center mb-0">
+                Brigád obsazeno
+              </p>
+            </div>
+          </div>
+          <div
+            class="col-12 col-md-3 text-center"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="400"
+            data-aos-duration="1500"
+          >
+            <div class="row justify-content-between">
+              <div class="col-6 align-self-center">
+                <svg
+                  class="ellipse-stats"
+                  width="50"
+                  height="50"
+                  viewbox="0 0 50 50"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="25" cy="25" r="25" fill="#B6CD1E" />
+                </svg>
+
+                <div class="number-stats">
+                  <p
+                    id="statsSatisfiedLeadersMobile"
+                    data-aos="fade-up"
+                    class="h1 text-decoration-underline text-accent mb-0"
+                  >
+                    12 920
+                  </p>
+                </div>
+              </div>
+
+              <p class="col-6 text-accent align-self-center mb-0">
+                Vedoucích spokojeno
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row justify-content-center mt-5">
+          <h2 class="col-12 align-self-center text-center text-accent my-5">
+            Kvalitní lidi přijdou přes Ty–brigády
+          </h2>
+
+          <p class="col-12 col-lg-10 col-xl-9 text-center">
+            Umíme najít brigádníky všude, kde je potřebuješ. Nabízíme jim totiž
+            motivační výhody, které jinde nedostanou. Kdo pozná Ty–brigády,
+            zůstává s námi, protože my jsme budoucnost. Ve férovosti, rychlosti
+            a jednoduchosti obsluhy nemáme konkurenci.
+          </p>
+        </div>
+        <div class="row">
+          <div
+            class="col-12 col-md-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="100"
+            data-aos-duration="1500"
+          >
+            <div class="d-flex justify-content-center">
+              <img src="assets/img/placeholder-img.png" />
+            </div>
+            <p class="text-accent">Tisíce prověřených brigádníků</p>
+            <p>
+              Všechny papíry si každý brigádník nahraje do apky a my hned
+              vidíme, na které brigády se může přihlásit.
+            </p>
+          </div>
+          <div
+            class="col-12 col-md-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="200"
+            data-aos-duration="1500"
+          >
+            <div class="d-flex justify-content-center">
+              <img src="assets/img/placeholder-img.png" />
+            </div>
+            <p class="text-accent">Co neumí, to je naučíme za tebe</p>
+            <p>
+              Všechny papíry si každý brigádník nahraje do apky a my hned
+              vidíme, na které brigády se může přihlásit.
+            </p>
+          </div>
+          <div
+            class="col-12 col-md-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="300"
+            data-aos-duration="1500"
+          >
+            <div class="d-flex justify-content-center">
+              <img src="assets/img/placeholder-img.png" />
+            </div>
+            <p class="text-accent">Skvělá konkurenční cena</p>
+            <p>
+              Výplata je férová pro lidi i pro firmy. V každém okamžiku máš
+              přesný přehled o tom, kolik tě stojí hodina práce.
+            </p>
+          </div>
+          <div
+            class="col-12 col-md-6 col-lg-3"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="400"
+            data-aos-duration="1500"
+          >
+            <div class="d-flex justify-content-center">
+              <img src="assets/img/placeholder-img.png" />
+            </div>
+            <p class="text-accent">Otravnou administrativu děláme místo tebe</p>
+            <p>
+              Náš systém je unikátní v tom, že administrativa je kompletně
+              online a firemní účet ti umožňuje mít nonstop kontrolu.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-main-light py-5">
+      <div class="container my-5">
+        <div class="row justify-content-center">
+          <div class="col-12 text-center">
+            <h2 class="text-accent">Jak to funguje?</h2>
+            <p>
+              Nejlepší je vyzkoušet si Ty–brigády naostro. Registrace je zdarma
+              a platit budeš jen za odpracované hodiny. Žádné riziko!
+            </p>
+          </div>
+        </div>
+        <div class="row my-5">
+          <div
+            class="col-12 col-md-4"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="100"
+            data-aos-duration="1500"
+          >
+            <img src="assets/img/step1-icon.svg" alt="" />
+            <h6 class="mt-3">Vyplníš kontaktní formulář</h6>
+            <p>Obratem se s tebou spojí náš zákaznický tým.</p>
+          </div>
+          <div
+            class="col-12 col-md-4"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="300"
+            data-aos-duration="1500"
+          >
+            <img src="assets/img/step2-icon.svg" alt="" />
+            <h6 class="mt-3">Založíme společně profil vaší firmy</h6>
+            <p>
+              Vytvořit firemní účet je otázkou pár minut. Se vším ti pomůžeme.
+            </p>
+          </div>
+          <div
+            class="col-12 col-md-4"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="500"
+            data-aos-duration="1500"
+          >
+            <img src="assets/img/step3-icon.svg" alt="" />
+            <h6 class="mt-3">Vytvoříš první volnou pozici</h6>
+            <p>
+              Stačí zadat pár základních informací o náplni práce a požadavcích
+              a o zbytek se postarají Ty–brigády!
+            </p>
+          </div>
+          <div class="col-12 text-center">
+            <!-- <a href="formular_b2b.html">
+              <button class="btn btn-primary rounded-pill">Jdu do toho</button>
+            </a> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5">
+      <div class="container">
+        <div class="row justify-content-center text-center">
+          <div class="col-12">
+            <h2 class="text-accent" style="font-size: 28px">
+              Firmy, které nám důvěřují
+            </h2>
+            <p>
+              Tady už Ty–brigády pomáhají zvládat náročné každodenní úkoly i
+              nárazový nárůst práce v klíčových obdobích roku.
+            </p>
+          </div>
+          <div
+            class="col-6 col-md-3 mt-4 partner-logo-container"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="100"
+            data-aos-duration="1500"
+          >
+            <img class="m-2" src="assets/img/pilulka-logo.png" alt="" />
+          </div>
+          <div
+            class="col-6 col-md-3 mt-4 partner-logo-container"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="200"
+            data-aos-duration="1500"
+          >
+            <img class="m-2" src="assets/img/tesco-logo-lg.png" alt="" />
+          </div>
+          <div
+            class="col-6 col-md-3 mt-4 partner-logo-container"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="300"
+            data-aos-duration="1500"
+          >
+            <img class="m-2" src="assets/img/zasilkovna-logo.png" alt="" />
+          </div>
+          <div
+            class="col-6 col-md-3 mt-4 partner-logo-container"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="400"
+            data-aos-duration="1500"
+          >
+            <img class="m-2" src="assets/img/ups-logo.png" alt="" />
+          </div>
+          <div class="col-12 mt-4">
+            <a href="formular_b2b.html">
+              <button class="btn btn-primary rounded-pill">Zjistit více</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container banner-bg rounded mb-5 d-none d-md-block">
+      <div class="row justify-content-center mt-5">
+        <div class="col-11">
+          <div class="row">
+            <div class="col-12 col-md-7 align-self-center">
+              <h2 class="text-accent">Ty–brigády jsou to, co potřebuju!</h2>
+              <a href="formular_b2b.html">
+                <button class="btn btn-primary rounded-pill mt-5 mt-lg-3">
+                  Chci brigádníky
+                </button>
+              </a>
+            </div>
             <div
-                class="container">
-
-                <!-- Desktop nav -->
-                <nav class="d-none d-md-block navbar navbar-expand-lg navbar-light bg-white">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#">
-                            <img src="assets/img/tymbe-logo.svg">
-                        </a>
-                        <p class="d-flex align-items-center mb-0">
-                            <span class="slogan-text">Transforming<br>
-                                the workplace</span>
-                        </p>
-
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="index.html">
-                                        <img src="assets/img/menu-icon1.svg">
-                                        Pro brigádníky</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="b2b.html">
-                                        <img src="assets/img/menu-icon2.svg">
-                                        Pro firmy</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="about.html">
-                                        <img src="assets/img/menu-icon3.svg">
-                                        O společnosti</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">
-                                        <img src="assets/img/menu-icon4.svg">
-                                        Kontakty</a>
-                                </li>
-                            </ul>
-                            <a href="https://tymbe.com/tymber/login">
-                                <button class="btn btn-outline-primary rounded-pill me-2">
-                                    Přihlásit
-                                </button>
-                            </a>
-                            <a href="formular_b2b.html">
-                                <button class="btn btn-primary rounded-pill">
-                                    Registrace
-                                </button>
-                            </a>
-
-                        </div>
-                    </div>
-                </nav>
-
-                <!-- Mobile nav -->
-                <nav class="d-md-none navbar navbar-expand-lg navbar-light bg-white">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#">
-                            <img src="assets/img/tymbe-logo.svg">
-                        </a>
-                        <p class="d-flex align-items-center mb-0">
-                            <span class="slogan-text">Transforming<br>
-                                the workplace</span>
-                        </p>
-
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                            <ul class="navbar-nav text-center me-auto mb-2 mb-lg-0">
-                                <li class="nav-item ">
-                                    <a class="nav-link py-3 border-bottom" aria-current="page" href="index.html">
-                                        <img src="assets/img/menu-icon1.svg">
-                                        Pro brigádníky</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link py-3 border-bottom active" href="b2b.html">
-                                        <img src="assets/img/menu-icon2.svg">
-                                        Pro firmy</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link py-3 border-bottom" href="about.html">
-                                        <img src="assets/img/menu-icon3.svg">
-                                        O společnosti</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link py-3" href="contact.html">
-                                        <img src="assets/img/menu-icon4.svg">
-                                        Kontakty</a>
-                                </li>
-                            </ul>
-                            <div class="text-center pb-3">
-                                <a class="btn btn-outline-primary rounded-pill me-2" href="https://tymbe.com/tymber/login">
-
-                                    Přihlásit
-                                </a>
-                                <a class="btn btn-primary rounded-pill" href="formular_b2c.html">
-
-                                    Registrace
-                                </a>
-                            </div>
-
-
-                        </div>
-                    </div>
-                </nav>
+              class="col-12 col-md-5 align-self-center"
+              style="margin-top: -70px"
+            >
+              <img
+                src="assets/img/header-graphic.png"
+                data-aos="fade-left"
+                data-aos-offset="200"
+                data-aos-delay="200"
+                data-aos-duration="1500"
+                alt=""
+                style="max-height: 440px"
+              />
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="container">
-                <div class="row my-5">
-                    <div class="col-12 col-md-7 align-self-center">
-                        <h1 data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1500" class="text-accent">
-                            “Ty–brigády mi zajistí brigádníky bez papírování”
-                        </h1>
-                        <p data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1500">
-                            Čas ušetřený díky službě Ty–brigády umožnil v Pilulce zaměřit síly na rozvoj dalšího byznysu.
-                        </p>
-                        <a class="btn btn-primary rounded-pill" data-aos="fade-up" data-aos-offset="200" data-aos-delay="400" data-aos-duration="1500" href="formular_b2b.html">
-
-                            Chci brigádníky
-
-                        </a>
-
-                        <a class="btn btn-outline-primary rounded-pill mt-3 mt-md-0" data-aos="fade-up" data-aos-offset="200" data-aos-delay="400" data-aos-duration="1500" href="formular_b2c.html">
-
-                            Jsem brigádník
-                        </a>
-
-
-                    </div>
-                    <div class="col-12 col-md-5 align-self-center text-center">
-                        <img class="img-fluid mt-5 mt-md-0" data-aos="fade-left" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1500" src="assets/img/header-graphic-b2b.png" alt="">
-                    </div>
-
-                </div>
-                <div class="row py-4 d-none d-lg-flex">
-                    <div class="col-12 col-md-3 text-center" data-aos="fade-up" data-aos-offset="50" data-aos-delay="200" data-aos-duration="1500">
-                        <svg class="ellipse-stats" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="25" cy="25" r="25" fill="#B6CD1E"/>
-                        </svg>
-
-                        <div class="number-stats">
-                            <p id="statsTemporaryWorkers" data-aos="fade-up" class="h1 text-decoration-underline text-accent">12 920</p>
-                            <p class="text-accent">
-                                Brigádníků k dispozici
-                            </p>
-                        </div>
-
-
-                    </div>
-                    <div class="col-12 col-md-3 text-center" data-aos="fade-up" data-aos-offset="50" data-aos-delay="200" data-aos-duration="1500">
-                        <svg class="ellipse-stats" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="25" cy="25" r="25" fill="#B6CD1E"/>
-                        </svg>
-
-                        <div class="number-stats">
-                            <p id="statsWorkPlaces" data-aos="fade-up" class="h1 text-decoration-underline text-accent">68</p>
-                            <p class="text-accent">
-                                Míst, kde to šlape
-                            </p>
-                        </div>
-
-                    </div>
-                    <div class="col-12 col-md-3 text-center" data-aos="fade-up" data-aos-offset="50" data-aos-delay="300" data-aos-duration="1500">
-                        <svg class="ellipse-stats" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="25" cy="25" r="25" fill="#B6CD1E"/>
-                        </svg>
-
-                        <div class="number-stats">
-                            <p id="statsJobsTaken" data-aos="fade-up" class="h1 text-decoration-underline text-accent">95%</p>
-                            <p class="text-accent">
-                                Brigád obsazeno
-                            </p>
-                        </div>
-
-                    </div>
-                    <div class="col-12 col-md-3 text-center" data-aos="fade-up" data-aos-offset="50" data-aos-delay="400" data-aos-duration="1500">
-                        <svg class="ellipse-stats" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="25" cy="25" r="25" fill="#B6CD1E"/>
-                        </svg>
-
-                        <div class="number-stats">
-                            <p id="statsSatisfiedLeaders" data-aos="fade-up" class="h1 text-decoration-underline text-accent">98%</p>
-                            <p class="text-accent">
-                                Vedoucích spokojeno
-                            </p>
-                        </div>
-
-
-                    </div>
-                </div>
-
-                <div class="row py-4 d-lg-none">
-                    <div class="col-12 col-md-3 text-center" data-aos="fade-up" data-aos-offset="50" data-aos-delay="200" data-aos-duration="1500">
-
-                        <div class="row justify-content-between">
-                            <div class="col-6 align-self-center">
-                                <svg class="ellipse-stats" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="25" cy="25" r="25" fill="#B6CD1E"/>
-                                </svg>
-
-                                <div class="number-stats">
-                                    <p id="statsTemporaryWorkersMobile" data-aos="fade-up" class="h1 text-decoration-underline text-accent mb-0">12 920</p>
-                                </div>
-                            </div>
-
-
-                            <p class="col-6 text-accent  mb-0 align-self-center">
-                                Brigádníků k dispozici
-                            </p>
-                        </div>
-
-
-                    </div>
-                    <div class="col-12 col-md-3 text-center" data-aos="fade-up" data-aos-offset="50" data-aos-delay="200" data-aos-duration="1500">
-
-                        <div class="row justify-content-between">
-                            <div class="col-6 align-self-center">
-                                <svg class="ellipse-stats" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="25" cy="25" r="25" fill="#B6CD1E"/>
-                                </svg>
-
-                                <div class="number-stats">
-                                    <p id="statsWorkPlacesMobile" data-aos="fade-up" class="h1 text-decoration-underline text-accent  mb-0">68</p>
-
-                                </div>
-                            </div>
-
-
-                            <p class="col-6 text-accent align-self-center  mb-0">
-                                Míst, kde to šlape
-                            </p>
-                        </div>
-
-
-                    </div>
-                    <div class="col-12 col-md-3 text-center" data-aos="fade-up" data-aos-offset="50" data-aos-delay="300" data-aos-duration="1500">
-
-                        <div class="row justify-content-between">
-                            <div class="col-6 align-self-center">
-                                <svg class="ellipse-stats" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="25" cy="25" r="25" fill="#B6CD1E"/>
-                                </svg>
-
-
-                                <div class="number-stats">
-                                    <p id="statsJobsTakenMobile" data-aos="fade-up" class="h1 text-decoration-underline text-accent  mb-0">95%</p>
-
-                                </div>
-                            </div>
-
-
-                            <p class="col-6 text-accent align-self-center  mb-0">
-                                Brigád obsazeno
-                            </p>
-                        </div>
-
-
-                    </div>
-                    <div class="col-12 col-md-3 text-center" data-aos="fade-up" data-aos-offset="200" data-aos-delay="400" data-aos-duration="1500">
-
-                        <div class="row justify-content-between">
-                            <div class="col-6 align-self-center">
-                                <svg class="ellipse-stats" width="50" height="50" viewbox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="25" cy="25" r="25" fill="#B6CD1E"/>
-                                </svg>
-
-
-                                <div class="number-stats">
-                                    <p id="statsSatisfiedLeadersMobile" data-aos="fade-up" class="h1 text-decoration-underline text-accent mb-0">12 920</p>
-
-                                </div>
-                            </div>
-
-
-                            <p class="col-6 text-accent align-self-center  mb-0">
-                                Vedoucích spokojeno
-                            </p>
-                        </div>
-
-
-                    </div>
-                </div>
-
+    <section class="container bg-main-light py-5 rounded mb-5 d-md-none">
+      <div class="row justify-content-center mt-5">
+        <div class="col-11">
+          <div class="row">
+            <div class="col-12 col-md-7 align-self-center">
+              <h2 class="text-accent">Ty–brigády jsou to, co potřebuju!</h2>
+              <a href="formular_b2b.html">
+                <button class="btn btn-primary rounded-pill mt-3">
+                  Chci brigádníky
+                </button>
+              </a>
             </div>
-
-
-        </header>
-
-        <section class="py-5">
-            <div class="container">
-                <div class="row justify-content-center mt-5">
-                    <h2 class="col-12 align-self-center text-center text-accent my-5">
-                        Kvalitní lidi přijdou přes Ty–brigády
-                    </h2>
-
-                    <p class="col-12 text-center">
-                        Umíme najít brigádníky všude, kde je potřebuješ. Nabízíme jim totiž motivační výhody, které jinde nedostanou. Kdo pozná Ty–brigády, zůstává s námi, protože my jsme budoucnost. Ve férovosti, rychlosti a jednoduchosti obsluhy nemáme konkurenci.
-                    </p>
-                </div>
-                <div class="row">
-                    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1500">
-                        <img src="assets/img/placeholder-img.png">
-                        <p class="text-accent">
-                            Tisíce prověřených brigádníků
-                        </p>
-                        <p>
-                            Všechny papíry si každý brigádník nahraje do apky a my hned vidíme, na které brigády se může přihlásit.
-                        </p>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="1500">
-                        <img src="assets/img/placeholder-img.png">
-                        <p class="text-accent">
-                            Co neumí, to je naučíme za tebe
-                        </p>
-                        <p>
-                            Všechny papíry si každý brigádník nahraje do apky a my hned vidíme, na které brigády se může přihlásit.
-                        </p>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-offset="200" data-aos-delay="300" data-aos-duration="1500">
-                        <img src="assets/img/placeholder-img.png">
-                        <p class="text-accent">
-                            Skvělá konkurenční cena
-                        </p>
-                        <p>
-                            Výplata je férová pro lidi i pro firmy. V každém okamžiku máš přesný přehled o tom, kolik tě stojí hodina práce.
-                        </p>
-                    </div>
-                    <div class="col-12 col-md-6 col-lg-3" data-aos="fade-up" data-aos-offset="200" data-aos-delay="400" data-aos-duration="1500">
-                        <img src="assets/img/placeholder-img.png">
-                        <p class="text-accent">
-                            Otravnou administrativu děláme místo tebe
-                        </p>
-                        <p>Náš systém je unikátní v tom, že administrativa je kompletně online a firemní účet ti umožňuje mít nonstop kontrolu.
-                        </p>
-                    </div>
-                </div>
-
+            <div class="col-12 col-md-5 align-self-center">
+              <img
+                src="assets/img/header-graphic.png"
+                data-aos="fade-left"
+                data-aos-offset="200"
+                data-aos-delay="200"
+                data-aos-duration="1500"
+                alt=""
+                style="max-height: 440px"
+              />
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="container">
+      <div class="row py-5">
+        <div
+          class="
+            d-none d-lg-block
+            col-12 col-md-6
+            text-center
+            align-self-center
+          "
+        >
+          <img
+            class="my-5 my-md-0"
+            data-aos="fade-right"
+            data-aos-offset="200"
+            data-aos-delay="200"
+            data-aos-duration="1500"
+            src="assets/img/phone-mockup2.png"
+            alt=""
+          />
+        </div>
+        <div class="col-12 col-md-6 align-self-center">
+          <h4 class="d-none d-lg-block text-accent">
+            Zajímat tě budou taky Ty–školení!
+          </h4>
+          <h2
+            class="d-block d-lg-none text-accent mb-4"
+            style="font-size: 28px"
+          >
+            Zajímat tě budou taky <br />
+            Ty–školení!
+          </h2>
+          <p class="mb-4">
+            Potřebuješ, aby brigádníci uměli ovládat pokladní systém přesně ve
+            vašem hypermarketu? To umíme! Ty–školení jsou další služba na
+            platformě Tymbe. Vytvoříme e-learning kurz přímo na míru potřebám
+            vaší firmy a přímo v apce Ty–brigády jím brigádníci projdou. Super,
+            ne?
+          </p>
+          <a href="formular_b2b.html">
+            <button class="btn-secondary rounded-pill">Zjistit více</button>
+          </a>
+          <div
+            class="
+              d-flex
+              justify-content-end
+              pe-3
+              align-self-center
+              d-block d-lg-none
+            "
+          >
+            <img
+              class="my-5 my-md-0"
+              data-aos="fade-right"
+              data-aos-offset="200"
+              data-aos-delay="200"
+              data-aos-duration="1500"
+              src="assets/img/phone-mockup2.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </section>
 
-        </section>
-
-        <section class="bg-main-light py-5">
-            <div class="container my-5">
-                <div class="row justify-content-center ">
-                    <div class="col-12 text-center">
-                        <h2 class="text-accent">
-                            Jak to funguje?
-                        </h2>
-                        <p>Nejlepší je vyzkoušet si Ty–brigády naostro. Registrace je zdarma a platit budeš jen za odpracované hodiny. Žádné riziko!</p>
-                    </div>
-                </div>
-                <div class="row my-5">
-                    <div class="col-12 col-md-4" data-aos="fade-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1500">
-                        <img src="assets/img/step1-icon.svg" alt="">
-                        <h6 class="mt-3">Vyplníš kontaktní formulář</h6>
-                        <p>
-                            Obratem se s tebou spojí náš zákaznický tým.
-                        </p>
-                    </div>
-                    <div class="col-12 col-md-4" data-aos="fade-up" data-aos-offset="200" data-aos-delay="300" data-aos-duration="1500">
-                        <img src="assets/img/step2-icon.svg" alt="">
-                        <h6 class="mt-3">Založíme společně profil vaší firmy</h6>
-                        <p>
-                            Vytvořit firemní účet je otázkou pár minut. Se vším ti pomůžeme.
-                        </p>
-                    </div>
-                    <div class="col-12 col-md-4" data-aos="fade-up" data-aos-offset="200" data-aos-delay="500" data-aos-duration="1500">
-                        <img src="assets/img/step3-icon.svg" alt="">
-                        <h6 class="mt-3">Vytvoříš první volnou pozici</h6>
-                        <p>
-                            Stačí zadat pár základních informací 
-                                                                                                            o náplni práce a požadavcích a o zbytek se postarají Ty–brigády!
-                        </p>
-                    </div>
-                    <div class="col-12 text-center">
-                        <a href="formular_b2b.html">
-                            <button class="btn btn-primary rounded-pill">
-                                Jdu do toho
-                            </button>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-5">
-            <div class="container">
-                <div class="row justify-content-center text-center">
-                    <div class="col-12">
-                        <h2 class="text-accent">
-                            Firmy, které nám důvěřují
-                        </h2>
-                        <p>
-                            Tady už Ty–brigády pomáhají zvládat náročné každodenní úkoly i nárazový nárůst práce v klíčových obdobích roku.
-                        </p>
-
-                    </div>
-                    <div class="col-12 col-md-3 mt-4" data-aos="fade-up" data-aos-offset="200" data-aos-delay="100" data-aos-duration="1500">
-                        <img class="m-2" src="assets/img/pilulka-logo.png" alt="">
-                    </div>
-                    <div class="col-12 col-md-3 mt-4" data-aos="fade-up" data-aos-offset="200" data-aos-delay="200" data-aos-duration="1500">
-                        <img class="m-2" src="assets/img/tesco-logo-lg.png" alt="">
-                    </div>
-                    <div class="col-12 col-md-3 mt-4" data-aos="fade-up" data-aos-offset="200" data-aos-delay="300" data-aos-duration="1500">
-                        <img class="m-2" src="assets/img/zasilkovna-logo.png" alt="">
-                    </div>
-                    <div class="col-12 col-md-3 mt-4" data-aos="fade-up" data-aos-offset="200" data-aos-delay="400" data-aos-duration="1500">
-                        <img class="m-2" src="assets/img/ups-logo.png" alt="">
-                    </div>
-                    <div class="col-12 mt-4">
-                        <a href="formular_b2b.html">
-                            <button class="btn btn-primary rounded-pill">
-                                Zjistit více
-                            </button>
-                        </a>
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="container banner-bg rounded mb-5 d-none d-md-block">
-            <div class="row justify-content-center mt-5">
-                <div class="col-11">
-                    <div class="row">
-                        <div class="col-12 col-md-7 align-self-center">
-                            <h2 class="text-accent">Ty–brigády jsou to, co potřebuju!</h2>
-                            <a href="formular_b2b.html">
-                                <button class="btn btn-primary rounded-pill mt-3">
-                                    Chci brigádníky
-                                </button>
-                            </a>
-
-                        </div>
-                        <div class="col-12 col-md-5 align-self-center" style="margin-top:-70px">
-                            <img src="assets/img/header-graphic.png" data-aos="fade-left" data-aos-offset="200" data-aos-delay="200" data-aos-duration="1500" alt="" style="max-height:440px;">
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="container bg-main-light py-5 rounded mb-5 d-md-none">
-            <div class="row justify-content-center mt-5">
-                <div class="col-11">
-                    <div class="row">
-                        <div class="col-12 col-md-7 align-self-center">
-                            <h2 class="text-accent">Ty–brigády jsou to, co potřebuju!</h2>
-                            <a href="formular_b2b.html">
-                                <button class="btn btn-primary rounded-pill mt-3">
-                                    Chci brigádníky
-                                </button>
-                            </a>
-
-                        </div>
-                        <div class="col-12 col-md-5 align-self-center">
-                            <img src="assets/img/header-graphic.png" data-aos="fade-left" data-aos-offset="200" data-aos-delay="200" data-aos-duration="1500" alt="" style="max-height:440px;">
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <section class="container">
-            <div class="row py-5">
-                <div class="col-12 col-md-6 text-center align-self-center">
-                    <img class="my-5 my-md-0 " data-aos="fade-right" data-aos-offset="200" data-aos-delay="200" data-aos-duration="1500" src="assets/img/phone-mockup2.png" alt="">
-                </div>
-                <div class="col-12 col-md-6 align-self-center">
-                    <h4 class="text-accent">
-                        Zajímat tě budou taky Ty–školení!
-                    </h4>
-                    <p>
-                        Potřebuješ, aby brigádníci uměli ovládat pokladní systém přesně ve vašem hypermarketu? To umíme! Ty–školení jsou další služba na platformě Tymbe. Vytvoříme e-learning kurz přímo na míru potřebám vaší firmy a přímo v apce Ty–brigády jím brigádníci projdou. Super, ne?
-                    </p>
-                    <a href="formular_b2b.html">
-                        <button class="btn btn-outline-primary rounded-pill">
-                            Zjistit více
-                        </button>
-                    </a>
-
-                </div>
-
-            </div>
-        </section>
-
-        <section class="bg-main-light py-5">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <h2 class="col-auto align-self-center text-accent ">
-                        Vyber si brigádu s výplatou denně. Teď hned!
-                    </h2>
-                    <div class="col-auto align-self-center d-none ">
-                        <button class="btn-carousel" type="button" data-bs-target="#companiesCarousel" data-bs-slide="prev"><img src="assets/img/arrow-left.svg"></button>
-                        <button class="btn-carousel" type="button" data-bs-target="#companiesCarousel" data-bs-slide="next"><img src="assets/img/arrow-right.svg"></button>
-                    </div>
-                </div>
-            </div>
-            <div class="container my-4">
-                <div class="row d-lg-block">
-                    <div class="col-12">
-                        <div id="companiesCarousel" class="carousel slide " data-bs-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div
-                                        id="ring_container" class="row g-4 py-3"><!-- <div class="col">
+    <section class="bg-main-light py-5">
+      <div class="container">
+        <div class="row justify-content-between">
+          <h2 class="d-none d-md-block col-auto align-self-center text-accent">
+            Vyber si brigádu s výplatou denně. Teď hned!
+          </h2>
+          <h2 class="d-block d-md-none col-auto align-self-center text-accent">
+            Vyber si brigádu <br />
+            s výplatou denně. <br />
+            Teď hned!
+          </h2>
+          <div class="col-auto align-self-center d-none">
+            <button
+              class="btn-carousel"
+              type="button"
+              data-bs-target="#companiesCarousel"
+              data-bs-slide="prev"
+            >
+              <img src="assets/img/arrow-left.svg" />
+            </button>
+            <button
+              class="btn-carousel"
+              type="button"
+              data-bs-target="#companiesCarousel"
+              data-bs-slide="next"
+            >
+              <img src="assets/img/arrow-right.svg" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="container my-4">
+        <div class="row d-lg-block">
+          <div class="col-12">
+            <div
+              id="companiesCarousel"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div id="ring_container" class="row g-4 py-3">
+                    <!-- <div class="col">
                                                                                                                                     <div class="card h-100 shadow border-0 m-2">
                                                                                                                                         <div class="card-body">
                                                                                                                                             <div class="row justify-content-between">
@@ -803,21 +1128,16 @@
                                                                                                                                         </div>
                                                                                                                                     </div>
                                                                                                                                 </div> -->
-
-                                    </div>
-                                </div>
-
-                            </div>
-
-                        </div>
-                    </div>
-
-
+                  </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-                <!-- Mobile carousel -->
-                <div
-                    class="row d-none"><!-- <div id="companiesCarouselMobile" class="carousel slide" data-bs-ride="carousel">
+        <!-- Mobile carousel -->
+        <div class="row d-none">
+          <!-- <div id="companiesCarouselMobile" class="carousel slide" data-bs-ride="carousel">
                                                 <div class="carousel-inner">
                                                     <div class="carousel-item active">
                                                         <div class="row row-cols-1 g-4 my-4">
@@ -932,323 +1252,530 @@
                                                 <button class="btn-carousel" type="button" data-bs-target="#companiesCarouselMobile" data-bs-slide="prev"><img src="assets/img/arrow-left.svg"></button>
                                                 <button class="btn-carousel" type="button" data-bs-target="#companiesCarouselMobile" data-bs-slide="next"><img src="assets/img/arrow-right.svg"></button>
                                             </div> -->
-                </div>
-            </div>
-        </section>
-
-        <footer class="text-white bg-main-dark">
-            <div class="container pt-3">
-
-                <nav class="row my-3 py-2 footer-nav border border-white justify-content-between d-none d-md-flex">
-                    <div class="col-auto">
-                        <img src="assets/img/tymbe-logo.svg">
-                    </div>
-                    <ul class="nav col-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="index.html">
-                                <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.54994 1.5H7.77495C7.4988 1.5 7.27495 1.72386 7.27495 2V2.17246H10.0499V2C10.0499 1.72386 9.82609 1.5 9.54994 1.5ZM5.77495 2V2.17246H1.5C0.671573 2.17246 0 2.84403 0 3.67246V9.3621C0 10.1905 0.671572 10.8621 1.5 10.8621H15.825C16.6534 10.8621 17.325 10.1905 17.325 9.3621V3.67246C17.325 2.84403 16.6534 2.17246 15.825 2.17246H11.5499V2C11.5499 0.895431 10.6545 0 9.54994 0H7.77495C6.67038 0 5.77495 0.89543 5.77495 2ZM16.3623 11.9483H0.962335V14.75C0.962335 15.3023 1.41005 15.75 1.96234 15.75H15.3623C15.9146 15.75 16.3623 15.3023 16.3623 14.75V11.9483Z" fill="#28367B"/>
-                                    <rect x="7.07959" y="9.27585" width="3.16563" height="4.25862" rx="1" fill="#28367B" stroke="white"/>
-                                </svg>
-                                Pro brigádníky</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="b2b.html">
-                                <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25022 2C2.25022 0.89543 3.14565 0 4.25022 0H13.0752C14.1798 0 15.0752 0.895431 15.0752 2V17C15.0752 17.0337 15.0736 17.067 15.0703 17.0999H16.875C17.1235 17.0999 17.325 17.3013 17.325 17.5499C17.325 17.7984 17.1235 17.9999 16.875 17.9999H14.0915L14.0752 18H3.25022L3.23395 17.9999H0.45C0.201472 17.9999 0 17.7984 0 17.5499C0 17.3013 0.201472 17.0999 0.45 17.0999H2.25514C2.25189 17.067 2.25022 17.0337 2.25022 17V2ZM5.72475 2.92507C5.17247 2.92507 4.72475 3.37278 4.72475 3.92507V4.85007C4.72475 5.40235 5.17247 5.85007 5.72475 5.85007H6.64975C7.20204 5.85007 7.64975 5.40235 7.64975 4.85007V3.92507C7.64975 3.37278 7.20204 2.92507 6.64975 2.92507H5.72475ZM4.72475 8.65009C4.72475 8.09781 5.17247 7.65009 5.72475 7.65009H6.64975C7.20204 7.65009 7.64975 8.09781 7.64975 8.65009V9.57509C7.64975 10.1274 7.20204 10.5751 6.64975 10.5751H5.72475C5.17247 10.5751 4.72475 10.1274 4.72475 9.57509V8.65009ZM10.4501 7.65009C9.89777 7.65009 9.45005 8.09781 9.45005 8.65009V9.57509C9.45005 10.1274 9.89777 10.5751 10.45 10.5751H11.3751C11.9273 10.5751 12.3751 10.1274 12.3751 9.57509V8.65009C12.3751 8.09781 11.9273 7.65009 11.3751 7.65009H10.4501ZM9.45005 3.92507C9.45005 3.37278 9.89777 2.92507 10.4501 2.92507H11.3751C11.9273 2.92507 12.3751 3.37278 12.3751 3.92507V4.85007C12.3751 5.40235 11.9273 5.85007 11.3751 5.85007H10.45C9.89777 5.85007 9.45005 5.40235 9.45005 4.85007V3.92507ZM6.85013 12.3751C6.29785 12.3751 5.85013 12.8228 5.85013 13.3751V17.1001H11.4751V13.3751C11.4751 12.8228 11.0274 12.3751 10.4751 12.3751H6.85013Z" fill="#28367B"/>
-                                </svg>
-                                Pro firmy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">
-                                <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8C0 4.22876 0 2.34315 1.17157 1.17157C2.34315 0 4.22876 0 8 0C11.7712 0 13.6569 0 14.8284 1.17157C16 2.34315 16 4.22876 16 8C16 11.7712 16 13.6569 14.8284 14.8284C13.6569 16 11.7712 16 8 16C4.22876 16 2.34315 16 1.17157 14.8284C0 13.6569 0 11.7712 0 8ZM4.77278 11.7955C5.6984 11.0853 6.83251 10.7003 7.99922 10.7003C9.16593 10.7003 10.3 11.0853 11.2257 11.7955C12.1513 12.5058 12.8167 13.5016 13.1186 14.6286C13.1901 14.8953 13.0318 15.1695 12.7651 15.2409C12.4983 15.3124 12.2242 15.1541 12.1527 14.8874C11.9077 13.9731 11.3679 13.1651 10.6169 12.5889C9.86592 12.0127 8.9458 11.7003 7.99922 11.7003C7.05264 11.7003 6.13252 12.0127 5.38155 12.5889C4.63058 13.1651 4.09073 13.9731 3.84574 14.8874C3.77427 15.1541 3.5001 15.3124 3.23337 15.2409C2.96663 15.1695 2.80834 14.8953 2.87981 14.6286C3.18178 13.5016 3.84717 12.5058 4.77278 11.7955ZM6.09961 5.59969C6.09961 4.55035 6.95027 3.69969 7.99961 3.69969C9.04895 3.69969 9.89961 4.55035 9.89961 5.59969C9.89961 6.64903 9.04895 7.49969 7.99961 7.49969C6.95027 7.49969 6.09961 6.64903 6.09961 5.59969ZM7.99961 2.69969C6.39798 2.69969 5.09961 3.99806 5.09961 5.59969C5.09961 7.20131 6.39798 8.49969 7.99961 8.49969C9.60123 8.49969 10.8996 7.20131 10.8996 5.59969C10.8996 3.99806 9.60123 2.69969 7.99961 2.69969Z" fill="#28367B"/>
-                                </svg>
-                                O společnosti</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">
-                                <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.87868 2.87868C0 3.75736 0 5.17157 0 8C0 10.8284 0 12.2426 0.87868 13.1213C1.75736 14 3.17157 14 6 14H10C12.8284 14 14.2426 14 15.1213 13.1213C16 12.2426 16 10.8284 16 8C16 5.17157 16 3.75736 15.1213 2.87868C14.2426 2 12.8284 2 10 2H6C3.17157 2 1.75736 2 0.87868 2.87868ZM2.93705 5.0091C2.70476 4.85977 2.3954 4.92702 2.24608 5.15931C2.09675 5.39159 2.164 5.70095 2.39629 5.85028L7.18886 8.93122C7.68298 9.24886 8.31703 9.24886 8.81114 8.93122L13.6037 5.85028C13.836 5.70095 13.9032 5.39159 13.7539 5.15931C13.6046 4.92702 13.2952 4.85977 13.063 5.0091L8.27038 8.09004C8.10567 8.19592 7.89433 8.19592 7.72962 8.09004L2.93705 5.0091Z" fill="#28367B"/>
-                                </svg>
-
-                                Kontakty</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="faq.html">
-                                <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 9.01127C1.5 5.06034 4.6575 1.5 9.015 1.5C13.275 1.5 16.5 4.99274 16.5 8.98873C16.5 13.6232 12.72 16.5 9 16.5C7.77 16.5 6.405 16.1695 5.31 15.5235C4.9275 15.2907 4.605 15.1179 4.1925 15.2531L2.6775 15.7038C2.295 15.824 1.95 15.5235 2.0625 15.1179L2.565 13.4354C2.6475 13.2026 2.6325 12.9547 2.5125 12.7594C1.8675 11.5726 1.5 10.2732 1.5 9.01127ZM8.02501 9.01127C8.02501 9.54457 8.45251 9.97271 8.98501 9.98022C9.51751 9.98022 9.94501 9.54457 9.94501 9.01878C9.94501 8.48548 9.51751 8.05734 8.98501 8.05734C8.46001 8.04982 8.02501 8.48548 8.02501 9.01127ZM11.4825 9.01878C11.4825 9.54457 11.91 9.98022 12.4425 9.98022C12.975 9.98022 13.4025 9.54457 13.4025 9.01878C13.4025 8.48548 12.975 8.05733 12.4425 8.05733C11.91 8.05733 11.4825 8.48548 11.4825 9.01878ZM5.52751 9.98022C5.00251 9.98022 4.56751 9.54457 4.56751 9.01878C4.56751 8.48548 4.99501 8.05733 5.52751 8.05733C6.06001 8.05733 6.48751 8.48548 6.48751 9.01878C6.48751 9.54457 6.06001 9.97271 5.52751 9.98022Z" fill="white"/>
-                                </svg>
-
-                                FAQ</a>
-                        </li>
-                    </ul>
-                </nav>
-
-                <nav class="d-md-none footer-nav text-center row justify-content-center">
-                    <div class="col-auto border border-white p-2 rounded-pill">
-                        <img src="assets/img/tymbe-logo.svg">
-                    </div>
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="index.html">
-                                <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M9.54994 1.5H7.77495C7.4988 1.5 7.27495 1.72386 7.27495 2V2.17246H10.0499V2C10.0499 1.72386 9.82609 1.5 9.54994 1.5ZM5.77495 2V2.17246H1.5C0.671573 2.17246 0 2.84403 0 3.67246V9.3621C0 10.1905 0.671572 10.8621 1.5 10.8621H15.825C16.6534 10.8621 17.325 10.1905 17.325 9.3621V3.67246C17.325 2.84403 16.6534 2.17246 15.825 2.17246H11.5499V2C11.5499 0.895431 10.6545 0 9.54994 0H7.77495C6.67038 0 5.77495 0.89543 5.77495 2ZM16.3623 11.9483H0.962335V14.75C0.962335 15.3023 1.41005 15.75 1.96234 15.75H15.3623C15.9146 15.75 16.3623 15.3023 16.3623 14.75V11.9483Z" fill="#28367B"/>
-                                    <rect x="7.07959" y="9.27585" width="3.16563" height="4.25862" rx="1" fill="#28367B" stroke="white"/>
-                                </svg>
-                                Pro brigádníky</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="b2b.html">
-                                <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25022 2C2.25022 0.89543 3.14565 0 4.25022 0H13.0752C14.1798 0 15.0752 0.895431 15.0752 2V17C15.0752 17.0337 15.0736 17.067 15.0703 17.0999H16.875C17.1235 17.0999 17.325 17.3013 17.325 17.5499C17.325 17.7984 17.1235 17.9999 16.875 17.9999H14.0915L14.0752 18H3.25022L3.23395 17.9999H0.45C0.201472 17.9999 0 17.7984 0 17.5499C0 17.3013 0.201472 17.0999 0.45 17.0999H2.25514C2.25189 17.067 2.25022 17.0337 2.25022 17V2ZM5.72475 2.92507C5.17247 2.92507 4.72475 3.37278 4.72475 3.92507V4.85007C4.72475 5.40235 5.17247 5.85007 5.72475 5.85007H6.64975C7.20204 5.85007 7.64975 5.40235 7.64975 4.85007V3.92507C7.64975 3.37278 7.20204 2.92507 6.64975 2.92507H5.72475ZM4.72475 8.65009C4.72475 8.09781 5.17247 7.65009 5.72475 7.65009H6.64975C7.20204 7.65009 7.64975 8.09781 7.64975 8.65009V9.57509C7.64975 10.1274 7.20204 10.5751 6.64975 10.5751H5.72475C5.17247 10.5751 4.72475 10.1274 4.72475 9.57509V8.65009ZM10.4501 7.65009C9.89777 7.65009 9.45005 8.09781 9.45005 8.65009V9.57509C9.45005 10.1274 9.89777 10.5751 10.45 10.5751H11.3751C11.9273 10.5751 12.3751 10.1274 12.3751 9.57509V8.65009C12.3751 8.09781 11.9273 7.65009 11.3751 7.65009H10.4501ZM9.45005 3.92507C9.45005 3.37278 9.89777 2.92507 10.4501 2.92507H11.3751C11.9273 2.92507 12.3751 3.37278 12.3751 3.92507V4.85007C12.3751 5.40235 11.9273 5.85007 11.3751 5.85007H10.45C9.89777 5.85007 9.45005 5.40235 9.45005 4.85007V3.92507ZM6.85013 12.3751C6.29785 12.3751 5.85013 12.8228 5.85013 13.3751V17.1001H11.4751V13.3751C11.4751 12.8228 11.0274 12.3751 10.4751 12.3751H6.85013Z" fill="#28367B"/>
-                                </svg>
-                                Pro firmy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="about.html">
-                                <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8C0 4.22876 0 2.34315 1.17157 1.17157C2.34315 0 4.22876 0 8 0C11.7712 0 13.6569 0 14.8284 1.17157C16 2.34315 16 4.22876 16 8C16 11.7712 16 13.6569 14.8284 14.8284C13.6569 16 11.7712 16 8 16C4.22876 16 2.34315 16 1.17157 14.8284C0 13.6569 0 11.7712 0 8ZM4.77278 11.7955C5.6984 11.0853 6.83251 10.7003 7.99922 10.7003C9.16593 10.7003 10.3 11.0853 11.2257 11.7955C12.1513 12.5058 12.8167 13.5016 13.1186 14.6286C13.1901 14.8953 13.0318 15.1695 12.7651 15.2409C12.4983 15.3124 12.2242 15.1541 12.1527 14.8874C11.9077 13.9731 11.3679 13.1651 10.6169 12.5889C9.86592 12.0127 8.9458 11.7003 7.99922 11.7003C7.05264 11.7003 6.13252 12.0127 5.38155 12.5889C4.63058 13.1651 4.09073 13.9731 3.84574 14.8874C3.77427 15.1541 3.5001 15.3124 3.23337 15.2409C2.96663 15.1695 2.80834 14.8953 2.87981 14.6286C3.18178 13.5016 3.84717 12.5058 4.77278 11.7955ZM6.09961 5.59969C6.09961 4.55035 6.95027 3.69969 7.99961 3.69969C9.04895 3.69969 9.89961 4.55035 9.89961 5.59969C9.89961 6.64903 9.04895 7.49969 7.99961 7.49969C6.95027 7.49969 6.09961 6.64903 6.09961 5.59969ZM7.99961 2.69969C6.39798 2.69969 5.09961 3.99806 5.09961 5.59969C5.09961 7.20131 6.39798 8.49969 7.99961 8.49969C9.60123 8.49969 10.8996 7.20131 10.8996 5.59969C10.8996 3.99806 9.60123 2.69969 7.99961 2.69969Z" fill="#28367B"/>
-                                </svg>
-                                O společnosti</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">
-                                <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.87868 2.87868C0 3.75736 0 5.17157 0 8C0 10.8284 0 12.2426 0.87868 13.1213C1.75736 14 3.17157 14 6 14H10C12.8284 14 14.2426 14 15.1213 13.1213C16 12.2426 16 10.8284 16 8C16 5.17157 16 3.75736 15.1213 2.87868C14.2426 2 12.8284 2 10 2H6C3.17157 2 1.75736 2 0.87868 2.87868ZM2.93705 5.0091C2.70476 4.85977 2.3954 4.92702 2.24608 5.15931C2.09675 5.39159 2.164 5.70095 2.39629 5.85028L7.18886 8.93122C7.68298 9.24886 8.31703 9.24886 8.81114 8.93122L13.6037 5.85028C13.836 5.70095 13.9032 5.39159 13.7539 5.15931C13.6046 4.92702 13.2952 4.85977 13.063 5.0091L8.27038 8.09004C8.10567 8.19592 7.89433 8.19592 7.72962 8.09004L2.93705 5.0091Z" fill="#28367B"/>
-                                </svg>
-
-                                Kontakty</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="faq.html">
-                                <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 9.01127C1.5 5.06034 4.6575 1.5 9.015 1.5C13.275 1.5 16.5 4.99274 16.5 8.98873C16.5 13.6232 12.72 16.5 9 16.5C7.77 16.5 6.405 16.1695 5.31 15.5235C4.9275 15.2907 4.605 15.1179 4.1925 15.2531L2.6775 15.7038C2.295 15.824 1.95 15.5235 2.0625 15.1179L2.565 13.4354C2.6475 13.2026 2.6325 12.9547 2.5125 12.7594C1.8675 11.5726 1.5 10.2732 1.5 9.01127ZM8.02501 9.01127C8.02501 9.54457 8.45251 9.97271 8.98501 9.98022C9.51751 9.98022 9.94501 9.54457 9.94501 9.01878C9.94501 8.48548 9.51751 8.05734 8.98501 8.05734C8.46001 8.04982 8.02501 8.48548 8.02501 9.01127ZM11.4825 9.01878C11.4825 9.54457 11.91 9.98022 12.4425 9.98022C12.975 9.98022 13.4025 9.54457 13.4025 9.01878C13.4025 8.48548 12.975 8.05733 12.4425 8.05733C11.91 8.05733 11.4825 8.48548 11.4825 9.01878ZM5.52751 9.98022C5.00251 9.98022 4.56751 9.54457 4.56751 9.01878C4.56751 8.48548 4.99501 8.05733 5.52751 8.05733C6.06001 8.05733 6.48751 8.48548 6.48751 9.01878C6.48751 9.54457 6.06001 9.97271 5.52751 9.98022Z" fill="white"/>
-                                </svg>
-
-                                FAQ</a>
-                        </li>
-
-
-                    </ul>
-                </nav>
-
-                <div class="row justify-content-center text-center my-3">
-                    <p class="col-12 col-md-6 text-center text-white">
-                        Tymbe Ty–brigády je jediná on-line platforma, která najde, prověří, doručí a zaplatí brigádníky tam, kde je právě potřebuješ.
-                    </p>
-                </div>
-                <div class="row justify-content-center">
-
-                    <p class="col-auto mt-3 p-3 text-center text-white bg-light-transparent px-3 py-2 rounded-pill">
-                        <small>24 hodin denně, 7 dní v týdnu a po celé ČR.</small>
-                    </p>
-                </div>
-                <div class="row mt-2">
-
-                    <div class="col-12 d-inline text-center">
-                        <a href="https://www.facebook.com/tymbecz">
-                            <img class="mx-2" src="assets/img/fb-icon.svg"></a>
-
-                        <a href="https://www.instagram.com/tymbe_cz/">
-                            <img class="mx-2" src="assets/img/ig-icon.svg" alt=""></a>
-
-
-                        <a href="https://www.linkedin.com/company/tymbe"><img class="mx-2" src="assets/img/linkedin.svg" alt=""></a>
-                    </div>
-                    <p class="col-12 text-center mt-3 text-white">
-                        <small>© Copyright 2021 – Tymbe a.s.</small>
-                    </p>
-                </div>
-            </div>
-        </footer>
-
-        <!-- jQuery -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-        <!-- Bootstrap Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-
-        <!-- AOS animations -->
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-
-
-        <!-- Custom scripts -->
-        <script src="assets/js/scripts.js"></script>
-
-
-        <script>
-
-            let statsTemporaryWorkers,
-                statsWorkPlaces,
-                statsJobsTaken,
-                statsSatisfiedLeaders;
-            statsTemporaryWorkers = document.getElementById('statsTemporaryWorkers');
-            statsWorkPlaces = document.getElementById('statsWorkPlaces');
-            statsJobsTaken = document.getElementById('statsJobsTaken');
-            statsSatisfiedLeaders = document.getElementById('statsSatisfiedLeaders');
-            statsTemporaryWorkersMobile = document.getElementById('statsTemporaryWorkersMobile');
-            statsWorkPlacesMobile = document.getElementById('statsWorkPlacesMobile');
-            statsJobsTakenMobile = document.getElementById('statsJobsTakenMobile');
-            statsSatisfiedLeadersMobile = document.getElementById('statsSatisfiedLeadersMobile');
-
-
-            function buildPeckaCard(ring) {
-
-                const ColContainer = document.createElement("div");
-                ColContainer.classList.add("col-12","col-md-6","col-lg-3");
-
-                const CardContainer = document.createElement("div");
-                CardContainer.classList.add("card", "h-100", "shadow", "border-0", "rounded","m-2");
-
-                const CardBody = document.createElement("div");
-                CardBody.classList.add("card-body");
-
-
-                const CardBodyHeader = document.createElement("div");
-                CardBodyHeader.classList.add("row", "justify-content-between");
-
-
-                const CardBodyHeaderImageContainer = document.createElement("div");
-                CardBodyHeaderImageContainer.classList.add("col-auto", "align-self-center");
-
-
-                const CardBodyHeaderImage = document.createElement("img");
-                CardBodyHeaderImage.src = "assets/img/tesco-logo.png";
-
-
-                const CardBodyHeaderTimeUntilContainer = document.createElement("div");
-                CardBodyHeaderTimeUntilContainer.classList.add("col-auto", "align-self-center");
-
-
-                const CardBodyHeaderTimeUntilContainerParagraph = document.createElement("p");
-                CardBodyHeaderTimeUntilContainerParagraph.classList.add("mb-0", "text-accent", "align-middle");
-
-                const CardBodyHeaderTimeUntilIcon = document.createElement("img");
-                CardBodyHeaderTimeUntilIcon.classList.add("col-auto", "align-self-center");
-                CardBodyHeaderTimeUntilIcon.src = "assets/img/time-icon.svg";
-                CardBodyHeaderTimeUntilIcon.classList.add("me-1");
-
-
-                const CardBodyHeaderTimeUntil = document.createElement("span");
-                CardBodyHeaderTimeUntil.classList.add("font-weight-bold", "text-decoration-underline", "h6");
-                CardBodyHeaderTimeUntil.innerHTML = "Od" + ring.date_from;
-               
-
-                const CardHeadingContainer = document.createElement("div");
-                CardHeadingContainer.classList.add("row", "mt-3");
-
-                const CardHeading = document.createElement("h4");
-                CardHeading.innerHTML = ring.position;
-
-                const CardLocationContainer = document.createElement('div')
-                CardLocationContainer.classList.add("row", "mt-3");
-
-                const CardLocationContainerParagraph = document.createElement('p')
-                CardLocationContainerParagraph.classList.add("d-inline", "text-accent", "align-middle", "text-capitalize");
-
-
-                const CardLocationContainerIcon = document.createElement('img')
-                CardLocationContainerIcon.src = 'assets/img/location-icon.svg';
-                CardLocationContainerIcon.classList.add("me-1");
-
-                const CardLocationContainerText = document.createElement('span')
-                CardLocationContainerText.innerHTML = ring.place;
-
-
-                const CardPriceContainer = document.createElement("div");
-                CardPriceContainer.classList.add("row","mb-3");
-
-                const CardMoneyContainer = document.createElement("div");
-                CardMoneyContainer.classList.add("col-6", "border", "border-light", "text-center", "py-3");
-
-                const CardMoney = document.createElement("span");
-                CardMoney.classList.add("font-weight-bold", "h4");
-                CardMoney.innerHTML = ring.price_start;
-                const CardMoneyCurrency = document.createElement("small");
-                CardMoneyCurrency.innerHTML = ' Kč/h'
-                
-
-                const CardCreditContainer = document.createElement("div");
-                CardCreditContainer.classList.add("col-6", "border", "border-light", "text-center", "py-3");
-
-                const CardCredit = document.createElement("span");
-                CardCredit.classList.add("font-weight-bold", "h4");
-                CardCredit.innerHTML = ring.price_current;
-
-                const CardCreditCurrency = document.createElement("small");
-                CardCreditCurrency.innerHTML = ' Kč/h'
-
-                const CardFooter = document.createElement("div");
-                CardFooter.classList.add("card-footer", "bg-white", "border-0","rounded");
-                const CardFooterAction = document.createElement("button");
-                CardFooterAction.classList.add("btn", "btn-primary", "rounded-pill", "w-100", "mb-3");
-                CardFooterAction.innerHTML = "Chci brigádu"
-
-
-                CardCreditCurrency.innerHTML = ' Kč/h'
-
-                ColContainer.appendChild(CardContainer);
-                CardContainer.appendChild(CardBody);
-                CardBody.appendChild(CardBodyHeader);
-                CardBodyHeader.appendChild(CardBodyHeaderImageContainer);
-                CardBodyHeaderImageContainer.appendChild(CardBodyHeaderImage);
-                CardBodyHeader.appendChild(CardBodyHeaderTimeUntilContainer);
-                CardBodyHeaderTimeUntilContainer.appendChild(CardBodyHeaderTimeUntilContainerParagraph);
-
-                CardBodyHeaderTimeUntilContainerParagraph.appendChild(CardBodyHeaderTimeUntilIcon);
-                CardBodyHeaderTimeUntilContainerParagraph.appendChild(CardBodyHeaderTimeUntil);
-                CardBody.appendChild(CardHeadingContainer);
-                CardHeadingContainer.appendChild(CardHeading);
-                CardBody.appendChild(CardLocationContainer);
-                CardLocationContainer.appendChild(CardLocationContainerParagraph);
-                CardLocationContainerParagraph.appendChild(CardLocationContainerIcon);
-                CardLocationContainerParagraph.appendChild(CardLocationContainerText);
-                CardPriceContainer.appendChild(CardMoneyContainer);
-                CardPriceContainer.appendChild(CardCreditContainer);
-                CardMoneyContainer.appendChild(CardMoney);
-                CardMoneyContainer.appendChild(CardMoneyCurrency);
-                CardCreditContainer.appendChild(CardCredit);
-                CardCreditContainer.appendChild(CardCreditCurrency);
-                
-                CardPriceContainer.appendChild(CardCreditContainer);
-                CardContainer.appendChild(CardFooter);
-                
-                CardFooter.appendChild(CardPriceContainer);
-                CardFooter.appendChild(CardFooterAction);
-
-                document.getElementById("ring_container").appendChild(ColContainer);
-            };
-
-
-            function loadStats(stats) {
-                statsTemporaryWorkers.innerHTML = stats.firma_1;
-                statsWorkPlaces.innerHTML = stats.firma_2;
-                statsJobsTaken.innerHTML = Math.floor(stats.firma_3) + '%';
-                statsSatisfiedLeaders.innerHTML = Math.floor(stats.firma_4) + '%';
-
-                statsTemporaryWorkersMobile.innerHTML = stats.firma_1;
-                statsWorkPlacesMobile.innerHTML = stats.firma_2;
-                statsJobsTakenMobile.innerHTML = Math.floor(stats.firma_3) + '%';
-                statsSatisfiedLeadersMobile.innerHTML = Math.floor(stats.firma_4) + '%';
-            }
-
-            
-          
-
-            $.get("https://api.tymbeos1.cz/rings", function (response) {
-                buildPeckaCard(response.pecka);
-                buildPeckaCard(response.ring1);
-                buildPeckaCard(response.ring2);
-                buildPeckaCard(response.ring3);
-            });
-
-            $.get("https://api.tymbeos1.cz/statistics", function (response) {
-                loadStats(response);
-            });
-        </script>
-
-
-    </body>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-white bg-main-dark">
+      <div class="container pt-3">
+        <nav
+          class="
+            row
+            my-3
+            py-2
+            footer-nav
+            border border-white
+            justify-content-between
+            d-none d-md-flex
+          "
+        >
+          <div class="col-auto">
+            <img src="assets/img/tymbe-logo.svg" />
+          </div>
+          <ul class="nav col-auto">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">
+                <svg
+                  width="18"
+                  height="18"
+                  viewbox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.54994 1.5H7.77495C7.4988 1.5 7.27495 1.72386 7.27495 2V2.17246H10.0499V2C10.0499 1.72386 9.82609 1.5 9.54994 1.5ZM5.77495 2V2.17246H1.5C0.671573 2.17246 0 2.84403 0 3.67246V9.3621C0 10.1905 0.671572 10.8621 1.5 10.8621H15.825C16.6534 10.8621 17.325 10.1905 17.325 9.3621V3.67246C17.325 2.84403 16.6534 2.17246 15.825 2.17246H11.5499V2C11.5499 0.895431 10.6545 0 9.54994 0H7.77495C6.67038 0 5.77495 0.89543 5.77495 2ZM16.3623 11.9483H0.962335V14.75C0.962335 15.3023 1.41005 15.75 1.96234 15.75H15.3623C15.9146 15.75 16.3623 15.3023 16.3623 14.75V11.9483Z"
+                    fill="#28367B"
+                  />
+                  <rect
+                    x="7.07959"
+                    y="9.27585"
+                    width="3.16563"
+                    height="4.25862"
+                    rx="1"
+                    fill="#28367B"
+                    stroke="white"
+                  />
+                </svg>
+                Pro brigádníky</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="b2b.html">
+                <svg
+                  width="18"
+                  height="18"
+                  viewbox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.25022 2C2.25022 0.89543 3.14565 0 4.25022 0H13.0752C14.1798 0 15.0752 0.895431 15.0752 2V17C15.0752 17.0337 15.0736 17.067 15.0703 17.0999H16.875C17.1235 17.0999 17.325 17.3013 17.325 17.5499C17.325 17.7984 17.1235 17.9999 16.875 17.9999H14.0915L14.0752 18H3.25022L3.23395 17.9999H0.45C0.201472 17.9999 0 17.7984 0 17.5499C0 17.3013 0.201472 17.0999 0.45 17.0999H2.25514C2.25189 17.067 2.25022 17.0337 2.25022 17V2ZM5.72475 2.92507C5.17247 2.92507 4.72475 3.37278 4.72475 3.92507V4.85007C4.72475 5.40235 5.17247 5.85007 5.72475 5.85007H6.64975C7.20204 5.85007 7.64975 5.40235 7.64975 4.85007V3.92507C7.64975 3.37278 7.20204 2.92507 6.64975 2.92507H5.72475ZM4.72475 8.65009C4.72475 8.09781 5.17247 7.65009 5.72475 7.65009H6.64975C7.20204 7.65009 7.64975 8.09781 7.64975 8.65009V9.57509C7.64975 10.1274 7.20204 10.5751 6.64975 10.5751H5.72475C5.17247 10.5751 4.72475 10.1274 4.72475 9.57509V8.65009ZM10.4501 7.65009C9.89777 7.65009 9.45005 8.09781 9.45005 8.65009V9.57509C9.45005 10.1274 9.89777 10.5751 10.45 10.5751H11.3751C11.9273 10.5751 12.3751 10.1274 12.3751 9.57509V8.65009C12.3751 8.09781 11.9273 7.65009 11.3751 7.65009H10.4501ZM9.45005 3.92507C9.45005 3.37278 9.89777 2.92507 10.4501 2.92507H11.3751C11.9273 2.92507 12.3751 3.37278 12.3751 3.92507V4.85007C12.3751 5.40235 11.9273 5.85007 11.3751 5.85007H10.45C9.89777 5.85007 9.45005 5.40235 9.45005 4.85007V3.92507ZM6.85013 12.3751C6.29785 12.3751 5.85013 12.8228 5.85013 13.3751V17.1001H11.4751V13.3751C11.4751 12.8228 11.0274 12.3751 10.4751 12.3751H6.85013Z"
+                    fill="#28367B"
+                  />
+                </svg>
+                Pro firmy</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">
+                <svg
+                  width="16"
+                  height="16"
+                  viewbox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 8C0 4.22876 0 2.34315 1.17157 1.17157C2.34315 0 4.22876 0 8 0C11.7712 0 13.6569 0 14.8284 1.17157C16 2.34315 16 4.22876 16 8C16 11.7712 16 13.6569 14.8284 14.8284C13.6569 16 11.7712 16 8 16C4.22876 16 2.34315 16 1.17157 14.8284C0 13.6569 0 11.7712 0 8ZM4.77278 11.7955C5.6984 11.0853 6.83251 10.7003 7.99922 10.7003C9.16593 10.7003 10.3 11.0853 11.2257 11.7955C12.1513 12.5058 12.8167 13.5016 13.1186 14.6286C13.1901 14.8953 13.0318 15.1695 12.7651 15.2409C12.4983 15.3124 12.2242 15.1541 12.1527 14.8874C11.9077 13.9731 11.3679 13.1651 10.6169 12.5889C9.86592 12.0127 8.9458 11.7003 7.99922 11.7003C7.05264 11.7003 6.13252 12.0127 5.38155 12.5889C4.63058 13.1651 4.09073 13.9731 3.84574 14.8874C3.77427 15.1541 3.5001 15.3124 3.23337 15.2409C2.96663 15.1695 2.80834 14.8953 2.87981 14.6286C3.18178 13.5016 3.84717 12.5058 4.77278 11.7955ZM6.09961 5.59969C6.09961 4.55035 6.95027 3.69969 7.99961 3.69969C9.04895 3.69969 9.89961 4.55035 9.89961 5.59969C9.89961 6.64903 9.04895 7.49969 7.99961 7.49969C6.95027 7.49969 6.09961 6.64903 6.09961 5.59969ZM7.99961 2.69969C6.39798 2.69969 5.09961 3.99806 5.09961 5.59969C5.09961 7.20131 6.39798 8.49969 7.99961 8.49969C9.60123 8.49969 10.8996 7.20131 10.8996 5.59969C10.8996 3.99806 9.60123 2.69969 7.99961 2.69969Z"
+                    fill="#28367B"
+                  />
+                </svg>
+                O společnosti</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">
+                <svg
+                  width="16"
+                  height="16"
+                  viewbox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0.87868 2.87868C0 3.75736 0 5.17157 0 8C0 10.8284 0 12.2426 0.87868 13.1213C1.75736 14 3.17157 14 6 14H10C12.8284 14 14.2426 14 15.1213 13.1213C16 12.2426 16 10.8284 16 8C16 5.17157 16 3.75736 15.1213 2.87868C14.2426 2 12.8284 2 10 2H6C3.17157 2 1.75736 2 0.87868 2.87868ZM2.93705 5.0091C2.70476 4.85977 2.3954 4.92702 2.24608 5.15931C2.09675 5.39159 2.164 5.70095 2.39629 5.85028L7.18886 8.93122C7.68298 9.24886 8.31703 9.24886 8.81114 8.93122L13.6037 5.85028C13.836 5.70095 13.9032 5.39159 13.7539 5.15931C13.6046 4.92702 13.2952 4.85977 13.063 5.0091L8.27038 8.09004C8.10567 8.19592 7.89433 8.19592 7.72962 8.09004L2.93705 5.0091Z"
+                    fill="#28367B"
+                  />
+                </svg>
+
+                Kontakty</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">
+                <svg
+                  width="18"
+                  height="18"
+                  viewbox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1.5 9.01127C1.5 5.06034 4.6575 1.5 9.015 1.5C13.275 1.5 16.5 4.99274 16.5 8.98873C16.5 13.6232 12.72 16.5 9 16.5C7.77 16.5 6.405 16.1695 5.31 15.5235C4.9275 15.2907 4.605 15.1179 4.1925 15.2531L2.6775 15.7038C2.295 15.824 1.95 15.5235 2.0625 15.1179L2.565 13.4354C2.6475 13.2026 2.6325 12.9547 2.5125 12.7594C1.8675 11.5726 1.5 10.2732 1.5 9.01127ZM8.02501 9.01127C8.02501 9.54457 8.45251 9.97271 8.98501 9.98022C9.51751 9.98022 9.94501 9.54457 9.94501 9.01878C9.94501 8.48548 9.51751 8.05734 8.98501 8.05734C8.46001 8.04982 8.02501 8.48548 8.02501 9.01127ZM11.4825 9.01878C11.4825 9.54457 11.91 9.98022 12.4425 9.98022C12.975 9.98022 13.4025 9.54457 13.4025 9.01878C13.4025 8.48548 12.975 8.05733 12.4425 8.05733C11.91 8.05733 11.4825 8.48548 11.4825 9.01878ZM5.52751 9.98022C5.00251 9.98022 4.56751 9.54457 4.56751 9.01878C4.56751 8.48548 4.99501 8.05733 5.52751 8.05733C6.06001 8.05733 6.48751 8.48548 6.48751 9.01878C6.48751 9.54457 6.06001 9.97271 5.52751 9.98022Z"
+                    fill="white"
+                  />
+                </svg>
+
+                FAQ</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <nav
+          class="d-md-none footer-nav text-center row justify-content-center"
+        >
+          <div class="col-auto border border-white p-2 rounded-pill">
+            <img src="assets/img/tymbe-logo.svg" />
+          </div>
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">
+                <svg
+                  width="18"
+                  height="18"
+                  viewbox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.54994 1.5H7.77495C7.4988 1.5 7.27495 1.72386 7.27495 2V2.17246H10.0499V2C10.0499 1.72386 9.82609 1.5 9.54994 1.5ZM5.77495 2V2.17246H1.5C0.671573 2.17246 0 2.84403 0 3.67246V9.3621C0 10.1905 0.671572 10.8621 1.5 10.8621H15.825C16.6534 10.8621 17.325 10.1905 17.325 9.3621V3.67246C17.325 2.84403 16.6534 2.17246 15.825 2.17246H11.5499V2C11.5499 0.895431 10.6545 0 9.54994 0H7.77495C6.67038 0 5.77495 0.89543 5.77495 2ZM16.3623 11.9483H0.962335V14.75C0.962335 15.3023 1.41005 15.75 1.96234 15.75H15.3623C15.9146 15.75 16.3623 15.3023 16.3623 14.75V11.9483Z"
+                    fill="#28367B"
+                  />
+                  <rect
+                    x="7.07959"
+                    y="9.27585"
+                    width="3.16563"
+                    height="4.25862"
+                    rx="1"
+                    fill="#28367B"
+                    stroke="white"
+                  />
+                </svg>
+                Pro brigádníky</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="b2b.html">
+                <svg
+                  width="18"
+                  height="18"
+                  viewbox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.25022 2C2.25022 0.89543 3.14565 0 4.25022 0H13.0752C14.1798 0 15.0752 0.895431 15.0752 2V17C15.0752 17.0337 15.0736 17.067 15.0703 17.0999H16.875C17.1235 17.0999 17.325 17.3013 17.325 17.5499C17.325 17.7984 17.1235 17.9999 16.875 17.9999H14.0915L14.0752 18H3.25022L3.23395 17.9999H0.45C0.201472 17.9999 0 17.7984 0 17.5499C0 17.3013 0.201472 17.0999 0.45 17.0999H2.25514C2.25189 17.067 2.25022 17.0337 2.25022 17V2ZM5.72475 2.92507C5.17247 2.92507 4.72475 3.37278 4.72475 3.92507V4.85007C4.72475 5.40235 5.17247 5.85007 5.72475 5.85007H6.64975C7.20204 5.85007 7.64975 5.40235 7.64975 4.85007V3.92507C7.64975 3.37278 7.20204 2.92507 6.64975 2.92507H5.72475ZM4.72475 8.65009C4.72475 8.09781 5.17247 7.65009 5.72475 7.65009H6.64975C7.20204 7.65009 7.64975 8.09781 7.64975 8.65009V9.57509C7.64975 10.1274 7.20204 10.5751 6.64975 10.5751H5.72475C5.17247 10.5751 4.72475 10.1274 4.72475 9.57509V8.65009ZM10.4501 7.65009C9.89777 7.65009 9.45005 8.09781 9.45005 8.65009V9.57509C9.45005 10.1274 9.89777 10.5751 10.45 10.5751H11.3751C11.9273 10.5751 12.3751 10.1274 12.3751 9.57509V8.65009C12.3751 8.09781 11.9273 7.65009 11.3751 7.65009H10.4501ZM9.45005 3.92507C9.45005 3.37278 9.89777 2.92507 10.4501 2.92507H11.3751C11.9273 2.92507 12.3751 3.37278 12.3751 3.92507V4.85007C12.3751 5.40235 11.9273 5.85007 11.3751 5.85007H10.45C9.89777 5.85007 9.45005 5.40235 9.45005 4.85007V3.92507ZM6.85013 12.3751C6.29785 12.3751 5.85013 12.8228 5.85013 13.3751V17.1001H11.4751V13.3751C11.4751 12.8228 11.0274 12.3751 10.4751 12.3751H6.85013Z"
+                    fill="#28367B"
+                  />
+                </svg>
+                Pro firmy</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">
+                <svg
+                  width="16"
+                  height="16"
+                  viewbox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 8C0 4.22876 0 2.34315 1.17157 1.17157C2.34315 0 4.22876 0 8 0C11.7712 0 13.6569 0 14.8284 1.17157C16 2.34315 16 4.22876 16 8C16 11.7712 16 13.6569 14.8284 14.8284C13.6569 16 11.7712 16 8 16C4.22876 16 2.34315 16 1.17157 14.8284C0 13.6569 0 11.7712 0 8ZM4.77278 11.7955C5.6984 11.0853 6.83251 10.7003 7.99922 10.7003C9.16593 10.7003 10.3 11.0853 11.2257 11.7955C12.1513 12.5058 12.8167 13.5016 13.1186 14.6286C13.1901 14.8953 13.0318 15.1695 12.7651 15.2409C12.4983 15.3124 12.2242 15.1541 12.1527 14.8874C11.9077 13.9731 11.3679 13.1651 10.6169 12.5889C9.86592 12.0127 8.9458 11.7003 7.99922 11.7003C7.05264 11.7003 6.13252 12.0127 5.38155 12.5889C4.63058 13.1651 4.09073 13.9731 3.84574 14.8874C3.77427 15.1541 3.5001 15.3124 3.23337 15.2409C2.96663 15.1695 2.80834 14.8953 2.87981 14.6286C3.18178 13.5016 3.84717 12.5058 4.77278 11.7955ZM6.09961 5.59969C6.09961 4.55035 6.95027 3.69969 7.99961 3.69969C9.04895 3.69969 9.89961 4.55035 9.89961 5.59969C9.89961 6.64903 9.04895 7.49969 7.99961 7.49969C6.95027 7.49969 6.09961 6.64903 6.09961 5.59969ZM7.99961 2.69969C6.39798 2.69969 5.09961 3.99806 5.09961 5.59969C5.09961 7.20131 6.39798 8.49969 7.99961 8.49969C9.60123 8.49969 10.8996 7.20131 10.8996 5.59969C10.8996 3.99806 9.60123 2.69969 7.99961 2.69969Z"
+                    fill="#28367B"
+                  />
+                </svg>
+                O společnosti</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">
+                <svg
+                  width="16"
+                  height="16"
+                  viewbox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0.87868 2.87868C0 3.75736 0 5.17157 0 8C0 10.8284 0 12.2426 0.87868 13.1213C1.75736 14 3.17157 14 6 14H10C12.8284 14 14.2426 14 15.1213 13.1213C16 12.2426 16 10.8284 16 8C16 5.17157 16 3.75736 15.1213 2.87868C14.2426 2 12.8284 2 10 2H6C3.17157 2 1.75736 2 0.87868 2.87868ZM2.93705 5.0091C2.70476 4.85977 2.3954 4.92702 2.24608 5.15931C2.09675 5.39159 2.164 5.70095 2.39629 5.85028L7.18886 8.93122C7.68298 9.24886 8.31703 9.24886 8.81114 8.93122L13.6037 5.85028C13.836 5.70095 13.9032 5.39159 13.7539 5.15931C13.6046 4.92702 13.2952 4.85977 13.063 5.0091L8.27038 8.09004C8.10567 8.19592 7.89433 8.19592 7.72962 8.09004L2.93705 5.0091Z"
+                    fill="#28367B"
+                  />
+                </svg>
+
+                Kontakty</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">
+                <svg
+                  width="18"
+                  height="18"
+                  viewbox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1.5 9.01127C1.5 5.06034 4.6575 1.5 9.015 1.5C13.275 1.5 16.5 4.99274 16.5 8.98873C16.5 13.6232 12.72 16.5 9 16.5C7.77 16.5 6.405 16.1695 5.31 15.5235C4.9275 15.2907 4.605 15.1179 4.1925 15.2531L2.6775 15.7038C2.295 15.824 1.95 15.5235 2.0625 15.1179L2.565 13.4354C2.6475 13.2026 2.6325 12.9547 2.5125 12.7594C1.8675 11.5726 1.5 10.2732 1.5 9.01127ZM8.02501 9.01127C8.02501 9.54457 8.45251 9.97271 8.98501 9.98022C9.51751 9.98022 9.94501 9.54457 9.94501 9.01878C9.94501 8.48548 9.51751 8.05734 8.98501 8.05734C8.46001 8.04982 8.02501 8.48548 8.02501 9.01127ZM11.4825 9.01878C11.4825 9.54457 11.91 9.98022 12.4425 9.98022C12.975 9.98022 13.4025 9.54457 13.4025 9.01878C13.4025 8.48548 12.975 8.05733 12.4425 8.05733C11.91 8.05733 11.4825 8.48548 11.4825 9.01878ZM5.52751 9.98022C5.00251 9.98022 4.56751 9.54457 4.56751 9.01878C4.56751 8.48548 4.99501 8.05733 5.52751 8.05733C6.06001 8.05733 6.48751 8.48548 6.48751 9.01878C6.48751 9.54457 6.06001 9.97271 5.52751 9.98022Z"
+                    fill="white"
+                  />
+                </svg>
+
+                FAQ</a
+              >
+            </li>
+          </ul>
+        </nav>
+
+        <div class="row justify-content-center text-center my-3">
+          <p class="col-12 col-md-6 text-center text-white">
+            Tymbe Ty–brigády je jediná on-line platforma, která najde, prověří,
+            doručí a zaplatí brigádníky tam, kde je právě potřebuješ.
+          </p>
+        </div>
+        <div class="row justify-content-center">
+          <p
+            class="
+              col-auto
+              mt-3
+              p-3
+              text-center text-white
+              bg-light-transparent
+              px-3
+              py-2
+              rounded-pill
+            "
+          >
+            <small>24 hodin denně, 7 dní v týdnu a po celé ČR.</small>
+          </p>
+        </div>
+        <div class="row mt-2">
+          <div class="col-12 d-inline text-center">
+            <a href="https://www.facebook.com/tymbecz">
+              <img class="mx-2" src="assets/img/fb-icon.svg"
+            /></a>
+
+            <a href="https://www.instagram.com/tymbe_cz/">
+              <img class="mx-2" src="assets/img/ig-icon.svg" alt=""
+            /></a>
+
+            <a href="https://www.linkedin.com/company/tymbe"
+              ><img class="mx-2" src="assets/img/linkedin.svg" alt=""
+            /></a>
+          </div>
+          <p class="col-12 text-center mt-3 text-white">
+            <small>© Copyright 2021 – Tymbe a.s.</small>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS animations -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- Custom scripts -->
+    <script src="assets/js/scripts.js"></script>
+
+    <script>
+      let statsTemporaryWorkers,
+        statsWorkPlaces,
+        statsJobsTaken,
+        statsSatisfiedLeaders;
+      statsTemporaryWorkers = document.getElementById("statsTemporaryWorkers");
+      statsWorkPlaces = document.getElementById("statsWorkPlaces");
+      statsJobsTaken = document.getElementById("statsJobsTaken");
+      statsSatisfiedLeaders = document.getElementById("statsSatisfiedLeaders");
+      statsTemporaryWorkersMobile = document.getElementById(
+        "statsTemporaryWorkersMobile"
+      );
+      statsWorkPlacesMobile = document.getElementById("statsWorkPlacesMobile");
+      statsJobsTakenMobile = document.getElementById("statsJobsTakenMobile");
+      statsSatisfiedLeadersMobile = document.getElementById(
+        "statsSatisfiedLeadersMobile"
+      );
+
+      function buildPeckaCard(ring) {
+        const ColContainer = document.createElement("div");
+        ColContainer.classList.add("col-12", "col-md-6", "col-lg-3");
+
+        const CardContainer = document.createElement("div");
+        CardContainer.classList.add(
+          "card",
+          "h-100",
+          "shadow",
+          "border-0",
+          "rounded",
+          "m-2"
+        );
+
+        const CardBody = document.createElement("div");
+        CardBody.classList.add("card-body");
+
+        const CardBodyHeader = document.createElement("div");
+        CardBodyHeader.classList.add("row", "justify-content-between");
+
+        const CardBodyHeaderImageContainer = document.createElement("div");
+        CardBodyHeaderImageContainer.classList.add(
+          "col-auto",
+          "align-self-center"
+        );
+
+        const CardBodyHeaderImage = document.createElement("img");
+        CardBodyHeaderImage.src = "assets/img/tesco-logo.png";
+
+        const CardBodyHeaderTimeUntilContainer = document.createElement("div");
+        CardBodyHeaderTimeUntilContainer.classList.add(
+          "col-auto",
+          "align-self-center"
+        );
+
+        const CardBodyHeaderTimeUntilContainerParagraph =
+          document.createElement("p");
+        CardBodyHeaderTimeUntilContainerParagraph.classList.add(
+          "mb-0",
+          "text-accent",
+          "align-middle"
+        );
+
+        const CardBodyHeaderTimeUntilIcon = document.createElement("img");
+        CardBodyHeaderTimeUntilIcon.classList.add(
+          "col-auto",
+          "align-self-center"
+        );
+        CardBodyHeaderTimeUntilIcon.src = "assets/img/time-icon.svg";
+        CardBodyHeaderTimeUntilIcon.classList.add("me-1");
+
+        const CardBodyHeaderTimeUntil = document.createElement("span");
+        CardBodyHeaderTimeUntil.classList.add(
+          "font-weight-bold",
+          "text-decoration-underline",
+          "h6"
+        );
+        CardBodyHeaderTimeUntil.innerHTML = "Od" + ring.date_from;
+
+        const CardHeadingContainer = document.createElement("div");
+        CardHeadingContainer.classList.add("row", "mt-3");
+
+        const CardHeading = document.createElement("h4");
+        CardHeading.innerHTML = ring.position;
+
+        const CardLocationContainer = document.createElement("div");
+        CardLocationContainer.classList.add("row", "mt-3");
+
+        const CardLocationContainerParagraph = document.createElement("p");
+        CardLocationContainerParagraph.classList.add(
+          "d-inline",
+          "text-accent",
+          "align-middle",
+          "text-capitalize"
+        );
+
+        const CardLocationContainerIcon = document.createElement("img");
+        CardLocationContainerIcon.src = "assets/img/location-icon.svg";
+        CardLocationContainerIcon.classList.add("me-1");
+
+        const CardLocationContainerText = document.createElement("span");
+        CardLocationContainerText.innerHTML = ring.place;
+
+        const CardPriceContainer = document.createElement("div");
+        CardPriceContainer.classList.add("row", "mb-3");
+
+        const CardMoneyContainer = document.createElement("div");
+        CardMoneyContainer.classList.add(
+          "col-6",
+          "border",
+          "border-light",
+          "text-center",
+          "py-3"
+        );
+
+        const CardMoney = document.createElement("span");
+        CardMoney.classList.add("font-weight-bold", "h4");
+        CardMoney.innerHTML = ring.price_start;
+        const CardMoneyCurrency = document.createElement("small");
+        CardMoneyCurrency.innerHTML = " Kč/h";
+
+        const CardCreditContainer = document.createElement("div");
+        CardCreditContainer.classList.add(
+          "col-6",
+          "border",
+          "border-light",
+          "text-center",
+          "py-3"
+        );
+
+        const CardCredit = document.createElement("span");
+        CardCredit.classList.add("font-weight-bold", "h4");
+        CardCredit.innerHTML = ring.price_current;
+
+        const CardCreditCurrency = document.createElement("small");
+        CardCreditCurrency.innerHTML = " Kč/h";
+
+        const CardFooter = document.createElement("div");
+        CardFooter.classList.add(
+          "card-footer",
+          "bg-white",
+          "border-0",
+          "rounded"
+        );
+        const CardFooterAction = document.createElement("button");
+        CardFooterAction.classList.add(
+          "btn",
+          "btn-primary",
+          "rounded-pill",
+          "w-100",
+          "mb-3"
+        );
+        CardFooterAction.innerHTML = "Chci brigádu";
+
+        CardCreditCurrency.innerHTML = " Kč/h";
+
+        ColContainer.appendChild(CardContainer);
+        CardContainer.appendChild(CardBody);
+        CardBody.appendChild(CardBodyHeader);
+        CardBodyHeader.appendChild(CardBodyHeaderImageContainer);
+        CardBodyHeaderImageContainer.appendChild(CardBodyHeaderImage);
+        CardBodyHeader.appendChild(CardBodyHeaderTimeUntilContainer);
+        CardBodyHeaderTimeUntilContainer.appendChild(
+          CardBodyHeaderTimeUntilContainerParagraph
+        );
+
+        CardBodyHeaderTimeUntilContainerParagraph.appendChild(
+          CardBodyHeaderTimeUntilIcon
+        );
+        CardBodyHeaderTimeUntilContainerParagraph.appendChild(
+          CardBodyHeaderTimeUntil
+        );
+        CardBody.appendChild(CardHeadingContainer);
+        CardHeadingContainer.appendChild(CardHeading);
+        CardBody.appendChild(CardLocationContainer);
+        CardLocationContainer.appendChild(CardLocationContainerParagraph);
+        CardLocationContainerParagraph.appendChild(CardLocationContainerIcon);
+        CardLocationContainerParagraph.appendChild(CardLocationContainerText);
+        CardPriceContainer.appendChild(CardMoneyContainer);
+        CardPriceContainer.appendChild(CardCreditContainer);
+        CardMoneyContainer.appendChild(CardMoney);
+        CardMoneyContainer.appendChild(CardMoneyCurrency);
+        CardCreditContainer.appendChild(CardCredit);
+        CardCreditContainer.appendChild(CardCreditCurrency);
+
+        CardPriceContainer.appendChild(CardCreditContainer);
+        CardContainer.appendChild(CardFooter);
+
+        CardFooter.appendChild(CardPriceContainer);
+        CardFooter.appendChild(CardFooterAction);
+
+        document.getElementById("ring_container").appendChild(ColContainer);
+      }
+
+      function loadStats(stats) {
+        statsTemporaryWorkers.innerHTML = stats.firma_1;
+        statsWorkPlaces.innerHTML = stats.firma_2;
+        statsJobsTaken.innerHTML = Math.floor(stats.firma_3) + "%";
+        statsSatisfiedLeaders.innerHTML = Math.floor(stats.firma_4) + "%";
+
+        statsTemporaryWorkersMobile.innerHTML = stats.firma_1;
+        statsWorkPlacesMobile.innerHTML = stats.firma_2;
+        statsJobsTakenMobile.innerHTML = Math.floor(stats.firma_3) + "%";
+        statsSatisfiedLeadersMobile.innerHTML = Math.floor(stats.firma_4) + "%";
+      }
+
+      $.get("https://api.tymbeos1.cz/rings", function (response) {
+        buildPeckaCard(response.pecka);
+        buildPeckaCard(response.ring1);
+        buildPeckaCard(response.ring2);
+        buildPeckaCard(response.ring3);
+      });
+
+      $.get("https://api.tymbeos1.cz/statistics", function (response) {
+        loadStats(response);
+      });
+    </script>
+  </body>
 </html>
