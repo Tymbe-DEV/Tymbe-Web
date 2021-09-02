@@ -184,13 +184,27 @@ h4 {
 }
 
 .btn-outline-primary {
-  color: var(--cta-green);
-  border-color: var(--cta-green);
+    border: 1px solid rgba(40, 54, 123, 0.5)!important;
+    box-sizing: border-box;
+    border-radius: 100px;
+
+    font-family: Poppins;
+font-style: normal;
+font-weight: 600;
+font-size: 16px;
+line-height: 22px;
+/* identical to box height, or 137% */
+
+text-align: center;
+
+/* Modra */
+
+color: #28367B;
 }
 
 .btn-outline-primary:hover {
-  background-color: var(--cta-green-dark);
-  border-color: var(--cta-green-dark);
+    border: 1px solid #141E4F;
+    color: #141E4F;
 }
 
 .btn-carousel {
@@ -219,6 +233,27 @@ header {
 .navbar {
   border-radius: 100px;
   box-shadow: 0px 0px 24px rgba(40, 54, 123, 0.08);
+}
+
+.navbar-toggler{
+    width:35px!important;
+    height:35px!important;
+    padding: 0!important;
+}
+
+.navbar-toggler-icon{
+    background-image: none!important;
+    width:35px!important;
+    height:35px!important;
+}
+
+.navbar-toggler-icon > svg{
+    margin: 0 auto;
+}
+
+.navbar-light .navbar-toggler{
+    color: transparent!important;
+    border-color:transparent!important;
 }
 
 
@@ -250,7 +285,6 @@ header a.nav-link.active {
 header a.nav-link.active > svg > path,
 header a.nav-link.active > svg > rect {
   fill: #a2ba02 !important;
-  stroke: #a2ba02 !important;
 }
 header a.nav-link.active:hover {
   color: var(--main) !important;
@@ -258,12 +292,15 @@ header a.nav-link.active:hover {
 }
 a.nav-link.active:hover > svg > path {
     fill: #a2ba02 !important;
-    stroke: #a2ba02 !important;
 }
 
 header a.nav-link:hover > svg > path,
 header a.nav-link:hover > svg > rect {
     fill: #a2ba02 !important;
+}
+
+.mobile-nav .navbar-brand img{
+  height:35px;
 }
 
 .slogan-text {
@@ -322,7 +359,7 @@ header a.nav-link:hover > svg > rect {
 .contact {
   background: url("../img/about-bg.jpg");
   background-repeat: no-repeat;
-  background-size: auto 100%;
+  background-size: contain;
 }
 
 .banner-bg {
@@ -429,6 +466,17 @@ font-size: 16px;
 line-height: 16px;
 opacity: 1!important;
 color: #28367B!important;
+}
+
+textarea::placeholder {
+  font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 16px;
+opacity: 1!important;
+color: #28367B!important;
+padding-top:10px!important;
 }
 
 .border-white{
