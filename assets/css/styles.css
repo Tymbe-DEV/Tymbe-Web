@@ -100,11 +100,17 @@ color: #FFFFFF;
 
 h1 {
   font-family: Coolvetica;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 55px;
-  line-height: 65px;
-  letter-spacing: 1px;
+font-style: normal;
+font-weight: bold;
+font-size: 55px;
+line-height: 65px;
+/* or 118% */
+
+letter-spacing: 1px;
+
+/* Dark Blue */
+
+color: #28367B;
 }
 
 h2 {
@@ -118,11 +124,11 @@ h2 {
 
 h3 {
   font-family: Coolvetica;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 22px;
-  line-height: 22px;
-  letter-spacing: 1px;
+font-style: normal;
+font-weight: bold;
+font-size: 22px;
+line-height: 26px;
+letter-spacing: 1px;
 }
 
 h4 {
@@ -158,6 +164,7 @@ h4 {
 .btn-primary {
   background-color: var(--cta-green);
   border-color: var(--cta-green);
+  color: white!important;
 }
 
 .btn-secondary {
@@ -220,6 +227,11 @@ color: #28367B;
 
 .rounded {
   border-radius: 20px !important;
+}
+
+.rounded-bottom {
+  border-bottom-right-radius: 20px!important;
+  border-bottom-left-radius: 20px!important;
 }
 
 header {
@@ -360,6 +372,12 @@ header a.nav-link:hover > svg > rect {
   background: url("../img/about-bg.jpg");
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+@media (max-width: 575.98px) {
+  .contact{
+    background-size: 300%;
+  }
 }
 
 .banner-bg {
