@@ -234,6 +234,10 @@ color: #28367B;
   border-bottom-left-radius: 20px!important;
 }
 
+.border-white{
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
 header {
   background: linear-gradient(
     90deg,
@@ -398,16 +402,7 @@ header a.nav-link:hover > svg > rect {
   z-index: 10;
 }
 
-.btn-faq.active {
-  font-weight: bold;
-  color: var(--main-dark);
-}
 
-.btn-faq.inactive {
-  font-weight: bold;
-  color: var(--main-dark);
-  opacity: 0.6;
-}
 #ring_container .ring-header {
   margin-top: 20px;
   height: 100px;
@@ -497,6 +492,63 @@ color: #28367B!important;
 padding-top:10px!important;
 }
 
-.border-white{
-    border: 1px solid rgba(255, 255, 255, 0.2);
+/* faq */
+
+.btn-faq.active {
+  font-weight: bold;
+  color: var(--main-dark);
+  border-bottom: 1px solid #28367B;
 }
+
+.btn-faq.inactive {
+  font-weight: bold;
+  color: var(--main-dark);
+  opacity: 0.6;
+  border-bottom: 1px solid #767676;
+}
+
+.accordion-button{
+  font-family: Poppins;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 24px;
+/* or 133% */
+
+
+/* Black */
+
+color: #141414;
+}
+
+.accordion-item{
+  margin: 10px 0;
+  border: 1px solid #DBDFEE!important;
+  border-radius: 10px!important;
+}
+
+.accordion-button{
+  border-radius:10px!important;
+}
+
+.accordion-button::after{
+  background-image: url('../img/accordionArrowDown.svg');
+}
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url('../img/accordionArrowDown.svg');
+}
+
+.accordion-button:focus{
+  box-shadow: none!important;
+  background: transparent!important;
+  color: #141414!important;
+}
+
+.accordion-button:visited{
+  box-shadow: none!important;
+  background: transparent!important;
+  color: #141414!important;
+  border-color:transparent!important;
+}
+
