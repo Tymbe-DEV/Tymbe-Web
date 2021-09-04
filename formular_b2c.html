@@ -197,95 +197,155 @@
                     <div class="col-12 col-lg-5">
                         <div class="bg-white shadow p-4 rounded" data-aos="fade-up" data-aos-offset="200" data-aos-delay="50" data-aos-duration="1500">
                             <h2 class="text-accent text-center">Staň se Tymberem</h2>
+
+
+                            <div class="row justify-content-center pt-4 pb-3">
+
+                                <div class="col-auto">
+                                    <div id="formStepCircle1" class="formStep visited">
+
+                                    </div>                                    
+                                </div>
+
+                                <hr id="formLine1" class="col-2 align-self-center mb-0 formLine nvisited">
+
+                                <div class="col-auto">
+                                    <div id="formStepCircle2" class="formStep nvisited">
+
+                                    </div>
+                                </div>
+
+                                <hr id="formLine2" class="col-2 align-self-center mb-0 formLine nvisited">
+
+                                <div class="col-auto">
+                                    <div id="formStepCircle2" class="formStep nvisited">
+
+                                    </div>
+                                </div>
+
+                            </div>
+
                             <form class="mt-4" id="workerRegisterForm">
-                                <div class="mb-3">
-                                    <input required id="sureName" name="sureName" type="text" class="form-control" placeholder="Jméno" aria-label="Jméno" aria-describedby="">
-                                </div>
-                                <div class="mb-3">
-                                    <input required id="familyName" name="familyName" type="text" class="form-control" placeholder="Příjmení" aria-label="Příjmení" aria-describedby="">
-                                </div>
-                                <div class="mb-3">
-                                    <input required id="birthPlace" name="birthPlace" type="text" class="form-control" placeholder="Místo narození" aria-label="MístoNarození" aria-describedby="">
-                                </div>
-                                <div class="mb-3">
-                                    <input required id="idNumber" name="idNumber" type="text" class="form-control" placeholder="Číslo občanského průkazu" aria-label="" aria-describedby="">
-                                </div>
-                                <div class="mb-3">
-                                    <input required id="birthDate" name="birthDate" type="text" class="form-control" placeholder="Datum narození (ve formátu DD.MM.RRRR)" aria-label="" aria-describedby="">
-                                </div>
-                                <div class="mb-3">
-                                    <input required id="birthNumber" name="birthNumber" type="text" class="form-control" placeholder="Rodné číslo (jen číslo bez lomítka)" aria-label="" aria-describedby="">
-                                </div>
-                                <div class="mb-3">
-                                    <p>Pohlaví:</p>
-                                    <div class="form-check">
-                                        <input id="gender" name="gender" class="form-check-input" value="2" type="radio">
-                                        <label class="form-check-label" for="genderRadio1">
-                                            Muž
-                                        </label>
+
+
+                                <div id="formStep1">
+
+                                    <div class="mb-3">
+                                        <input required id="sureName" name="sureName" type="text" class="form-control" placeholder="Jméno" aria-label="Jméno" aria-describedby="">
                                     </div>
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" checked value='1'>
-                                        <label class="form-check-label" for="genderRadio2">
-                                            Žena
-                                        </label>
+                                    <div class="mb-3">
+                                        <input required id="familyName" name="familyName" type="text" class="form-control" placeholder="Příjmení" aria-label="Příjmení" aria-describedby="">
                                     </div>
+                                    <div class="mb-3">
+                                        <input required id="birthPlace" name="birthPlace" type="text" class="form-control" placeholder="Místo narození" aria-label="MístoNarození" aria-describedby="">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input required id="idNumber" name="idNumber" type="text" class="form-control" placeholder="Číslo občanského průkazu" aria-label="" aria-describedby="">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input required id="birthDate" name="birthDate" type="text" class="form-control" placeholder="Datum narození (ve formátu DD.MM.RRRR)" aria-label="" aria-describedby="">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input required id="birthNumber" name="birthNumber" type="text" class="form-control" placeholder="Rodné číslo (jen číslo bez lomítka)" aria-label="" aria-describedby="">
+                                    </div>
+                                    <div class="mb-3">
+                                        <p>Pohlaví:</p>
+                                        <div class="form-check">
+                                            <input id="gender" name="gender" class="form-check-input" value="2" type="radio">
+                                            <label class="form-check-label" for="genderRadio1">
+                                                Muž
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" checked value='1'>
+                                            <label class="form-check-label" for="genderRadio2">
+                                                Žena
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="row justify-content-end  mx-0 my-3">
+                                        
+                                       
+                                        <button id="" type="" class="btn btn-primary rounded-pill col-auto" onclick="formStep2()">Další</button>
+
+                                    </div>
+
                                 </div>
 
-                                <select required id="pCountry" name="pCountry" class="form-select mb-3" aria-label="Default select example">
-                                    <option selected>Stát - trvalé bydliště</option>
-                                    <option value="CZ">Česká republika</option>
-                                    <option value="SK">Slovensko</option>
-                                </select>
+                                <div id="formStep2" class="d-none">
 
-                                <div class="mb-3">
-                                    <input required id="pStreet" name="pStreet" type="text" class="form-control" placeholder="Ulice a číslo - trvalé bydliště" aria-label="" aria-describedby="">
-                                </div>
-                                <div class="mb-3">
-                                    <input required id="pCity" name="pCity" type="text" class="form-control" placeholder="Město - trvalé bydliště" aria-label="" aria-describedby="">
-                                </div>
-                                <div class="mb-3">
-                                    <input required id="pZip" name="pZip" type="text" class="form-control" placeholder="PSČ - trvalé bydliště" aria-label="" aria-describedby="">
+                                    <select required id="pCountry" name="pCountry" class="form-select mb-3" aria-label="Default select example">
+                                        <option selected>Stát - trvalé bydliště</option>
+                                        <option value="CZ">Česká republika</option>
+                                        <option value="SK">Slovensko</option>
+                                    </select>
+    
+                                    <div class="mb-3">
+                                        <input required id="pStreet" name="pStreet" type="text" class="form-control" placeholder="Ulice a číslo - trvalé bydliště" aria-label="" aria-describedby="">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input required id="pCity" name="pCity" type="text" class="form-control" placeholder="Město - trvalé bydliště" aria-label="" aria-describedby="">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input required id="pZip" name="pZip" type="text" class="form-control" placeholder="PSČ - trvalé bydliště" aria-label="" aria-describedby="">
+                                    </div>
+    
+                                    <select id="cCountry" name="cCountry" class="form-select mb-3" aria-label="Default select example">
+                                        <option selected>Stát - kontaktní adresa</option>
+                                        <option value="CZ">Česká republika</option>
+                                        <option value="SK">Slovensko</option>
+                                    </select>
+    
+                                    <div class="mb-3">
+                                        <input id="cStreet" name="cStreet" type="text" class="form-control" placeholder="Ulice a číslo - kontaktní adresa" aria-label="" aria-describedby="">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input id="cCity" name="cCity" type="text" class="form-control" placeholder="Město - kontaktní adresa" aria-label="" aria-describedby="">
+                                    </div>
+                                    <div class="mb-3">
+                                        <input id="cZip" name="cZip" type="text" class="form-control" placeholder="PSČ - kontaktní adresa" aria-label="" aria-describedby="">
+                                    </div>
+    
+    
+                                    <div class="mb-3">
+                                        <input required id="phone" name="phone" type="text" class="form-control" placeholder="Telefoní číslo (ve formátu: +420123456789)" aria-label="" aria-describedby="">
+                                    </div>
+
+                                    <div class="row justify-content-between  mx-0 my-3">
+                                        
+                                        <button id="" type="" class="btn btn-outline-primary rounded-pill col-auto" onclick="formStep1()">Zpět</button>
+                                        <button id="" type="" class="btn btn-primary rounded-pill col-auto" onclick="formStep3()">Další</button>
+
+                                    </div>
+
                                 </div>
 
-                                <select id="cCountry" name="cCountry" class="form-select mb-3" aria-label="Default select example">
-                                    <option selected>Stát - kontaktní adresa</option>
-                                    <option value="CZ">Česká republika</option>
-                                    <option value="SK">Slovensko</option>
-                                </select>
+                                <div id="formStep3" class="d-none">
 
-                                <div class="mb-3">
-                                    <input id="cStreet" name="cStreet" type="text" class="form-control" placeholder="Ulice a číslo - kontaktní adresa" aria-label="" aria-describedby="">
-                                </div>
-                                <div class="mb-3">
-                                    <input id="cCity" name="cCity" type="text" class="form-control" placeholder="Město - kontaktní adresa" aria-label="" aria-describedby="">
-                                </div>
-                                <div class="mb-3">
-                                    <input id="cZip" name="cZip" type="text" class="form-control" placeholder="PSČ - kontaktní adresa" aria-label="" aria-describedby="">
-                                </div>
+                                    <div class="mb-3">
+                                        <input required id="email" name="email" type="email" class="form-control" placeholder="E-mail" aria-label="" aria-describedby="">
+                                    </div>
+    
+                                    <div class="mb-3">
+                                        <input required id="password" name="password" type="password" class="form-control" placeholder="Password" aria-label="" aria-describedby="">
+                                    </div>
+    
+                                    <div class="mb-3">
+                                        <input required id="passwordCheck" name="passwordCheck" type="password" class="form-control" placeholder="Repeat Password" aria-label="" aria-describedby="">
+                                    </div>
+                                    <input hidden name="acceptDataProcessing" value="true"/>
 
+                                    <div class="row justify-content-between  mx-0 my-3">
+                                        
+                                        <button id="" type="" class="btn btn-outline-primary rounded-pill col-auto" onclick="formStep2()">Zpět</button>
+                                        <button id="submitButton" type="submit" class="btn btn-primary rounded-pill col-auto">Odeslat</button>
 
-                                <div class="mb-3">
-                                    <input required id="phone" name="phone" type="text" class="form-control" placeholder="Telefoní číslo (ve formátu: +420123456789)" aria-label="" aria-describedby="">
-                                </div>
+                                    </div>
+                                
+                                </div>                
 
-                                <div class="mb-3">
-                                    <input required id="email" name="email" type="email" class="form-control" placeholder="E-mail" aria-label="" aria-describedby="">
-                                </div>
-
-                                <div class="mb-3">
-                                    <input required id="password" name="password" type="password" class="form-control" placeholder="Password" aria-label="" aria-describedby="">
-                                </div>
-
-                                <div class="mb-3">
-                                    <input required id="passwordCheck" name="passwordCheck" type="password" class="form-control" placeholder="Repeat Password" aria-label="" aria-describedby="">
-                                </div>
-                                <input hidden name="acceptDataProcessing" value="true"/>
-
-
-                                <div class="text-center py-3">
-                                    <button id="submitButton" type="submit" class="btn btn-primary rounded-pill mx-auto">Registrovat</button>
-                                </div>
+                              
                                 <p class="text-center">
                                     Už máš u nás účet?
                                     <a href="#">Přihlas se.</a>
@@ -513,6 +573,39 @@
                     });
                 });
             });
+        </script>
+
+        <script>
+            function formStep1(){
+                $('#formStep2').addClass('d-none');
+                $('#formStep3').addClass('d-none');
+                $('#formStep1').removeClass('d-none');
+
+                $('#formLine1').addClass('inactive'); 
+                $('#formCircle2').addClass('inactive');                
+            }
+
+            function formStep2(){
+                $('#formStep1').addClass('d-none');
+                $('#formStep3').addClass('d-none');
+                $('#formStep2').removeClass('d-none');
+
+                $('#formLine1').removeClass('inactive'); 
+                $('#formCircle2').removeClass('inactive'); 
+                $('#formLine2').addClass('inactive'); 
+                $('#formCircle3').addClass('inactive'); 
+            }
+
+            function formStep3(){
+                $('#formStep1').addClass('d-none');
+                $('#formStep2').addClass('d-none');
+                $('#formStep3').removeClass('d-none');
+
+                $('#formLine2').removeClass('inactive'); 
+                $('#formCircle3').removeClass('inactive'); 
+            }
+
+
         </script>
 
     </body>
