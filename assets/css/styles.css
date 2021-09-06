@@ -569,3 +569,7 @@ color: #141414;
 .nvisited{
   background: rgba(162, 186, 2, 0.25);
 }
+
+.visited{
+  background: rgba(162, 186, 2, 1);
+}

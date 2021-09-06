@@ -581,8 +581,8 @@
                 $('#formStep3').addClass('d-none');
                 $('#formStep1').removeClass('d-none');
 
-                $('#formLine1').addClass('inactive'); 
-                $('#formCircle2').addClass('inactive');                
+                $('#formLine1').addClass('nvisited'); 
+                $('#formCircle2').addClass('nvisited');                
             }
 
             function formStep2(){
@@ -590,10 +590,12 @@
                 $('#formStep3').addClass('d-none');
                 $('#formStep2').removeClass('d-none');
 
-                $('#formLine1').removeClass('inactive'); 
-                $('#formCircle2').removeClass('inactive'); 
-                $('#formLine2').addClass('inactive'); 
-                $('#formCircle3').addClass('inactive'); 
+                $('#formLine1').removeClass('nvisited'); 
+                $('#formCircle2').removeClass('nvisited'); 
+                $('#formLine1').addClass('visited'); 
+                $('#formCircle2').addClass('visited'); 
+                $('#formLine2').addClass('nvisited'); 
+                $('#formCircle3').addClass('nvisited'); 
             }
 
             function formStep3(){
@@ -601,8 +603,10 @@
                 $('#formStep2').addClass('d-none');
                 $('#formStep3').removeClass('d-none');
 
-                $('#formLine2').removeClass('inactive'); 
-                $('#formCircle3').removeClass('inactive'); 
+                $('#formLine2').removeClass('nvisited'); 
+                $('#formCircle3').removeClass('nvisited'); 
+                $('#formLine2').addClass('visited'); 
+                $('#formCircle3').addClass('visited'); 
             }
 
 
