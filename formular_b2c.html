@@ -218,7 +218,7 @@
                                 <hr id="formLine2" class="col-2 align-self-center mb-0 formLine nvisited">
 
                                 <div class="col-auto">
-                                    <div id="formStepCircle2" class="formStep nvisited">
+                                    <div id="formStepCircle3" class="formStep nvisited">
 
                                     </div>
                                 </div>
@@ -249,15 +249,15 @@
                                         <input required id="birthNumber" name="birthNumber" type="text" class="form-control" placeholder="Rodné číslo (jen číslo bez lomítka)" aria-label="" aria-describedby="">
                                     </div>
                                     <div class="mb-3">
-                                        <p>Pohlaví:</p>
+                                        <p class="text-accent">Pohlaví:</p>
                                         <div class="form-check">
-                                            <input id="gender" name="gender" class="form-check-input" value="2" type="radio">
+                                            <input id="gender1" name="gender" class="form-check-input" value="2" type="radio" checked>
                                             <label class="form-check-label" for="genderRadio1">
                                                 Muž
                                             </label>
                                         </div>
                                         <div class="form-check">
-                                            <input class="form-check-input" type="radio" checked value='1'>
+                                            <input id="gender2" name="gender" class="form-check-input" value="1" type="radio">
                                             <label class="form-check-label" for="genderRadio2">
                                                 Žena
                                             </label>
@@ -275,6 +275,8 @@
 
                                 <div id="formStep2" class="d-none">
 
+                                    <p class="text-accent">Adresa trvalého bydliště</p>
+
                                     <select required id="pCountry" name="pCountry" class="form-select mb-3" aria-label="Default select example">
                                         <option selected>Stát - trvalé bydliště</option>
                                         <option value="CZ">Česká republika</option>
@@ -290,6 +292,8 @@
                                     <div class="mb-3">
                                         <input required id="pZip" name="pZip" type="text" class="form-control" placeholder="PSČ - trvalé bydliště" aria-label="" aria-describedby="">
                                     </div>
+
+                                    <p class="text-accent">Kontaktní adresa</p>
     
                                     <select id="cCountry" name="cCountry" class="form-select mb-3" aria-label="Default select example">
                                         <option selected>Stát - kontaktní adresa</option>
@@ -581,8 +585,10 @@
                 $('#formStep3').addClass('d-none');
                 $('#formStep1').removeClass('d-none');
 
+                $('#formLine1').removeClass('visited'); 
+                $('#formStepCircle2').removeClass('visited'); 
                 $('#formLine1').addClass('nvisited'); 
-                $('#formCircle2').addClass('nvisited');                
+                $('#formStepCircle2').addClass('nvisited');                
             }
 
             function formStep2(){
@@ -591,11 +597,13 @@
                 $('#formStep2').removeClass('d-none');
 
                 $('#formLine1').removeClass('nvisited'); 
-                $('#formCircle2').removeClass('nvisited'); 
+                $('#formStepCircle2').removeClass('nvisited'); 
+                $('#formLine2').removeClass('visited'); 
+                $('#formStepCircle3').removeClass('visited');
                 $('#formLine1').addClass('visited'); 
-                $('#formCircle2').addClass('visited'); 
+                $('#formStepCircle2').addClass('visited'); 
                 $('#formLine2').addClass('nvisited'); 
-                $('#formCircle3').addClass('nvisited'); 
+                $('#formStepCircle3').addClass('nvisited'); 
             }
 
             function formStep3(){
@@ -604,9 +612,9 @@
                 $('#formStep3').removeClass('d-none');
 
                 $('#formLine2').removeClass('nvisited'); 
-                $('#formCircle3').removeClass('nvisited'); 
+                $('#formStepCircle3').removeClass('nvisited'); 
                 $('#formLine2').addClass('visited'); 
-                $('#formCircle3').addClass('visited'); 
+                $('#formStepCircle3').addClass('visited'); 
             }
 
 

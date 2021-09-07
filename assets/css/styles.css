@@ -468,6 +468,33 @@ header a.nav-link:hover > svg > rect {
   box-sizing: border-box;
   border-radius: 10px;
 }
+
+.form-select{
+  background: rgba(243, 245, 253, 0.5);
+
+  /* Dark Blue */
+  border: 1px solid #28367b!important;
+  border-radius: 10px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  opacity: 1!important;
+  color: #28367B!important;
+  padding:15px 10px;
+}
+
+.form-select option{
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  opacity: 1!important;
+  color: #28367B!important;
+}
+
 input.form-control {
   padding: 10px;
 }
@@ -562,14 +589,23 @@ color: #141414;
   border-radius:50%;
 }
 
+.formStep.nvisited{
+  background: rgba(162, 186, 2, 0.25);
+}
+
+.formStep.visited{
+  background: rgba(162, 186, 2, 1);
+  opacity: 1;
+}
+
 .formLine{
   border: 1px solid #A2BA02;
 }
 
-.nvisited{
-  background: rgba(162, 186, 2, 0.25);
+.formLine.nvisited{
+  opacity: 0.25;
 }
 
-.visited{
-  background: rgba(162, 186, 2, 1);
+.formLine.visited{
+  opacity: 1;
 }
