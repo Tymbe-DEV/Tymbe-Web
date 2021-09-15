@@ -1085,7 +1085,7 @@
 
     <script>
       const form = $("#workerRegisterForm");
-      console.log(form);
+
       const errorMessages = [];
 
       function createErrorMessage(referenceNode, errorText) {
@@ -1104,8 +1104,6 @@
       }
 
       function validatePattern(value, regex) {
-        console.log(value);
-        console.log(regex.test(value));
         return regex.test(value);
       }
       function validateStep1() {
