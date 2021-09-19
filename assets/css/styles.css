@@ -31,6 +31,9 @@ html {
     rgba(243, 245, 253, 0) 88.54%
   );
 }
+.bg-main-light-green {
+  background: rgba(182, 205, 30, 0.05);
+}
 
 .bg-main-dark {
   background-color: var(--main-dark);
@@ -48,20 +51,19 @@ html {
   );
 }
 
-a{
-    color: #28367B!important;
+a {
+  color: #28367b !important;
 }
 
-small{
-    font-family: Poppins;
-font-style: normal;
-font-weight: normal;
-font-size: 13px!important;
-line-height: 12px;
-/* or 100% */
+small {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 13px !important;
+  line-height: 12px;
+  /* or 100% */
 
-text-align: center;
-
+  text-align: center;
 }
 
 p {
@@ -77,40 +79,39 @@ p {
   color: rgba(0, 0, 0, 0.8);
 }
 
-.p14{
-    font-family: Poppins;
-font-style: normal;
-font-weight: normal;
-font-size: 14px;
-line-height: 20px;
+.p14 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
 }
 
-.p16{
-    font-family: Poppins;
-font-style: normal;
-font-weight: normal;
-font-size: 16px;
-line-height: 24px;
+.p16 {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
 
-text-align: center;
+  text-align: center;
 
-color: #FFFFFF;
-
+  color: #ffffff;
 }
 
 h1 {
   font-family: Coolvetica;
-font-style: normal;
-font-weight: bold;
-font-size: 55px;
-line-height: 65px;
-/* or 118% */
+  font-style: normal;
+  font-weight: bold;
+  font-size: 55px;
+  line-height: 65px;
+  /* or 118% */
 
-letter-spacing: 1px;
+  letter-spacing: 1px;
 
-/* Dark Blue */
+  /* Dark Blue */
 
-color: #28367B;
+  color: #28367b;
 }
 
 h2 {
@@ -124,11 +125,11 @@ h2 {
 
 h3 {
   font-family: Coolvetica;
-font-style: normal;
-font-weight: bold;
-font-size: 22px;
-line-height: 26px;
-letter-spacing: 1px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  letter-spacing: 1px;
 }
 
 h4 {
@@ -164,7 +165,7 @@ h4 {
 .btn-primary {
   background-color: var(--cta-green);
   border-color: var(--cta-green);
-  color: white!important;
+  color: white !important;
 }
 
 .btn-secondary {
@@ -191,28 +192,28 @@ h4 {
 }
 
 .btn-outline-primary {
-    border: 1px solid rgba(40, 54, 123, 0.5)!important;
-    box-sizing: border-box;
-    border-radius: 100px;
+  border: 1px solid rgba(40, 54, 123, 0.5) !important;
+  box-sizing: border-box;
+  border-radius: 100px;
 
-    font-family: Poppins;
-font-style: normal;
-font-weight: 600;
-font-size: 16px;
-line-height: 22px;
-/* identical to box height, or 137% */
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height, or 137% */
 
-text-align: center;
+  text-align: center;
 
-/* Modra */
+  /* Modra */
 
-color: #28367B;
+  color: #28367b;
 }
 
 .btn-outline-primary:hover {
-    border: 1px solid #141E4F;
-    color: #141E4F;
-    background: transparent !important;
+  border: 1px solid #141e4f;
+  color: #141e4f;
+  background: transparent !important;
 }
 
 .btn-carousel {
@@ -231,11 +232,11 @@ color: #28367B;
 }
 
 .rounded-bottom {
-  border-bottom-right-radius: 20px!important;
-  border-bottom-left-radius: 20px!important;
+  border-bottom-right-radius: 20px !important;
+  border-bottom-left-radius: 20px !important;
 }
 
-.border-white{
+.border-white {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -252,27 +253,26 @@ header {
   box-shadow: 0px 0px 24px rgba(40, 54, 123, 0.08);
 }
 
-.navbar-toggler{
-    width:35px!important;
-    height:35px!important;
-    padding: 0!important;
+.navbar-toggler {
+  width: 35px !important;
+  height: 35px !important;
+  padding: 0 !important;
 }
 
-.navbar-toggler-icon{
-    background-image: none!important;
-    width:35px!important;
-    height:35px!important;
+.navbar-toggler-icon {
+  background-image: none !important;
+  width: 35px !important;
+  height: 35px !important;
 }
 
-.navbar-toggler-icon > svg{
-    margin: 0 auto;
+.navbar-toggler-icon > svg {
+  margin: 0 auto;
 }
 
-.navbar-light .navbar-toggler{
-    color: transparent!important;
-    border-color:transparent!important;
+.navbar-light .navbar-toggler {
+  color: transparent !important;
+  border-color: transparent !important;
 }
-
 
 a.nav-link {
   font-family: Poppins;
@@ -283,21 +283,21 @@ a.nav-link {
   color: #28367b !important;
 }
 header a.nav-link:hover {
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;    
-    color: #A2BA02!important;  
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #a2ba02 !important;
 }
 header a.nav-link.active {
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 20px;    
-    color: #A2BA02!important;    
-    mix-blend-mode: normal;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #a2ba02 !important;
+  mix-blend-mode: normal;
 }
 header a.nav-link.active > svg > path,
 header a.nav-link.active > svg > rect {
@@ -308,16 +308,16 @@ header a.nav-link.active:hover {
   fill: var(--main) !important;
 }
 a.nav-link.active:hover > svg > path {
-    fill: #a2ba02 !important;
+  fill: #a2ba02 !important;
 }
 
 header a.nav-link:hover > svg > path,
 header a.nav-link:hover > svg > rect {
-    fill: #a2ba02 !important;
+  fill: #a2ba02 !important;
 }
 
-.mobile-nav .navbar-brand img{
-  height:35px;
+.mobile-nav .navbar-brand img {
+  height: 35px;
 }
 
 .slogan-text {
@@ -370,9 +370,13 @@ header a.nav-link:hover > svg > rect {
   background: url("../img/about-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 70vh;
+  height: 70vh;
+  max-height: 500px !important;
 }
-
+.accordion-button:not(.collapsed) {
+  color: var(--body-color);
+  background-color: white;
+}
 .contact {
   background: url("../img/about-bg.jpg");
   background-repeat: no-repeat;
@@ -380,7 +384,7 @@ header a.nav-link:hover > svg > rect {
 }
 
 @media (max-width: 575.98px) {
-  .contact{
+  .contact {
     background-size: 300%;
   }
 }
@@ -402,7 +406,6 @@ header a.nav-link:hover > svg > rect {
   position: absolute;
   z-index: 10;
 }
-
 
 #ring_container .ring-header {
   margin-top: 20px;
@@ -464,35 +467,35 @@ header a.nav-link:hover > svg > rect {
   background: rgba(243, 245, 253, 0.5);
 
   /* Dark Blue */
-  border: 1px solid #28367b!important;
+  border: 1px solid #28367b !important;
   box-sizing: border-box;
   border-radius: 10px;
 }
 
-.form-select{
+.form-select {
   background: rgba(243, 245, 253, 0.5);
 
   /* Dark Blue */
-  border: 1px solid #28367b!important;
+  border: 1px solid #28367b !important;
   border-radius: 10px;
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
-  opacity: 1!important;
-  color: #28367B!important;
-  padding:15px 10px;
+  opacity: 1 !important;
+  color: #28367b !important;
+  padding: 15px 10px;
 }
 
-.form-select option{
+.form-select option {
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 16px;
-  opacity: 1!important;
-  color: #28367B!important;
+  opacity: 1 !important;
+  color: #28367b !important;
 }
 
 input.form-control {
@@ -500,24 +503,24 @@ input.form-control {
 }
 
 input::placeholder {
-    font-family: Poppins;
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 16px;
-opacity: 1!important;
-color: #28367B!important;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  opacity: 1 !important;
+  color: #28367b !important;
 }
 
 textarea::placeholder {
   font-family: Poppins;
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 16px;
-opacity: 1!important;
-color: #28367B!important;
-padding-top:10px!important;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  opacity: 1 !important;
+  color: #28367b !important;
+  padding-top: 10px !important;
 }
 
 /* faq */
@@ -525,7 +528,7 @@ padding-top:10px!important;
 .btn-faq.active {
   font-weight: bold;
   color: var(--main-dark);
-  border-bottom: 1px solid #28367B;
+  border-bottom: 1px solid #28367b;
 }
 
 .btn-faq.inactive {
@@ -535,77 +538,76 @@ padding-top:10px!important;
   border-bottom: 1px solid #767676;
 }
 
-.accordion-button{
+.accordion-button {
   font-family: Poppins;
-font-style: normal;
-font-weight: 500;
-font-size: 18px;
-line-height: 24px;
-/* or 133% */
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  /* or 133% */
 
+  /* Black */
 
-/* Black */
-
-color: #141414;
+  color: #141414;
 }
 
-.accordion-item{
+.accordion-item {
   margin: 10px 0;
-  border: 1px solid #DBDFEE!important;
-  border-radius: 10px!important;
+  border: 1px solid #dbdfee !important;
+  border-radius: 10px !important;
 }
 
-.accordion-button{
-  border-radius:10px!important;
+.accordion-button {
+  border-radius: 10px !important;
 }
 
-.accordion-button::after{
-  background-image: url('../img/accordionArrowDown.svg');
+.accordion-button::after {
+  background-image: url("../img/accordionArrowDown.svg");
 }
 
 .accordion-button:not(.collapsed)::after {
-  background-image: url('../img/accordionArrowDown.svg');
+  background-image: url("../img/accordionArrowDown.svg");
 }
 
-.accordion-button:focus{
-  box-shadow: none!important;
-  background: transparent!important;
-  color: #141414!important;
+.accordion-button:focus {
+  box-shadow: none !important;
+  background: transparent !important;
+  color: #141414 !important;
 }
 
-.accordion-button:visited{
-  box-shadow: none!important;
-  background: transparent!important;
-  color: #141414!important;
-  border-color:transparent!important;
+.accordion-button:visited {
+  box-shadow: none !important;
+  background: transparent !important;
+  color: #141414 !important;
+  border-color: transparent !important;
 }
 
 /*--- B2B register form ---*/
 
-.formStep{
+.formStep {
   width: 18px;
   height: 18px;
-  background: #A2BA02;  
-  border-radius:50%;
+  background: #a2ba02;
+  border-radius: 50%;
 }
 
-.formStep.nvisited{
+.formStep.nvisited {
   background: rgba(162, 186, 2, 0.25);
 }
 
-.formStep.visited{
+.formStep.visited {
   background: rgba(162, 186, 2, 1);
   opacity: 1;
 }
 
-.formLine{
-  border: 1px solid #A2BA02;
+.formLine {
+  border: 1px solid #a2ba02;
 }
 
-.formLine.nvisited{
+.formLine.nvisited {
   opacity: 0.25;
 }
 
-.formLine.visited{
+.formLine.visited {
   opacity: 1;
 }
