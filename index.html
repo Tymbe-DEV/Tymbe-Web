@@ -894,16 +894,15 @@
         <!-- Custom scripts -->
         <script src="assets/js/scripts.js"></script>
         <script src="node_modules/moment/moment.js"></script>
+        <script src="node_modules/moment/locale/cs.js"></script>
         <script>
-            moment().format();
 
             let TITLE;
             var settings = {
                 sameDay: "[dnes do] LT",
                 nextDay: "[zítra do] LT",
-                nextWeek: function (now) {
-                    console.log(now);
-                    switch (now.day()) {
+                nextWeek: function () {
+                    switch (this.day()) {
                         case 0:
                             return "[do neděle] LT";
                         default:

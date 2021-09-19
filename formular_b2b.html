@@ -57,8 +57,6 @@
 
       gtag("config", "AW-967437153");
     </script>
-
-    <script src="https://www.google.com/recaptcha/api.js?render=6LfNCnMUAAAAAMwWYCZaqQvtn5TmuA3Uau07nj5g"></script>
   </head>
   <body>
     <header class="formular_b2b container-fluid pt-3">
@@ -441,7 +439,7 @@
                 <div class="text-center py-3">
                   <button
                     id="submitButton"
-                    type="submit"
+                    type="button"
                     class="btn btn-primary rounded-pill mx-auto"
                   >
                     Registrovat
@@ -452,6 +450,11 @@
                   <a href="#">Přihlas se.</a>
                 </p>
               </form>
+              <div class="g-recaptcha"
+                   data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                   data-callback="onSubmit"
+                   data-size="invisible">
+              </div>
             </div>
           </div>
           <div class="col-12 col-lg-3 mt-5 mt-lg-0">
@@ -924,40 +927,35 @@
         return valid;
       }
 
-      $("button#submitButton").click(function (e) {
+      function onSubmit(token) {
         removeErrorMessages();
-        e.preventDefault();
-        if (validateForm()) {
-          grecaptcha.ready(function () {
-            grecaptcha
-              .execute("6LfNCnMUAAAAAMwWYCZaqQvtn5TmuA3Uau07nj5g", {
-                action: "submit",
-              })
-              .then(function (token) {
-                $.ajax({
-                  url: "https://api.tymbeos1.cz/company/registration",
-                  type: "post",
-                  dataType: "json",
-                  data: {
-                    ...$("form#companyRegisterForm").serialize(),
-                    reCaptcha: token,
-                  },
-                  success: function (data) {
-                    console.log(data);
-                  },
-                  error: function (data) {
-                    const errors = data.responseJSON.data.errors;
-                    console.log(errors);
+        $.ajax({
+          url: "https://api.tymbeos1.cz/company/registration",
+          type: "post",
+          dataType: "json",
+          contentType: "application/json; charset=utf-8",
+          data: JSON.stringify([
+            ...$("form#companyRegisterForm").serializeArray(),
+            { name: 'reCaptcha', value: token },
+          ]),
+          success: function (data) {
+            console.log(data);
+          },
+          error: function (data) {
+            const errors = data.responseJSON.data.errors;
+            console.log(errors);
 
-                    errors.forEach((err) => {
-                      createErrorMessage($("#formStep3")[0], err);
-                    });
-                  },
-                });
-              });
-          });
-        }
+            errors.forEach((err) => {
+              createErrorMessage($("#companyRegisterForm")[0], err);
+            });
+          },
+        });
+      }
+      $('#submitButton').click((e) => {
+        e.preventDefault();
+        grecaptcha.execute();
       });
     </script>
+    <script async src="https://www.google.com/recaptcha/api.js?render=onload&hl=cs" defer></script>
   </body>
 </html>
