@@ -320,6 +320,13 @@ header a.nav-link:hover > svg > rect {
   height: 35px;
 }
 
+.navbar-expand-lg .navbar-nav .nav-link {
+  padding-left: 14px;
+  padding-right: 14px;
+}
+.navbar-expand-lg .navbar-nav .nav-link svg {
+  margin-right: 5px;
+}
 .slogan-text {
   font-family: Coolvetica;
   font-style: normal;
@@ -610,4 +617,14 @@ textarea::placeholder {
 
 .formLine.visited {
   opacity: 1;
+}
+h1.page-title {
+  margin-bottom: 18px !important;
+}
+.call-to-action {
+  margin-top: 45px !important;
+  margin-bottom: 55px !important;
+}
+.page-content-section{
+  margin-top:100px;
 }
