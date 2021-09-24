@@ -1,606 +1,1252 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta
-        name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
-        <title>Tymbe</title>
+    <title>Tymbe</title>
 
-        <link
-        href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet" />
 
-        <!-- Coolvetica font -->
-        <link
-        rel="stylesheet" href="https://use.typekit.net/ykm6nsb.css">
+    <!-- Coolvetica font -->
+    <link rel="stylesheet" href="https://use.typekit.net/ykm6nsb.css" />
 
-        <!-- AOS animations-->
-        <link
-        rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <!-- AOS animations-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-        <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#2b5797">
-        <meta
-        name="theme-color" content="#ffffff">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="theme-color" content="#ffffff" />
 
-        <!--Seznam SKLIK:-->
-        <script type="text/javascript">
-            /* <![CDATA[ */
-            var seznam_retargeting_id = 139023;
-            /* ]]> */
-        </script>
-        <script type="text/javascript" src="//c.imedia.cz/js/retargeting.js"></script>
+    <!--Seznam SKLIK:-->
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      var seznam_retargeting_id = 139023;
+      /* ]]> */
+    </script>
+    <script
+      type="text/javascript"
+      src="//c.imedia.cz/js/retargeting.js"
+    ></script>
 
+    <!-- Global site tag (gtag.js) - Google Ads: 967437153 -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-967437153"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        <!-- Global site tag (gtag.js) - Google Ads: 967437153 -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-967437153"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
+      gtag("config", "AW-967437153");
+    </script>
+  </head>
+  <body>
+    <header class="faq container-fluid pb-4">
+      <div class="container">
+        <nav
+          class="
+            desktop-nav
+            d-none d-md-block
+            navbar navbar-expand-lg navbar-light
+            bg-white
+          "
+        >
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="assets/img/tymbe-logo.svg" />
+            </a>
 
-            gtag('config', 'AW-967437153');
-        </script>
-
-
-    </head>
-    <body>
-
-        <header class="container-fluid pt-3">
-            <div
-                class="container">
-
-               <!-- Desktop nav -->
-               <nav class="d-none d-md-block navbar navbar-expand-lg navbar-light bg-white">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
-                        <img src="assets/img/tymbe-logo.svg">
-                    </a>
-                    
-
-                  
-                    <div class="collapse navbar-collapse">
-                        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="index.html">
-                                    <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.54994 1.5H7.77495C7.4988 1.5 7.27495 1.72386 7.27495 2V2.17246H10.0499V2C10.0499 1.72386 9.82609 1.5 9.54994 1.5ZM5.77495 2V2.17246H1.5C0.671573 2.17246 0 2.84403 0 3.67246V9.3621C0 10.1905 0.671572 10.8621 1.5 10.8621H15.825C16.6534 10.8621 17.325 10.1905 17.325 9.3621V3.67246C17.325 2.84403 16.6534 2.17246 15.825 2.17246H11.5499V2C11.5499 0.895431 10.6545 0 9.54994 0H7.77495C6.67038 0 5.77495 0.89543 5.77495 2ZM16.3623 11.9483H0.962335V14.75C0.962335 15.3023 1.41005 15.75 1.96234 15.75H15.3623C15.9146 15.75 16.3623 15.3023 16.3623 14.75V11.9483Z" fill="#28367B"/>
-                                        <rect x="7.07959" y="9.27585" width="3.16563" height="4.25862" rx="1" fill="#28367B" stroke="white"/>
-                                    </svg>
-                                    Pro brigádníky</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="b2b.html">
-                                    <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25022 2C2.25022 0.89543 3.14565 0 4.25022 0H13.0752C14.1798 0 15.0752 0.895431 15.0752 2V17C15.0752 17.0337 15.0736 17.067 15.0703 17.0999H16.875C17.1235 17.0999 17.325 17.3013 17.325 17.5499C17.325 17.7984 17.1235 17.9999 16.875 17.9999H14.0915L14.0752 18H3.25022L3.23395 17.9999H0.45C0.201472 17.9999 0 17.7984 0 17.5499C0 17.3013 0.201472 17.0999 0.45 17.0999H2.25514C2.25189 17.067 2.25022 17.0337 2.25022 17V2ZM5.72475 2.92507C5.17247 2.92507 4.72475 3.37278 4.72475 3.92507V4.85007C4.72475 5.40235 5.17247 5.85007 5.72475 5.85007H6.64975C7.20204 5.85007 7.64975 5.40235 7.64975 4.85007V3.92507C7.64975 3.37278 7.20204 2.92507 6.64975 2.92507H5.72475ZM4.72475 8.65009C4.72475 8.09781 5.17247 7.65009 5.72475 7.65009H6.64975C7.20204 7.65009 7.64975 8.09781 7.64975 8.65009V9.57509C7.64975 10.1274 7.20204 10.5751 6.64975 10.5751H5.72475C5.17247 10.5751 4.72475 10.1274 4.72475 9.57509V8.65009ZM10.4501 7.65009C9.89777 7.65009 9.45005 8.09781 9.45005 8.65009V9.57509C9.45005 10.1274 9.89777 10.5751 10.45 10.5751H11.3751C11.9273 10.5751 12.3751 10.1274 12.3751 9.57509V8.65009C12.3751 8.09781 11.9273 7.65009 11.3751 7.65009H10.4501ZM9.45005 3.92507C9.45005 3.37278 9.89777 2.92507 10.4501 2.92507H11.3751C11.9273 2.92507 12.3751 3.37278 12.3751 3.92507V4.85007C12.3751 5.40235 11.9273 5.85007 11.3751 5.85007H10.45C9.89777 5.85007 9.45005 5.40235 9.45005 4.85007V3.92507ZM6.85013 12.3751C6.29785 12.3751 5.85013 12.8228 5.85013 13.3751V17.1001H11.4751V13.3751C11.4751 12.8228 11.0274 12.3751 10.4751 12.3751H6.85013Z" fill="#28367B"/>
-                                    </svg>
-                                    Pro firmy</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="about.html">
-                                    <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8C0 4.22876 0 2.34315 1.17157 1.17157C2.34315 0 4.22876 0 8 0C11.7712 0 13.6569 0 14.8284 1.17157C16 2.34315 16 4.22876 16 8C16 11.7712 16 13.6569 14.8284 14.8284C13.6569 16 11.7712 16 8 16C4.22876 16 2.34315 16 1.17157 14.8284C0 13.6569 0 11.7712 0 8ZM4.77278 11.7955C5.6984 11.0853 6.83251 10.7003 7.99922 10.7003C9.16593 10.7003 10.3 11.0853 11.2257 11.7955C12.1513 12.5058 12.8167 13.5016 13.1186 14.6286C13.1901 14.8953 13.0318 15.1695 12.7651 15.2409C12.4983 15.3124 12.2242 15.1541 12.1527 14.8874C11.9077 13.9731 11.3679 13.1651 10.6169 12.5889C9.86592 12.0127 8.9458 11.7003 7.99922 11.7003C7.05264 11.7003 6.13252 12.0127 5.38155 12.5889C4.63058 13.1651 4.09073 13.9731 3.84574 14.8874C3.77427 15.1541 3.5001 15.3124 3.23337 15.2409C2.96663 15.1695 2.80834 14.8953 2.87981 14.6286C3.18178 13.5016 3.84717 12.5058 4.77278 11.7955ZM6.09961 5.59969C6.09961 4.55035 6.95027 3.69969 7.99961 3.69969C9.04895 3.69969 9.89961 4.55035 9.89961 5.59969C9.89961 6.64903 9.04895 7.49969 7.99961 7.49969C6.95027 7.49969 6.09961 6.64903 6.09961 5.59969ZM7.99961 2.69969C6.39798 2.69969 5.09961 3.99806 5.09961 5.59969C5.09961 7.20131 6.39798 8.49969 7.99961 8.49969C9.60123 8.49969 10.8996 7.20131 10.8996 5.59969C10.8996 3.99806 9.60123 2.69969 7.99961 2.69969Z" fill="#28367B"/>
-                                    </svg>
-                                    O společnosti</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contact.html">
-                                    <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.87868 2.87868C0 3.75736 0 5.17157 0 8C0 10.8284 0 12.2426 0.87868 13.1213C1.75736 14 3.17157 14 6 14H10C12.8284 14 14.2426 14 15.1213 13.1213C16 12.2426 16 10.8284 16 8C16 5.17157 16 3.75736 15.1213 2.87868C14.2426 2 12.8284 2 10 2H6C3.17157 2 1.75736 2 0.87868 2.87868ZM2.93705 5.0091C2.70476 4.85977 2.3954 4.92702 2.24608 5.15931C2.09675 5.39159 2.164 5.70095 2.39629 5.85028L7.18886 8.93122C7.68298 9.24886 8.31703 9.24886 8.81114 8.93122L13.6037 5.85028C13.836 5.70095 13.9032 5.39159 13.7539 5.15931C13.6046 4.92702 13.2952 4.85977 13.063 5.0091L8.27038 8.09004C8.10567 8.19592 7.89433 8.19592 7.72962 8.09004L2.93705 5.0091Z" fill="#28367B"/>
-                                    </svg>
-                                    Kontakty</a>
-                            </li>
-                        </ul>
-                        <a href="https://tymbe.com/tymber/login">
-                            <button class="btn btn-outline-primary rounded-pill me-2">
-                                Přihlásit
-                            </button>
-                        </a>
-                        <a href="formular_b2c.html">
-                            <button class="btn btn-primary rounded-pill">
-                                Registrace
-                            </button>
-                        </a>
-
-                    </div>
-                </div>
-            </nav>
-
-            <!-- Mobile nav -->
-            <nav class="d-md-none navbar navbar-expand-lg navbar-light bg-white">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
-                        <img src="assets/img/tymbe-logo.svg">
-                    </a>
-                   
-
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon d-flex align-items-center">
-                            <svg id="navbarOpenIcon" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="35" height="35" rx="17.5" fill="#28367B"/>
-                                <path d="M11 13H25" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                                <path d="M11 18H21" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                                <path d="M11 23H17" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                                </svg>
-                                
-                                
-                                <svg id="navbarCloseIcon" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" hidden>
-                                    <rect width="35" height="35" rx="17.5" fill="#28367B"/>
-                                    <path d="M23.25 11.75L11.75 23.25" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M11.75 11.75L23.25 23.25" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    </svg>
-                                    
-                                    
-                        </span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarToggler">
-                        <ul class="navbar-nav text-center me-auto mb-2 mb-lg-0">
-                            <li class="nav-item ">
-                                <a class="nav-link py-3 border-bottom" aria-current="page" href="index.html">
-                                    <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.54994 1.5H7.77495C7.4988 1.5 7.27495 1.72386 7.27495 2V2.17246H10.0499V2C10.0499 1.72386 9.82609 1.5 9.54994 1.5ZM5.77495 2V2.17246H1.5C0.671573 2.17246 0 2.84403 0 3.67246V9.3621C0 10.1905 0.671572 10.8621 1.5 10.8621H15.825C16.6534 10.8621 17.325 10.1905 17.325 9.3621V3.67246C17.325 2.84403 16.6534 2.17246 15.825 2.17246H11.5499V2C11.5499 0.895431 10.6545 0 9.54994 0H7.77495C6.67038 0 5.77495 0.89543 5.77495 2ZM16.3623 11.9483H0.962335V14.75C0.962335 15.3023 1.41005 15.75 1.96234 15.75H15.3623C15.9146 15.75 16.3623 15.3023 16.3623 14.75V11.9483Z" fill="#28367B"/>
-                                        <rect x="7.07959" y="9.27585" width="3.16563" height="4.25862" rx="1" fill="#28367B" stroke="white"/>
-                                    </svg>
-                                    Pro brigádníky</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link py-3 border-bottom" href="b2b.html">
-                                    <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25022 2C2.25022 0.89543 3.14565 0 4.25022 0H13.0752C14.1798 0 15.0752 0.895431 15.0752 2V17C15.0752 17.0337 15.0736 17.067 15.0703 17.0999H16.875C17.1235 17.0999 17.325 17.3013 17.325 17.5499C17.325 17.7984 17.1235 17.9999 16.875 17.9999H14.0915L14.0752 18H3.25022L3.23395 17.9999H0.45C0.201472 17.9999 0 17.7984 0 17.5499C0 17.3013 0.201472 17.0999 0.45 17.0999H2.25514C2.25189 17.067 2.25022 17.0337 2.25022 17V2ZM5.72475 2.92507C5.17247 2.92507 4.72475 3.37278 4.72475 3.92507V4.85007C4.72475 5.40235 5.17247 5.85007 5.72475 5.85007H6.64975C7.20204 5.85007 7.64975 5.40235 7.64975 4.85007V3.92507C7.64975 3.37278 7.20204 2.92507 6.64975 2.92507H5.72475ZM4.72475 8.65009C4.72475 8.09781 5.17247 7.65009 5.72475 7.65009H6.64975C7.20204 7.65009 7.64975 8.09781 7.64975 8.65009V9.57509C7.64975 10.1274 7.20204 10.5751 6.64975 10.5751H5.72475C5.17247 10.5751 4.72475 10.1274 4.72475 9.57509V8.65009ZM10.4501 7.65009C9.89777 7.65009 9.45005 8.09781 9.45005 8.65009V9.57509C9.45005 10.1274 9.89777 10.5751 10.45 10.5751H11.3751C11.9273 10.5751 12.3751 10.1274 12.3751 9.57509V8.65009C12.3751 8.09781 11.9273 7.65009 11.3751 7.65009H10.4501ZM9.45005 3.92507C9.45005 3.37278 9.89777 2.92507 10.4501 2.92507H11.3751C11.9273 2.92507 12.3751 3.37278 12.3751 3.92507V4.85007C12.3751 5.40235 11.9273 5.85007 11.3751 5.85007H10.45C9.89777 5.85007 9.45005 5.40235 9.45005 4.85007V3.92507ZM6.85013 12.3751C6.29785 12.3751 5.85013 12.8228 5.85013 13.3751V17.1001H11.4751V13.3751C11.4751 12.8228 11.0274 12.3751 10.4751 12.3751H6.85013Z" fill="#28367B"/>
-                                    </svg>
-                                    Pro firmy</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link py-3 border-bottom" href="about.html">
-                                    <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8C0 4.22876 0 2.34315 1.17157 1.17157C2.34315 0 4.22876 0 8 0C11.7712 0 13.6569 0 14.8284 1.17157C16 2.34315 16 4.22876 16 8C16 11.7712 16 13.6569 14.8284 14.8284C13.6569 16 11.7712 16 8 16C4.22876 16 2.34315 16 1.17157 14.8284C0 13.6569 0 11.7712 0 8ZM4.77278 11.7955C5.6984 11.0853 6.83251 10.7003 7.99922 10.7003C9.16593 10.7003 10.3 11.0853 11.2257 11.7955C12.1513 12.5058 12.8167 13.5016 13.1186 14.6286C13.1901 14.8953 13.0318 15.1695 12.7651 15.2409C12.4983 15.3124 12.2242 15.1541 12.1527 14.8874C11.9077 13.9731 11.3679 13.1651 10.6169 12.5889C9.86592 12.0127 8.9458 11.7003 7.99922 11.7003C7.05264 11.7003 6.13252 12.0127 5.38155 12.5889C4.63058 13.1651 4.09073 13.9731 3.84574 14.8874C3.77427 15.1541 3.5001 15.3124 3.23337 15.2409C2.96663 15.1695 2.80834 14.8953 2.87981 14.6286C3.18178 13.5016 3.84717 12.5058 4.77278 11.7955ZM6.09961 5.59969C6.09961 4.55035 6.95027 3.69969 7.99961 3.69969C9.04895 3.69969 9.89961 4.55035 9.89961 5.59969C9.89961 6.64903 9.04895 7.49969 7.99961 7.49969C6.95027 7.49969 6.09961 6.64903 6.09961 5.59969ZM7.99961 2.69969C6.39798 2.69969 5.09961 3.99806 5.09961 5.59969C5.09961 7.20131 6.39798 8.49969 7.99961 8.49969C9.60123 8.49969 10.8996 7.20131 10.8996 5.59969C10.8996 3.99806 9.60123 2.69969 7.99961 2.69969Z" fill="#28367B"/>
-                                    </svg>
-                                    O společnosti</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link py-3" href="contact.html">
-                                    <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.87868 2.87868C0 3.75736 0 5.17157 0 8C0 10.8284 0 12.2426 0.87868 13.1213C1.75736 14 3.17157 14 6 14H10C12.8284 14 14.2426 14 15.1213 13.1213C16 12.2426 16 10.8284 16 8C16 5.17157 16 3.75736 15.1213 2.87868C14.2426 2 12.8284 2 10 2H6C3.17157 2 1.75736 2 0.87868 2.87868ZM2.93705 5.0091C2.70476 4.85977 2.3954 4.92702 2.24608 5.15931C2.09675 5.39159 2.164 5.70095 2.39629 5.85028L7.18886 8.93122C7.68298 9.24886 8.31703 9.24886 8.81114 8.93122L13.6037 5.85028C13.836 5.70095 13.9032 5.39159 13.7539 5.15931C13.6046 4.92702 13.2952 4.85977 13.063 5.0091L8.27038 8.09004C8.10567 8.19592 7.89433 8.19592 7.72962 8.09004L2.93705 5.0091Z" fill="#28367B"/>
-                                    </svg>
-                                    Kontakty</a>
-                            </li>
-                        </ul>
-                        <div class="text-center pb-3">
-                            <a class="btn btn-outline-primary rounded-pill me-2" href="formular_b2b.html">
-
-                                Přihlásit
-                            </a>
-                            <a class="btn btn-primary rounded-pill" href="formular_b2c.html">
-
-                                Registrace
-                            </a>
-                        </div>
-
-
-                    </div>
-                </div>
-            </nav>
+            <div class="collapse navbar-collapse">
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="index.html">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewbox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.54994 1.5H7.77495C7.4988 1.5 7.27495 1.72386 7.27495 2V2.17246H10.0499V2C10.0499 1.72386 9.82609 1.5 9.54994 1.5ZM5.77495 2V2.17246H1.5C0.671573 2.17246 0 2.84403 0 3.67246V9.3621C0 10.1905 0.671572 10.8621 1.5 10.8621H15.825C16.6534 10.8621 17.325 10.1905 17.325 9.3621V3.67246C17.325 2.84403 16.6534 2.17246 15.825 2.17246H11.5499V2C11.5499 0.895431 10.6545 0 9.54994 0H7.77495C6.67038 0 5.77495 0.89543 5.77495 2ZM16.3623 11.9483H0.962335V14.75C0.962335 15.3023 1.41005 15.75 1.96234 15.75H15.3623C15.9146 15.75 16.3623 15.3023 16.3623 14.75V11.9483Z"
+                        fill="#28367B"
+                      />
+                      <rect
+                        x="7.07959"
+                        y="9.27585"
+                        width="3.16563"
+                        height="4.25862"
+                        rx="1"
+                        fill="#28367B"
+                        stroke="white"
+                      />
+                    </svg>
+                    Pro brigádníky</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="b2b.html">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewbox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M2.25022 2C2.25022 0.89543 3.14565 0 4.25022 0H13.0752C14.1798 0 15.0752 0.895431 15.0752 2V17C15.0752 17.0337 15.0736 17.067 15.0703 17.0999H16.875C17.1235 17.0999 17.325 17.3013 17.325 17.5499C17.325 17.7984 17.1235 17.9999 16.875 17.9999H14.0915L14.0752 18H3.25022L3.23395 17.9999H0.45C0.201472 17.9999 0 17.7984 0 17.5499C0 17.3013 0.201472 17.0999 0.45 17.0999H2.25514C2.25189 17.067 2.25022 17.0337 2.25022 17V2ZM5.72475 2.92507C5.17247 2.92507 4.72475 3.37278 4.72475 3.92507V4.85007C4.72475 5.40235 5.17247 5.85007 5.72475 5.85007H6.64975C7.20204 5.85007 7.64975 5.40235 7.64975 4.85007V3.92507C7.64975 3.37278 7.20204 2.92507 6.64975 2.92507H5.72475ZM4.72475 8.65009C4.72475 8.09781 5.17247 7.65009 5.72475 7.65009H6.64975C7.20204 7.65009 7.64975 8.09781 7.64975 8.65009V9.57509C7.64975 10.1274 7.20204 10.5751 6.64975 10.5751H5.72475C5.17247 10.5751 4.72475 10.1274 4.72475 9.57509V8.65009ZM10.4501 7.65009C9.89777 7.65009 9.45005 8.09781 9.45005 8.65009V9.57509C9.45005 10.1274 9.89777 10.5751 10.45 10.5751H11.3751C11.9273 10.5751 12.3751 10.1274 12.3751 9.57509V8.65009C12.3751 8.09781 11.9273 7.65009 11.3751 7.65009H10.4501ZM9.45005 3.92507C9.45005 3.37278 9.89777 2.92507 10.4501 2.92507H11.3751C11.9273 2.92507 12.3751 3.37278 12.3751 3.92507V4.85007C12.3751 5.40235 11.9273 5.85007 11.3751 5.85007H10.45C9.89777 5.85007 9.45005 5.40235 9.45005 4.85007V3.92507ZM6.85013 12.3751C6.29785 12.3751 5.85013 12.8228 5.85013 13.3751V17.1001H11.4751V13.3751C11.4751 12.8228 11.0274 12.3751 10.4751 12.3751H6.85013Z"
+                        fill="#28367B"
+                      />
+                    </svg>
+                    Pro firmy</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewbox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0 8C0 4.22876 0 2.34315 1.17157 1.17157C2.34315 0 4.22876 0 8 0C11.7712 0 13.6569 0 14.8284 1.17157C16 2.34315 16 4.22876 16 8C16 11.7712 16 13.6569 14.8284 14.8284C13.6569 16 11.7712 16 8 16C4.22876 16 2.34315 16 1.17157 14.8284C0 13.6569 0 11.7712 0 8ZM4.77278 11.7955C5.6984 11.0853 6.83251 10.7003 7.99922 10.7003C9.16593 10.7003 10.3 11.0853 11.2257 11.7955C12.1513 12.5058 12.8167 13.5016 13.1186 14.6286C13.1901 14.8953 13.0318 15.1695 12.7651 15.2409C12.4983 15.3124 12.2242 15.1541 12.1527 14.8874C11.9077 13.9731 11.3679 13.1651 10.6169 12.5889C9.86592 12.0127 8.9458 11.7003 7.99922 11.7003C7.05264 11.7003 6.13252 12.0127 5.38155 12.5889C4.63058 13.1651 4.09073 13.9731 3.84574 14.8874C3.77427 15.1541 3.5001 15.3124 3.23337 15.2409C2.96663 15.1695 2.80834 14.8953 2.87981 14.6286C3.18178 13.5016 3.84717 12.5058 4.77278 11.7955ZM6.09961 5.59969C6.09961 4.55035 6.95027 3.69969 7.99961 3.69969C9.04895 3.69969 9.89961 4.55035 9.89961 5.59969C9.89961 6.64903 9.04895 7.49969 7.99961 7.49969C6.95027 7.49969 6.09961 6.64903 6.09961 5.59969ZM7.99961 2.69969C6.39798 2.69969 5.09961 3.99806 5.09961 5.59969C5.09961 7.20131 6.39798 8.49969 7.99961 8.49969C9.60123 8.49969 10.8996 7.20131 10.8996 5.59969C10.8996 3.99806 9.60123 2.69969 7.99961 2.69969Z"
+                        fill="#28367B"
+                      />
+                    </svg>
+                    O společnosti</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewbox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0.87868 2.87868C0 3.75736 0 5.17157 0 8C0 10.8284 0 12.2426 0.87868 13.1213C1.75736 14 3.17157 14 6 14H10C12.8284 14 14.2426 14 15.1213 13.1213C16 12.2426 16 10.8284 16 8C16 5.17157 16 3.75736 15.1213 2.87868C14.2426 2 12.8284 2 10 2H6C3.17157 2 1.75736 2 0.87868 2.87868ZM2.93705 5.0091C2.70476 4.85977 2.3954 4.92702 2.24608 5.15931C2.09675 5.39159 2.164 5.70095 2.39629 5.85028L7.18886 8.93122C7.68298 9.24886 8.31703 9.24886 8.81114 8.93122L13.6037 5.85028C13.836 5.70095 13.9032 5.39159 13.7539 5.15931C13.6046 4.92702 13.2952 4.85977 13.063 5.0091L8.27038 8.09004C8.10567 8.19592 7.89433 8.19592 7.72962 8.09004L2.93705 5.0091Z"
+                        fill="#28367B"
+                      />
+                    </svg>
+                    Kontakty</a
+                  >
+                </li>
+              </ul>
+              <a href="https://tymbe.com/tymber/login">
+                <button class="btn btn-outline-primary rounded-pill me-2">
+                  Přihlásit
+                </button>
+              </a>
+              <a href="formular_b2c.html">
+                <button class="btn btn-primary rounded-pill">Registrace</button>
+              </a>
             </div>
+          </div>
+        </nav>
 
-            <section class="container py-5 ">
-                <div class="row mb-5 justify-content-center">
-                    <div class="col-12 text-center">
-                        <h1 class="text-accent">
-                            FAQ
-                        </h1>
-                        <p>
-                            Máš otázky? Máme odpovědi! Ozvi se a doplníme všechno, co tě zajímá.
-                        </p>
+        <!-- Mobile nav -->
+        <nav
+          class="
+            mobile-nav
+            d-md-none
+            navbar navbar-expand-lg navbar-light
+            bg-white
+          "
+        >
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="assets/img/tymbe-logo.svg" />
+            </a>
+
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarToggler"
+              aria-controls="navbarToggler"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon d-flex align-items-center">
+                <svg
+                  id="navbarOpenIcon"
+                  width="35"
+                  height="35"
+                  viewbox="0 0 35 35"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect width="35" height="35" rx="17.5" fill="#28367B" />
+                  <path
+                    d="M11 13H25"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M11 18H21"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M11 23H17"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
+
+                <svg
+                  id="navbarCloseIcon"
+                  width="35"
+                  height="35"
+                  viewbox="0 0 35 35"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  hidden
+                >
+                  <rect width="35" height="35" rx="17.5" fill="#28367B" />
+                  <path
+                    d="M23.25 11.75L11.75 23.25"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M11.75 11.75L23.25 23.25"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+              <ul class="navbar-nav text-center me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link py-3 ty-border-bottom"
+                    aria-current="page"
+                    href="index.html"
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      viewbox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.54994 1.5H7.77495C7.4988 1.5 7.27495 1.72386 7.27495 2V2.17246H10.0499V2C10.0499 1.72386 9.82609 1.5 9.54994 1.5ZM5.77495 2V2.17246H1.5C0.671573 2.17246 0 2.84403 0 3.67246V9.3621C0 10.1905 0.671572 10.8621 1.5 10.8621H15.825C16.6534 10.8621 17.325 10.1905 17.325 9.3621V3.67246C17.325 2.84403 16.6534 2.17246 15.825 2.17246H11.5499V2C11.5499 0.895431 10.6545 0 9.54994 0H7.77495C6.67038 0 5.77495 0.89543 5.77495 2ZM16.3623 11.9483H0.962335V14.75C0.962335 15.3023 1.41005 15.75 1.96234 15.75H15.3623C15.9146 15.75 16.3623 15.3023 16.3623 14.75V11.9483Z"
+                        fill="#28367B"
+                      />
+                      <rect
+                        x="7.07959"
+                        y="9.27585"
+                        width="3.16563"
+                        height="4.25862"
+                        rx="1"
+                        fill="#28367B"
+                        stroke="white"
+                      />
+                    </svg>
+                    Pro brigádníky</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link py-3 ty-border-bottom" href="b2b.html">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewbox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M2.25022 2C2.25022 0.89543 3.14565 0 4.25022 0H13.0752C14.1798 0 15.0752 0.895431 15.0752 2V17C15.0752 17.0337 15.0736 17.067 15.0703 17.0999H16.875C17.1235 17.0999 17.325 17.3013 17.325 17.5499C17.325 17.7984 17.1235 17.9999 16.875 17.9999H14.0915L14.0752 18H3.25022L3.23395 17.9999H0.45C0.201472 17.9999 0 17.7984 0 17.5499C0 17.3013 0.201472 17.0999 0.45 17.0999H2.25514C2.25189 17.067 2.25022 17.0337 2.25022 17V2ZM5.72475 2.92507C5.17247 2.92507 4.72475 3.37278 4.72475 3.92507V4.85007C4.72475 5.40235 5.17247 5.85007 5.72475 5.85007H6.64975C7.20204 5.85007 7.64975 5.40235 7.64975 4.85007V3.92507C7.64975 3.37278 7.20204 2.92507 6.64975 2.92507H5.72475ZM4.72475 8.65009C4.72475 8.09781 5.17247 7.65009 5.72475 7.65009H6.64975C7.20204 7.65009 7.64975 8.09781 7.64975 8.65009V9.57509C7.64975 10.1274 7.20204 10.5751 6.64975 10.5751H5.72475C5.17247 10.5751 4.72475 10.1274 4.72475 9.57509V8.65009ZM10.4501 7.65009C9.89777 7.65009 9.45005 8.09781 9.45005 8.65009V9.57509C9.45005 10.1274 9.89777 10.5751 10.45 10.5751H11.3751C11.9273 10.5751 12.3751 10.1274 12.3751 9.57509V8.65009C12.3751 8.09781 11.9273 7.65009 11.3751 7.65009H10.4501ZM9.45005 3.92507C9.45005 3.37278 9.89777 2.92507 10.4501 2.92507H11.3751C11.9273 2.92507 12.3751 3.37278 12.3751 3.92507V4.85007C12.3751 5.40235 11.9273 5.85007 11.3751 5.85007H10.45C9.89777 5.85007 9.45005 5.40235 9.45005 4.85007V3.92507ZM6.85013 12.3751C6.29785 12.3751 5.85013 12.8228 5.85013 13.3751V17.1001H11.4751V13.3751C11.4751 12.8228 11.0274 12.3751 10.4751 12.3751H6.85013Z"
+                        fill="#28367B"
+                      />
+                    </svg>
+                    Pro firmy</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link py-3 ty-border-bottom" href="about.html">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewbox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0 8C0 4.22876 0 2.34315 1.17157 1.17157C2.34315 0 4.22876 0 8 0C11.7712 0 13.6569 0 14.8284 1.17157C16 2.34315 16 4.22876 16 8C16 11.7712 16 13.6569 14.8284 14.8284C13.6569 16 11.7712 16 8 16C4.22876 16 2.34315 16 1.17157 14.8284C0 13.6569 0 11.7712 0 8ZM4.77278 11.7955C5.6984 11.0853 6.83251 10.7003 7.99922 10.7003C9.16593 10.7003 10.3 11.0853 11.2257 11.7955C12.1513 12.5058 12.8167 13.5016 13.1186 14.6286C13.1901 14.8953 13.0318 15.1695 12.7651 15.2409C12.4983 15.3124 12.2242 15.1541 12.1527 14.8874C11.9077 13.9731 11.3679 13.1651 10.6169 12.5889C9.86592 12.0127 8.9458 11.7003 7.99922 11.7003C7.05264 11.7003 6.13252 12.0127 5.38155 12.5889C4.63058 13.1651 4.09073 13.9731 3.84574 14.8874C3.77427 15.1541 3.5001 15.3124 3.23337 15.2409C2.96663 15.1695 2.80834 14.8953 2.87981 14.6286C3.18178 13.5016 3.84717 12.5058 4.77278 11.7955ZM6.09961 5.59969C6.09961 4.55035 6.95027 3.69969 7.99961 3.69969C9.04895 3.69969 9.89961 4.55035 9.89961 5.59969C9.89961 6.64903 9.04895 7.49969 7.99961 7.49969C6.95027 7.49969 6.09961 6.64903 6.09961 5.59969ZM7.99961 2.69969C6.39798 2.69969 5.09961 3.99806 5.09961 5.59969C5.09961 7.20131 6.39798 8.49969 7.99961 8.49969C9.60123 8.49969 10.8996 7.20131 10.8996 5.59969C10.8996 3.99806 9.60123 2.69969 7.99961 2.69969Z"
+                        fill="#28367B"
+                      />
+                    </svg>
+                    O společnosti</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link py-3" href="contact.html">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewbox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0.87868 2.87868C0 3.75736 0 5.17157 0 8C0 10.8284 0 12.2426 0.87868 13.1213C1.75736 14 3.17157 14 6 14H10C12.8284 14 14.2426 14 15.1213 13.1213C16 12.2426 16 10.8284 16 8C16 5.17157 16 3.75736 15.1213 2.87868C14.2426 2 12.8284 2 10 2H6C3.17157 2 1.75736 2 0.87868 2.87868ZM2.93705 5.0091C2.70476 4.85977 2.3954 4.92702 2.24608 5.15931C2.09675 5.39159 2.164 5.70095 2.39629 5.85028L7.18886 8.93122C7.68298 9.24886 8.31703 9.24886 8.81114 8.93122L13.6037 5.85028C13.836 5.70095 13.9032 5.39159 13.7539 5.15931C13.6046 4.92702 13.2952 4.85977 13.063 5.0091L8.27038 8.09004C8.10567 8.19592 7.89433 8.19592 7.72962 8.09004L2.93705 5.0091Z"
+                        fill="#28367B"
+                      />
+                    </svg>
+                    Kontakty</a
+                  >
+                </li>
+              </ul>
+              <div class="text-center pb-3">
+                <a
+                  class="btn btn-outline-primary rounded-pill me-2"
+                  href="formular_b2b.html"
+                >
+                  Přihlásit
+                </a>
+                <a
+                  class="btn btn-primary rounded-pill"
+                  href="formular_b2c.html"
+                >
+                  Registrace
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <div
+        class="col-12 text-center mt-5 pt-5"
+        style="padding-left: 16px; padding-right: 16px"
+      >
+        <h1 class="text-accent ty-h1">FAQ</h1>
+        <p class="ty-body-responsive">
+          Máš otázky? Máme odpovědi! Ozvi se a doplníme všechno, co tě zajímá.
+        </p>
+      </div>
+    </header>
+    <section class="container py-5 mb-5 justify-content-center">
+      <div class="col-12 col-md-10 offset-md-1 p-0">
+        <div class="bg-white shadow rounded faq-container">
+          <nav>
+            <div class="nav nav-tabs row g-0" id="carouselFAQ" role="tablist">
+              <button
+                id="btnCompanyFAQ"
+                data-bs-toggle="tab"
+                data-bs-target="#companyFAQ"
+                role="tab"
+                aria-controls="companyFAQ"
+                aria-selected="true"
+                class="
+                  nav-link
+                  active
+                  text-center
+                  mb-0
+                  btn-faq
+                  col-5
+                  py-4
+                  ty-body-responsive
+                "
+                type="button"
+              >
+                <img src="assets/img/menu-icon2.svg" alt="" />
+                Pro firmy
+              </button>
+
+              <button
+                id="btnWorkersFAQ"
+                data-bs-toggle="tab"
+                data-bs-target="#workersFAQ"
+                role="tab"
+                aria-controls="workersFAQ"
+                aria-selected="false"
+                class="
+                  text-center
+                  nav-link
+                  mb-0
+                  btn-faq
+                  inactive
+                  col-7
+                  py-4
+                  ty-body-responsive
+                "
+                type="button"
+              >
+                <img src="assets/img/menu-icon1.svg" alt="" />
+                Pro brigádniky
+              </button>
+            </div>
+          </nav>
+
+          <div class="tab-content" id="carouselFAQContent">
+            <div
+              class="tab-pane fade show active"
+              id="companyFAQ"
+              role="tabpanel"
+              aria-labelledby="btnCompanyFAQ"
+            >
+              <div class="accordion" id="accordionPanelsCompany">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsCompany-headingOne">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsCompany-collapseOne"
+                      aria-expanded="false"
+                      aria-controls="panelsCompany-collapseOne"
+                    >
+                      Co je Tymbe?
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsCompany-collapseOne"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsCompany-headingOne"
+                    data-bs-parent="#accordionPanelsCompany"
+                  >
+                    <div class="accordion-body">
+                      Tymbe a.s. je rychle rostoucí tým nadšených Evropanů s
+                      chutí měnit zarezlé procesy v oblasti, které se ošklivě
+                      říká „lidské zdroje“, a přitom jde o většinu života
+                      většiny nás. Tymbe je tu od toho, aby se všechno kolem
+                      práce zjednodušilo, zrychlilo a zlevnilo na úrovni firem i
+                      jednotlivců.
                     </div>
-                    <div class="col-10">
-                        <div class="bg-white shadow rounded">
-                            <div class="row g-0">
-                                    <p id="btnCompanyFAQ" class="text-center mb-0 btn-faq active col-6 py-4" type="button" data-bs-target="#carouselFAQ" data-bs-slide="prev">
-                                        <img src="assets/img/menu-icon2.svg" alt="">
-                                        Pro firmy
-                                    </p>
-                                
-                                
-                                    <p id="btnWorkersFAQ" class="text-center mb-0 btn-faq inactive col-6 py-4" type="button" data-bs-target="#carouselFAQ" data-bs-slide="next">
-                                        <img src="assets/img/menu-icon1.svg" alt="">
-                                        Pro brigádniky
-                                    </p>
-                                
-                            </div>
-                            <div class="col-12">
-
-                                <div class="p-4">
-
-                                    <div id="carouselFAQ" class="carousel slide" data-interval="false" data-ride="false">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <div class="accordion" id="accordionPanelsCompany">
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="panelsCompany-headingOne">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsCompany-collapseOne" aria-expanded="false" aria-controls="panelsCompany-collapseOne">
-                                                            Co je Tymbe?
-                                                        </button>
-                                                    </h2>
-                                                    <div id="panelsCompany-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsCompany-headingOne" data-bs-parent="#accordionPanelsCompany">
-                                                        <div class="accordion-body">
-                                                            Tymbe a.s. je rychle rostoucí tým nadšených Evropanů s chutí měnit zarezlé procesy v oblasti, které se ošklivě říká „lidské zdroje“, a přitom jde o většinu života většiny nás. Tymbe je tu od toho, aby se všechno kolem práce zjednodušilo, zrychlilo a zlevnilo na úrovni firem i jednotlivců.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="panelsCompany-headingTwo">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsCompany-collapseTwo" aria-expanded="false" aria-controls="panelsCompany-collapseTwo">
-                                                            Jaké výhody má Tymbe pro firmy?
-                                                        </button>
-                                                    </h2>
-                                                    <div id="panelsCompany-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsCompany-headingTwo"  data-bs-parent="#accordionPanelsCompany">
-                                                        <div class="accordion-body">
-                                                            Všechno, co Tymbe dělá, je postavené pro online management. Nechceme ti práci přidělávat, ale ušetřit. Naše služby fungují po celém Česku i v zahraničí a chytré nástroje Tymbe vyřeší spoustu otravné administrativy místo tebe. A co ti šetří čas, to ti šetří i peníze.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="panelsCompany-headingThree">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsCompany-collapseThree" aria-expanded="false" aria-controls="panelsCompany-collapseThree">
-                                                            Proč najímat lidi přes Ty–brigády?
-                                                        </button>
-                                                    </h2>
-                                                    <div id="panelsCompany-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsCompany-headingThree" data-bs-parent="#accordionPanelsCompany">
-                                                        <div class="accordion-body">
-                                                            Ty–brigády jsou jediná online platforma na trhu, která tě zbaví starostí a doručí ti kvalitní brigádníky třeba už zítra. Je to chytrá služba, která znamená definitivní konec papírování, šetří častvých lidí, nasbírá ti hromadu užitečných dat a brigádníkům vyplácí hodinovku, která je pro tebe vždy výhodná.Ty–brigády navíc jedou 24 hodin denně, 7 dní v týdnu a po celé ČR.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="panelsCompany-headingFour">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsCompany-collapseFour" aria-expanded="false" aria-controls="panelsCompany-collapseFour">
-                                                            Umí Tymbe postavit službu na míru?
-                                                        </button>
-                                                    </h2>
-                                                    <div id="panelsCompany-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsCompany-headingFour" data-bs-parent="#accordionPanelsCompany">
-                                                        <div class="accordion-body">
-                                                            Na to se u nás specializujeme. Tvoje lidi dokážeme online proškolit, v čem si vzpomeneš, a zařídíme pro ně i pracovní pomůcky, když na to přijde. Pojď to s námi probrat a určitě to vymyslíme. Volej
-                                                            <u>+420 602 200 114</u>
-                                                            nebo piš na
-                                                            <u>firma@tymbe.com</u>
-                                                            a my se do 24 hodin ozveme.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="panelsCompany-headingFive">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsCompany-collapseFive" aria-expanded="false" aria-controls="panelsCompany-collapseFive">
-                                                            Všechno online je super, ale co když chci jednat s lidmi?
-                                                        </button>
-                                                    </h2>
-                                                    <div id="panelsCompany-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsCompany-headingFive" data-bs-parent="#accordionPanelsCompany">
-                                                        <div class="accordion-body">
-                                                            Nejsme žádní IT roboti. I my se rádi potkáváme a řešíme zakázky a kontrakty osobně. Máme tým zkušené zákaznické podpory, který s tebou nastaví všechno přesně podle potřeb vaší firmy. Tymbe je tu pro lidi, ne pro automaty :)
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="carousel-item">
-                                            <div class="accordion" id="accordionPanelsWorkers">
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="panelsWorkers-headingOne">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsWorkers-collapseOne" aria-expanded="false" aria-controls="panelsWorkers-collapseOne">
-                                                            Co je Tymbe?
-                                                        </button>
-                                                    </h2>
-                                                    <div id="panelsWorkers-collapseOne" class="accordion-collapse collapse" aria-labelledby="panelsWorkers-headingOne" data-bs-parent="#accordionPanelsWorkers">
-                                                        <div class="accordion-body">
-                                                            Tymbe je značka, za kterou stojí parta chytrých lidí, kteří se rozhodli dělat chytré služby online. Třeba jako Ty–brigády, online zkratku k brigádě. Prostě věci, které dávají smysl a lidem pomůžou
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="panelsWorkers-headingTwo">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsWorkers-collapseTwo" aria-expanded="false" aria-controls="panelsWorkers-collapseTwo">
-                                                            A co jsou Ty–brigády?
-                                                        </button>
-                                                    </h2>
-                                                    <div id="panelsWorkers-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsWorkers-headingTwo" data-bs-parent="#accordionPanelsWorkers">
-                                                        <div class="accordion-body">
-                                                            Ty–brigády je první online platforma na trhu brigád, která ti sežene super zaplacenou férovou brigádu třeba už zítra a kdekoliv po Česku u prověřených renomovaných společností. Přihlásit se můžeš přes apku v mobilu. Mrkni na App Store nebo na Google Play, anebo klasicky na tybrigady.tymbe.cz. Na Tymbe najdeš nabídky brigád přímo od vybraných zaměstnavatelů, sám si řekneš, za kolik jsi ochotný pracovat a jak často chceš vyplácet odměnu. A co je nejvíc, Tymbe je pro tebe úplně zdarma.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="panelsWorkers-headingThree">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsWorkers-collapseThree" aria-expanded="false" aria-controls="panelsWorkers-collapseThree">
-                                                            Kdo je Tymber?
-                                                        </button>
-                                                    </h2>
-                                                    <div id="panelsWorkers-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsWorkers-headingThree" data-bs-parent="#accordionPanelsWorkers">
-                                                        <div class="accordion-body">
-                                                            Když máš brigádu přes Ty–brigády, tak jsi Tymber :) Prostě jsme si to tak poladili, abychom si rozuměli. Každý Tymber má svůj profil na tybrigady.tymbe.cz. Na svém profilu najdeš úplně všechno, co budeš potřebovat vědět.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="panelsWorkers-headingFour">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsWorkers-collapseFour" aria-expanded="false" aria-controls="panelsWorkers-collapseFour">
-                                                            Kde a jak se mám registrovat?
-                                                        </button>
-                                                    </h2>
-                                                    <div id="panelsWorkers-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsWorkers-headingFour" data-bs-parent="#accordionPanelsWorkers">
-                                                        <div class="accordion-body">
-                                                            Stáhni si apku Ty–brigády na App Storu nebo na Google Play. Celá akce ti nebude trvat víc než 10minut. Využij přestávku nebo cestu domů a jsi Tymber!
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="panelsWorkers-headingFive">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsWorkers-collapseFive" aria-expanded="false" aria-controls="panelsWorkers-collapseFive">
-                                                            Kde podepíšu potřebné papíry?
-                                                        </button>
-                                                    </h2>
-                                                    <div id="panelsWorkers-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsWorkers-headingFive" data-bs-parent="#accordionPanelsWorkers">
-                                                        <div class="accordion-body">
-                                                            Jo papíry? Tak ty jsme zrušili! No fakt, všechny „papíry“ prostě podepíšeš v apce, prstem na obrazovce. Nemusíš se nikam vláčet, teda kromě brigády, na kterou se přihlásíš.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="panelsWorkers-headingSix">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsWorkers-collapseSix" aria-expanded="false" aria-controls="panelsWorkers-collapseSix">
-                                                            Som zo Slovenska a nemám trvalý pobyt v Česku, čo mám vyplniť do kontaktnej adresy?
-                                                        </button>
-                                                    </h2>
-                                                    <div id="panelsWorkers-collapseSix" class="accordion-collapse collapse" aria-labelledby="panelsWorkers-headingSix" data-bs-parent="#accordionPanelsWorkers">
-                                                        <div class="accordion-body">
-                                                            Pro Tymbery jsme pořád jedna země :) Vyplnit můžeš jakoukoliv adresu, kam ti dorazí pošta, když ti nějakou náhodou pošleme. Může to být adresa kolejí nebo spolubydlení, nemusíš být ani uvedený jako nájemník.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="panelsWorkers-headingSeven">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsWorkers-collapseSeven" aria-expanded="false" aria-controls="panelsWorkers-collapseSeven">
-                                                            Jak mě Ty–brigády zaplatí?
-                                                        </button>
-                                                    </h2>
-                                                    <div id="panelsWorkers-collapseSeven" class="accordion-collapse collapse" aria-labelledby="panelsWorkers-headingSeven" data-bs-parent="#accordionPanelsWorkers">
-                                                        <div class="accordion-body">
-                                                            Když si vybíráš brigádu v apce, vždycky vidíš, jaká je hodinovka. Je to prostě fér. Odměna na Ty–brigády za se skládá z pevné částky + kreditu. Kredit roste podle toho, kolik času zbývá do začátkusměny a kolik je volných míst. Jestli máš nervy počkat si, až cena vyroste nejvýš, dobře ty. Ale taky ti někdo může brigádu vyfouknout. Někdy je to adrenalin :)
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="panelsWorkers-headingEight">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsWorkers-collapseEight" aria-expanded="false" aria-controls="panelsWorkers-collapseEight">
-                                                            Kdy dostanu peníze na účet?
-                                                        </button>
-                                                    </h2>
-                                                    <div id="panelsWorkers-collapseEight" class="accordion-collapse collapse" aria-labelledby="panelsWorkers-headingEight" data-bs-parent="#accordionPanelsWorkers">
-                                                        <div class="accordion-body">
-                                                            Troufáme si říct, že peníze ti pošleme, jakmile si odmakáš domluvenou brigádu. Stačí, aby ti vedoucí směny potvrdil “docházku” a odvedenou práci, a hned se ti na profilu objeví možnost si nechat peníze poslat na účet. Peníze si můžeš nechat proplatit ihned nebo můžeš počkat a nastřádat si větší sumu, záleží na tobě. Výplaty každopádně posíláme několikrát denně, takže peníze od nás dostaneš doslova “cobydup” ;)
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="panelsWorkers-headingNine">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsWorkers-collapseNine" aria-expanded="false" aria-controls="panelsWorkers-collapseNine">
-                                                            Co když nemůžu dorazit na směnu?
-                                                        </button>
-                                                    </h2>
-                                                    <div id="panelsWorkers-collapseNine" class="accordion-collapse collapse" aria-labelledby="panelsWorkers-headingNine" data-bs-parent="#accordionPanelsWorkers">
-                                                        <div class="accordion-body">
-                                                            Ze směny se můžeš vždycky odhlásit, ale když to bude míň než 24 hodin před začátkem směny, budeme potřebovat omluvenku s vysvětlením. Tu nám pošli na trener@tymbe.cz.Ty–brigády fungují skvěle díky tomu, že se na sebe můžeme navzájem spolehnout.
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="accordion-item">
-                                                    <h2 class="accordion-header" id="panelsWorkers-headingTen">
-                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsWorkers-collapseTen" aria-expanded="false" aria-controls="panelsWorkers-collapseTen">
-                                                            Pomóc! Něco mi nefunguje, co mám dělat?
-                                                        </button>
-                                                    </h2>
-                                                    <div id="panelsWorkers-collapseTen" class="accordion-collapse collapse" aria-labelledby="panelsWorkers-headingTen" data-bs-parent="#accordionPanelsWorkers">
-                                                        <div class="accordion-body">
-                                                            Od toho tu jsme. Poradíme, vyřešíme. Piš na e-mail
-                                                            <span class="fw-bold">trener@tymbe.cz</span>
-                                                            nebo na FB Messenger
-                                                            <span class="fw-bold">@tymbecz</span>. Jsme tu pro tebe od pondělí do neděle a od 8.00 do 18.00, takže vlastně furt ;)
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                    </div>
-
-
-                                    </div>
-
-                                </div>
-
-                                
-                            </div>
-
-                        </div>
-                    </div>
-                </section>
-
-            </header>
-
-            <footer class="text-white bg-main-dark">
-                <div class="container pt-3">
-
-                    <nav class="row my-3 py-2 footer-nav border border-white justify-content-between d-none d-lg-flex">
-                        <div class="col-auto">
-                            <img src="assets/img/tymbe-logo.svg">
-                        </div>
-                        <ul class="nav col-auto">
-                            <li class="nav-item align-self-center">
-                                <a class="nav-link" aria-current="page" href="index.html">
-                                    <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.54994 1.5H7.77495C7.4988 1.5 7.27495 1.72386 7.27495 2V2.17246H10.0499V2C10.0499 1.72386 9.82609 1.5 9.54994 1.5ZM5.77495 2V2.17246H1.5C0.671573 2.17246 0 2.84403 0 3.67246V9.3621C0 10.1905 0.671572 10.8621 1.5 10.8621H15.825C16.6534 10.8621 17.325 10.1905 17.325 9.3621V3.67246C17.325 2.84403 16.6534 2.17246 15.825 2.17246H11.5499V2C11.5499 0.895431 10.6545 0 9.54994 0H7.77495C6.67038 0 5.77495 0.89543 5.77495 2ZM16.3623 11.9483H0.962335V14.75C0.962335 15.3023 1.41005 15.75 1.96234 15.75H15.3623C15.9146 15.75 16.3623 15.3023 16.3623 14.75V11.9483Z" fill="#28367B"/>
-                                        <rect x="7.07959" y="9.27585" width="3.16563" height="4.25862" rx="1" fill="#28367B" stroke="white"/>
-                                    </svg>
-                                    Pro brigádníky</a>
-                            </li>
-                            <li class="nav-item align-self-center">
-                                <a class="nav-link" href="b2b.html">
-                                    <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25022 2C2.25022 0.89543 3.14565 0 4.25022 0H13.0752C14.1798 0 15.0752 0.895431 15.0752 2V17C15.0752 17.0337 15.0736 17.067 15.0703 17.0999H16.875C17.1235 17.0999 17.325 17.3013 17.325 17.5499C17.325 17.7984 17.1235 17.9999 16.875 17.9999H14.0915L14.0752 18H3.25022L3.23395 17.9999H0.45C0.201472 17.9999 0 17.7984 0 17.5499C0 17.3013 0.201472 17.0999 0.45 17.0999H2.25514C2.25189 17.067 2.25022 17.0337 2.25022 17V2ZM5.72475 2.92507C5.17247 2.92507 4.72475 3.37278 4.72475 3.92507V4.85007C4.72475 5.40235 5.17247 5.85007 5.72475 5.85007H6.64975C7.20204 5.85007 7.64975 5.40235 7.64975 4.85007V3.92507C7.64975 3.37278 7.20204 2.92507 6.64975 2.92507H5.72475ZM4.72475 8.65009C4.72475 8.09781 5.17247 7.65009 5.72475 7.65009H6.64975C7.20204 7.65009 7.64975 8.09781 7.64975 8.65009V9.57509C7.64975 10.1274 7.20204 10.5751 6.64975 10.5751H5.72475C5.17247 10.5751 4.72475 10.1274 4.72475 9.57509V8.65009ZM10.4501 7.65009C9.89777 7.65009 9.45005 8.09781 9.45005 8.65009V9.57509C9.45005 10.1274 9.89777 10.5751 10.45 10.5751H11.3751C11.9273 10.5751 12.3751 10.1274 12.3751 9.57509V8.65009C12.3751 8.09781 11.9273 7.65009 11.3751 7.65009H10.4501ZM9.45005 3.92507C9.45005 3.37278 9.89777 2.92507 10.4501 2.92507H11.3751C11.9273 2.92507 12.3751 3.37278 12.3751 3.92507V4.85007C12.3751 5.40235 11.9273 5.85007 11.3751 5.85007H10.45C9.89777 5.85007 9.45005 5.40235 9.45005 4.85007V3.92507ZM6.85013 12.3751C6.29785 12.3751 5.85013 12.8228 5.85013 13.3751V17.1001H11.4751V13.3751C11.4751 12.8228 11.0274 12.3751 10.4751 12.3751H6.85013Z" fill="#28367B"/>
-                                    </svg>
-                                    Pro firmy</a>
-                            </li>
-                            <li class="nav-item align-self-center">
-                                <a class="nav-link" href="about.html">
-                                    <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8C0 4.22876 0 2.34315 1.17157 1.17157C2.34315 0 4.22876 0 8 0C11.7712 0 13.6569 0 14.8284 1.17157C16 2.34315 16 4.22876 16 8C16 11.7712 16 13.6569 14.8284 14.8284C13.6569 16 11.7712 16 8 16C4.22876 16 2.34315 16 1.17157 14.8284C0 13.6569 0 11.7712 0 8ZM4.77278 11.7955C5.6984 11.0853 6.83251 10.7003 7.99922 10.7003C9.16593 10.7003 10.3 11.0853 11.2257 11.7955C12.1513 12.5058 12.8167 13.5016 13.1186 14.6286C13.1901 14.8953 13.0318 15.1695 12.7651 15.2409C12.4983 15.3124 12.2242 15.1541 12.1527 14.8874C11.9077 13.9731 11.3679 13.1651 10.6169 12.5889C9.86592 12.0127 8.9458 11.7003 7.99922 11.7003C7.05264 11.7003 6.13252 12.0127 5.38155 12.5889C4.63058 13.1651 4.09073 13.9731 3.84574 14.8874C3.77427 15.1541 3.5001 15.3124 3.23337 15.2409C2.96663 15.1695 2.80834 14.8953 2.87981 14.6286C3.18178 13.5016 3.84717 12.5058 4.77278 11.7955ZM6.09961 5.59969C6.09961 4.55035 6.95027 3.69969 7.99961 3.69969C9.04895 3.69969 9.89961 4.55035 9.89961 5.59969C9.89961 6.64903 9.04895 7.49969 7.99961 7.49969C6.95027 7.49969 6.09961 6.64903 6.09961 5.59969ZM7.99961 2.69969C6.39798 2.69969 5.09961 3.99806 5.09961 5.59969C5.09961 7.20131 6.39798 8.49969 7.99961 8.49969C9.60123 8.49969 10.8996 7.20131 10.8996 5.59969C10.8996 3.99806 9.60123 2.69969 7.99961 2.69969Z" fill="#28367B"/>
-                                    </svg>
-                                    O společnosti</a>
-                            </li>
-                            <li class="nav-item align-self-center">
-                                <a class="nav-link" href="contact.html">
-                                    <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.87868 2.87868C0 3.75736 0 5.17157 0 8C0 10.8284 0 12.2426 0.87868 13.1213C1.75736 14 3.17157 14 6 14H10C12.8284 14 14.2426 14 15.1213 13.1213C16 12.2426 16 10.8284 16 8C16 5.17157 16 3.75736 15.1213 2.87868C14.2426 2 12.8284 2 10 2H6C3.17157 2 1.75736 2 0.87868 2.87868ZM2.93705 5.0091C2.70476 4.85977 2.3954 4.92702 2.24608 5.15931C2.09675 5.39159 2.164 5.70095 2.39629 5.85028L7.18886 8.93122C7.68298 9.24886 8.31703 9.24886 8.81114 8.93122L13.6037 5.85028C13.836 5.70095 13.9032 5.39159 13.7539 5.15931C13.6046 4.92702 13.2952 4.85977 13.063 5.0091L8.27038 8.09004C8.10567 8.19592 7.89433 8.19592 7.72962 8.09004L2.93705 5.0091Z" fill="#28367B"/>
-                                    </svg>
-
-                                    Kontakty</a>
-                            </li>
-
-
-                            <li class="nav-item align-self-center">
-                                <a class="nav-link" href="faq.html">
-                                    <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 9.01127C1.5 5.06034 4.6575 1.5 9.015 1.5C13.275 1.5 16.5 4.99274 16.5 8.98873C16.5 13.6232 12.72 16.5 9 16.5C7.77 16.5 6.405 16.1695 5.31 15.5235C4.9275 15.2907 4.605 15.1179 4.1925 15.2531L2.6775 15.7038C2.295 15.824 1.95 15.5235 2.0625 15.1179L2.565 13.4354C2.6475 13.2026 2.6325 12.9547 2.5125 12.7594C1.8675 11.5726 1.5 10.2732 1.5 9.01127ZM8.02501 9.01127C8.02501 9.54457 8.45251 9.97271 8.98501 9.98022C9.51751 9.98022 9.94501 9.54457 9.94501 9.01878C9.94501 8.48548 9.51751 8.05734 8.98501 8.05734C8.46001 8.04982 8.02501 8.48548 8.02501 9.01127ZM11.4825 9.01878C11.4825 9.54457 11.91 9.98022 12.4425 9.98022C12.975 9.98022 13.4025 9.54457 13.4025 9.01878C13.4025 8.48548 12.975 8.05733 12.4425 8.05733C11.91 8.05733 11.4825 8.48548 11.4825 9.01878ZM5.52751 9.98022C5.00251 9.98022 4.56751 9.54457 4.56751 9.01878C4.56751 8.48548 4.99501 8.05733 5.52751 8.05733C6.06001 8.05733 6.48751 8.48548 6.48751 9.01878C6.48751 9.54457 6.06001 9.97271 5.52751 9.98022Z" fill="white"/>
-                                    </svg>
-
-                                    FAQ</a>
-                            </li>
-
-                        </ul>
-                    </nav>
-
-                    <nav class="d-lg-none footer-nav text-center row justify-content-center">
-                        <div class="col-auto border border-white p-2 rounded-pill">
-                            <img src="assets/img/tymbe-logo.svg">
-                        </div>
-                        <ul class="nav flex-column">
-                            <li class="nav-item pt-3">
-                                <a class="nav-link" aria-current="page" href="index.html">
-                                    <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.54994 1.5H7.77495C7.4988 1.5 7.27495 1.72386 7.27495 2V2.17246H10.0499V2C10.0499 1.72386 9.82609 1.5 9.54994 1.5ZM5.77495 2V2.17246H1.5C0.671573 2.17246 0 2.84403 0 3.67246V9.3621C0 10.1905 0.671572 10.8621 1.5 10.8621H15.825C16.6534 10.8621 17.325 10.1905 17.325 9.3621V3.67246C17.325 2.84403 16.6534 2.17246 15.825 2.17246H11.5499V2C11.5499 0.895431 10.6545 0 9.54994 0H7.77495C6.67038 0 5.77495 0.89543 5.77495 2ZM16.3623 11.9483H0.962335V14.75C0.962335 15.3023 1.41005 15.75 1.96234 15.75H15.3623C15.9146 15.75 16.3623 15.3023 16.3623 14.75V11.9483Z" fill="#28367B"/>
-                                        <rect x="7.07959" y="9.27585" width="3.16563" height="4.25862" rx="1" fill="#28367B" stroke="white"/>
-                                    </svg>
-                                    Pro brigádníky</a>
-                            </li>
-                            <li class="nav-item pt-3">
-                                <a class="nav-link" href="b2b.html">
-                                    <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25022 2C2.25022 0.89543 3.14565 0 4.25022 0H13.0752C14.1798 0 15.0752 0.895431 15.0752 2V17C15.0752 17.0337 15.0736 17.067 15.0703 17.0999H16.875C17.1235 17.0999 17.325 17.3013 17.325 17.5499C17.325 17.7984 17.1235 17.9999 16.875 17.9999H14.0915L14.0752 18H3.25022L3.23395 17.9999H0.45C0.201472 17.9999 0 17.7984 0 17.5499C0 17.3013 0.201472 17.0999 0.45 17.0999H2.25514C2.25189 17.067 2.25022 17.0337 2.25022 17V2ZM5.72475 2.92507C5.17247 2.92507 4.72475 3.37278 4.72475 3.92507V4.85007C4.72475 5.40235 5.17247 5.85007 5.72475 5.85007H6.64975C7.20204 5.85007 7.64975 5.40235 7.64975 4.85007V3.92507C7.64975 3.37278 7.20204 2.92507 6.64975 2.92507H5.72475ZM4.72475 8.65009C4.72475 8.09781 5.17247 7.65009 5.72475 7.65009H6.64975C7.20204 7.65009 7.64975 8.09781 7.64975 8.65009V9.57509C7.64975 10.1274 7.20204 10.5751 6.64975 10.5751H5.72475C5.17247 10.5751 4.72475 10.1274 4.72475 9.57509V8.65009ZM10.4501 7.65009C9.89777 7.65009 9.45005 8.09781 9.45005 8.65009V9.57509C9.45005 10.1274 9.89777 10.5751 10.45 10.5751H11.3751C11.9273 10.5751 12.3751 10.1274 12.3751 9.57509V8.65009C12.3751 8.09781 11.9273 7.65009 11.3751 7.65009H10.4501ZM9.45005 3.92507C9.45005 3.37278 9.89777 2.92507 10.4501 2.92507H11.3751C11.9273 2.92507 12.3751 3.37278 12.3751 3.92507V4.85007C12.3751 5.40235 11.9273 5.85007 11.3751 5.85007H10.45C9.89777 5.85007 9.45005 5.40235 9.45005 4.85007V3.92507ZM6.85013 12.3751C6.29785 12.3751 5.85013 12.8228 5.85013 13.3751V17.1001H11.4751V13.3751C11.4751 12.8228 11.0274 12.3751 10.4751 12.3751H6.85013Z" fill="#28367B"/>
-                                    </svg>
-                                    Pro firmy</a>
-                            </li>
-                            <li class="nav-item pt-3">
-                                <a class="nav-link" href="about.html">
-                                    <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8C0 4.22876 0 2.34315 1.17157 1.17157C2.34315 0 4.22876 0 8 0C11.7712 0 13.6569 0 14.8284 1.17157C16 2.34315 16 4.22876 16 8C16 11.7712 16 13.6569 14.8284 14.8284C13.6569 16 11.7712 16 8 16C4.22876 16 2.34315 16 1.17157 14.8284C0 13.6569 0 11.7712 0 8ZM4.77278 11.7955C5.6984 11.0853 6.83251 10.7003 7.99922 10.7003C9.16593 10.7003 10.3 11.0853 11.2257 11.7955C12.1513 12.5058 12.8167 13.5016 13.1186 14.6286C13.1901 14.8953 13.0318 15.1695 12.7651 15.2409C12.4983 15.3124 12.2242 15.1541 12.1527 14.8874C11.9077 13.9731 11.3679 13.1651 10.6169 12.5889C9.86592 12.0127 8.9458 11.7003 7.99922 11.7003C7.05264 11.7003 6.13252 12.0127 5.38155 12.5889C4.63058 13.1651 4.09073 13.9731 3.84574 14.8874C3.77427 15.1541 3.5001 15.3124 3.23337 15.2409C2.96663 15.1695 2.80834 14.8953 2.87981 14.6286C3.18178 13.5016 3.84717 12.5058 4.77278 11.7955ZM6.09961 5.59969C6.09961 4.55035 6.95027 3.69969 7.99961 3.69969C9.04895 3.69969 9.89961 4.55035 9.89961 5.59969C9.89961 6.64903 9.04895 7.49969 7.99961 7.49969C6.95027 7.49969 6.09961 6.64903 6.09961 5.59969ZM7.99961 2.69969C6.39798 2.69969 5.09961 3.99806 5.09961 5.59969C5.09961 7.20131 6.39798 8.49969 7.99961 8.49969C9.60123 8.49969 10.8996 7.20131 10.8996 5.59969C10.8996 3.99806 9.60123 2.69969 7.99961 2.69969Z" fill="#28367B"/>
-                                    </svg>
-                                    O společnosti</a>
-                            </li>
-                            <li class="nav-item pt-3">
-                                <a class="nav-link" href="contact.html">
-                                    <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.87868 2.87868C0 3.75736 0 5.17157 0 8C0 10.8284 0 12.2426 0.87868 13.1213C1.75736 14 3.17157 14 6 14H10C12.8284 14 14.2426 14 15.1213 13.1213C16 12.2426 16 10.8284 16 8C16 5.17157 16 3.75736 15.1213 2.87868C14.2426 2 12.8284 2 10 2H6C3.17157 2 1.75736 2 0.87868 2.87868ZM2.93705 5.0091C2.70476 4.85977 2.3954 4.92702 2.24608 5.15931C2.09675 5.39159 2.164 5.70095 2.39629 5.85028L7.18886 8.93122C7.68298 9.24886 8.31703 9.24886 8.81114 8.93122L13.6037 5.85028C13.836 5.70095 13.9032 5.39159 13.7539 5.15931C13.6046 4.92702 13.2952 4.85977 13.063 5.0091L8.27038 8.09004C8.10567 8.19592 7.89433 8.19592 7.72962 8.09004L2.93705 5.0091Z" fill="#28367B"/>
-                                    </svg>
-
-                                    Kontakty</a>
-                            </li>
-                            <li class="nav-item pt-3">
-                                <a class="nav-link" href="faq.html">
-                                    <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 9.01127C1.5 5.06034 4.6575 1.5 9.015 1.5C13.275 1.5 16.5 4.99274 16.5 8.98873C16.5 13.6232 12.72 16.5 9 16.5C7.77 16.5 6.405 16.1695 5.31 15.5235C4.9275 15.2907 4.605 15.1179 4.1925 15.2531L2.6775 15.7038C2.295 15.824 1.95 15.5235 2.0625 15.1179L2.565 13.4354C2.6475 13.2026 2.6325 12.9547 2.5125 12.7594C1.8675 11.5726 1.5 10.2732 1.5 9.01127ZM8.02501 9.01127C8.02501 9.54457 8.45251 9.97271 8.98501 9.98022C9.51751 9.98022 9.94501 9.54457 9.94501 9.01878C9.94501 8.48548 9.51751 8.05734 8.98501 8.05734C8.46001 8.04982 8.02501 8.48548 8.02501 9.01127ZM11.4825 9.01878C11.4825 9.54457 11.91 9.98022 12.4425 9.98022C12.975 9.98022 13.4025 9.54457 13.4025 9.01878C13.4025 8.48548 12.975 8.05733 12.4425 8.05733C11.91 8.05733 11.4825 8.48548 11.4825 9.01878ZM5.52751 9.98022C5.00251 9.98022 4.56751 9.54457 4.56751 9.01878C4.56751 8.48548 4.99501 8.05733 5.52751 8.05733C6.06001 8.05733 6.48751 8.48548 6.48751 9.01878C6.48751 9.54457 6.06001 9.97271 5.52751 9.98022Z" fill="white"/>
-                                    </svg>
-
-                                    FAQ</a>
-                            </li>
-
-                        </ul>
-                    </nav>
-
-                    <div class="row justify-content-center text-center my-3">
-                        <p class="col-12 col-md-6 text-center text-white p16">
-                            Tymbe Ty–brigády je jediná on-line platforma, která najde, prověří, doručí a zaplatí brigádníky tam, kde je právě potřebuješ.
-                        </p>
-                    </div>
-                    <div class="row justify-content-center">
-
-                        <p class="col-auto mt-3 p-3 text-center bg-light-transparent px-3 py-2 rounded-pill text-white">
-                            <small>24 hodin denně, 7 dní v týdnu a po celé ČR.</small>
-                        </p>
-                    </div>
-                    <div class="row mt-2">
-
-                        <div class="col-12 d-inline text-center">
-                            <a href="https://www.facebook.com/tymbecz">
-                                <img class="mx-2" src="assets/img/fb-icon.svg"></a>
-
-
-                            <a href="https://www.instagram.com/tymbe_cz/">
-                                <img class="mx-2" src="assets/img/ig-icon.svg" alt=""></a>
-
-
-                            <a href="https://www.linkedin.com/company/tymbe"><img class="mx-2" src="assets/img/linkedin.svg" alt=""></a>
-                        </div>
-                        <p class="col-12 text-center mt-3 text-white">
-                            <small>© Copyright 2021 – Tymbe a.s.</small>
-                        </p>
-                    </div>
+                  </div>
                 </div>
-            </footer>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsCompany-headingTwo">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsCompany-collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="panelsCompany-collapseTwo"
+                    >
+                      Jaké výhody má Tymbe pro firmy?
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsCompany-collapseTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsCompany-headingTwo"
+                    data-bs-parent="#accordionPanelsCompany"
+                  >
+                    <div class="accordion-body">
+                      Všechno, co Tymbe dělá, je postavené pro online
+                      management. Nechceme ti práci přidělávat, ale ušetřit.
+                      Naše služby fungují po celém Česku i v zahraničí a chytré
+                      nástroje Tymbe vyřeší spoustu otravné administrativy místo
+                      tebe. A co ti šetří čas, to ti šetří i peníze.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsCompany-headingThree">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsCompany-collapseThree"
+                      aria-expanded="false"
+                      aria-controls="panelsCompany-collapseThree"
+                    >
+                      Proč najímat lidi přes Ty–brigády?
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsCompany-collapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsCompany-headingThree"
+                    data-bs-parent="#accordionPanelsCompany"
+                  >
+                    <div class="accordion-body">
+                      Ty–brigády jsou jediná online platforma na trhu, která tě
+                      zbaví starostí a doručí ti kvalitní brigádníky třeba už
+                      zítra. Je to chytrá služba, která znamená definitivní
+                      konec papírování, šetří častvých lidí, nasbírá ti hromadu
+                      užitečných dat a brigádníkům vyplácí hodinovku, která je
+                      pro tebe vždy výhodná.Ty–brigády navíc jedou 24 hodin
+                      denně, 7 dní v týdnu a po celé ČR.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsCompany-headingFour">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsCompany-collapseFour"
+                      aria-expanded="false"
+                      aria-controls="panelsCompany-collapseFour"
+                    >
+                      Umí Tymbe postavit službu na míru?
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsCompany-collapseFour"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsCompany-headingFour"
+                    data-bs-parent="#accordionPanelsCompany"
+                  >
+                    <div class="accordion-body">
+                      Na to se u nás specializujeme. Tvoje lidi dokážeme online
+                      proškolit, v čem si vzpomeneš, a zařídíme pro ně i
+                      pracovní pomůcky, když na to přijde. Pojď to s námi
+                      probrat a určitě to vymyslíme. Volej
+                      <u>+420 602 200 114</u>
+                      nebo piš na
+                      <u>firma@tymbe.com</u>
+                      a my se do 24 hodin ozveme.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsCompany-headingFive">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsCompany-collapseFive"
+                      aria-expanded="false"
+                      aria-controls="panelsCompany-collapseFive"
+                    >
+                      Všechno online je super, ale co když chci jednat s lidmi?
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsCompany-collapseFive"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsCompany-headingFive"
+                    data-bs-parent="#accordionPanelsCompany"
+                  >
+                    <div class="accordion-body">
+                      Nejsme žádní IT roboti. I my se rádi potkáváme a řešíme
+                      zakázky a kontrakty osobně. Máme tým zkušené zákaznické
+                      podpory, který s tebou nastaví všechno přesně podle potřeb
+                      vaší firmy. Tymbe je tu pro lidi, ne pro automaty :)
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="tab-pane fade"
+              id="workersFAQ"
+              role="tabpanel"
+              aria-labelledby="btnWorkersFAQ"
+            >
+              <div class="accordion" id="accordionPanelsWorkers">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsWorkers-headingOne">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsWorkers-collapseOne"
+                      aria-expanded="false"
+                      aria-controls="panelsWorkers-collapseOne"
+                    >
+                      Co je Tymbe?
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsWorkers-collapseOne"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsWorkers-headingOne"
+                    data-bs-parent="#accordionPanelsWorkers"
+                  >
+                    <div class="accordion-body">
+                      Tymbe je značka, za kterou stojí parta chytrých lidí,
+                      kteří se rozhodli dělat chytré služby online. Třeba jako
+                      Ty–brigády, online zkratku k brigádě. Prostě věci, které
+                      dávají smysl a lidem pomůžou
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsWorkers-headingTwo">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsWorkers-collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="panelsWorkers-collapseTwo"
+                    >
+                      A co jsou Ty–brigády?
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsWorkers-collapseTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsWorkers-headingTwo"
+                    data-bs-parent="#accordionPanelsWorkers"
+                  >
+                    <div class="accordion-body">
+                      Ty–brigády je první online platforma na trhu brigád, která
+                      ti sežene super zaplacenou férovou brigádu třeba už zítra
+                      a kdekoliv po Česku u prověřených renomovaných
+                      společností. Přihlásit se můžeš přes apku v mobilu. Mrkni
+                      na App Store nebo na Google Play, anebo klasicky na
+                      tybrigady.tymbe.cz. Na Tymbe najdeš nabídky brigád přímo
+                      od vybraných zaměstnavatelů, sám si řekneš, za kolik jsi
+                      ochotný pracovat a jak často chceš vyplácet odměnu. A co
+                      je nejvíc, Tymbe je pro tebe úplně zdarma.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsWorkers-headingThree">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsWorkers-collapseThree"
+                      aria-expanded="false"
+                      aria-controls="panelsWorkers-collapseThree"
+                    >
+                      Kdo je Tymber?
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsWorkers-collapseThree"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsWorkers-headingThree"
+                    data-bs-parent="#accordionPanelsWorkers"
+                  >
+                    <div class="accordion-body">
+                      Když máš brigádu přes Ty–brigády, tak jsi Tymber :) Prostě
+                      jsme si to tak poladili, abychom si rozuměli. Každý Tymber
+                      má svůj profil na tybrigady.tymbe.cz. Na svém profilu
+                      najdeš úplně všechno, co budeš potřebovat vědět.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsWorkers-headingFour">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsWorkers-collapseFour"
+                      aria-expanded="false"
+                      aria-controls="panelsWorkers-collapseFour"
+                    >
+                      Kde a jak se mám registrovat?
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsWorkers-collapseFour"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsWorkers-headingFour"
+                    data-bs-parent="#accordionPanelsWorkers"
+                  >
+                    <div class="accordion-body">
+                      Stáhni si apku Ty–brigády na App Storu nebo na Google
+                      Play. Celá akce ti nebude trvat víc než 10minut. Využij
+                      přestávku nebo cestu domů a jsi Tymber!
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsWorkers-headingFive">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsWorkers-collapseFive"
+                      aria-expanded="false"
+                      aria-controls="panelsWorkers-collapseFive"
+                    >
+                      Kde podepíšu potřebné papíry?
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsWorkers-collapseFive"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsWorkers-headingFive"
+                    data-bs-parent="#accordionPanelsWorkers"
+                  >
+                    <div class="accordion-body">
+                      Jo papíry? Tak ty jsme zrušili! No fakt, všechny „papíry“
+                      prostě podepíšeš v apce, prstem na obrazovce. Nemusíš se
+                      nikam vláčet, teda kromě brigády, na kterou se přihlásíš.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsWorkers-headingSix">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsWorkers-collapseSix"
+                      aria-expanded="false"
+                      aria-controls="panelsWorkers-collapseSix"
+                    >
+                      Som zo Slovenska a nemám trvalý pobyt v Česku, čo mám
+                      vyplniť do kontaktnej adresy?
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsWorkers-collapseSix"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsWorkers-headingSix"
+                    data-bs-parent="#accordionPanelsWorkers"
+                  >
+                    <div class="accordion-body">
+                      Pro Tymbery jsme pořád jedna země :) Vyplnit můžeš
+                      jakoukoliv adresu, kam ti dorazí pošta, když ti nějakou
+                      náhodou pošleme. Může to být adresa kolejí nebo
+                      spolubydlení, nemusíš být ani uvedený jako nájemník.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsWorkers-headingSeven">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsWorkers-collapseSeven"
+                      aria-expanded="false"
+                      aria-controls="panelsWorkers-collapseSeven"
+                    >
+                      Jak mě Ty–brigády zaplatí?
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsWorkers-collapseSeven"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsWorkers-headingSeven"
+                    data-bs-parent="#accordionPanelsWorkers"
+                  >
+                    <div class="accordion-body">
+                      Když si vybíráš brigádu v apce, vždycky vidíš, jaká je
+                      hodinovka. Je to prostě fér. Odměna na Ty–brigády za se
+                      skládá z pevné částky + kreditu. Kredit roste podle toho,
+                      kolik času zbývá do začátkusměny a kolik je volných míst.
+                      Jestli máš nervy počkat si, až cena vyroste nejvýš, dobře
+                      ty. Ale taky ti někdo může brigádu vyfouknout. Někdy je to
+                      adrenalin :)
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsWorkers-headingEight">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsWorkers-collapseEight"
+                      aria-expanded="false"
+                      aria-controls="panelsWorkers-collapseEight"
+                    >
+                      Kdy dostanu peníze na účet?
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsWorkers-collapseEight"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsWorkers-headingEight"
+                    data-bs-parent="#accordionPanelsWorkers"
+                  >
+                    <div class="accordion-body">
+                      Troufáme si říct, že peníze ti pošleme, jakmile si odmakáš
+                      domluvenou brigádu. Stačí, aby ti vedoucí směny potvrdil
+                      “docházku” a odvedenou práci, a hned se ti na profilu
+                      objeví možnost si nechat peníze poslat na účet. Peníze si
+                      můžeš nechat proplatit ihned nebo můžeš počkat a nastřádat
+                      si větší sumu, záleží na tobě. Výplaty každopádně posíláme
+                      několikrát denně, takže peníze od nás dostaneš doslova
+                      “cobydup” ;)
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsWorkers-headingNine">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsWorkers-collapseNine"
+                      aria-expanded="false"
+                      aria-controls="panelsWorkers-collapseNine"
+                    >
+                      Co když nemůžu dorazit na směnu?
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsWorkers-collapseNine"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsWorkers-headingNine"
+                    data-bs-parent="#accordionPanelsWorkers"
+                  >
+                    <div class="accordion-body">
+                      Ze směny se můžeš vždycky odhlásit, ale když to bude míň
+                      než 24 hodin před začátkem směny, budeme potřebovat
+                      omluvenku s vysvětlením. Tu nám pošli na
+                      trener@tymbe.cz.Ty–brigády fungují skvěle díky tomu, že se
+                      na sebe můžeme navzájem spolehnout.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="panelsWorkers-headingTen">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#panelsWorkers-collapseTen"
+                      aria-expanded="false"
+                      aria-controls="panelsWorkers-collapseTen"
+                    >
+                      Pomóc! Něco mi nefunguje, co mám dělat?
+                    </button>
+                  </h2>
+                  <div
+                    id="panelsWorkers-collapseTen"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="panelsWorkers-headingTen"
+                    data-bs-parent="#accordionPanelsWorkers"
+                  >
+                    <div class="accordion-body">
+                      Od toho tu jsme. Poradíme, vyřešíme. Piš na e-mail
+                      <span class="fw-bold">trener@tymbe.cz</span>
+                      nebo na FB Messenger
+                      <span class="fw-bold">@tymbecz</span>. Jsme tu pro tebe od
+                      pondělí do neděle a od 8.00 do 18.00, takže vlastně furt
+                      ;)
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <!-- jQuery -->
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <footer class="text-white bg-main-dark">
+      <div class="container pt-3">
+        <nav
+          class="
+            row
+            my-3
+            py-2
+            footer-nav
+            border border-white
+            justify-content-between
+            d-none d-lg-flex
+          "
+        >
+          <div class="col-auto">
+            <img src="assets/img/tymbe-logo.svg" />
+          </div>
+          <ul class="nav col-auto">
+            <li class="nav-item align-self-center">
+              <a class="nav-link" aria-current="page" href="index.html">
+                <svg
+                  width="18"
+                  height="18"
+                  viewbox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.54994 1.5H7.77495C7.4988 1.5 7.27495 1.72386 7.27495 2V2.17246H10.0499V2C10.0499 1.72386 9.82609 1.5 9.54994 1.5ZM5.77495 2V2.17246H1.5C0.671573 2.17246 0 2.84403 0 3.67246V9.3621C0 10.1905 0.671572 10.8621 1.5 10.8621H15.825C16.6534 10.8621 17.325 10.1905 17.325 9.3621V3.67246C17.325 2.84403 16.6534 2.17246 15.825 2.17246H11.5499V2C11.5499 0.895431 10.6545 0 9.54994 0H7.77495C6.67038 0 5.77495 0.89543 5.77495 2ZM16.3623 11.9483H0.962335V14.75C0.962335 15.3023 1.41005 15.75 1.96234 15.75H15.3623C15.9146 15.75 16.3623 15.3023 16.3623 14.75V11.9483Z"
+                    fill="#28367B"
+                  />
+                  <rect
+                    x="7.07959"
+                    y="9.27585"
+                    width="3.16563"
+                    height="4.25862"
+                    rx="1"
+                    fill="#28367B"
+                    stroke="white"
+                  />
+                </svg>
+                Pro brigádníky</a
+              >
+            </li>
+            <li class="nav-item align-self-center">
+              <a class="nav-link" href="b2b.html">
+                <svg
+                  width="18"
+                  height="18"
+                  viewbox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.25022 2C2.25022 0.89543 3.14565 0 4.25022 0H13.0752C14.1798 0 15.0752 0.895431 15.0752 2V17C15.0752 17.0337 15.0736 17.067 15.0703 17.0999H16.875C17.1235 17.0999 17.325 17.3013 17.325 17.5499C17.325 17.7984 17.1235 17.9999 16.875 17.9999H14.0915L14.0752 18H3.25022L3.23395 17.9999H0.45C0.201472 17.9999 0 17.7984 0 17.5499C0 17.3013 0.201472 17.0999 0.45 17.0999H2.25514C2.25189 17.067 2.25022 17.0337 2.25022 17V2ZM5.72475 2.92507C5.17247 2.92507 4.72475 3.37278 4.72475 3.92507V4.85007C4.72475 5.40235 5.17247 5.85007 5.72475 5.85007H6.64975C7.20204 5.85007 7.64975 5.40235 7.64975 4.85007V3.92507C7.64975 3.37278 7.20204 2.92507 6.64975 2.92507H5.72475ZM4.72475 8.65009C4.72475 8.09781 5.17247 7.65009 5.72475 7.65009H6.64975C7.20204 7.65009 7.64975 8.09781 7.64975 8.65009V9.57509C7.64975 10.1274 7.20204 10.5751 6.64975 10.5751H5.72475C5.17247 10.5751 4.72475 10.1274 4.72475 9.57509V8.65009ZM10.4501 7.65009C9.89777 7.65009 9.45005 8.09781 9.45005 8.65009V9.57509C9.45005 10.1274 9.89777 10.5751 10.45 10.5751H11.3751C11.9273 10.5751 12.3751 10.1274 12.3751 9.57509V8.65009C12.3751 8.09781 11.9273 7.65009 11.3751 7.65009H10.4501ZM9.45005 3.92507C9.45005 3.37278 9.89777 2.92507 10.4501 2.92507H11.3751C11.9273 2.92507 12.3751 3.37278 12.3751 3.92507V4.85007C12.3751 5.40235 11.9273 5.85007 11.3751 5.85007H10.45C9.89777 5.85007 9.45005 5.40235 9.45005 4.85007V3.92507ZM6.85013 12.3751C6.29785 12.3751 5.85013 12.8228 5.85013 13.3751V17.1001H11.4751V13.3751C11.4751 12.8228 11.0274 12.3751 10.4751 12.3751H6.85013Z"
+                    fill="#28367B"
+                  />
+                </svg>
+                Pro firmy</a
+              >
+            </li>
+            <li class="nav-item align-self-center">
+              <a class="nav-link" href="about.html">
+                <svg
+                  width="16"
+                  height="16"
+                  viewbox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 8C0 4.22876 0 2.34315 1.17157 1.17157C2.34315 0 4.22876 0 8 0C11.7712 0 13.6569 0 14.8284 1.17157C16 2.34315 16 4.22876 16 8C16 11.7712 16 13.6569 14.8284 14.8284C13.6569 16 11.7712 16 8 16C4.22876 16 2.34315 16 1.17157 14.8284C0 13.6569 0 11.7712 0 8ZM4.77278 11.7955C5.6984 11.0853 6.83251 10.7003 7.99922 10.7003C9.16593 10.7003 10.3 11.0853 11.2257 11.7955C12.1513 12.5058 12.8167 13.5016 13.1186 14.6286C13.1901 14.8953 13.0318 15.1695 12.7651 15.2409C12.4983 15.3124 12.2242 15.1541 12.1527 14.8874C11.9077 13.9731 11.3679 13.1651 10.6169 12.5889C9.86592 12.0127 8.9458 11.7003 7.99922 11.7003C7.05264 11.7003 6.13252 12.0127 5.38155 12.5889C4.63058 13.1651 4.09073 13.9731 3.84574 14.8874C3.77427 15.1541 3.5001 15.3124 3.23337 15.2409C2.96663 15.1695 2.80834 14.8953 2.87981 14.6286C3.18178 13.5016 3.84717 12.5058 4.77278 11.7955ZM6.09961 5.59969C6.09961 4.55035 6.95027 3.69969 7.99961 3.69969C9.04895 3.69969 9.89961 4.55035 9.89961 5.59969C9.89961 6.64903 9.04895 7.49969 7.99961 7.49969C6.95027 7.49969 6.09961 6.64903 6.09961 5.59969ZM7.99961 2.69969C6.39798 2.69969 5.09961 3.99806 5.09961 5.59969C5.09961 7.20131 6.39798 8.49969 7.99961 8.49969C9.60123 8.49969 10.8996 7.20131 10.8996 5.59969C10.8996 3.99806 9.60123 2.69969 7.99961 2.69969Z"
+                    fill="#28367B"
+                  />
+                </svg>
+                O společnosti</a
+              >
+            </li>
+            <li class="nav-item align-self-center">
+              <a class="nav-link" href="contact.html">
+                <svg
+                  width="16"
+                  height="16"
+                  viewbox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0.87868 2.87868C0 3.75736 0 5.17157 0 8C0 10.8284 0 12.2426 0.87868 13.1213C1.75736 14 3.17157 14 6 14H10C12.8284 14 14.2426 14 15.1213 13.1213C16 12.2426 16 10.8284 16 8C16 5.17157 16 3.75736 15.1213 2.87868C14.2426 2 12.8284 2 10 2H6C3.17157 2 1.75736 2 0.87868 2.87868ZM2.93705 5.0091C2.70476 4.85977 2.3954 4.92702 2.24608 5.15931C2.09675 5.39159 2.164 5.70095 2.39629 5.85028L7.18886 8.93122C7.68298 9.24886 8.31703 9.24886 8.81114 8.93122L13.6037 5.85028C13.836 5.70095 13.9032 5.39159 13.7539 5.15931C13.6046 4.92702 13.2952 4.85977 13.063 5.0091L8.27038 8.09004C8.10567 8.19592 7.89433 8.19592 7.72962 8.09004L2.93705 5.0091Z"
+                    fill="#28367B"
+                  />
+                </svg>
 
-            <!-- Bootstrap Bundle with Popper -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+                Kontakty</a
+              >
+            </li>
 
-            <!-- AOS animations -->
-            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+            <li class="nav-item align-self-center">
+              <a class="nav-link" href="faq.html">
+                <svg
+                  width="18"
+                  height="18"
+                  viewbox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1.5 9.01127C1.5 5.06034 4.6575 1.5 9.015 1.5C13.275 1.5 16.5 4.99274 16.5 8.98873C16.5 13.6232 12.72 16.5 9 16.5C7.77 16.5 6.405 16.1695 5.31 15.5235C4.9275 15.2907 4.605 15.1179 4.1925 15.2531L2.6775 15.7038C2.295 15.824 1.95 15.5235 2.0625 15.1179L2.565 13.4354C2.6475 13.2026 2.6325 12.9547 2.5125 12.7594C1.8675 11.5726 1.5 10.2732 1.5 9.01127ZM8.02501 9.01127C8.02501 9.54457 8.45251 9.97271 8.98501 9.98022C9.51751 9.98022 9.94501 9.54457 9.94501 9.01878C9.94501 8.48548 9.51751 8.05734 8.98501 8.05734C8.46001 8.04982 8.02501 8.48548 8.02501 9.01127ZM11.4825 9.01878C11.4825 9.54457 11.91 9.98022 12.4425 9.98022C12.975 9.98022 13.4025 9.54457 13.4025 9.01878C13.4025 8.48548 12.975 8.05733 12.4425 8.05733C11.91 8.05733 11.4825 8.48548 11.4825 9.01878ZM5.52751 9.98022C5.00251 9.98022 4.56751 9.54457 4.56751 9.01878C4.56751 8.48548 4.99501 8.05733 5.52751 8.05733C6.06001 8.05733 6.48751 8.48548 6.48751 9.01878C6.48751 9.54457 6.06001 9.97271 5.52751 9.98022Z"
+                    fill="white"
+                  />
+                </svg>
 
+                FAQ</a
+              >
+            </li>
+          </ul>
+        </nav>
 
-            <!-- Custom scripts -->
-            <script src="assets/js/scripts.js"></script>
+        <nav
+          class="d-lg-none footer-nav text-center row justify-content-center"
+        >
+          <div class="col-auto border border-white p-2 rounded-pill">
+            <img src="assets/img/tymbe-logo.svg" />
+          </div>
+          <ul class="nav flex-column">
+            <li class="nav-item pt-3">
+              <a class="nav-link" aria-current="page" href="index.html">
+                <svg
+                  width="18"
+                  height="18"
+                  viewbox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.54994 1.5H7.77495C7.4988 1.5 7.27495 1.72386 7.27495 2V2.17246H10.0499V2C10.0499 1.72386 9.82609 1.5 9.54994 1.5ZM5.77495 2V2.17246H1.5C0.671573 2.17246 0 2.84403 0 3.67246V9.3621C0 10.1905 0.671572 10.8621 1.5 10.8621H15.825C16.6534 10.8621 17.325 10.1905 17.325 9.3621V3.67246C17.325 2.84403 16.6534 2.17246 15.825 2.17246H11.5499V2C11.5499 0.895431 10.6545 0 9.54994 0H7.77495C6.67038 0 5.77495 0.89543 5.77495 2ZM16.3623 11.9483H0.962335V14.75C0.962335 15.3023 1.41005 15.75 1.96234 15.75H15.3623C15.9146 15.75 16.3623 15.3023 16.3623 14.75V11.9483Z"
+                    fill="#28367B"
+                  />
+                  <rect
+                    x="7.07959"
+                    y="9.27585"
+                    width="3.16563"
+                    height="4.25862"
+                    rx="1"
+                    fill="#28367B"
+                    stroke="white"
+                  />
+                </svg>
+                Pro brigádníky</a
+              >
+            </li>
+            <li class="nav-item pt-3">
+              <a class="nav-link" href="b2b.html">
+                <svg
+                  width="18"
+                  height="18"
+                  viewbox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.25022 2C2.25022 0.89543 3.14565 0 4.25022 0H13.0752C14.1798 0 15.0752 0.895431 15.0752 2V17C15.0752 17.0337 15.0736 17.067 15.0703 17.0999H16.875C17.1235 17.0999 17.325 17.3013 17.325 17.5499C17.325 17.7984 17.1235 17.9999 16.875 17.9999H14.0915L14.0752 18H3.25022L3.23395 17.9999H0.45C0.201472 17.9999 0 17.7984 0 17.5499C0 17.3013 0.201472 17.0999 0.45 17.0999H2.25514C2.25189 17.067 2.25022 17.0337 2.25022 17V2ZM5.72475 2.92507C5.17247 2.92507 4.72475 3.37278 4.72475 3.92507V4.85007C4.72475 5.40235 5.17247 5.85007 5.72475 5.85007H6.64975C7.20204 5.85007 7.64975 5.40235 7.64975 4.85007V3.92507C7.64975 3.37278 7.20204 2.92507 6.64975 2.92507H5.72475ZM4.72475 8.65009C4.72475 8.09781 5.17247 7.65009 5.72475 7.65009H6.64975C7.20204 7.65009 7.64975 8.09781 7.64975 8.65009V9.57509C7.64975 10.1274 7.20204 10.5751 6.64975 10.5751H5.72475C5.17247 10.5751 4.72475 10.1274 4.72475 9.57509V8.65009ZM10.4501 7.65009C9.89777 7.65009 9.45005 8.09781 9.45005 8.65009V9.57509C9.45005 10.1274 9.89777 10.5751 10.45 10.5751H11.3751C11.9273 10.5751 12.3751 10.1274 12.3751 9.57509V8.65009C12.3751 8.09781 11.9273 7.65009 11.3751 7.65009H10.4501ZM9.45005 3.92507C9.45005 3.37278 9.89777 2.92507 10.4501 2.92507H11.3751C11.9273 2.92507 12.3751 3.37278 12.3751 3.92507V4.85007C12.3751 5.40235 11.9273 5.85007 11.3751 5.85007H10.45C9.89777 5.85007 9.45005 5.40235 9.45005 4.85007V3.92507ZM6.85013 12.3751C6.29785 12.3751 5.85013 12.8228 5.85013 13.3751V17.1001H11.4751V13.3751C11.4751 12.8228 11.0274 12.3751 10.4751 12.3751H6.85013Z"
+                    fill="#28367B"
+                  />
+                </svg>
+                Pro firmy</a
+              >
+            </li>
+            <li class="nav-item pt-3">
+              <a class="nav-link" href="about.html">
+                <svg
+                  width="16"
+                  height="16"
+                  viewbox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 8C0 4.22876 0 2.34315 1.17157 1.17157C2.34315 0 4.22876 0 8 0C11.7712 0 13.6569 0 14.8284 1.17157C16 2.34315 16 4.22876 16 8C16 11.7712 16 13.6569 14.8284 14.8284C13.6569 16 11.7712 16 8 16C4.22876 16 2.34315 16 1.17157 14.8284C0 13.6569 0 11.7712 0 8ZM4.77278 11.7955C5.6984 11.0853 6.83251 10.7003 7.99922 10.7003C9.16593 10.7003 10.3 11.0853 11.2257 11.7955C12.1513 12.5058 12.8167 13.5016 13.1186 14.6286C13.1901 14.8953 13.0318 15.1695 12.7651 15.2409C12.4983 15.3124 12.2242 15.1541 12.1527 14.8874C11.9077 13.9731 11.3679 13.1651 10.6169 12.5889C9.86592 12.0127 8.9458 11.7003 7.99922 11.7003C7.05264 11.7003 6.13252 12.0127 5.38155 12.5889C4.63058 13.1651 4.09073 13.9731 3.84574 14.8874C3.77427 15.1541 3.5001 15.3124 3.23337 15.2409C2.96663 15.1695 2.80834 14.8953 2.87981 14.6286C3.18178 13.5016 3.84717 12.5058 4.77278 11.7955ZM6.09961 5.59969C6.09961 4.55035 6.95027 3.69969 7.99961 3.69969C9.04895 3.69969 9.89961 4.55035 9.89961 5.59969C9.89961 6.64903 9.04895 7.49969 7.99961 7.49969C6.95027 7.49969 6.09961 6.64903 6.09961 5.59969ZM7.99961 2.69969C6.39798 2.69969 5.09961 3.99806 5.09961 5.59969C5.09961 7.20131 6.39798 8.49969 7.99961 8.49969C9.60123 8.49969 10.8996 7.20131 10.8996 5.59969C10.8996 3.99806 9.60123 2.69969 7.99961 2.69969Z"
+                    fill="#28367B"
+                  />
+                </svg>
+                O společnosti</a
+              >
+            </li>
+            <li class="nav-item pt-3">
+              <a class="nav-link" href="contact.html">
+                <svg
+                  width="16"
+                  height="16"
+                  viewbox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0.87868 2.87868C0 3.75736 0 5.17157 0 8C0 10.8284 0 12.2426 0.87868 13.1213C1.75736 14 3.17157 14 6 14H10C12.8284 14 14.2426 14 15.1213 13.1213C16 12.2426 16 10.8284 16 8C16 5.17157 16 3.75736 15.1213 2.87868C14.2426 2 12.8284 2 10 2H6C3.17157 2 1.75736 2 0.87868 2.87868ZM2.93705 5.0091C2.70476 4.85977 2.3954 4.92702 2.24608 5.15931C2.09675 5.39159 2.164 5.70095 2.39629 5.85028L7.18886 8.93122C7.68298 9.24886 8.31703 9.24886 8.81114 8.93122L13.6037 5.85028C13.836 5.70095 13.9032 5.39159 13.7539 5.15931C13.6046 4.92702 13.2952 4.85977 13.063 5.0091L8.27038 8.09004C8.10567 8.19592 7.89433 8.19592 7.72962 8.09004L2.93705 5.0091Z"
+                    fill="#28367B"
+                  />
+                </svg>
 
-            <script>
+                Kontakty</a
+              >
+            </li>
+            <li class="nav-item pt-3">
+              <a class="nav-link" href="faq.html">
+                <svg
+                  width="18"
+                  height="18"
+                  viewbox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1.5 9.01127C1.5 5.06034 4.6575 1.5 9.015 1.5C13.275 1.5 16.5 4.99274 16.5 8.98873C16.5 13.6232 12.72 16.5 9 16.5C7.77 16.5 6.405 16.1695 5.31 15.5235C4.9275 15.2907 4.605 15.1179 4.1925 15.2531L2.6775 15.7038C2.295 15.824 1.95 15.5235 2.0625 15.1179L2.565 13.4354C2.6475 13.2026 2.6325 12.9547 2.5125 12.7594C1.8675 11.5726 1.5 10.2732 1.5 9.01127ZM8.02501 9.01127C8.02501 9.54457 8.45251 9.97271 8.98501 9.98022C9.51751 9.98022 9.94501 9.54457 9.94501 9.01878C9.94501 8.48548 9.51751 8.05734 8.98501 8.05734C8.46001 8.04982 8.02501 8.48548 8.02501 9.01127ZM11.4825 9.01878C11.4825 9.54457 11.91 9.98022 12.4425 9.98022C12.975 9.98022 13.4025 9.54457 13.4025 9.01878C13.4025 8.48548 12.975 8.05733 12.4425 8.05733C11.91 8.05733 11.4825 8.48548 11.4825 9.01878ZM5.52751 9.98022C5.00251 9.98022 4.56751 9.54457 4.56751 9.01878C4.56751 8.48548 4.99501 8.05733 5.52751 8.05733C6.06001 8.05733 6.48751 8.48548 6.48751 9.01878C6.48751 9.54457 6.06001 9.97271 5.52751 9.98022Z"
+                    fill="white"
+                  />
+                </svg>
 
-                $("#btnCompanyFAQ").click(function () {
-                    $("#btnCompanyFAQ").removeClass('inactive');
-                    $("#btnCompanyFAQ").addClass('disabled active');
-                    $("#btnWorkersFAQ").removeClass('active');
-                    $("#btnWorkersFAQ").addClass('disabled inactive');
-                    document.getElementById("btnCompanyFAQ").style.pointerEvents = "none";
-                    document.getElementById("btnWorkersFAQ").style.pointerEvents = "auto";
+                FAQ</a
+              >
+            </li>
+          </ul>
+        </nav>
 
-                });
+        <div class="row justify-content-center text-center my-3">
+          <p class="col-12 col-md-6 text-center text-white p16">
+            Tymbe Ty–brigády je jediná on-line platforma, která najde, prověří,
+            doručí a zaplatí brigádníky tam, kde je právě potřebuješ.
+          </p>
+        </div>
 
-                $("#btnWorkersFAQ").click(function () {
-                    $("#btnWorkersFAQ").removeClass('inactive');
-                    $("#btnWorkersFAQ").addClass('disabled active');
-                    $("#btnCompanyFAQ").removeClass('active');
-                    $("#btnCompanyFAQ").addClass('disabled inactive');
-                    document.getElementById("btnWorkersFAQ").style.pointerEvents = "none";
-                    document.getElementById("btnCompanyFAQ").style.pointerEvents = "auto";
+        <div class="row justify-content-center">
+          <p
+            class="
+              col-auto
+              mt-3
+              p-3
+              text-center
+              bg-light-transparent
+              px-3
+              py-2
+              rounded-pill
+              text-white
+            "
+          >
+            <small class="d-flex align-items-center">
+              <img class="mx-2" src="assets/img/phone-icon.svg" alt="" />
+              <span
+                style="
+                  font-family: Poppins;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: 14px;
+                  line-height: 14px;
 
-                });
-            </script>
-      
-    </body>
+                  /* identical to box height, or 100% */
+                  display: flex;
+                  align-items: center;
+
+                  color: #ffffff;
+                  margin-right: 13px;
+                  margin-left: 9px;
+                "
+                class="d-none d-lg-block"
+                >725 762 453</span
+              >
+              <span
+                style="
+                  font-family: Poppins;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: 14px;
+                  line-height: 14px;
+
+                  /* identical to box height, or 100% */
+                  display: flex;
+                  align-items: center;
+
+                  color: #ffffff;
+
+                  opacity: 0.7;
+                "
+                >24 hodin denně, 7 dní v týdnu a po celé ČR.</span
+              >
+            </small>
+          </p>
+        </div>
+
+        <div class="row mt-2">
+          <div class="col-12 d-inline text-center">
+            <a href="https://www.facebook.com/tymbecz">
+              <img class="mx-2" src="assets/img/fb-icon.svg"
+            /></a>
+
+            <a href="https://www.instagram.com/tymbe_cz/">
+              <img class="mx-2" src="assets/img/ig-icon.svg" alt=""
+            /></a>
+
+            <a href="https://www.linkedin.com/company/tymbe"
+              ><img class="mx-2" src="assets/img/linkedin.svg" alt=""
+            /></a>
+          </div>
+          <p class="col-12 text-center mt-3 text-white">
+            <small>© Copyright 2021 – Tymbe a.s.</small>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS animations -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- Custom scripts -->
+    <script src="assets/js/scripts.js"></script>
+
+    <script>
+      //   $("#btnCompanyFAQ").click(function () {
+      //     $("#btnCompanyFAQ").removeClass("inactive");
+      //     $("#btnCompanyFAQ").addClass("disabled active");
+      //     $("#btnWorkersFAQ").removeClass("active");
+      //     $("#btnWorkersFAQ").addClass("disabled inactive");
+      //     document.getElementById("btnCompanyFAQ").style.pointerEvents = "none";
+      //     document.getElementById("btnWorkersFAQ").style.pointerEvents = "auto";
+      //   });
+
+      //   $("#btnWorkersFAQ").click(function () {
+      //     $("#btnWorkersFAQ").removeClass("inactive");
+      //     $("#btnWorkersFAQ").addClass("disabled active");
+      //     $("#btnCompanyFAQ").removeClass("active");
+      //     $("#btnCompanyFAQ").addClass("disabled inactive");
+      //     document.getElementById("btnWorkersFAQ").style.pointerEvents = "none";
+      //     document.getElementById("btnCompanyFAQ").style.pointerEvents = "auto";
+      //   });
+    </script>
+  </body>
 </html>

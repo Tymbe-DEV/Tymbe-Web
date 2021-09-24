@@ -1,524 +1,1013 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta
-        name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- Bootstrap CSS -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
 
-        <title>Tymbe</title>
+    <title>Tymbe</title>
 
-        <link
-        href="assets/css/styles.css" rel="stylesheet">
+    <link href="assets/css/styles.css" rel="stylesheet" />
 
-        <!-- Coolvetica font -->
-        <link
-        rel="stylesheet" href="https://use.typekit.net/ykm6nsb.css">
+    <!-- Coolvetica font -->
+    <link rel="stylesheet" href="https://use.typekit.net/ykm6nsb.css" />
 
-        <!-- AOS animations-->
-        <link
-        rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <!-- AOS animations-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
-        <!-- Favicon -->
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/site.webmanifest">
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
-        <meta name="msapplication-TileColor" content="#2b5797">
-        <meta
-        name="theme-color" content="#ffffff">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+    <meta name="msapplication-TileColor" content="#2b5797" />
+    <meta name="theme-color" content="#ffffff" />
 
-        <!--Seznam SKLIK:-->
-        <script type="text/javascript">
-            /* <![CDATA[ */
-            var seznam_retargeting_id = 139023;
-            /* ]]> */
-        </script>
-        <script type="text/javascript" src="//c.imedia.cz/js/retargeting.js"></script>
+    <!--Seznam SKLIK:-->
+    <script type="text/javascript">
+      /* <![CDATA[ */
+      var seznam_retargeting_id = 139023;
+      /* ]]> */
+    </script>
+    <script
+      type="text/javascript"
+      src="//c.imedia.cz/js/retargeting.js"
+    ></script>
 
+    <!-- Global site tag (gtag.js) - Google Ads: 967437153 -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-967437153"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        <!-- Global site tag (gtag.js) - Google Ads: 967437153 -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-967437153"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
+      gtag("config", "AW-967437153");
+    </script>
+  </head>
+  <body>
+    <header class="contact container-fluid pt-3" style="background-size: cover">
+      <div class="container">
+        <!-- Desktop nav -->
+        <nav
+          class="
+            desktop-nav
+            d-none d-md-block
+            navbar navbar-expand-lg navbar-light
+            bg-white
+          "
+        >
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="assets/img/tymbe-logo.svg" />
+            </a>
 
-            gtag('config', 'AW-967437153');
-        </script>
-
-    </head>
-    <body>
-
-        <header class="contact container-fluid pt-3">
-            <div
-                class="container">
-
-                <!-- Desktop nav -->
-                <nav class="desktop-nav d-none d-md-block navbar navbar-expand-lg navbar-light bg-white">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#">
-                            <img src="assets/img/tymbe-logo.svg">
-                        </a>
-                        
-
-                      
-                        <div class="collapse navbar-collapse">
-                            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link" aria-current="page" href="index.html">
-                                        <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.54994 1.5H7.77495C7.4988 1.5 7.27495 1.72386 7.27495 2V2.17246H10.0499V2C10.0499 1.72386 9.82609 1.5 9.54994 1.5ZM5.77495 2V2.17246H1.5C0.671573 2.17246 0 2.84403 0 3.67246V9.3621C0 10.1905 0.671572 10.8621 1.5 10.8621H15.825C16.6534 10.8621 17.325 10.1905 17.325 9.3621V3.67246C17.325 2.84403 16.6534 2.17246 15.825 2.17246H11.5499V2C11.5499 0.895431 10.6545 0 9.54994 0H7.77495C6.67038 0 5.77495 0.89543 5.77495 2ZM16.3623 11.9483H0.962335V14.75C0.962335 15.3023 1.41005 15.75 1.96234 15.75H15.3623C15.9146 15.75 16.3623 15.3023 16.3623 14.75V11.9483Z" fill="#28367B"/>
-                                            <rect x="7.07959" y="9.27585" width="3.16563" height="4.25862" rx="1" fill="#28367B" stroke="white"/>
-                                        </svg>
-                                        Pro brigádníky</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="b2b.html">
-                                        <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25022 2C2.25022 0.89543 3.14565 0 4.25022 0H13.0752C14.1798 0 15.0752 0.895431 15.0752 2V17C15.0752 17.0337 15.0736 17.067 15.0703 17.0999H16.875C17.1235 17.0999 17.325 17.3013 17.325 17.5499C17.325 17.7984 17.1235 17.9999 16.875 17.9999H14.0915L14.0752 18H3.25022L3.23395 17.9999H0.45C0.201472 17.9999 0 17.7984 0 17.5499C0 17.3013 0.201472 17.0999 0.45 17.0999H2.25514C2.25189 17.067 2.25022 17.0337 2.25022 17V2ZM5.72475 2.92507C5.17247 2.92507 4.72475 3.37278 4.72475 3.92507V4.85007C4.72475 5.40235 5.17247 5.85007 5.72475 5.85007H6.64975C7.20204 5.85007 7.64975 5.40235 7.64975 4.85007V3.92507C7.64975 3.37278 7.20204 2.92507 6.64975 2.92507H5.72475ZM4.72475 8.65009C4.72475 8.09781 5.17247 7.65009 5.72475 7.65009H6.64975C7.20204 7.65009 7.64975 8.09781 7.64975 8.65009V9.57509C7.64975 10.1274 7.20204 10.5751 6.64975 10.5751H5.72475C5.17247 10.5751 4.72475 10.1274 4.72475 9.57509V8.65009ZM10.4501 7.65009C9.89777 7.65009 9.45005 8.09781 9.45005 8.65009V9.57509C9.45005 10.1274 9.89777 10.5751 10.45 10.5751H11.3751C11.9273 10.5751 12.3751 10.1274 12.3751 9.57509V8.65009C12.3751 8.09781 11.9273 7.65009 11.3751 7.65009H10.4501ZM9.45005 3.92507C9.45005 3.37278 9.89777 2.92507 10.4501 2.92507H11.3751C11.9273 2.92507 12.3751 3.37278 12.3751 3.92507V4.85007C12.3751 5.40235 11.9273 5.85007 11.3751 5.85007H10.45C9.89777 5.85007 9.45005 5.40235 9.45005 4.85007V3.92507ZM6.85013 12.3751C6.29785 12.3751 5.85013 12.8228 5.85013 13.3751V17.1001H11.4751V13.3751C11.4751 12.8228 11.0274 12.3751 10.4751 12.3751H6.85013Z" fill="#28367B"/>
-                                        </svg>
-                                        Pro firmy</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="about.html">
-                                        <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8C0 4.22876 0 2.34315 1.17157 1.17157C2.34315 0 4.22876 0 8 0C11.7712 0 13.6569 0 14.8284 1.17157C16 2.34315 16 4.22876 16 8C16 11.7712 16 13.6569 14.8284 14.8284C13.6569 16 11.7712 16 8 16C4.22876 16 2.34315 16 1.17157 14.8284C0 13.6569 0 11.7712 0 8ZM4.77278 11.7955C5.6984 11.0853 6.83251 10.7003 7.99922 10.7003C9.16593 10.7003 10.3 11.0853 11.2257 11.7955C12.1513 12.5058 12.8167 13.5016 13.1186 14.6286C13.1901 14.8953 13.0318 15.1695 12.7651 15.2409C12.4983 15.3124 12.2242 15.1541 12.1527 14.8874C11.9077 13.9731 11.3679 13.1651 10.6169 12.5889C9.86592 12.0127 8.9458 11.7003 7.99922 11.7003C7.05264 11.7003 6.13252 12.0127 5.38155 12.5889C4.63058 13.1651 4.09073 13.9731 3.84574 14.8874C3.77427 15.1541 3.5001 15.3124 3.23337 15.2409C2.96663 15.1695 2.80834 14.8953 2.87981 14.6286C3.18178 13.5016 3.84717 12.5058 4.77278 11.7955ZM6.09961 5.59969C6.09961 4.55035 6.95027 3.69969 7.99961 3.69969C9.04895 3.69969 9.89961 4.55035 9.89961 5.59969C9.89961 6.64903 9.04895 7.49969 7.99961 7.49969C6.95027 7.49969 6.09961 6.64903 6.09961 5.59969ZM7.99961 2.69969C6.39798 2.69969 5.09961 3.99806 5.09961 5.59969C5.09961 7.20131 6.39798 8.49969 7.99961 8.49969C9.60123 8.49969 10.8996 7.20131 10.8996 5.59969C10.8996 3.99806 9.60123 2.69969 7.99961 2.69969Z" fill="#28367B"/>
-                                        </svg>
-                                        O společnosti</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" href="contact.html">
-                                        <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.87868 2.87868C0 3.75736 0 5.17157 0 8C0 10.8284 0 12.2426 0.87868 13.1213C1.75736 14 3.17157 14 6 14H10C12.8284 14 14.2426 14 15.1213 13.1213C16 12.2426 16 10.8284 16 8C16 5.17157 16 3.75736 15.1213 2.87868C14.2426 2 12.8284 2 10 2H6C3.17157 2 1.75736 2 0.87868 2.87868ZM2.93705 5.0091C2.70476 4.85977 2.3954 4.92702 2.24608 5.15931C2.09675 5.39159 2.164 5.70095 2.39629 5.85028L7.18886 8.93122C7.68298 9.24886 8.31703 9.24886 8.81114 8.93122L13.6037 5.85028C13.836 5.70095 13.9032 5.39159 13.7539 5.15931C13.6046 4.92702 13.2952 4.85977 13.063 5.0091L8.27038 8.09004C8.10567 8.19592 7.89433 8.19592 7.72962 8.09004L2.93705 5.0091Z" fill="#28367B"/>
-                                        </svg>
-                                        Kontakty</a>
-                                </li>
-                            </ul>
-                            <a href="https://tymbe.com/tymber/login">
-                                <button class="btn btn-outline-primary rounded-pill me-2">
-                                    Přihlásit
-                                </button>
-                            </a>
-                            <a href="formular_b2c.html">
-                                <button class="btn btn-primary rounded-pill">
-                                    Registrace
-                                </button>
-                            </a>
-
-                        </div>
-                    </div>
-                </nav>
-
-                <!-- Mobile nav -->
-                <nav class="mobile-nav d-md-none navbar navbar-expand-lg navbar-light bg-white">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="#">
-                            <img src="assets/img/tymbe-logo.svg">
-                        </a>
-                       
-
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon d-flex align-items-center">
-                                <svg id="navbarOpenIcon" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <rect width="35" height="35" rx="17.5" fill="#28367B"/>
-                                    <path d="M11 13H25" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                                    <path d="M11 18H21" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                                    <path d="M11 23H17" stroke="white" stroke-width="2" stroke-linecap="round"/>
-                                    </svg>
-                                    
-                                    
-                                    <svg id="navbarCloseIcon" width="35" height="35" viewBox="0 0 35 35" fill="none" xmlns="http://www.w3.org/2000/svg" hidden>
-                                        <rect width="35" height="35" rx="17.5" fill="#28367B"/>
-                                        <path d="M23.25 11.75L11.75 23.25" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <path d="M11.75 11.75L23.25 23.25" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                        
-                                        
-                            </span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarToggler">
-                            <ul class="navbar-nav text-center me-auto mb-2 mb-lg-0">
-                                <li class="nav-item ">
-                                    <a class="nav-link py-3 border-bottom" aria-current="page" href="index.html">
-                                        <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M9.54994 1.5H7.77495C7.4988 1.5 7.27495 1.72386 7.27495 2V2.17246H10.0499V2C10.0499 1.72386 9.82609 1.5 9.54994 1.5ZM5.77495 2V2.17246H1.5C0.671573 2.17246 0 2.84403 0 3.67246V9.3621C0 10.1905 0.671572 10.8621 1.5 10.8621H15.825C16.6534 10.8621 17.325 10.1905 17.325 9.3621V3.67246C17.325 2.84403 16.6534 2.17246 15.825 2.17246H11.5499V2C11.5499 0.895431 10.6545 0 9.54994 0H7.77495C6.67038 0 5.77495 0.89543 5.77495 2ZM16.3623 11.9483H0.962335V14.75C0.962335 15.3023 1.41005 15.75 1.96234 15.75H15.3623C15.9146 15.75 16.3623 15.3023 16.3623 14.75V11.9483Z" fill="#28367B"/>
-                                            <rect x="7.07959" y="9.27585" width="3.16563" height="4.25862" rx="1" fill="#28367B" stroke="white"/>
-                                        </svg>
-                                        Pro brigádníky</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link py-3 border-bottom" href="b2b.html">
-                                        <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25022 2C2.25022 0.89543 3.14565 0 4.25022 0H13.0752C14.1798 0 15.0752 0.895431 15.0752 2V17C15.0752 17.0337 15.0736 17.067 15.0703 17.0999H16.875C17.1235 17.0999 17.325 17.3013 17.325 17.5499C17.325 17.7984 17.1235 17.9999 16.875 17.9999H14.0915L14.0752 18H3.25022L3.23395 17.9999H0.45C0.201472 17.9999 0 17.7984 0 17.5499C0 17.3013 0.201472 17.0999 0.45 17.0999H2.25514C2.25189 17.067 2.25022 17.0337 2.25022 17V2ZM5.72475 2.92507C5.17247 2.92507 4.72475 3.37278 4.72475 3.92507V4.85007C4.72475 5.40235 5.17247 5.85007 5.72475 5.85007H6.64975C7.20204 5.85007 7.64975 5.40235 7.64975 4.85007V3.92507C7.64975 3.37278 7.20204 2.92507 6.64975 2.92507H5.72475ZM4.72475 8.65009C4.72475 8.09781 5.17247 7.65009 5.72475 7.65009H6.64975C7.20204 7.65009 7.64975 8.09781 7.64975 8.65009V9.57509C7.64975 10.1274 7.20204 10.5751 6.64975 10.5751H5.72475C5.17247 10.5751 4.72475 10.1274 4.72475 9.57509V8.65009ZM10.4501 7.65009C9.89777 7.65009 9.45005 8.09781 9.45005 8.65009V9.57509C9.45005 10.1274 9.89777 10.5751 10.45 10.5751H11.3751C11.9273 10.5751 12.3751 10.1274 12.3751 9.57509V8.65009C12.3751 8.09781 11.9273 7.65009 11.3751 7.65009H10.4501ZM9.45005 3.92507C9.45005 3.37278 9.89777 2.92507 10.4501 2.92507H11.3751C11.9273 2.92507 12.3751 3.37278 12.3751 3.92507V4.85007C12.3751 5.40235 11.9273 5.85007 11.3751 5.85007H10.45C9.89777 5.85007 9.45005 5.40235 9.45005 4.85007V3.92507ZM6.85013 12.3751C6.29785 12.3751 5.85013 12.8228 5.85013 13.3751V17.1001H11.4751V13.3751C11.4751 12.8228 11.0274 12.3751 10.4751 12.3751H6.85013Z" fill="#28367B"/>
-                                        </svg>
-                                        Pro firmy</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link py-3 border-bottom" href="about.html">
-                                        <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8C0 4.22876 0 2.34315 1.17157 1.17157C2.34315 0 4.22876 0 8 0C11.7712 0 13.6569 0 14.8284 1.17157C16 2.34315 16 4.22876 16 8C16 11.7712 16 13.6569 14.8284 14.8284C13.6569 16 11.7712 16 8 16C4.22876 16 2.34315 16 1.17157 14.8284C0 13.6569 0 11.7712 0 8ZM4.77278 11.7955C5.6984 11.0853 6.83251 10.7003 7.99922 10.7003C9.16593 10.7003 10.3 11.0853 11.2257 11.7955C12.1513 12.5058 12.8167 13.5016 13.1186 14.6286C13.1901 14.8953 13.0318 15.1695 12.7651 15.2409C12.4983 15.3124 12.2242 15.1541 12.1527 14.8874C11.9077 13.9731 11.3679 13.1651 10.6169 12.5889C9.86592 12.0127 8.9458 11.7003 7.99922 11.7003C7.05264 11.7003 6.13252 12.0127 5.38155 12.5889C4.63058 13.1651 4.09073 13.9731 3.84574 14.8874C3.77427 15.1541 3.5001 15.3124 3.23337 15.2409C2.96663 15.1695 2.80834 14.8953 2.87981 14.6286C3.18178 13.5016 3.84717 12.5058 4.77278 11.7955ZM6.09961 5.59969C6.09961 4.55035 6.95027 3.69969 7.99961 3.69969C9.04895 3.69969 9.89961 4.55035 9.89961 5.59969C9.89961 6.64903 9.04895 7.49969 7.99961 7.49969C6.95027 7.49969 6.09961 6.64903 6.09961 5.59969ZM7.99961 2.69969C6.39798 2.69969 5.09961 3.99806 5.09961 5.59969C5.09961 7.20131 6.39798 8.49969 7.99961 8.49969C9.60123 8.49969 10.8996 7.20131 10.8996 5.59969C10.8996 3.99806 9.60123 2.69969 7.99961 2.69969Z" fill="#28367B"/>
-                                        </svg>
-                                        O společnosti</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link py-3 active" href="contact.html">
-                                        <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0.87868 2.87868C0 3.75736 0 5.17157 0 8C0 10.8284 0 12.2426 0.87868 13.1213C1.75736 14 3.17157 14 6 14H10C12.8284 14 14.2426 14 15.1213 13.1213C16 12.2426 16 10.8284 16 8C16 5.17157 16 3.75736 15.1213 2.87868C14.2426 2 12.8284 2 10 2H6C3.17157 2 1.75736 2 0.87868 2.87868ZM2.93705 5.0091C2.70476 4.85977 2.3954 4.92702 2.24608 5.15931C2.09675 5.39159 2.164 5.70095 2.39629 5.85028L7.18886 8.93122C7.68298 9.24886 8.31703 9.24886 8.81114 8.93122L13.6037 5.85028C13.836 5.70095 13.9032 5.39159 13.7539 5.15931C13.6046 4.92702 13.2952 4.85977 13.063 5.0091L8.27038 8.09004C8.10567 8.19592 7.89433 8.19592 7.72962 8.09004L2.93705 5.0091Z" fill="#28367B"/>
-                                        </svg>
-                                        Kontakty</a>
-                                </li>
-                            </ul>
-                            <div class="text-center pb-3">
-                                <a class="btn btn-outline-primary rounded-pill me-2" href="formular_b2b.html">
-
-                                    Přihlásit
-                                </a>
-                                <a class="btn btn-primary rounded-pill" href="formular_b2c.html">
-
-                                    Registrace
-                                </a>
-                            </div>
-
-
-                        </div>
-                    </div>
-                </nav>
-                
-
+            <div class="collapse navbar-collapse">
+              <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="index.html">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewbox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.54994 1.5H7.77495C7.4988 1.5 7.27495 1.72386 7.27495 2V2.17246H10.0499V2C10.0499 1.72386 9.82609 1.5 9.54994 1.5ZM5.77495 2V2.17246H1.5C0.671573 2.17246 0 2.84403 0 3.67246V9.3621C0 10.1905 0.671572 10.8621 1.5 10.8621H15.825C16.6534 10.8621 17.325 10.1905 17.325 9.3621V3.67246C17.325 2.84403 16.6534 2.17246 15.825 2.17246H11.5499V2C11.5499 0.895431 10.6545 0 9.54994 0H7.77495C6.67038 0 5.77495 0.89543 5.77495 2ZM16.3623 11.9483H0.962335V14.75C0.962335 15.3023 1.41005 15.75 1.96234 15.75H15.3623C15.9146 15.75 16.3623 15.3023 16.3623 14.75V11.9483Z"
+                        fill="#28367B"
+                      />
+                      <rect
+                        x="7.07959"
+                        y="9.27585"
+                        width="3.16563"
+                        height="4.25862"
+                        rx="1"
+                        fill="#28367B"
+                        stroke="white"
+                      />
+                    </svg>
+                    Pro brigádníky</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="b2b.html">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewbox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M2.25022 2C2.25022 0.89543 3.14565 0 4.25022 0H13.0752C14.1798 0 15.0752 0.895431 15.0752 2V17C15.0752 17.0337 15.0736 17.067 15.0703 17.0999H16.875C17.1235 17.0999 17.325 17.3013 17.325 17.5499C17.325 17.7984 17.1235 17.9999 16.875 17.9999H14.0915L14.0752 18H3.25022L3.23395 17.9999H0.45C0.201472 17.9999 0 17.7984 0 17.5499C0 17.3013 0.201472 17.0999 0.45 17.0999H2.25514C2.25189 17.067 2.25022 17.0337 2.25022 17V2ZM5.72475 2.92507C5.17247 2.92507 4.72475 3.37278 4.72475 3.92507V4.85007C4.72475 5.40235 5.17247 5.85007 5.72475 5.85007H6.64975C7.20204 5.85007 7.64975 5.40235 7.64975 4.85007V3.92507C7.64975 3.37278 7.20204 2.92507 6.64975 2.92507H5.72475ZM4.72475 8.65009C4.72475 8.09781 5.17247 7.65009 5.72475 7.65009H6.64975C7.20204 7.65009 7.64975 8.09781 7.64975 8.65009V9.57509C7.64975 10.1274 7.20204 10.5751 6.64975 10.5751H5.72475C5.17247 10.5751 4.72475 10.1274 4.72475 9.57509V8.65009ZM10.4501 7.65009C9.89777 7.65009 9.45005 8.09781 9.45005 8.65009V9.57509C9.45005 10.1274 9.89777 10.5751 10.45 10.5751H11.3751C11.9273 10.5751 12.3751 10.1274 12.3751 9.57509V8.65009C12.3751 8.09781 11.9273 7.65009 11.3751 7.65009H10.4501ZM9.45005 3.92507C9.45005 3.37278 9.89777 2.92507 10.4501 2.92507H11.3751C11.9273 2.92507 12.3751 3.37278 12.3751 3.92507V4.85007C12.3751 5.40235 11.9273 5.85007 11.3751 5.85007H10.45C9.89777 5.85007 9.45005 5.40235 9.45005 4.85007V3.92507ZM6.85013 12.3751C6.29785 12.3751 5.85013 12.8228 5.85013 13.3751V17.1001H11.4751V13.3751C11.4751 12.8228 11.0274 12.3751 10.4751 12.3751H6.85013Z"
+                        fill="#28367B"
+                      />
+                    </svg>
+                    Pro firmy</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewbox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0 8C0 4.22876 0 2.34315 1.17157 1.17157C2.34315 0 4.22876 0 8 0C11.7712 0 13.6569 0 14.8284 1.17157C16 2.34315 16 4.22876 16 8C16 11.7712 16 13.6569 14.8284 14.8284C13.6569 16 11.7712 16 8 16C4.22876 16 2.34315 16 1.17157 14.8284C0 13.6569 0 11.7712 0 8ZM4.77278 11.7955C5.6984 11.0853 6.83251 10.7003 7.99922 10.7003C9.16593 10.7003 10.3 11.0853 11.2257 11.7955C12.1513 12.5058 12.8167 13.5016 13.1186 14.6286C13.1901 14.8953 13.0318 15.1695 12.7651 15.2409C12.4983 15.3124 12.2242 15.1541 12.1527 14.8874C11.9077 13.9731 11.3679 13.1651 10.6169 12.5889C9.86592 12.0127 8.9458 11.7003 7.99922 11.7003C7.05264 11.7003 6.13252 12.0127 5.38155 12.5889C4.63058 13.1651 4.09073 13.9731 3.84574 14.8874C3.77427 15.1541 3.5001 15.3124 3.23337 15.2409C2.96663 15.1695 2.80834 14.8953 2.87981 14.6286C3.18178 13.5016 3.84717 12.5058 4.77278 11.7955ZM6.09961 5.59969C6.09961 4.55035 6.95027 3.69969 7.99961 3.69969C9.04895 3.69969 9.89961 4.55035 9.89961 5.59969C9.89961 6.64903 9.04895 7.49969 7.99961 7.49969C6.95027 7.49969 6.09961 6.64903 6.09961 5.59969ZM7.99961 2.69969C6.39798 2.69969 5.09961 3.99806 5.09961 5.59969C5.09961 7.20131 6.39798 8.49969 7.99961 8.49969C9.60123 8.49969 10.8996 7.20131 10.8996 5.59969C10.8996 3.99806 9.60123 2.69969 7.99961 2.69969Z"
+                        fill="#28367B"
+                      />
+                    </svg>
+                    O společnosti</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" href="contact.html">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewbox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0.87868 2.87868C0 3.75736 0 5.17157 0 8C0 10.8284 0 12.2426 0.87868 13.1213C1.75736 14 3.17157 14 6 14H10C12.8284 14 14.2426 14 15.1213 13.1213C16 12.2426 16 10.8284 16 8C16 5.17157 16 3.75736 15.1213 2.87868C14.2426 2 12.8284 2 10 2H6C3.17157 2 1.75736 2 0.87868 2.87868ZM2.93705 5.0091C2.70476 4.85977 2.3954 4.92702 2.24608 5.15931C2.09675 5.39159 2.164 5.70095 2.39629 5.85028L7.18886 8.93122C7.68298 9.24886 8.31703 9.24886 8.81114 8.93122L13.6037 5.85028C13.836 5.70095 13.9032 5.39159 13.7539 5.15931C13.6046 4.92702 13.2952 4.85977 13.063 5.0091L8.27038 8.09004C8.10567 8.19592 7.89433 8.19592 7.72962 8.09004L2.93705 5.0091Z"
+                        fill="#28367B"
+                      />
+                    </svg>
+                    Kontakty</a
+                  >
+                </li>
+              </ul>
+              <a href="https://tymbe.com/tymber/login">
+                <button class="btn btn-outline-primary rounded-pill me-2">
+                  Přihlásit
+                </button>
+              </a>
+              <a href="formular_b2c.html">
+                <button class="btn btn-primary rounded-pill">Registrace</button>
+              </a>
             </div>
+          </div>
+        </nav>
 
-            <section class="container py-5 ">
-                <div class="row mb-5 justify-content-center">
-                    <div class="col-12 text-center py-5">
-                        <h1 class="text-accent">
-                            Kontakt
-                        </h1>
-                        <p>
-                            Máš otázky? Máme odpovědi! Ozvi se a doplníme všechno, co tě zajímá.
-                        </p>
-                    </div>
-                    <div class="col-12 col-md-10">
-                        <div class="bg-white shadow rounded">
-                            <div class="row mx-0">
-                                <div class="col-12 col-md-6 border-end">
-                                    <div class="p-4">
-                                        <h3 class="text-accent text-center">Spoj se s námi</h3>
-                                        <form class="mt-4">
+        <!-- Mobile nav -->
+        <nav
+          class="
+            mobile-nav
+            d-md-none
+            navbar navbar-expand-lg navbar-light
+            bg-white
+          "
+        >
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+              <img src="assets/img/tymbe-logo.svg" />
+            </a>
 
-                                            <div class="mb-3">
-                                                <input type="text" id="contactInputName" class="form-control" name="contactInputName" placeholder="Jméno" aria-label="Jméno" aria-describedby="">
-                                            </div>
-                                            <div class="mb-3">
-                                                <input type="email" id="contactInputEmail" class="form-control" name="contactInputEmail" placeholder="E-mail" aria-label="Email" aria-describedby="">
-                                            </div>
-                                            <div class="mb-3">
-                                                <textarea id="contactInputMessage" class="form-control" name="contactInputMessage" placeholder="Zpráva" aria-label="Zpráva" aria-describedby="" rows="3"></textarea>
-                                            </div>
-                                            <div class="text-center py-3">
-                                                <button id="submitContactForm" type="submit" class="btn btn-primary rounded-pill mx-auto">Odeslat</button>
-                                            </div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarToggler"
+              aria-controls="navbarToggler"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon d-flex align-items-center">
+                <svg
+                  id="navbarOpenIcon"
+                  width="35"
+                  height="35"
+                  viewBox="0 0 35 35"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect width="35" height="35" rx="17.5" fill="#28367B" />
+                  <path
+                    d="M11 13H25"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M11 18H21"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M11 23H17"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </svg>
 
-                                        </form>
+                <svg
+                  id="navbarCloseIcon"
+                  width="35"
+                  height="35"
+                  viewBox="0 0 35 35"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  hidden
+                >
+                  <rect width="35" height="35" rx="17.5" fill="#28367B" />
+                  <path
+                    d="M23.25 11.75L11.75 23.25"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M11.75 11.75L23.25 23.25"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggler">
+              <ul class="navbar-nav text-center me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a
+                    class="nav-link py-3 ty-ty-border-bottom"
+                    aria-current="page"
+                    href="index.html"
+                  >
+                    <svg
+                      width="18"
+                      height="18"
+                      viewbox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M9.54994 1.5H7.77495C7.4988 1.5 7.27495 1.72386 7.27495 2V2.17246H10.0499V2C10.0499 1.72386 9.82609 1.5 9.54994 1.5ZM5.77495 2V2.17246H1.5C0.671573 2.17246 0 2.84403 0 3.67246V9.3621C0 10.1905 0.671572 10.8621 1.5 10.8621H15.825C16.6534 10.8621 17.325 10.1905 17.325 9.3621V3.67246C17.325 2.84403 16.6534 2.17246 15.825 2.17246H11.5499V2C11.5499 0.895431 10.6545 0 9.54994 0H7.77495C6.67038 0 5.77495 0.89543 5.77495 2ZM16.3623 11.9483H0.962335V14.75C0.962335 15.3023 1.41005 15.75 1.96234 15.75H15.3623C15.9146 15.75 16.3623 15.3023 16.3623 14.75V11.9483Z"
+                        fill="#28367B"
+                      />
+                      <rect
+                        x="7.07959"
+                        y="9.27585"
+                        width="3.16563"
+                        height="4.25862"
+                        rx="1"
+                        fill="#28367B"
+                        stroke="white"
+                      />
+                    </svg>
+                    Pro brigádníky</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link py-3 ty-ty-border-bottom" href="b2b.html">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewbox="0 0 18 18"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M2.25022 2C2.25022 0.89543 3.14565 0 4.25022 0H13.0752C14.1798 0 15.0752 0.895431 15.0752 2V17C15.0752 17.0337 15.0736 17.067 15.0703 17.0999H16.875C17.1235 17.0999 17.325 17.3013 17.325 17.5499C17.325 17.7984 17.1235 17.9999 16.875 17.9999H14.0915L14.0752 18H3.25022L3.23395 17.9999H0.45C0.201472 17.9999 0 17.7984 0 17.5499C0 17.3013 0.201472 17.0999 0.45 17.0999H2.25514C2.25189 17.067 2.25022 17.0337 2.25022 17V2ZM5.72475 2.92507C5.17247 2.92507 4.72475 3.37278 4.72475 3.92507V4.85007C4.72475 5.40235 5.17247 5.85007 5.72475 5.85007H6.64975C7.20204 5.85007 7.64975 5.40235 7.64975 4.85007V3.92507C7.64975 3.37278 7.20204 2.92507 6.64975 2.92507H5.72475ZM4.72475 8.65009C4.72475 8.09781 5.17247 7.65009 5.72475 7.65009H6.64975C7.20204 7.65009 7.64975 8.09781 7.64975 8.65009V9.57509C7.64975 10.1274 7.20204 10.5751 6.64975 10.5751H5.72475C5.17247 10.5751 4.72475 10.1274 4.72475 9.57509V8.65009ZM10.4501 7.65009C9.89777 7.65009 9.45005 8.09781 9.45005 8.65009V9.57509C9.45005 10.1274 9.89777 10.5751 10.45 10.5751H11.3751C11.9273 10.5751 12.3751 10.1274 12.3751 9.57509V8.65009C12.3751 8.09781 11.9273 7.65009 11.3751 7.65009H10.4501ZM9.45005 3.92507C9.45005 3.37278 9.89777 2.92507 10.4501 2.92507H11.3751C11.9273 2.92507 12.3751 3.37278 12.3751 3.92507V4.85007C12.3751 5.40235 11.9273 5.85007 11.3751 5.85007H10.45C9.89777 5.85007 9.45005 5.40235 9.45005 4.85007V3.92507ZM6.85013 12.3751C6.29785 12.3751 5.85013 12.8228 5.85013 13.3751V17.1001H11.4751V13.3751C11.4751 12.8228 11.0274 12.3751 10.4751 12.3751H6.85013Z"
+                        fill="#28367B"
+                      />
+                    </svg>
+                    Pro firmy</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link py-3 ty-ty-border-bottom"
+                    href="about.html"
+                  >
+                    <svg
+                      width="16"
+                      height="16"
+                      viewbox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0 8C0 4.22876 0 2.34315 1.17157 1.17157C2.34315 0 4.22876 0 8 0C11.7712 0 13.6569 0 14.8284 1.17157C16 2.34315 16 4.22876 16 8C16 11.7712 16 13.6569 14.8284 14.8284C13.6569 16 11.7712 16 8 16C4.22876 16 2.34315 16 1.17157 14.8284C0 13.6569 0 11.7712 0 8ZM4.77278 11.7955C5.6984 11.0853 6.83251 10.7003 7.99922 10.7003C9.16593 10.7003 10.3 11.0853 11.2257 11.7955C12.1513 12.5058 12.8167 13.5016 13.1186 14.6286C13.1901 14.8953 13.0318 15.1695 12.7651 15.2409C12.4983 15.3124 12.2242 15.1541 12.1527 14.8874C11.9077 13.9731 11.3679 13.1651 10.6169 12.5889C9.86592 12.0127 8.9458 11.7003 7.99922 11.7003C7.05264 11.7003 6.13252 12.0127 5.38155 12.5889C4.63058 13.1651 4.09073 13.9731 3.84574 14.8874C3.77427 15.1541 3.5001 15.3124 3.23337 15.2409C2.96663 15.1695 2.80834 14.8953 2.87981 14.6286C3.18178 13.5016 3.84717 12.5058 4.77278 11.7955ZM6.09961 5.59969C6.09961 4.55035 6.95027 3.69969 7.99961 3.69969C9.04895 3.69969 9.89961 4.55035 9.89961 5.59969C9.89961 6.64903 9.04895 7.49969 7.99961 7.49969C6.95027 7.49969 6.09961 6.64903 6.09961 5.59969ZM7.99961 2.69969C6.39798 2.69969 5.09961 3.99806 5.09961 5.59969C5.09961 7.20131 6.39798 8.49969 7.99961 8.49969C9.60123 8.49969 10.8996 7.20131 10.8996 5.59969C10.8996 3.99806 9.60123 2.69969 7.99961 2.69969Z"
+                        fill="#28367B"
+                      />
+                    </svg>
+                    O společnosti</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link py-3 active" href="contact.html">
+                    <svg
+                      width="16"
+                      height="16"
+                      viewbox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0.87868 2.87868C0 3.75736 0 5.17157 0 8C0 10.8284 0 12.2426 0.87868 13.1213C1.75736 14 3.17157 14 6 14H10C12.8284 14 14.2426 14 15.1213 13.1213C16 12.2426 16 10.8284 16 8C16 5.17157 16 3.75736 15.1213 2.87868C14.2426 2 12.8284 2 10 2H6C3.17157 2 1.75736 2 0.87868 2.87868ZM2.93705 5.0091C2.70476 4.85977 2.3954 4.92702 2.24608 5.15931C2.09675 5.39159 2.164 5.70095 2.39629 5.85028L7.18886 8.93122C7.68298 9.24886 8.31703 9.24886 8.81114 8.93122L13.6037 5.85028C13.836 5.70095 13.9032 5.39159 13.7539 5.15931C13.6046 4.92702 13.2952 4.85977 13.063 5.0091L8.27038 8.09004C8.10567 8.19592 7.89433 8.19592 7.72962 8.09004L2.93705 5.0091Z"
+                        fill="#28367B"
+                      />
+                    </svg>
+                    Kontakty</a
+                  >
+                </li>
+              </ul>
+              <div class="text-center pb-3">
+                <a
+                  class="btn btn-outline-primary rounded-pill me-2"
+                  href="formular_b2b.html"
+                >
+                  Přihlásit
+                </a>
+                <a
+                  class="btn btn-primary rounded-pill"
+                  href="formular_b2c.html"
+                >
+                  Registrace
+                </a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
 
-                                    </div>
+      <section class="container py-5">
+        <div class="row mb-lg-5 justify-content-center">
+          <div class="col-12 text-center py-5 px-0">
+            <h1 class="text-accent pt-4 ty-h1">Kontakt</h1>
+            <p
+              class="ty-body-responsive mx-auto ty-mt1"
+              style="max-width: 570px"
+            >
+              Máš otázky? Máme odpovědi! Ozvi se a doplníme všechno, co tě
+              zajímá.
+            </p>
+          </div>
+        </div>
+      </section>
+    </header>
+    <!-- CONTACT FORM -->
+    <section class="container">
+      <div class="col-12 col-md-10 offset-md-1">
+        <div class="bg-white shadow rounded" style="margin-bottom: 55px">
+          <div class="row mx-0">
+            <div class="col-12 col-md-6 border-lg-end p-0">
+              <div class="contact-container">
+                <h3 class="text-accent text-center">Spoj se s námi</h3>
+                <form class="mt-4">
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      id="contactInputName"
+                      class="form-control"
+                      name="contactInputName"
+                      placeholder="Jméno"
+                      aria-label="Jméno"
+                      aria-describedby=""
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <input
+                      type="email"
+                      id="contactInputEmail"
+                      class="form-control"
+                      name="contactInputEmail"
+                      placeholder="E-mail"
+                      aria-label="Email"
+                      aria-describedby=""
+                    />
+                  </div>
+                  <div class="mb-3">
+                    <textarea
+                      id="contactInputMessage"
+                      class="form-control"
+                      style="min-height: 169px"
+                      name="contactInputMessage"
+                      placeholder="Zpráva"
+                      aria-label="Zpráva"
+                      aria-describedby=""
+                      rows="3"
+                    ></textarea>
+                  </div>
+                  <div class="text-center py-3">
+                    <button
+                      id="submitContactForm"
+                      type="submit"
+                      class="btn btn-primary rounded-pill mx-auto"
+                    >
+                      Odeslat
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 px-0">
+              <div class="row mx-0">
+                <h3 class="text-accent text-center py-4 ty-border-bottom mb-0">
+                  Tymbe, a.s.
+                </h3>
+              </div>
 
-                                </div>
-                                <div class="col-12 col-md-6 px-0">
-                                    <div class="row mx-0">
-                                        <h3 class="text-accent text-center py-4 border-bottom mb-0">
-                                            Tymbe, a.s.
-                                        </h3>
-                                    </div>
-
-                                    <div class="row mx-0 border-bottom">
-                                        <div class="col-6 py-3 align-self-center">
-                                            <p class="text-accent text-uppercase fw-bold mb-0">
-                                                <svg class="ms-3" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.87868 2.87868C0 3.75736 0 5.17157 0 8C0 10.8284 0 12.2426 0.87868 13.1213C1.75736 14 3.17157 14 6 14H10C12.8284 14 14.2426 14 15.1213 13.1213C16 12.2426 16 10.8284 16 8C16 5.17157 16 3.75736 15.1213 2.87868C14.2426 2 12.8284 2 10 2H6C3.17157 2 1.75736 2 0.87868 2.87868ZM2.93705 5.0091C2.70476 4.85977 2.3954 4.92702 2.24608 5.15931C2.09675 5.39159 2.164 5.70095 2.39629 5.85028L7.18886 8.93122C7.68298 9.24886 8.31703 9.24886 8.81114 8.93122L13.6037 5.85028C13.836 5.70095 13.9032 5.39159 13.7539 5.15931C13.6046 4.92702 13.2952 4.85977 13.063 5.0091L8.27038 8.09004C8.10567 8.19592 7.89433 8.19592 7.72962 8.09004L2.93705 5.0091Z" fill="#28367B"/>
-                                                    </svg>
-                                                    <span style="font-family: Poppins;
-                                                    font-style: normal;
-                                                    font-weight: 500;
-                                                    font-size: 14px;
-                                                    line-height: 14px;
-                                                    padding-left:5px;
-                                                    ">E-mail</span>
-                                            </p>
-                                        </div>
-                                        <div class="col-6 p-3 align-self-center">
-                                            <span style="font-family: Poppins;
-                                            font-style: normal;
-                                            font-weight: normal;
-                                            font-size: 14px;
-                                            line-height: 20px;">
-                                            firma@tymbe.com
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="row mx-0 border-bottom">
-                                        <div class="col-6 py-3 align-self-center">
-                                            <p class="text-accent text-uppercase fw-bold mb-0">
-                                                <svg class="ms-3" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path d="M12.5492 8.60184L14.3637 10.4163C14.7151 10.7678 14.7151 11.3375 14.3637 11.6889C12.4638 13.5888 9.45604 13.8026 7.30656 12.1904L7.18126 12.0965C5.55988 10.8804 4.11956 9.44012 2.90353 7.81874L2.80955 7.69343C1.19744 5.54396 1.4112 2.53617 3.31108 0.636285C3.66249 0.284875 4.23224 0.284874 4.58365 0.636285L6.39816 2.45079C6.78868 2.84131 6.78868 3.47448 6.39816 3.865L5.13196 5.1312C4.896 5.36716 4.8375 5.72764 4.98674 6.0261C5.84944 7.75151 7.24849 9.15056 8.9739 10.0133C9.27236 10.1625 9.63284 10.104 9.8688 9.86804L11.135 8.60184C11.5255 8.21132 12.1587 8.21132 12.5492 8.60184Z" fill="#28367B"/>
-                                                    </svg>                                                    
-                                                <span
-                                                style="font-family: Poppins;
-                                                font-style: normal;
-                                                font-weight: 500;
-                                                font-size: 14px;
-                                                line-height: 14px;
-                                                padding-left:5px;"
-                                                >Phone</span>
-                                            </p>
-                                        </div>
-                                        <div class="col-6 p-3 align-self-center">
-                                            <span style="font-family: Poppins;
-                                            font-style: normal;
-                                            font-weight: normal;
-                                            font-size: 14px;
-                                            line-height: 20px;">
-                                            +420 777 123 456
-                                            </span>
-                                        </div>
-                                    </div>
-                                    <div class="row mx-0 border-bottom">
-
-                                        <div class="col-6 py-3 align-self-center">
-                                            <p class="text-accent text-uppercase fw-bold mb-0">
-                                                <svg class="ms-3" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.40005 15.9C9.8856 15.1244 15 12.0879 15 7.04299C15 3.15325 11.866 0 8 0C4.13401 0 1 3.15325 1 7.04299C1 12.0879 6.1144 15.1244 7.59995 15.9C7.85387 16.0325 8.14613 16.0325 8.40005 15.9ZM8 10.0614C9.65685 10.0614 11 8.71002 11 7.04299C11 5.37596 9.65685 4.02457 8 4.02457C6.34315 4.02457 5 5.37596 5 7.04299C5 8.71002 6.34315 10.0614 8 10.0614Z" fill="#28367B"/>
-                                                    </svg>
-                                                    
-                                                    <span
-                                                    style="font-family: Poppins;
-                                                    font-style: normal;
-                                                    font-weight: 500;
-                                                    font-size: 14px;
-                                                    line-height: 14px;
-                                                    padding-left:5px;"
-                                                    >Address</span>
-                                            </p>
-                                        </div>
-                                        <div class="col-6 py-3 align-self-center">
-                                            <span style="font-family: Poppins;
-                                            font-style: normal;
-                                            font-weight: normal;
-                                            font-size: 14px;
-                                            line-height: 20px;">
-                                            Podolská 2731/33, Líšeň<br>628 00 Brno
-                                        </span>
-                                            
-                                        </div>
-
-
-                                    </div>
-                                    <div class="row mx-0">
-                                        <div class="col-12 py-3 align-self-center">
-                                            <p class="text-accent text-uppercase fw-bold mb-0">
-                                                <svg class="ms-3" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M7.81395 0C7.40295 0 7.06977 0.333183 7.06977 0.744186V1.86047H3.97674C3.42446 1.86047 2.97674 2.30818 2.97674 2.86047V9.30233H1C0.447715 9.30233 0 9.75004 0 10.3023V15C0 15.5523 0.447716 16 1 16H3.97675H11.6512H14.6279C15.1802 16 15.6279 15.5523 15.6279 15V10.3023C15.6279 9.75004 15.1802 9.30233 14.6279 9.30233H12.6512V2.86047C12.6512 2.30818 12.2034 1.86047 11.6512 1.86047H8.55814V0.744186C8.55814 0.333184 8.22496 0 7.81395 0ZM5.83721 3.72093C5.28492 3.72093 4.83721 4.16864 4.83721 4.72093V14.1395H6.69797V11.9072C6.69797 11.2907 7.19774 10.7909 7.81425 10.7909C8.43075 10.7909 8.93053 11.2907 8.93053 11.9072V14.1395H10.7907V4.72093C10.7907 4.16865 10.343 3.72093 9.7907 3.72093H5.83721ZM7.81425 5.58162C7.19774 5.58162 6.69797 6.0814 6.69797 6.6979C6.69797 7.31441 7.19774 7.81418 7.81425 7.81418C8.43075 7.81418 8.93053 7.31441 8.93053 6.6979C8.93053 6.0814 8.43075 5.58162 7.81425 5.58162Z" fill="#28367B"/>
-                                                    </svg>
-                                                    
-                                                <span class="text-accent text-uppercase" style="font-family: Poppins;
-                                                font-style: normal;
-                                                font-weight: 500;
-                                                font-size: 14px;
-                                                line-height: 14px;
-                                                padding-left:5px;">IČO: 2684801 — DIČ: CZ2684801</span>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-
-                            </div>
-                        </div>
-
-                    </div>
-                </section>
-
-            </header>
-
-            <footer class="text-white bg-main-dark">
-                <div class="container pt-3">
-
-                    <nav class="row my-3 py-2 footer-nav border border-white justify-content-between d-none d-lg-flex">
-                        <div class="col-auto">
-                            <img src="assets/img/tymbe-logo.svg">
-                        </div>
-                        <ul class="nav col-auto">
-                            <li class="nav-item align-self-center">
-                                <a class="nav-link" aria-current="page" href="index.html">
-                                    <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.54994 1.5H7.77495C7.4988 1.5 7.27495 1.72386 7.27495 2V2.17246H10.0499V2C10.0499 1.72386 9.82609 1.5 9.54994 1.5ZM5.77495 2V2.17246H1.5C0.671573 2.17246 0 2.84403 0 3.67246V9.3621C0 10.1905 0.671572 10.8621 1.5 10.8621H15.825C16.6534 10.8621 17.325 10.1905 17.325 9.3621V3.67246C17.325 2.84403 16.6534 2.17246 15.825 2.17246H11.5499V2C11.5499 0.895431 10.6545 0 9.54994 0H7.77495C6.67038 0 5.77495 0.89543 5.77495 2ZM16.3623 11.9483H0.962335V14.75C0.962335 15.3023 1.41005 15.75 1.96234 15.75H15.3623C15.9146 15.75 16.3623 15.3023 16.3623 14.75V11.9483Z" fill="#28367B"/>
-                                        <rect x="7.07959" y="9.27585" width="3.16563" height="4.25862" rx="1" fill="#28367B" stroke="white"/>
-                                    </svg>
-                                    Pro brigádníky</a>
-                            </li>
-                            <li class="nav-item align-self-center">
-                                <a class="nav-link" href="b2b.html">
-                                    <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25022 2C2.25022 0.89543 3.14565 0 4.25022 0H13.0752C14.1798 0 15.0752 0.895431 15.0752 2V17C15.0752 17.0337 15.0736 17.067 15.0703 17.0999H16.875C17.1235 17.0999 17.325 17.3013 17.325 17.5499C17.325 17.7984 17.1235 17.9999 16.875 17.9999H14.0915L14.0752 18H3.25022L3.23395 17.9999H0.45C0.201472 17.9999 0 17.7984 0 17.5499C0 17.3013 0.201472 17.0999 0.45 17.0999H2.25514C2.25189 17.067 2.25022 17.0337 2.25022 17V2ZM5.72475 2.92507C5.17247 2.92507 4.72475 3.37278 4.72475 3.92507V4.85007C4.72475 5.40235 5.17247 5.85007 5.72475 5.85007H6.64975C7.20204 5.85007 7.64975 5.40235 7.64975 4.85007V3.92507C7.64975 3.37278 7.20204 2.92507 6.64975 2.92507H5.72475ZM4.72475 8.65009C4.72475 8.09781 5.17247 7.65009 5.72475 7.65009H6.64975C7.20204 7.65009 7.64975 8.09781 7.64975 8.65009V9.57509C7.64975 10.1274 7.20204 10.5751 6.64975 10.5751H5.72475C5.17247 10.5751 4.72475 10.1274 4.72475 9.57509V8.65009ZM10.4501 7.65009C9.89777 7.65009 9.45005 8.09781 9.45005 8.65009V9.57509C9.45005 10.1274 9.89777 10.5751 10.45 10.5751H11.3751C11.9273 10.5751 12.3751 10.1274 12.3751 9.57509V8.65009C12.3751 8.09781 11.9273 7.65009 11.3751 7.65009H10.4501ZM9.45005 3.92507C9.45005 3.37278 9.89777 2.92507 10.4501 2.92507H11.3751C11.9273 2.92507 12.3751 3.37278 12.3751 3.92507V4.85007C12.3751 5.40235 11.9273 5.85007 11.3751 5.85007H10.45C9.89777 5.85007 9.45005 5.40235 9.45005 4.85007V3.92507ZM6.85013 12.3751C6.29785 12.3751 5.85013 12.8228 5.85013 13.3751V17.1001H11.4751V13.3751C11.4751 12.8228 11.0274 12.3751 10.4751 12.3751H6.85013Z" fill="#28367B"/>
-                                    </svg>
-                                    Pro firmy</a>
-                            </li>
-                            <li class="nav-item align-self-center">
-                                <a class="nav-link" href="about.html">
-                                    <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8C0 4.22876 0 2.34315 1.17157 1.17157C2.34315 0 4.22876 0 8 0C11.7712 0 13.6569 0 14.8284 1.17157C16 2.34315 16 4.22876 16 8C16 11.7712 16 13.6569 14.8284 14.8284C13.6569 16 11.7712 16 8 16C4.22876 16 2.34315 16 1.17157 14.8284C0 13.6569 0 11.7712 0 8ZM4.77278 11.7955C5.6984 11.0853 6.83251 10.7003 7.99922 10.7003C9.16593 10.7003 10.3 11.0853 11.2257 11.7955C12.1513 12.5058 12.8167 13.5016 13.1186 14.6286C13.1901 14.8953 13.0318 15.1695 12.7651 15.2409C12.4983 15.3124 12.2242 15.1541 12.1527 14.8874C11.9077 13.9731 11.3679 13.1651 10.6169 12.5889C9.86592 12.0127 8.9458 11.7003 7.99922 11.7003C7.05264 11.7003 6.13252 12.0127 5.38155 12.5889C4.63058 13.1651 4.09073 13.9731 3.84574 14.8874C3.77427 15.1541 3.5001 15.3124 3.23337 15.2409C2.96663 15.1695 2.80834 14.8953 2.87981 14.6286C3.18178 13.5016 3.84717 12.5058 4.77278 11.7955ZM6.09961 5.59969C6.09961 4.55035 6.95027 3.69969 7.99961 3.69969C9.04895 3.69969 9.89961 4.55035 9.89961 5.59969C9.89961 6.64903 9.04895 7.49969 7.99961 7.49969C6.95027 7.49969 6.09961 6.64903 6.09961 5.59969ZM7.99961 2.69969C6.39798 2.69969 5.09961 3.99806 5.09961 5.59969C5.09961 7.20131 6.39798 8.49969 7.99961 8.49969C9.60123 8.49969 10.8996 7.20131 10.8996 5.59969C10.8996 3.99806 9.60123 2.69969 7.99961 2.69969Z" fill="#28367B"/>
-                                    </svg>
-                                    O společnosti</a>
-                            </li>
-                            <li class="nav-item align-self-center">
-                                <a class="nav-link" href="contact.html">
-                                    <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.87868 2.87868C0 3.75736 0 5.17157 0 8C0 10.8284 0 12.2426 0.87868 13.1213C1.75736 14 3.17157 14 6 14H10C12.8284 14 14.2426 14 15.1213 13.1213C16 12.2426 16 10.8284 16 8C16 5.17157 16 3.75736 15.1213 2.87868C14.2426 2 12.8284 2 10 2H6C3.17157 2 1.75736 2 0.87868 2.87868ZM2.93705 5.0091C2.70476 4.85977 2.3954 4.92702 2.24608 5.15931C2.09675 5.39159 2.164 5.70095 2.39629 5.85028L7.18886 8.93122C7.68298 9.24886 8.31703 9.24886 8.81114 8.93122L13.6037 5.85028C13.836 5.70095 13.9032 5.39159 13.7539 5.15931C13.6046 4.92702 13.2952 4.85977 13.063 5.0091L8.27038 8.09004C8.10567 8.19592 7.89433 8.19592 7.72962 8.09004L2.93705 5.0091Z" fill="#28367B"/>
-                                    </svg>
-
-                                    Kontakty</a>
-                            </li>
-
-
-                            <li class="nav-item align-self-center">
-                                <a class="nav-link" href="faq.html">
-                                    <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 9.01127C1.5 5.06034 4.6575 1.5 9.015 1.5C13.275 1.5 16.5 4.99274 16.5 8.98873C16.5 13.6232 12.72 16.5 9 16.5C7.77 16.5 6.405 16.1695 5.31 15.5235C4.9275 15.2907 4.605 15.1179 4.1925 15.2531L2.6775 15.7038C2.295 15.824 1.95 15.5235 2.0625 15.1179L2.565 13.4354C2.6475 13.2026 2.6325 12.9547 2.5125 12.7594C1.8675 11.5726 1.5 10.2732 1.5 9.01127ZM8.02501 9.01127C8.02501 9.54457 8.45251 9.97271 8.98501 9.98022C9.51751 9.98022 9.94501 9.54457 9.94501 9.01878C9.94501 8.48548 9.51751 8.05734 8.98501 8.05734C8.46001 8.04982 8.02501 8.48548 8.02501 9.01127ZM11.4825 9.01878C11.4825 9.54457 11.91 9.98022 12.4425 9.98022C12.975 9.98022 13.4025 9.54457 13.4025 9.01878C13.4025 8.48548 12.975 8.05733 12.4425 8.05733C11.91 8.05733 11.4825 8.48548 11.4825 9.01878ZM5.52751 9.98022C5.00251 9.98022 4.56751 9.54457 4.56751 9.01878C4.56751 8.48548 4.99501 8.05733 5.52751 8.05733C6.06001 8.05733 6.48751 8.48548 6.48751 9.01878C6.48751 9.54457 6.06001 9.97271 5.52751 9.98022Z" fill="white"/>
-                                    </svg>
-
-                                    FAQ</a>
-                            </li>
-
-                        </ul>
-                    </nav>
-
-                    <nav class="d-lg-none footer-nav text-center row justify-content-center">
-                        <div class="col-auto border border-white p-2 rounded-pill">
-                            <img src="assets/img/tymbe-logo.svg">
-                        </div>
-                        <ul class="nav flex-column">
-                            <li class="nav-item pt-3">
-                                <a class="nav-link" aria-current="page" href="index.html">
-                                    <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.54994 1.5H7.77495C7.4988 1.5 7.27495 1.72386 7.27495 2V2.17246H10.0499V2C10.0499 1.72386 9.82609 1.5 9.54994 1.5ZM5.77495 2V2.17246H1.5C0.671573 2.17246 0 2.84403 0 3.67246V9.3621C0 10.1905 0.671572 10.8621 1.5 10.8621H15.825C16.6534 10.8621 17.325 10.1905 17.325 9.3621V3.67246C17.325 2.84403 16.6534 2.17246 15.825 2.17246H11.5499V2C11.5499 0.895431 10.6545 0 9.54994 0H7.77495C6.67038 0 5.77495 0.89543 5.77495 2ZM16.3623 11.9483H0.962335V14.75C0.962335 15.3023 1.41005 15.75 1.96234 15.75H15.3623C15.9146 15.75 16.3623 15.3023 16.3623 14.75V11.9483Z" fill="#28367B"/>
-                                        <rect x="7.07959" y="9.27585" width="3.16563" height="4.25862" rx="1" fill="#28367B" stroke="white"/>
-                                    </svg>
-                                    Pro brigádníky</a>
-                            </li>
-                            <li class="nav-item pt-3">
-                                <a class="nav-link" href="b2b.html">
-                                    <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M2.25022 2C2.25022 0.89543 3.14565 0 4.25022 0H13.0752C14.1798 0 15.0752 0.895431 15.0752 2V17C15.0752 17.0337 15.0736 17.067 15.0703 17.0999H16.875C17.1235 17.0999 17.325 17.3013 17.325 17.5499C17.325 17.7984 17.1235 17.9999 16.875 17.9999H14.0915L14.0752 18H3.25022L3.23395 17.9999H0.45C0.201472 17.9999 0 17.7984 0 17.5499C0 17.3013 0.201472 17.0999 0.45 17.0999H2.25514C2.25189 17.067 2.25022 17.0337 2.25022 17V2ZM5.72475 2.92507C5.17247 2.92507 4.72475 3.37278 4.72475 3.92507V4.85007C4.72475 5.40235 5.17247 5.85007 5.72475 5.85007H6.64975C7.20204 5.85007 7.64975 5.40235 7.64975 4.85007V3.92507C7.64975 3.37278 7.20204 2.92507 6.64975 2.92507H5.72475ZM4.72475 8.65009C4.72475 8.09781 5.17247 7.65009 5.72475 7.65009H6.64975C7.20204 7.65009 7.64975 8.09781 7.64975 8.65009V9.57509C7.64975 10.1274 7.20204 10.5751 6.64975 10.5751H5.72475C5.17247 10.5751 4.72475 10.1274 4.72475 9.57509V8.65009ZM10.4501 7.65009C9.89777 7.65009 9.45005 8.09781 9.45005 8.65009V9.57509C9.45005 10.1274 9.89777 10.5751 10.45 10.5751H11.3751C11.9273 10.5751 12.3751 10.1274 12.3751 9.57509V8.65009C12.3751 8.09781 11.9273 7.65009 11.3751 7.65009H10.4501ZM9.45005 3.92507C9.45005 3.37278 9.89777 2.92507 10.4501 2.92507H11.3751C11.9273 2.92507 12.3751 3.37278 12.3751 3.92507V4.85007C12.3751 5.40235 11.9273 5.85007 11.3751 5.85007H10.45C9.89777 5.85007 9.45005 5.40235 9.45005 4.85007V3.92507ZM6.85013 12.3751C6.29785 12.3751 5.85013 12.8228 5.85013 13.3751V17.1001H11.4751V13.3751C11.4751 12.8228 11.0274 12.3751 10.4751 12.3751H6.85013Z" fill="#28367B"/>
-                                    </svg>
-                                    Pro firmy</a>
-                            </li>
-                            <li class="nav-item pt-3">
-                                <a class="nav-link" href="about.html">
-                                    <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0 8C0 4.22876 0 2.34315 1.17157 1.17157C2.34315 0 4.22876 0 8 0C11.7712 0 13.6569 0 14.8284 1.17157C16 2.34315 16 4.22876 16 8C16 11.7712 16 13.6569 14.8284 14.8284C13.6569 16 11.7712 16 8 16C4.22876 16 2.34315 16 1.17157 14.8284C0 13.6569 0 11.7712 0 8ZM4.77278 11.7955C5.6984 11.0853 6.83251 10.7003 7.99922 10.7003C9.16593 10.7003 10.3 11.0853 11.2257 11.7955C12.1513 12.5058 12.8167 13.5016 13.1186 14.6286C13.1901 14.8953 13.0318 15.1695 12.7651 15.2409C12.4983 15.3124 12.2242 15.1541 12.1527 14.8874C11.9077 13.9731 11.3679 13.1651 10.6169 12.5889C9.86592 12.0127 8.9458 11.7003 7.99922 11.7003C7.05264 11.7003 6.13252 12.0127 5.38155 12.5889C4.63058 13.1651 4.09073 13.9731 3.84574 14.8874C3.77427 15.1541 3.5001 15.3124 3.23337 15.2409C2.96663 15.1695 2.80834 14.8953 2.87981 14.6286C3.18178 13.5016 3.84717 12.5058 4.77278 11.7955ZM6.09961 5.59969C6.09961 4.55035 6.95027 3.69969 7.99961 3.69969C9.04895 3.69969 9.89961 4.55035 9.89961 5.59969C9.89961 6.64903 9.04895 7.49969 7.99961 7.49969C6.95027 7.49969 6.09961 6.64903 6.09961 5.59969ZM7.99961 2.69969C6.39798 2.69969 5.09961 3.99806 5.09961 5.59969C5.09961 7.20131 6.39798 8.49969 7.99961 8.49969C9.60123 8.49969 10.8996 7.20131 10.8996 5.59969C10.8996 3.99806 9.60123 2.69969 7.99961 2.69969Z" fill="#28367B"/>
-                                    </svg>
-                                    O společnosti</a>
-                            </li>
-                            <li class="nav-item pt-3">
-                                <a class="nav-link" href="contact.html">
-                                    <svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M0.87868 2.87868C0 3.75736 0 5.17157 0 8C0 10.8284 0 12.2426 0.87868 13.1213C1.75736 14 3.17157 14 6 14H10C12.8284 14 14.2426 14 15.1213 13.1213C16 12.2426 16 10.8284 16 8C16 5.17157 16 3.75736 15.1213 2.87868C14.2426 2 12.8284 2 10 2H6C3.17157 2 1.75736 2 0.87868 2.87868ZM2.93705 5.0091C2.70476 4.85977 2.3954 4.92702 2.24608 5.15931C2.09675 5.39159 2.164 5.70095 2.39629 5.85028L7.18886 8.93122C7.68298 9.24886 8.31703 9.24886 8.81114 8.93122L13.6037 5.85028C13.836 5.70095 13.9032 5.39159 13.7539 5.15931C13.6046 4.92702 13.2952 4.85977 13.063 5.0091L8.27038 8.09004C8.10567 8.19592 7.89433 8.19592 7.72962 8.09004L2.93705 5.0091Z" fill="#28367B"/>
-                                    </svg>
-
-                                    Kontakty</a>
-                            </li>
-                            <li class="nav-item pt-3">
-                                <a class="nav-link" href="faq.html">
-                                    <svg width="18" height="18" viewbox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 9.01127C1.5 5.06034 4.6575 1.5 9.015 1.5C13.275 1.5 16.5 4.99274 16.5 8.98873C16.5 13.6232 12.72 16.5 9 16.5C7.77 16.5 6.405 16.1695 5.31 15.5235C4.9275 15.2907 4.605 15.1179 4.1925 15.2531L2.6775 15.7038C2.295 15.824 1.95 15.5235 2.0625 15.1179L2.565 13.4354C2.6475 13.2026 2.6325 12.9547 2.5125 12.7594C1.8675 11.5726 1.5 10.2732 1.5 9.01127ZM8.02501 9.01127C8.02501 9.54457 8.45251 9.97271 8.98501 9.98022C9.51751 9.98022 9.94501 9.54457 9.94501 9.01878C9.94501 8.48548 9.51751 8.05734 8.98501 8.05734C8.46001 8.04982 8.02501 8.48548 8.02501 9.01127ZM11.4825 9.01878C11.4825 9.54457 11.91 9.98022 12.4425 9.98022C12.975 9.98022 13.4025 9.54457 13.4025 9.01878C13.4025 8.48548 12.975 8.05733 12.4425 8.05733C11.91 8.05733 11.4825 8.48548 11.4825 9.01878ZM5.52751 9.98022C5.00251 9.98022 4.56751 9.54457 4.56751 9.01878C4.56751 8.48548 4.99501 8.05733 5.52751 8.05733C6.06001 8.05733 6.48751 8.48548 6.48751 9.01878C6.48751 9.54457 6.06001 9.97271 5.52751 9.98022Z" fill="white"/>
-                                    </svg>
-
-                                    FAQ</a>
-                            </li>
-
-                        </ul>
-                    </nav>
-
-                    <div class="row justify-content-center text-center my-3">
-                        <p class="col-12 col-md-6 text-center text-white p16">
-                            Tymbe Ty–brigády je jediná on-line platforma, která najde, prověří, doručí a zaplatí brigádníky tam, kde je právě potřebuješ.
-                        </p>
-                    </div>
-                    <div class="row justify-content-center">
-
-                        <p class="col-auto mt-3 p-3 text-center bg-light-transparent px-3 py-2 rounded-pill text-white">
-                            <small>24 hodin denně, 7 dní v týdnu a po celé ČR.</small>
-                        </p>
-                    </div>
-                    <div class="row mt-2">
-
-                        <div class="col-12 d-inline text-center">
-                            <a href="https://www.facebook.com/tymbecz">
-                                <img class="mx-2" src="assets/img/fb-icon.svg"></a>
-
-
-                            <a href="https://www.instagram.com/tymbe_cz/">
-                                <img class="mx-2" src="assets/img/ig-icon.svg" alt=""></a>
-
-
-                            <a href="https://www.linkedin.com/company/tymbe"><img class="mx-2" src="assets/img/linkedin.svg" alt=""></a>
-                        </div>
-                        <p class="col-12 text-center mt-3 text-white">
-                            <small>© Copyright 2021 – Tymbe a.s.</small>
-                        </p>
-                    </div>
+              <div class="row mx-0 ty-border-bottom">
+                <div class="col-6 py-3 align-self-center">
+                  <p class="text-accent text-uppercase fw-bold mb-0">
+                    <svg
+                      class="ms-3"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M0.87868 2.87868C0 3.75736 0 5.17157 0 8C0 10.8284 0 12.2426 0.87868 13.1213C1.75736 14 3.17157 14 6 14H10C12.8284 14 14.2426 14 15.1213 13.1213C16 12.2426 16 10.8284 16 8C16 5.17157 16 3.75736 15.1213 2.87868C14.2426 2 12.8284 2 10 2H6C3.17157 2 1.75736 2 0.87868 2.87868ZM2.93705 5.0091C2.70476 4.85977 2.3954 4.92702 2.24608 5.15931C2.09675 5.39159 2.164 5.70095 2.39629 5.85028L7.18886 8.93122C7.68298 9.24886 8.31703 9.24886 8.81114 8.93122L13.6037 5.85028C13.836 5.70095 13.9032 5.39159 13.7539 5.15931C13.6046 4.92702 13.2952 4.85977 13.063 5.0091L8.27038 8.09004C8.10567 8.19592 7.89433 8.19592 7.72962 8.09004L2.93705 5.0091Z"
+                        fill="#28367B"
+                      />
+                    </svg>
+                    <span
+                      style="
+                        font-family: Poppins;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 14px;
+                        padding-left: 5px;
+                      "
+                      >E-mail</span
+                    >
+                  </p>
                 </div>
-            </footer>
+                <div class="col-6 p-3 align-self-center">
+                  <span
+                    style="
+                      font-family: Poppins;
+                      font-style: normal;
+                      font-weight: normal;
+                      font-size: 14px;
+                      line-height: 20px;
+                    "
+                  >
+                    firma@tymbe.com
+                  </span>
+                </div>
+              </div>
+              <div class="row mx-0 ty-border-bottom">
+                <div class="col-6 py-3 align-self-center">
+                  <p class="text-accent text-uppercase fw-bold mb-0">
+                    <svg
+                      class="ms-3"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.5492 8.60184L14.3637 10.4163C14.7151 10.7678 14.7151 11.3375 14.3637 11.6889C12.4638 13.5888 9.45604 13.8026 7.30656 12.1904L7.18126 12.0965C5.55988 10.8804 4.11956 9.44012 2.90353 7.81874L2.80955 7.69343C1.19744 5.54396 1.4112 2.53617 3.31108 0.636285C3.66249 0.284875 4.23224 0.284874 4.58365 0.636285L6.39816 2.45079C6.78868 2.84131 6.78868 3.47448 6.39816 3.865L5.13196 5.1312C4.896 5.36716 4.8375 5.72764 4.98674 6.0261C5.84944 7.75151 7.24849 9.15056 8.9739 10.0133C9.27236 10.1625 9.63284 10.104 9.8688 9.86804L11.135 8.60184C11.5255 8.21132 12.1587 8.21132 12.5492 8.60184Z"
+                        fill="#28367B"
+                      />
+                    </svg>
+                    <span
+                      style="
+                        font-family: Poppins;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 14px;
+                        padding-left: 5px;
+                      "
+                      >Phone</span
+                    >
+                  </p>
+                </div>
+                <div class="col-6 p-3 align-self-center">
+                  <span
+                    style="
+                      font-family: Poppins;
+                      font-style: normal;
+                      font-weight: normal;
+                      font-size: 14px;
+                      line-height: 20px;
+                    "
+                  >
+                    +420 777 123 456
+                  </span>
+                </div>
+              </div>
+              <div class="row mx-0 ty-border-bottom">
+                <div class="col-6 py-3 align-self-center">
+                  <p class="text-accent text-uppercase fw-bold mb-0">
+                    <svg
+                      class="ms-3"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M8.40005 15.9C9.8856 15.1244 15 12.0879 15 7.04299C15 3.15325 11.866 0 8 0C4.13401 0 1 3.15325 1 7.04299C1 12.0879 6.1144 15.1244 7.59995 15.9C7.85387 16.0325 8.14613 16.0325 8.40005 15.9ZM8 10.0614C9.65685 10.0614 11 8.71002 11 7.04299C11 5.37596 9.65685 4.02457 8 4.02457C6.34315 4.02457 5 5.37596 5 7.04299C5 8.71002 6.34315 10.0614 8 10.0614Z"
+                        fill="#28367B"
+                      />
+                    </svg>
 
-            <!-- jQuery -->
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+                    <span
+                      style="
+                        font-family: Poppins;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 14px;
+                        line-height: 14px;
+                        padding-left: 5px;
+                      "
+                      >Address</span
+                    >
+                  </p>
+                </div>
+                <div class="col-6 py-3 align-self-center">
+                  <span
+                    style="
+                      font-family: Poppins;
+                      font-style: normal;
+                      font-weight: normal;
+                      font-size: 14px;
+                      line-height: 20px;
+                    "
+                  >
+                    Podolská 2731/33, Líšeň<br />628 00 Brno
+                  </span>
+                </div>
+              </div>
+              <div class="row mx-0">
+                <div
+                  class="
+                    col-12
+                    py-3
+                    align-self-center
+                    d-flex
+                    align-items-center
+                  "
+                >
+                  <p class="text-accent text-uppercase fw-bold mb-0">
+                    <svg
+                      class="ms-3"
+                      width="16"
+                      height="16"
+                      viewBox="0 0 16 16"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M7.81395 0C7.40295 0 7.06977 0.333183 7.06977 0.744186V1.86047H3.97674C3.42446 1.86047 2.97674 2.30818 2.97674 2.86047V9.30233H1C0.447715 9.30233 0 9.75004 0 10.3023V15C0 15.5523 0.447716 16 1 16H3.97675H11.6512H14.6279C15.1802 16 15.6279 15.5523 15.6279 15V10.3023C15.6279 9.75004 15.1802 9.30233 14.6279 9.30233H12.6512V2.86047C12.6512 2.30818 12.2034 1.86047 11.6512 1.86047H8.55814V0.744186C8.55814 0.333184 8.22496 0 7.81395 0ZM5.83721 3.72093C5.28492 3.72093 4.83721 4.16864 4.83721 4.72093V14.1395H6.69797V11.9072C6.69797 11.2907 7.19774 10.7909 7.81425 10.7909C8.43075 10.7909 8.93053 11.2907 8.93053 11.9072V14.1395H10.7907V4.72093C10.7907 4.16865 10.343 3.72093 9.7907 3.72093H5.83721ZM7.81425 5.58162C7.19774 5.58162 6.69797 6.0814 6.69797 6.6979C6.69797 7.31441 7.19774 7.81418 7.81425 7.81418C8.43075 7.81418 8.93053 7.31441 8.93053 6.6979C8.93053 6.0814 8.43075 5.58162 7.81425 5.58162Z"
+                        fill="#28367B"
+                      />
+                    </svg>
+                  </p>
+                  <span
+                    class="
+                      text-accent text-uppercase
+                      d-flex
+                      flex-grow-1
+                      justify-content-around
+                    "
+                    style="
+                      font-family: Poppins;
+                      font-style: normal;
+                      font-weight: 500;
+                      font-size: 14px;
+                      line-height: 14px;
+                      padding-left: 5px;
+                    "
+                  >
+                    <span>IČO: 2684801</span>
+                    <span> — </span>
+                    <span>DIČ: CZ2684801</span></span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-md-block d-none" style="height: 107px"></div>
+    </section>
 
-            <!-- Bootstrap Bundle with Popper -->
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <footer class="text-white bg-main-dark">
+      <div class="container pt-3">
+        <nav
+          class="
+            row
+            my-3
+            py-2
+            footer-nav
+            border border-white
+            justify-content-between
+            d-none d-lg-flex
+          "
+        >
+          <div class="col-auto">
+            <img src="assets/img/tymbe-logo.svg" />
+          </div>
+          <ul class="nav col-auto">
+            <li class="nav-item align-self-center">
+              <a class="nav-link" aria-current="page" href="index.html">
+                <svg
+                  width="18"
+                  height="18"
+                  viewbox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.54994 1.5H7.77495C7.4988 1.5 7.27495 1.72386 7.27495 2V2.17246H10.0499V2C10.0499 1.72386 9.82609 1.5 9.54994 1.5ZM5.77495 2V2.17246H1.5C0.671573 2.17246 0 2.84403 0 3.67246V9.3621C0 10.1905 0.671572 10.8621 1.5 10.8621H15.825C16.6534 10.8621 17.325 10.1905 17.325 9.3621V3.67246C17.325 2.84403 16.6534 2.17246 15.825 2.17246H11.5499V2C11.5499 0.895431 10.6545 0 9.54994 0H7.77495C6.67038 0 5.77495 0.89543 5.77495 2ZM16.3623 11.9483H0.962335V14.75C0.962335 15.3023 1.41005 15.75 1.96234 15.75H15.3623C15.9146 15.75 16.3623 15.3023 16.3623 14.75V11.9483Z"
+                    fill="#28367B"
+                  />
+                  <rect
+                    x="7.07959"
+                    y="9.27585"
+                    width="3.16563"
+                    height="4.25862"
+                    rx="1"
+                    fill="#28367B"
+                    stroke="white"
+                  />
+                </svg>
+                Pro brigádníky</a
+              >
+            </li>
+            <li class="nav-item align-self-center">
+              <a class="nav-link" href="b2b.html">
+                <svg
+                  width="18"
+                  height="18"
+                  viewbox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.25022 2C2.25022 0.89543 3.14565 0 4.25022 0H13.0752C14.1798 0 15.0752 0.895431 15.0752 2V17C15.0752 17.0337 15.0736 17.067 15.0703 17.0999H16.875C17.1235 17.0999 17.325 17.3013 17.325 17.5499C17.325 17.7984 17.1235 17.9999 16.875 17.9999H14.0915L14.0752 18H3.25022L3.23395 17.9999H0.45C0.201472 17.9999 0 17.7984 0 17.5499C0 17.3013 0.201472 17.0999 0.45 17.0999H2.25514C2.25189 17.067 2.25022 17.0337 2.25022 17V2ZM5.72475 2.92507C5.17247 2.92507 4.72475 3.37278 4.72475 3.92507V4.85007C4.72475 5.40235 5.17247 5.85007 5.72475 5.85007H6.64975C7.20204 5.85007 7.64975 5.40235 7.64975 4.85007V3.92507C7.64975 3.37278 7.20204 2.92507 6.64975 2.92507H5.72475ZM4.72475 8.65009C4.72475 8.09781 5.17247 7.65009 5.72475 7.65009H6.64975C7.20204 7.65009 7.64975 8.09781 7.64975 8.65009V9.57509C7.64975 10.1274 7.20204 10.5751 6.64975 10.5751H5.72475C5.17247 10.5751 4.72475 10.1274 4.72475 9.57509V8.65009ZM10.4501 7.65009C9.89777 7.65009 9.45005 8.09781 9.45005 8.65009V9.57509C9.45005 10.1274 9.89777 10.5751 10.45 10.5751H11.3751C11.9273 10.5751 12.3751 10.1274 12.3751 9.57509V8.65009C12.3751 8.09781 11.9273 7.65009 11.3751 7.65009H10.4501ZM9.45005 3.92507C9.45005 3.37278 9.89777 2.92507 10.4501 2.92507H11.3751C11.9273 2.92507 12.3751 3.37278 12.3751 3.92507V4.85007C12.3751 5.40235 11.9273 5.85007 11.3751 5.85007H10.45C9.89777 5.85007 9.45005 5.40235 9.45005 4.85007V3.92507ZM6.85013 12.3751C6.29785 12.3751 5.85013 12.8228 5.85013 13.3751V17.1001H11.4751V13.3751C11.4751 12.8228 11.0274 12.3751 10.4751 12.3751H6.85013Z"
+                    fill="#28367B"
+                  />
+                </svg>
+                Pro firmy</a
+              >
+            </li>
+            <li class="nav-item align-self-center">
+              <a class="nav-link" href="about.html">
+                <svg
+                  width="16"
+                  height="16"
+                  viewbox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 8C0 4.22876 0 2.34315 1.17157 1.17157C2.34315 0 4.22876 0 8 0C11.7712 0 13.6569 0 14.8284 1.17157C16 2.34315 16 4.22876 16 8C16 11.7712 16 13.6569 14.8284 14.8284C13.6569 16 11.7712 16 8 16C4.22876 16 2.34315 16 1.17157 14.8284C0 13.6569 0 11.7712 0 8ZM4.77278 11.7955C5.6984 11.0853 6.83251 10.7003 7.99922 10.7003C9.16593 10.7003 10.3 11.0853 11.2257 11.7955C12.1513 12.5058 12.8167 13.5016 13.1186 14.6286C13.1901 14.8953 13.0318 15.1695 12.7651 15.2409C12.4983 15.3124 12.2242 15.1541 12.1527 14.8874C11.9077 13.9731 11.3679 13.1651 10.6169 12.5889C9.86592 12.0127 8.9458 11.7003 7.99922 11.7003C7.05264 11.7003 6.13252 12.0127 5.38155 12.5889C4.63058 13.1651 4.09073 13.9731 3.84574 14.8874C3.77427 15.1541 3.5001 15.3124 3.23337 15.2409C2.96663 15.1695 2.80834 14.8953 2.87981 14.6286C3.18178 13.5016 3.84717 12.5058 4.77278 11.7955ZM6.09961 5.59969C6.09961 4.55035 6.95027 3.69969 7.99961 3.69969C9.04895 3.69969 9.89961 4.55035 9.89961 5.59969C9.89961 6.64903 9.04895 7.49969 7.99961 7.49969C6.95027 7.49969 6.09961 6.64903 6.09961 5.59969ZM7.99961 2.69969C6.39798 2.69969 5.09961 3.99806 5.09961 5.59969C5.09961 7.20131 6.39798 8.49969 7.99961 8.49969C9.60123 8.49969 10.8996 7.20131 10.8996 5.59969C10.8996 3.99806 9.60123 2.69969 7.99961 2.69969Z"
+                    fill="#28367B"
+                  />
+                </svg>
+                O společnosti</a
+              >
+            </li>
+            <li class="nav-item align-self-center">
+              <a class="nav-link" href="contact.html">
+                <svg
+                  width="16"
+                  height="16"
+                  viewbox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0.87868 2.87868C0 3.75736 0 5.17157 0 8C0 10.8284 0 12.2426 0.87868 13.1213C1.75736 14 3.17157 14 6 14H10C12.8284 14 14.2426 14 15.1213 13.1213C16 12.2426 16 10.8284 16 8C16 5.17157 16 3.75736 15.1213 2.87868C14.2426 2 12.8284 2 10 2H6C3.17157 2 1.75736 2 0.87868 2.87868ZM2.93705 5.0091C2.70476 4.85977 2.3954 4.92702 2.24608 5.15931C2.09675 5.39159 2.164 5.70095 2.39629 5.85028L7.18886 8.93122C7.68298 9.24886 8.31703 9.24886 8.81114 8.93122L13.6037 5.85028C13.836 5.70095 13.9032 5.39159 13.7539 5.15931C13.6046 4.92702 13.2952 4.85977 13.063 5.0091L8.27038 8.09004C8.10567 8.19592 7.89433 8.19592 7.72962 8.09004L2.93705 5.0091Z"
+                    fill="#28367B"
+                  />
+                </svg>
 
-            <!-- AOS animations -->
-            <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+                Kontakty</a
+              >
+            </li>
 
+            <li class="nav-item align-self-center">
+              <a class="nav-link" href="faq.html">
+                <svg
+                  width="18"
+                  height="18"
+                  viewbox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1.5 9.01127C1.5 5.06034 4.6575 1.5 9.015 1.5C13.275 1.5 16.5 4.99274 16.5 8.98873C16.5 13.6232 12.72 16.5 9 16.5C7.77 16.5 6.405 16.1695 5.31 15.5235C4.9275 15.2907 4.605 15.1179 4.1925 15.2531L2.6775 15.7038C2.295 15.824 1.95 15.5235 2.0625 15.1179L2.565 13.4354C2.6475 13.2026 2.6325 12.9547 2.5125 12.7594C1.8675 11.5726 1.5 10.2732 1.5 9.01127ZM8.02501 9.01127C8.02501 9.54457 8.45251 9.97271 8.98501 9.98022C9.51751 9.98022 9.94501 9.54457 9.94501 9.01878C9.94501 8.48548 9.51751 8.05734 8.98501 8.05734C8.46001 8.04982 8.02501 8.48548 8.02501 9.01127ZM11.4825 9.01878C11.4825 9.54457 11.91 9.98022 12.4425 9.98022C12.975 9.98022 13.4025 9.54457 13.4025 9.01878C13.4025 8.48548 12.975 8.05733 12.4425 8.05733C11.91 8.05733 11.4825 8.48548 11.4825 9.01878ZM5.52751 9.98022C5.00251 9.98022 4.56751 9.54457 4.56751 9.01878C4.56751 8.48548 4.99501 8.05733 5.52751 8.05733C6.06001 8.05733 6.48751 8.48548 6.48751 9.01878C6.48751 9.54457 6.06001 9.97271 5.52751 9.98022Z"
+                    fill="white"
+                  />
+                </svg>
 
-            <!-- Custom scripts -->
-            <script src="assets/js/scripts.js"></script>
+                FAQ</a
+              >
+            </li>
+          </ul>
+        </nav>
 
-            <script>
+        <nav
+          class="d-lg-none footer-nav text-center row justify-content-center"
+        >
+          <div class="col-auto border border-white p-2 rounded-pill">
+            <img src="assets/img/tymbe-logo.svg" />
+          </div>
+          <ul class="nav flex-column">
+            <li class="nav-item pt-3">
+              <a class="nav-link" aria-current="page" href="index.html">
+                <svg
+                  width="18"
+                  height="18"
+                  viewbox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.54994 1.5H7.77495C7.4988 1.5 7.27495 1.72386 7.27495 2V2.17246H10.0499V2C10.0499 1.72386 9.82609 1.5 9.54994 1.5ZM5.77495 2V2.17246H1.5C0.671573 2.17246 0 2.84403 0 3.67246V9.3621C0 10.1905 0.671572 10.8621 1.5 10.8621H15.825C16.6534 10.8621 17.325 10.1905 17.325 9.3621V3.67246C17.325 2.84403 16.6534 2.17246 15.825 2.17246H11.5499V2C11.5499 0.895431 10.6545 0 9.54994 0H7.77495C6.67038 0 5.77495 0.89543 5.77495 2ZM16.3623 11.9483H0.962335V14.75C0.962335 15.3023 1.41005 15.75 1.96234 15.75H15.3623C15.9146 15.75 16.3623 15.3023 16.3623 14.75V11.9483Z"
+                    fill="#28367B"
+                  />
+                  <rect
+                    x="7.07959"
+                    y="9.27585"
+                    width="3.16563"
+                    height="4.25862"
+                    rx="1"
+                    fill="#28367B"
+                    stroke="white"
+                  />
+                </svg>
+                Pro brigádníky</a
+              >
+            </li>
+            <li class="nav-item pt-3">
+              <a class="nav-link" href="b2b.html">
+                <svg
+                  width="18"
+                  height="18"
+                  viewbox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M2.25022 2C2.25022 0.89543 3.14565 0 4.25022 0H13.0752C14.1798 0 15.0752 0.895431 15.0752 2V17C15.0752 17.0337 15.0736 17.067 15.0703 17.0999H16.875C17.1235 17.0999 17.325 17.3013 17.325 17.5499C17.325 17.7984 17.1235 17.9999 16.875 17.9999H14.0915L14.0752 18H3.25022L3.23395 17.9999H0.45C0.201472 17.9999 0 17.7984 0 17.5499C0 17.3013 0.201472 17.0999 0.45 17.0999H2.25514C2.25189 17.067 2.25022 17.0337 2.25022 17V2ZM5.72475 2.92507C5.17247 2.92507 4.72475 3.37278 4.72475 3.92507V4.85007C4.72475 5.40235 5.17247 5.85007 5.72475 5.85007H6.64975C7.20204 5.85007 7.64975 5.40235 7.64975 4.85007V3.92507C7.64975 3.37278 7.20204 2.92507 6.64975 2.92507H5.72475ZM4.72475 8.65009C4.72475 8.09781 5.17247 7.65009 5.72475 7.65009H6.64975C7.20204 7.65009 7.64975 8.09781 7.64975 8.65009V9.57509C7.64975 10.1274 7.20204 10.5751 6.64975 10.5751H5.72475C5.17247 10.5751 4.72475 10.1274 4.72475 9.57509V8.65009ZM10.4501 7.65009C9.89777 7.65009 9.45005 8.09781 9.45005 8.65009V9.57509C9.45005 10.1274 9.89777 10.5751 10.45 10.5751H11.3751C11.9273 10.5751 12.3751 10.1274 12.3751 9.57509V8.65009C12.3751 8.09781 11.9273 7.65009 11.3751 7.65009H10.4501ZM9.45005 3.92507C9.45005 3.37278 9.89777 2.92507 10.4501 2.92507H11.3751C11.9273 2.92507 12.3751 3.37278 12.3751 3.92507V4.85007C12.3751 5.40235 11.9273 5.85007 11.3751 5.85007H10.45C9.89777 5.85007 9.45005 5.40235 9.45005 4.85007V3.92507ZM6.85013 12.3751C6.29785 12.3751 5.85013 12.8228 5.85013 13.3751V17.1001H11.4751V13.3751C11.4751 12.8228 11.0274 12.3751 10.4751 12.3751H6.85013Z"
+                    fill="#28367B"
+                  />
+                </svg>
+                Pro firmy</a
+              >
+            </li>
+            <li class="nav-item pt-3">
+              <a class="nav-link" href="about.html">
+                <svg
+                  width="16"
+                  height="16"
+                  viewbox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0 8C0 4.22876 0 2.34315 1.17157 1.17157C2.34315 0 4.22876 0 8 0C11.7712 0 13.6569 0 14.8284 1.17157C16 2.34315 16 4.22876 16 8C16 11.7712 16 13.6569 14.8284 14.8284C13.6569 16 11.7712 16 8 16C4.22876 16 2.34315 16 1.17157 14.8284C0 13.6569 0 11.7712 0 8ZM4.77278 11.7955C5.6984 11.0853 6.83251 10.7003 7.99922 10.7003C9.16593 10.7003 10.3 11.0853 11.2257 11.7955C12.1513 12.5058 12.8167 13.5016 13.1186 14.6286C13.1901 14.8953 13.0318 15.1695 12.7651 15.2409C12.4983 15.3124 12.2242 15.1541 12.1527 14.8874C11.9077 13.9731 11.3679 13.1651 10.6169 12.5889C9.86592 12.0127 8.9458 11.7003 7.99922 11.7003C7.05264 11.7003 6.13252 12.0127 5.38155 12.5889C4.63058 13.1651 4.09073 13.9731 3.84574 14.8874C3.77427 15.1541 3.5001 15.3124 3.23337 15.2409C2.96663 15.1695 2.80834 14.8953 2.87981 14.6286C3.18178 13.5016 3.84717 12.5058 4.77278 11.7955ZM6.09961 5.59969C6.09961 4.55035 6.95027 3.69969 7.99961 3.69969C9.04895 3.69969 9.89961 4.55035 9.89961 5.59969C9.89961 6.64903 9.04895 7.49969 7.99961 7.49969C6.95027 7.49969 6.09961 6.64903 6.09961 5.59969ZM7.99961 2.69969C6.39798 2.69969 5.09961 3.99806 5.09961 5.59969C5.09961 7.20131 6.39798 8.49969 7.99961 8.49969C9.60123 8.49969 10.8996 7.20131 10.8996 5.59969C10.8996 3.99806 9.60123 2.69969 7.99961 2.69969Z"
+                    fill="#28367B"
+                  />
+                </svg>
+                O společnosti</a
+              >
+            </li>
+            <li class="nav-item pt-3">
+              <a class="nav-link" href="contact.html">
+                <svg
+                  width="16"
+                  height="16"
+                  viewbox="0 0 16 16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0.87868 2.87868C0 3.75736 0 5.17157 0 8C0 10.8284 0 12.2426 0.87868 13.1213C1.75736 14 3.17157 14 6 14H10C12.8284 14 14.2426 14 15.1213 13.1213C16 12.2426 16 10.8284 16 8C16 5.17157 16 3.75736 15.1213 2.87868C14.2426 2 12.8284 2 10 2H6C3.17157 2 1.75736 2 0.87868 2.87868ZM2.93705 5.0091C2.70476 4.85977 2.3954 4.92702 2.24608 5.15931C2.09675 5.39159 2.164 5.70095 2.39629 5.85028L7.18886 8.93122C7.68298 9.24886 8.31703 9.24886 8.81114 8.93122L13.6037 5.85028C13.836 5.70095 13.9032 5.39159 13.7539 5.15931C13.6046 4.92702 13.2952 4.85977 13.063 5.0091L8.27038 8.09004C8.10567 8.19592 7.89433 8.19592 7.72962 8.09004L2.93705 5.0091Z"
+                    fill="#28367B"
+                  />
+                </svg>
 
-                let contactInputName,
-                    contactInputEmail,
-                    contactInputMessage;
+                Kontakty</a
+              >
+            </li>
+            <li class="nav-item pt-3">
+              <a class="nav-link" href="faq.html">
+                <svg
+                  width="18"
+                  height="18"
+                  viewbox="0 0 18 18"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M1.5 9.01127C1.5 5.06034 4.6575 1.5 9.015 1.5C13.275 1.5 16.5 4.99274 16.5 8.98873C16.5 13.6232 12.72 16.5 9 16.5C7.77 16.5 6.405 16.1695 5.31 15.5235C4.9275 15.2907 4.605 15.1179 4.1925 15.2531L2.6775 15.7038C2.295 15.824 1.95 15.5235 2.0625 15.1179L2.565 13.4354C2.6475 13.2026 2.6325 12.9547 2.5125 12.7594C1.8675 11.5726 1.5 10.2732 1.5 9.01127ZM8.02501 9.01127C8.02501 9.54457 8.45251 9.97271 8.98501 9.98022C9.51751 9.98022 9.94501 9.54457 9.94501 9.01878C9.94501 8.48548 9.51751 8.05734 8.98501 8.05734C8.46001 8.04982 8.02501 8.48548 8.02501 9.01127ZM11.4825 9.01878C11.4825 9.54457 11.91 9.98022 12.4425 9.98022C12.975 9.98022 13.4025 9.54457 13.4025 9.01878C13.4025 8.48548 12.975 8.05733 12.4425 8.05733C11.91 8.05733 11.4825 8.48548 11.4825 9.01878ZM5.52751 9.98022C5.00251 9.98022 4.56751 9.54457 4.56751 9.01878C4.56751 8.48548 4.99501 8.05733 5.52751 8.05733C6.06001 8.05733 6.48751 8.48548 6.48751 9.01878C6.48751 9.54457 6.06001 9.97271 5.52751 9.98022Z"
+                    fill="white"
+                  />
+                </svg>
 
+                FAQ</a
+              >
+            </li>
+          </ul>
+        </nav>
 
-                $("#submitContactForm").click(function (e) {
-                    e.preventDefault();
-                    contactInputName = document.getElementById("contactInputName").value;
-                    contactInputEmail = document.getElementById("contactInputEmail").value;
-                    contactInputMessage = document.getElementById("contactInputMessage").value;
-                    $.ajax({
-                        type: "POST",
-                        url: "https://api.tymbeos1.cz/contactForm",
-                        data: {
-                            contactInputName: contactInputName,
-                            contactInputEmail: contactInputEmail,
-                            contactInputMessage: contactInputMessage
-                        },
-                        success: function (result) {
-                            alert('ok');
-                        },
-                        error: function (result) {
-                            alert('error');
-                        }
-                    });
-                });
-            </script>
+        <div class="row justify-content-center text-center my-3">
+          <p class="col-12 col-md-6 text-center text-white p16">
+            Tymbe Ty–brigády je jediná on-line platforma, která najde, prověří,
+            doručí a zaplatí brigádníky tam, kde je právě potřebuješ.
+          </p>
+        </div>
+        <div class="row justify-content-center">
+          <p
+            class="
+              col-auto
+              mt-3
+              p-3
+              text-center
+              bg-light-transparent
+              px-3
+              py-2
+              rounded-pill
+              text-white
+            "
+          >
+            <small class="d-flex align-items-center">
+              <img class="mx-2" src="assets/img/phone-icon.svg" alt="" />
+              <span
+                style="
+                  font-family: Poppins;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: 14px;
+                  line-height: 14px;
 
-        </body>
-    </body>
+                  /* identical to box height, or 100% */
+                  display: flex;
+                  align-items: center;
+
+                  color: #ffffff;
+                  margin-right: 13px;
+                  margin-left: 9px;
+                "
+                class="d-none d-lg-block"
+                >725 762 453</span
+              >
+              <span
+                style="
+                  font-family: Poppins;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: 14px;
+                  line-height: 14px;
+
+                  /* identical to box height, or 100% */
+                  display: flex;
+                  align-items: center;
+
+                  color: #ffffff;
+
+                  opacity: 0.7;
+                "
+                >24 hodin denně, 7 dní v týdnu a po celé ČR.</span
+              >
+            </small>
+          </p>
+        </div>
+        <div class="row mt-2">
+          <div class="col-12 d-inline text-center">
+            <a href="https://www.facebook.com/tymbecz">
+              <img class="mx-2" src="assets/img/fb-icon.svg"
+            /></a>
+
+            <a href="https://www.instagram.com/tymbe_cz/">
+              <img class="mx-2" src="assets/img/ig-icon.svg" alt=""
+            /></a>
+
+            <a href="https://www.linkedin.com/company/tymbe"
+              ><img class="mx-2" src="assets/img/linkedin.svg" alt=""
+            /></a>
+          </div>
+          <p class="col-12 text-center mt-3 text-white">
+            <small>© Copyright 2021 – Tymbe a.s.</small>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS animations -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <!-- Custom scripts -->
+    <script src="assets/js/scripts.js"></script>
+
+    <script>
+      let contactInputName, contactInputEmail, contactInputMessage;
+
+      $("#submitContactForm").click(function (e) {
+        e.preventDefault();
+        contactInputName = document.getElementById("contactInputName").value;
+        contactInputEmail = document.getElementById("contactInputEmail").value;
+        contactInputMessage = document.getElementById(
+          "contactInputMessage"
+        ).value;
+        $.ajax({
+          type: "POST",
+          url: "https://api.tymbeos1.cz/contactForm",
+          data: {
+            contactInputName: contactInputName,
+            contactInputEmail: contactInputEmail,
+            contactInputMessage: contactInputMessage,
+          },
+          success: function (result) {
+            alert("ok");
+          },
+          error: function (result) {
+            alert("error");
+          },
+        });
+      });
+    </script>
+  </body>
 </html>

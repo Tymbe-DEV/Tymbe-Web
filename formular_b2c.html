@@ -58,12 +58,13 @@
       gtag("config", "AW-967437153");
     </script>
   </head>
-  <body>
-    <header class="formular_index container-fluid pt-3">
+  <body class="formular_b2c">
+    <header class="container-fluid pt-3">
       <div class="container">
         <!-- Desktop nav -->
         <nav
           class="
+            desktop-nav
             d-none d-md-block
             navbar navbar-expand-lg navbar-light
             bg-white
@@ -77,11 +78,7 @@
             <div class="collapse navbar-collapse">
               <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                  <a
-                    class="nav-link active"
-                    aria-current="page"
-                    href="index.html"
-                  >
+                  <a class="nav-link" aria-current="page" href="index.html">
                     <svg
                       width="18"
                       height="18"
@@ -179,7 +176,14 @@
         </nav>
 
         <!-- Mobile nav -->
-        <nav class="d-md-none navbar navbar-expand-lg navbar-light bg-white">
+        <nav
+          class="
+            mobile-nav
+            d-md-none
+            navbar navbar-expand-lg navbar-light
+            bg-white
+          "
+        >
           <div class="container-fluid">
             <a class="navbar-brand" href="#">
               <img src="assets/img/tymbe-logo.svg" />
@@ -199,7 +203,7 @@
                   id="navbarOpenIcon"
                   width="35"
                   height="35"
-                  viewBox="0 0 35 35"
+                  viewbox="0 0 35 35"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                 >
@@ -228,7 +232,7 @@
                   id="navbarCloseIcon"
                   width="35"
                   height="35"
-                  viewBox="0 0 35 35"
+                  viewbox="0 0 35 35"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
                   hidden
@@ -255,7 +259,7 @@
               <ul class="navbar-nav text-center me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                   <a
-                    class="nav-link py-3 border-bottom active"
+                    class="nav-link py-3 ty-border-bottom"
                     aria-current="page"
                     href="index.html"
                   >
@@ -286,7 +290,7 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link py-3 border-bottom" href="b2b.html">
+                  <a class="nav-link py-3 ty-border-bottom" href="b2b.html">
                     <svg
                       width="18"
                       height="18"
@@ -305,7 +309,7 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link py-3 border-bottom" href="about.html">
+                  <a class="nav-link py-3 ty-border-bottom" href="about.html">
                     <svg
                       width="16"
                       height="16"
@@ -361,425 +365,435 @@
           </div>
         </nav>
       </div>
+    </header>
+    <section class="container py-5 mt-md-5">
+      <div class="row mb-5">
+        <div class="col-12 col-lg-5 p-0">
+          <div
+            class="bg-white shadow form-card rounded"
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1500"
+          >
+            <h2 class="text-accent text-center ty-h3-website">
+              Staň se Tymberem
+            </h2>
 
-      <section class="container py-5">
-        <div class="row mb-5">
-          <div class="col-12 col-lg-5">
-            <div
-              class="bg-white shadow p-4 rounded"
-              data-aos="fade-up"
-              data-aos-offset="200"
-              data-aos-delay="50"
-              data-aos-duration="1500"
-            >
-              <h2 class="text-accent text-center">Staň se Tymberem</h2>
-
-              <div class="row justify-content-center pt-4 pb-3">
-                <div class="col-auto">
-                  <div id="formStepCircle1" class="formStep visited"></div>
-                </div>
-
-                <hr
-                  id="formLine1"
-                  class="col-2 align-self-center mb-0 formLine nvisited"
-                />
-
-                <div class="col-auto">
-                  <div id="formStepCircle2" class="formStep nvisited"></div>
-                </div>
-
-                <hr
-                  id="formLine2"
-                  class="col-2 align-self-center mb-0 formLine nvisited"
-                />
-
-                <div class="col-auto">
-                  <div id="formStepCircle3" class="formStep nvisited"></div>
-                </div>
+            <div class="row justify-content-center pt-4 pb-3">
+              <div class="col-auto">
+                <div id="formStepCircle1" class="formStep visited"></div>
               </div>
 
-              <form class="mt-4" id="workerRegisterForm" novalidate action="?">
-                <div id="formStep1">
-                  <div class="mb-3">
-                    <input
-                      required
-                      id="sureName"
-                      name="sureName"
-                      type="text"
-                      class="form-control"
-                      placeholder="Jméno"
-                      aria-label="Jméno"
-                      aria-describedby=""
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <input
-                      required
-                      id="familyName"
-                      name="familyName"
-                      type="text"
-                      class="form-control"
-                      placeholder="Příjmení"
-                      aria-label="Příjmení"
-                      aria-describedby=""
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <input
-                      required
-                      id="birthPlace"
-                      name="birthPlace"
-                      type="text"
-                      class="form-control"
-                      placeholder="Místo narození"
-                      aria-label="MístoNarození"
-                      aria-describedby=""
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <input
-                      required
-                      id="idNumber"
-                      name="idNumber"
-                      type="number"
-                      class="form-control"
-                      placeholder="Číslo občanského průkazu"
-                      aria-label=""
-                      aria-describedby=""
-                    />
-                    <div class="invalid-feedback">
-                      Please choose a username.
-                    </div>
-                  </div>
-                  <div class="mb-3">
-                    <input
-                      required
-                      id="birthDate"
-                      name="birthDate"
-                      type="text"
-                      class="form-control"
-                      placeholder="Datum narození (ve formátu DD.MM.RRRR)"
-                      aria-label=""
-                      aria-describedby=""
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <input
-                      required
-                      id="birthNumber"
-                      name="birthNumber"
-                      type="number"
-                      class="form-control"
-                      placeholder="Rodné číslo (jen číslo bez lomítka)"
-                      aria-label=""
-                      aria-describedby=""
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <p class="text-accent">Pohlaví:</p>
-                    <div class="form-check">
-                      <input
-                        id="gender1"
-                        name="gender"
-                        class="form-check-input"
-                        value="2"
-                        type="radio"
-                        checked
-                      />
-                      <label class="form-check-label" for="genderRadio1">
-                        Muž
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input
-                        id="gender2"
-                        name="gender"
-                        class="form-check-input"
-                        value="1"
-                        type="radio"
-                      />
-                      <label class="form-check-label" for="genderRadio2">
-                        Žena
-                      </label>
-                    </div>
-                  </div>
+              <hr
+                id="formLine1"
+                class="col-2 align-self-center mb-0 formLine nvisited"
+              />
 
-                  <div class="row justify-content-end mx-0 my-3">
-                    <button
-                      id=""
-                      type="button"
-                      class="btn btn-primary rounded-pill col-auto"
-                      onclick="formStep2()"
-                    >
-                      Další
-                    </button>
-                  </div>
-                </div>
+              <div class="col-auto">
+                <div id="formStepCircle2" class="formStep nvisited"></div>
+              </div>
 
-                <div id="formStep2" class="d-none">
-                  <p class="text-accent">Adresa trvalého bydliště</p>
+              <hr
+                id="formLine2"
+                class="col-2 align-self-center mb-0 formLine nvisited"
+              />
 
-                  <select
+              <div class="col-auto">
+                <div id="formStepCircle3" class="formStep nvisited"></div>
+              </div>
+            </div>
+
+            <form class="mt-4" id="workerRegisterForm" novalidate action="?">
+              <div id="formStep1">
+                <div class="mb-3">
+                  <input
                     required
-                    id="pCountry"
-                    name="pCountry"
-                    class="form-select mb-3"
-                    aria-label="Default select example"
-                  >
-                    <option value="" selected>Stát - trvalé bydliště</option>
-                    <option value="CZ">Česká republika</option>
-                    <option value="SK">Slovensko</option>
-                  </select>
-
-                  <div class="mb-3">
+                    id="sureName"
+                    name="sureName"
+                    type="text"
+                    class="form-control"
+                    placeholder="Jméno"
+                    aria-label="Jméno"
+                    aria-describedby=""
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    required
+                    id="familyName"
+                    name="familyName"
+                    type="text"
+                    class="form-control"
+                    placeholder="Příjmení"
+                    aria-label="Příjmení"
+                    aria-describedby=""
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    required
+                    id="birthPlace"
+                    name="birthPlace"
+                    type="text"
+                    class="form-control"
+                    placeholder="Místo narození"
+                    aria-label="MístoNarození"
+                    aria-describedby=""
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    required
+                    id="idNumber"
+                    name="idNumber"
+                    type="number"
+                    class="form-control"
+                    placeholder="Číslo občanského průkazu"
+                    aria-label=""
+                    aria-describedby=""
+                  />
+                  <div class="invalid-feedback">Please choose a username.</div>
+                </div>
+                <div class="mb-3">
+                  <input
+                    required
+                    id="birthDate"
+                    name="birthDate"
+                    type="text"
+                    class="form-control"
+                    placeholder="Datum narození (ve formátu DD.MM.RRRR)"
+                    aria-label=""
+                    aria-describedby=""
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    required
+                    id="birthNumber"
+                    name="birthNumber"
+                    type="number"
+                    class="form-control"
+                    placeholder="Rodné číslo (jen číslo bez lomítka)"
+                    aria-label=""
+                    aria-describedby=""
+                  />
+                </div>
+                <div class="mb-3">
+                  <p class="text-accent">Pohlaví:</p>
+                  <div class="form-check">
                     <input
-                      required
-                      id="pStreet"
-                      name="pStreet"
-                      type="text"
-                      class="form-control"
-                      placeholder="Ulice a číslo - trvalé bydliště"
-                      aria-label=""
-                      aria-describedby=""
+                      id="gender1"
+                      name="gender"
+                      class="form-check-input"
+                      value="2"
+                      type="radio"
+                      checked
                     />
+                    <label class="form-check-label" for="genderRadio1">
+                      Muž
+                    </label>
                   </div>
-                  <div class="mb-3">
+                  <div class="form-check">
                     <input
-                      required
-                      id="pCity"
-                      name="pCity"
-                      type="text"
-                      class="form-control"
-                      placeholder="Město - trvalé bydliště"
-                      aria-label=""
-                      aria-describedby=""
+                      id="gender2"
+                      name="gender"
+                      class="form-check-input"
+                      value="1"
+                      type="radio"
                     />
-                  </div>
-                  <div class="mb-3">
-                    <input
-                      required
-                      id="pZip"
-                      name="pZip"
-                      type="text"
-                      class="form-control"
-                      placeholder="PSČ - trvalé bydliště"
-                      aria-label=""
-                      aria-describedby=""
-                    />
-                  </div>
-
-                  <p class="text-accent">Kontaktní adresa</p>
-
-                  <select
-                    id="cCountry"
-                    name="cCountry"
-                    class="form-select mb-3"
-                    aria-label="Default select example"
-                  >
-                    <option value="" selected>Stát - kontaktní adresa</option>
-                    <option value="CZ">Česká republika</option>
-                    <option value="SK">Slovensko</option>
-                  </select>
-
-                  <div class="mb-3">
-                    <input
-                      id="cStreet"
-                      name="cStreet"
-                      type="text"
-                      class="form-control"
-                      placeholder="Ulice a číslo - kontaktní adresa"
-                      aria-label=""
-                      aria-describedby=""
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <input
-                      id="cCity"
-                      name="cCity"
-                      type="text"
-                      class="form-control"
-                      placeholder="Město - kontaktní adresa"
-                      aria-label=""
-                      aria-describedby=""
-                    />
-                  </div>
-                  <div class="mb-3">
-                    <input
-                      id="cZip"
-                      name="cZip"
-                      type="text"
-                      class="form-control"
-                      placeholder="PSČ - kontaktní adresa"
-                      aria-label=""
-                      aria-describedby=""
-                    />
-                  </div>
-
-                  <div class="mb-3">
-                    <input
-                      required
-                      id="phone"
-                      name="phone"
-                      type="text"
-                      class="form-control"
-                      placeholder="Telefoní číslo (ve formátu: +420123456789)"
-                      aria-label=""
-                      aria-describedby=""
-                    />
-                  </div>
-
-                  <div class="row justify-content-between mx-0 my-3">
-                    <button
-                      id=""
-                      type="button"
-                      class="btn btn-outline-primary rounded-pill col-auto"
-                      onclick="formStep1()"
-                    >
-                      Zpět
-                    </button>
-                    <button
-                      id=""
-                      type="button"
-                      class="btn btn-primary rounded-pill col-auto"
-                      onclick="formStep3()"
-                    >
-                      Další
-                    </button>
+                    <label class="form-check-label" for="genderRadio2">
+                      Žena
+                    </label>
                   </div>
                 </div>
 
-                <div id="formStep3" class="d-none">
-                  <div class="mb-3">
-                    <input
-                      required
-                      id="email"
-                      name="email"
-                      type="email"
-                      class="form-control"
-                      placeholder="E-mail"
-                      aria-label=""
-                      aria-describedby=""
-                    />
-                  </div>
-
-                  <div class="mb-3">
-                    <input
-                      required
-                      id="password"
-                      name="password"
-                      type="password"
-                      class="form-control"
-                      placeholder="Heslo"
-                      aria-label=""
-                      aria-describedby=""
-                    />
-                  </div>
-
-                  <div class="mb-3">
-                    <input
-                      required
-                      id="passwordCheck"
-                      name="passwordCheck"
-                      type="password"
-                      class="form-control"
-                      placeholder="Heslo znovu"
-                      aria-label=""
-                      aria-describedby=""
-                    />
-                  </div>
-                  <input hidden name="acceptDataProcessing" value="true" />
-
-                  <div class="row justify-content-between mx-0 my-3">
-                    <button
-                      id=""
-                      type="button"
-                      class="btn btn-outline-primary rounded-pill col-auto"
-                      onclick="formStep2()"
-                    >
-                      Zpět
-                    </button>
-                    <button
-                      id="submitButton"
-                      class="btn btn-primary rounded-pill col-auto"
-                      type="button"
-                    >
-                      Odeslat
-                    </button>
-                  </div>
+                <div class="row justify-content-end mx-0 my-3">
+                  <button
+                    id=""
+                    type="button"
+                    class="btn btn-primary rounded-pill col-auto"
+                    onclick="formStep2()"
+                  >
+                    Další
+                  </button>
                 </div>
-
-                <p class="text-center">
-                  Už máš u nás účet?
-                  <a href="#">Přihlas se.</a>
-                </p>
-              </form>
-              <div class="g-recaptcha"
-                   data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-                   data-callback="onSubmit"
-                   data-size="invisible">
               </div>
-            </div>
-          </div>
-          <div class="col-12 col-lg-3 mt-5 mt-lg-0">
-            <div
-              data-aos="fade-up"
-              data-aos-offset="200"
-              data-aos-delay="50"
-              data-aos-duration="1500"
-            >
-              <h4 class="text-accent">Výplata každý den. Stačí kliknout!</h4>
-              <p>
-                Ty–brigády jedou online, takže jsou mnohem rychlejší ve všem. I
-                ve výplatách.
+
+              <div id="formStep2" class="d-none">
+                <p class="text-accent">Adresa trvalého bydliště</p>
+
+                <select
+                  required
+                  id="pCountry"
+                  name="pCountry"
+                  class="form-select mb-3"
+                  aria-label="Default select example"
+                >
+                  <option value="" selected>Stát - trvalé bydliště</option>
+                  <option value="CZ">Česká republika</option>
+                  <option value="SK">Slovensko</option>
+                </select>
+
+                <div class="mb-3">
+                  <input
+                    required
+                    id="pStreet"
+                    name="pStreet"
+                    type="text"
+                    class="form-control"
+                    placeholder="Ulice a číslo - trvalé bydliště"
+                    aria-label=""
+                    aria-describedby=""
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    required
+                    id="pCity"
+                    name="pCity"
+                    type="text"
+                    class="form-control"
+                    placeholder="Město - trvalé bydliště"
+                    aria-label=""
+                    aria-describedby=""
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    required
+                    id="pZip"
+                    name="pZip"
+                    type="text"
+                    class="form-control"
+                    placeholder="PSČ - trvalé bydliště"
+                    aria-label=""
+                    aria-describedby=""
+                  />
+                </div>
+
+                <p class="text-accent">Kontaktní adresa</p>
+
+                <select
+                  id="cCountry"
+                  name="cCountry"
+                  class="form-select mb-3"
+                  aria-label="Default select example"
+                >
+                  <option value="" selected>Stát - kontaktní adresa</option>
+                  <option value="CZ">Česká republika</option>
+                  <option value="SK">Slovensko</option>
+                </select>
+
+                <div class="mb-3">
+                  <input
+                    id="cStreet"
+                    name="cStreet"
+                    type="text"
+                    class="form-control"
+                    placeholder="Ulice a číslo - kontaktní adresa"
+                    aria-label=""
+                    aria-describedby=""
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    id="cCity"
+                    name="cCity"
+                    type="text"
+                    class="form-control"
+                    placeholder="Město - kontaktní adresa"
+                    aria-label=""
+                    aria-describedby=""
+                  />
+                </div>
+                <div class="mb-3">
+                  <input
+                    id="cZip"
+                    name="cZip"
+                    type="text"
+                    class="form-control"
+                    placeholder="PSČ - kontaktní adresa"
+                    aria-label=""
+                    aria-describedby=""
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <input
+                    required
+                    id="phone"
+                    name="phone"
+                    type="text"
+                    class="form-control"
+                    placeholder="Telefoní číslo (ve formátu: +420123456789)"
+                    aria-label=""
+                    aria-describedby=""
+                  />
+                </div>
+
+                <div class="row justify-content-between mx-0 my-3">
+                  <button
+                    id=""
+                    type="button"
+                    class="btn btn-outline-primary rounded-pill col-auto"
+                    onclick="formStep1()"
+                  >
+                    Zpět
+                  </button>
+                  <button
+                    id=""
+                    type="button"
+                    class="btn btn-primary rounded-pill col-auto"
+                    onclick="formStep3()"
+                  >
+                    Další
+                  </button>
+                </div>
+              </div>
+
+              <div id="formStep3" class="d-none">
+                <div class="mb-3">
+                  <input
+                    required
+                    id="email"
+                    name="email"
+                    type="email"
+                    class="form-control"
+                    placeholder="E-mail"
+                    aria-label=""
+                    aria-describedby=""
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <input
+                    required
+                    id="password"
+                    name="password"
+                    type="password"
+                    class="form-control"
+                    placeholder="Heslo"
+                    aria-label=""
+                    aria-describedby=""
+                  />
+                </div>
+
+                <div class="mb-3">
+                  <input
+                    required
+                    id="passwordCheck"
+                    name="passwordCheck"
+                    type="password"
+                    class="form-control"
+                    placeholder="Heslo znovu"
+                    aria-label=""
+                    aria-describedby=""
+                  />
+                </div>
+                <input hidden name="acceptDataProcessing" value="true" />
+
+                <div class="row justify-content-between mx-0 my-3">
+                  <button
+                    id=""
+                    type="button"
+                    class="btn btn-outline-primary rounded-pill col-auto"
+                    onclick="formStep2()"
+                  >
+                    Zpět
+                  </button>
+                  <button
+                    id="submitButton"
+                    class="btn btn-primary rounded-pill col-auto"
+                    type="button"
+                  >
+                    Odeslat
+                  </button>
+                </div>
+              </div>
+
+              <p class="text-center ty-body-responsive">
+                Už máš u nás účet?
+                <a href="#">Přihlas se.</a>
               </p>
-            </div>
+            </form>
             <div
-              data-aos="fade-up"
-              data-aos-offset="200"
-              data-aos-delay="50"
-              data-aos-duration="1500"
-            >
-              <h4 class="text-accent">Brigáda bez papírování. Pecka!</h4>
-              <p>
-                Nemusíš nikde běhat a něco stokrát podepisovat. Všechno nahraješ
-                na svůj účet v apce Ty–brigády.
-              </p>
-            </div>
-            <div
-              data-aos="fade-up"
-              data-aos-offset="200"
-              data-aos-delay="50"
-              data-aos-duration="1500"
-            >
-              <h4 class="text-accent">Odměna za tvůj názor na brigádu.</h4>
-              <p>Byla směna v pohodě? Dej nám vědět a získáš extra odměnu.</p>
-            </div>
-            <div
-              data-aos="fade-up"
-              data-aos-offset="200"
-              data-aos-degilay="50"
-              data-aos-duration="1500"
-            >
-              <h4 class="text-accent">Ty–brigády zajímají práva brigádníků.</h4>
-              <p>
-                Ohlídáme, že ti tvoje práva nikdo neupře. Třeba na pauzy v práci
-                máš jasný nárok.
-              </p>
-            </div>
-          </div>
-          <div class="d-none d-lg-block col-4 align-self-end">
-            <img
-              data-aos="fade-up"
-              data-aos-offset="200"
-              data-aos-delay="50"
-              data-aos-duration="1500"
-              src="assets/img/header-graphic.png"
-              alt=""
-            />
+              class="g-recaptcha"
+              data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+              data-callback="onSubmit"
+              data-size="invisible"
+            ></div>
           </div>
         </div>
-      </section>
-    </header>
+        <div class="col-12 col-lg-3 mt-5 mt-lg-0">
+          <div
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1500"
+          >
+            <h4 class="form-text-header text-accent">
+              Výplata každý den. Stačí kliknout!
+            </h4>
+            <p class="ty-body-responsive">
+              Ty–brigády jedou online, takže jsou mnohem rychlejší ve všem. I ve
+              výplatách.
+            </p>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1500"
+          >
+            <h4 class="form-text-header text-accent">
+              Brigáda bez papírování. Pecka!
+            </h4>
+            <p class="ty-body-responsive">
+              Nemusíš nikde běhat a něco stokrát podepisovat. Všechno nahraješ
+              na svůj účet v apce Ty–brigády.
+            </p>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1500"
+          >
+            <h4 class="form-text-header text-accent">
+              Odměna za tvůj názor na brigádu.
+            </h4>
+            <p class="ty-body-responsive">
+              Byla směna v pohodě? Dej nám vědět a získáš extra odměnu.
+            </p>
+          </div>
+          <div
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-degilay="50"
+            data-aos-duration="1500"
+          >
+            <h4 class="form-text-header text-accent">
+              Ty–brigády zajímají práva brigádníků.
+            </h4>
+            <p class="ty-body-responsive">
+              Ohlídáme, že ti tvoje práva nikdo neupře. Třeba na pauzy v práci
+              máš jasný nárok.
+            </p>
+          </div>
+        </div>
+        <div class="d-none d-lg-block col-4 align-self-end">
+          <img
+            data-aos="fade-up"
+            data-aos-offset="200"
+            data-aos-delay="50"
+            data-aos-duration="1500"
+            src="assets/img/header-graphic.png"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
 
     <footer class="text-white bg-main-dark">
       <div class="container pt-3">
@@ -1044,7 +1058,46 @@
               text-white
             "
           >
-            <small>24 hodin denně, 7 dní v týdnu a po celé ČR.</small>
+            <small class="d-flex align-items-center">
+              <img class="mx-2" src="assets/img/phone-icon.svg" alt="" />
+              <span
+                style="
+                  font-family: Poppins;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: 14px;
+                  line-height: 14px;
+
+                  /* identical to box height, or 100% */
+                  display: flex;
+                  align-items: center;
+
+                  color: #ffffff;
+                  margin-right: 13px;
+                  margin-left: 9px;
+                "
+                class="d-none d-lg-block"
+                >725 762 453</span
+              >
+              <span
+                style="
+                  font-family: Poppins;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: 14px;
+                  line-height: 14px;
+
+                  /* identical to box height, or 100% */
+                  display: flex;
+                  align-items: center;
+
+                  color: #ffffff;
+
+                  opacity: 0.7;
+                "
+                >24 hodin denně, 7 dní v týdnu a po celé ČR.</span
+              >
+            </small>
           </p>
         </div>
         <div class="row mt-2">
@@ -1313,7 +1366,7 @@
           contentType: "application/json; charset=utf-8",
           data: JSON.stringify([
             ...$("form#workerRegisterForm").serializeArray(),
-            { name: 'reCaptcha', value: token },
+            { name: "reCaptcha", value: token },
           ]),
           success: function (data) {
             console.log(data);
@@ -1328,11 +1381,15 @@
           },
         });
       }
-      $('#submitButton').click((e) => {
+      $("#submitButton").click((e) => {
         e.preventDefault();
         grecaptcha.execute();
       });
     </script>
-    <script async src="https://www.google.com/recaptcha/api.js?render=onload&hl=cs" defer></script>
+    <script
+      async
+      src="https://www.google.com/recaptcha/api.js?render=onload&hl=cs"
+      defer
+    ></script>
   </body>
 </html>

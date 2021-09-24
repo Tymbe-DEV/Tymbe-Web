@@ -251,7 +251,7 @@
               <ul class="navbar-nav text-center me-auto mb-2 mb-lg-0">
                 <li class="nav-item">
                   <a
-                    class="nav-link py-3 border-bottom"
+                    class="nav-link py-3 ty-border-bottom"
                     aria-current="page"
                     href="index.html"
                   >
@@ -282,7 +282,10 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link py-3 border-bottom active" href="b2b.html">
+                  <a
+                    class="nav-link py-3 ty-border-bottom active"
+                    href="b2b.html"
+                  >
                     <svg
                       width="18"
                       height="18"
@@ -301,7 +304,7 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link py-3 border-bottom" href="about.html">
+                  <a class="nav-link py-3 ty-border-bottom" href="about.html">
                     <svg
                       width="16"
                       height="16"
@@ -441,7 +444,7 @@
                     id="submitButton"
                     type="button"
                     class="btn btn-primary rounded-pill mx-auto"
-                    style="margin:23px 0 28px 0;"
+                    style="margin: 23px 0 28px 0"
                   >
                     Registrovat
                   </button>
@@ -451,11 +454,12 @@
                   <a href="#">Přihlas se.</a>
                 </p>
               </form>
-              <div class="g-recaptcha"
-                   data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-                   data-callback="onSubmit"
-                   data-size="invisible">
-              </div>
+              <div
+                class="g-recaptcha"
+                data-sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+                data-callback="onSubmit"
+                data-size="invisible"
+              ></div>
             </div>
           </div>
           <div class="col-12 col-lg-3 mt-5 mt-lg-0">
@@ -791,7 +795,46 @@
               text-white
             "
           >
-            <small>24 hodin denně, 7 dní v týdnu a po celé ČR.</small>
+            <small class="d-flex align-items-center">
+              <img class="mx-2" src="assets/img/phone-icon.svg" alt="" />
+              <span
+                style="
+                  font-family: Poppins;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: 14px;
+                  line-height: 14px;
+
+                  /* identical to box height, or 100% */
+                  display: flex;
+                  align-items: center;
+
+                  color: #ffffff;
+                  margin-right: 13px;
+                  margin-left: 9px;
+                "
+                class="d-none d-lg-block"
+                >725 762 453</span
+              >
+              <span
+                style="
+                  font-family: Poppins;
+                  font-style: normal;
+                  font-weight: normal;
+                  font-size: 14px;
+                  line-height: 14px;
+
+                  /* identical to box height, or 100% */
+                  display: flex;
+                  align-items: center;
+
+                  color: #ffffff;
+
+                  opacity: 0.7;
+                "
+                >24 hodin denně, 7 dní v týdnu a po celé ČR.</span
+              >
+            </small>
           </p>
         </div>
         <div class="row mt-2">
@@ -937,7 +980,7 @@
           contentType: "application/json; charset=utf-8",
           data: JSON.stringify([
             ...$("form#companyRegisterForm").serializeArray(),
-            { name: 'reCaptcha', value: token },
+            { name: "reCaptcha", value: token },
           ]),
           success: function (data) {
             console.log(data);
@@ -952,11 +995,15 @@
           },
         });
       }
-      $('#submitButton').click((e) => {
+      $("#submitButton").click((e) => {
         e.preventDefault();
         grecaptcha.execute();
       });
     </script>
-    <script async src="https://www.google.com/recaptcha/api.js?render=onload&hl=cs" defer></script>
+    <script
+      async
+      src="https://www.google.com/recaptcha/api.js?render=onload&hl=cs"
+      defer
+    ></script>
   </body>
 </html>
