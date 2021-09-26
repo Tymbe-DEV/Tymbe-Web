@@ -669,7 +669,6 @@ header a.nav-link:hover > svg > rect {
 .number-stats {
   display: flex;
   position: relative;
-  z-index: 10 !important;
 }
 .number-stats p {
   font-family: Coolvetica;
@@ -677,7 +676,8 @@ header a.nav-link:hover > svg > rect {
   font-weight: normal;
   font-size: 28px;
   line-height: 45px;
-
+  position: relative;
+  z-index: 10 !important;
   /* identical to box height, or 161% */
   text-align: center;
   letter-spacing: 1px;
@@ -1085,6 +1085,12 @@ h1.page-title {
     color: #28367b;
 
     opacity: 0.8;
+  }
+  .ty-circle-container .ty-circle {
+    width: 50px;
+    height: 50px;
+    top: -23px;
+    left: -35px;
   }
 }
 nav.mobile-nav a.nav-link {
