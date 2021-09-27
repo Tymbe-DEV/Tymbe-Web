@@ -665,6 +665,18 @@ header a.nav-link:hover > svg > rect {
   position: absolute;
   margin-left: -150px;
 }
+.testimonial-text {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 35px;
+
+  /* or 219% */
+  text-align: center;
+
+  color: #000000;
+}
 
 .number-stats {
   display: flex;
@@ -1022,6 +1034,18 @@ h1.page-title {
   margin-top: 30px;
 }
 @media (min-width: 992px) {
+  .testimonial-text {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 35px;
+
+    /* or 194% */
+    text-align: center;
+
+    color: #000000;
+  }
   h1.page-title {
     margin-top: 107px;
     margin-bottom: 18px !important;
@@ -1091,6 +1115,12 @@ h1.page-title {
     height: 50px;
     top: -23px;
     left: -35px;
+  }
+
+  .banner-bg {
+    background: url("../img/banner-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 nav.mobile-nav a.nav-link {
