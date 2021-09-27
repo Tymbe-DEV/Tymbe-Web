@@ -1122,6 +1122,19 @@ h1.page-title {
     background-repeat: no-repeat;
     background-size: cover;
   }
+  span.ty-advantage-card-header {
+    /* Headline-Article */
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+
+    /* or 133% */
+
+    /* Dark Blue */
+    color: #28367b;
+  }
 }
 nav.mobile-nav a.nav-link {
   padding-top: 22px !important;
@@ -1192,12 +1205,14 @@ footer div.row.justify-content-center.text-center p {
   background-color: #b6cd1e;
 }
 .ty-advantage-card-header {
+  max-width: 270px;
   font-family: Poppins;
   font-style: normal;
   font-weight: 500;
   font-size: 22px;
   line-height: 28px;
-
+  height: 48px;
+  display: block;
   /* or 127% */
 
   /* Dark Blue */
