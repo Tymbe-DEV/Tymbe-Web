@@ -618,7 +618,7 @@ header a.nav-link:hover > svg > rect {
 .formular_b2c {
   background: url("../img/formularB2C-bg.jpg");
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: contain;
 }
 .formular_b2c section {
   margin-top: 55px;
